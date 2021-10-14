@@ -41,7 +41,13 @@ export default {
             try {
                 const { data } = await axios.get(`https://paste.rkslot.nl/raw/${this.key}`);
                 this.data = data;
-                this.loaded = true;
+
+                if (!this.data.generated_at) {
+                    this.error = 'Invalid URL';
+                } else {
+                    this.loaded = true;
+                }
+
             } catch (err) {
                 this.error = err.message;
             } finally {

@@ -6,8 +6,8 @@
 import Debug from './components/Debug.vue'
 
 export default {
-  components: {
-    Debug
-  }
+    components: {
+        Debug
+    }
 }
 </script>
