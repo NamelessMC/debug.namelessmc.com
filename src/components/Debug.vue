@@ -26,7 +26,7 @@
 
             <!-- NamelessMC version section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-red-300 mb-2 rounded-t-lg font-bold text-white">
+                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
                     NamelessMC version
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-3 place-items-center items-center text-center align-middle">
@@ -47,7 +47,7 @@
 
             <!-- NamelessMC settings section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-purple-300 mb-2 rounded-t-lg font-bold text-white">
+                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
                     NamelessMC settings
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-4 gap-8 place-items-center items-center text-center align-middle">
@@ -89,7 +89,7 @@
 
             <!-- NamelessMC config section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-green-300 mb-2 rounded-t-lg font-bold text-white">
+                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
                     NamelessMC config
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-5 place-items-center items-center text-center align-middle">
@@ -118,13 +118,18 @@
 
             <!-- NamelessMC modules section -->
             <div v-if="loaded">
-                <div class="rounded-lg p-4 h-full bg-pink-300 mb-2 rounded-t-lg shadow-lg font-bold text-white">
+                <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
                     NamelessMC modules
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid place-items-center" :class="gridColsClass(data.namelessmc.modules)">
+                <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
-                        <div class="p-4 px-44 rounded-lg bg-gray-100 shadow-lg">
-                            <h5 class="text-sm font-bold">{{ module.name }}</h5>
+                        <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
+                            <h5 class="text-md font-bold">{{ module.name }}</h5>
+                            <p v-html="booleanBadge(module.enabled)"></p>
+                            <p v-html="module.author"></p>
+                            <p v-html="module.namelessmc_version"></p>
+                            <p v-html="module.module_version"></p>
+                            <pre>{{ module.debug_info }}</pre>
                         </div>
                     </div>
                 </div>
@@ -132,7 +137,7 @@
 
             <!-- Enviroment section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-blue-300 mb-2 rounded-t-lg font-bold text-white">
+                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
                     Enviroment
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-4 place-items-center items-center text-center align-middle">
@@ -183,23 +188,28 @@ export default {
     },
     methods: {
         async loadData() {
-            try {
-                const { data } = await axios.get(`https://paste.rkslot.nl/raw/${this.key}`);
-                this.data = data;
 
-                if (!this.data.generated_at) {
-                    this.error = 'No debug data available in JSON';
-                } else if (this.data.debug_version != 1) {
-                    this.error = `Debug version <strong>${this.data.debug_version}</strong> is not supported`;
-                } else {
-                    this.loaded = true;
+            if (this.key.length == 0) {
+                this.error = 'No debug link ID provided'
+            } else {
+                try {
+                    const { data } = await axios.get(`https://paste.rkslot.nl/raw/${this.key}`);
+                    this.data = data;
+
+                    if (!this.data.generated_at) {
+                        this.error = 'No debug data available in JSON';
+                    } else if (this.data.debug_version != 1) {
+                        this.error = `Debug version <strong>${this.data.debug_version}</strong> is not supported`;
+                    } else {
+                        this.loaded = true;
+                    }
+
+                } catch (err) {
+                    this.error = 'Invalid debug link ID';
                 }
-
-            } catch (err) {
-                this.error = 'Invalid debug link ID';
-            } finally {
-                this.loading = false;
             }
+            
+            this.loading = false;
         },
         formatDate(seconds) {
             const date = new Date(seconds * 1000);
