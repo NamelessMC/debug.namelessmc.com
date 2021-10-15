@@ -20,9 +20,7 @@
                     <div class="p-4 h-full bg-red-300 mb-2 rounded-t-lg font-bold text-white">
                         Error
                     </div>
-                    <div class="pt-2 pb-4 mb-8 pl-4 text-white">
-                        {{ error }}
-                    </div>
+                    <div class="pt-2 pb-4 mb-8 pl-4 text-white" v-html="error"></div>
                 </div>
             </div>
 
@@ -89,6 +87,49 @@
                 </div>
             </div>
 
+            <!-- NamelessMC config section -->
+            <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
+                <div class="p-4 h-full bg-green-300 mb-2 rounded-t-lg font-bold text-white">
+                    NamelessMC config
+                </div>
+                <div class="pt-2 pb-8 mb-8 grid grid-cols-5 place-items-center items-center text-center align-middle">
+                    <div>
+                        <h5 class="text-sm font-bold">Path</h5>
+                        <h2 v-html="isEmpty(data.namelessmc.config.path)"></h2>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold">Friendly URLs</h5>
+                        <h2>{{ booleanBadge(data.namelessmc.config.friendly) }}</h2>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold">Force HTTPS</h5>
+                        <h2>{{ booleanBadge(data.namelessmc.config.force_https) }}</h2>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold">Force www</h5>
+                        <h2>{{ booleanBadge(data.namelessmc.config.force_www) }}</h2>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold">Allowed Proxies</h5>
+                        <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies)"></h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NamelessMC modules section -->
+            <div v-if="loaded">
+                <div class="rounded-lg p-4 h-full bg-pink-300 mb-2 rounded-t-lg shadow-lg font-bold text-white">
+                    NamelessMC modules
+                </div>
+                <div class="pt-2 pb-8 mb-8 grid place-items-center" :class="gridColsClass(data.namelessmc.modules)">
+                    <div v-for="module in data.namelessmc.modules" :key="module.name">
+                        <div class="p-4 px-44 rounded-lg bg-gray-100 shadow-lg">
+                            <h5 class="text-sm font-bold">{{ module.name }}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Enviroment section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-300 mb-2 rounded-t-lg font-bold text-white">
@@ -109,9 +150,7 @@
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Using offical Docker image</h5>
-                        <div>
-                            <h5>{{ booleanBadge(data.enviroment.offical_docker_image) }}</h5>
-                        </div>
+                        <h5>{{ booleanBadge(data.enviroment.offical_docker_image) }}</h5>
                     </div>
                 </div>
             </div>
@@ -149,7 +188,9 @@ export default {
                 this.data = data;
 
                 if (!this.data.generated_at) {
-                    this.error = 'Invalid debug link ID';
+                    this.error = 'No debug data available in JSON';
+                } else if (this.data.debug_version != 1) {
+                    this.error = `Debug version <strong>${this.data.debug_version}</strong> is not supported`;
                 } else {
                     this.loaded = true;
                 }
@@ -177,6 +218,12 @@ export default {
         booleanBadge(value) {
             return value ? 'Yes' : 'No';
         },
+        isEmpty(value) {
+            return value == undefined ? "<i>Empty</i>" : value;
+        },
+        gridColsClass(obj) {
+            return `grid-cols-${Object.keys(obj).length}`;
+        }
     },
 }
 
