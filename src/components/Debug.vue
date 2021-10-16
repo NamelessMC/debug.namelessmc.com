@@ -388,7 +388,7 @@ export default {
                 count = 3;
             }
 
-            return `lg:grid-cols-${count}`;
+            return `md:grid-cols-${count}`;
         },
         isOfficialModule(moduleName) {
             return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
