@@ -11,7 +11,7 @@
 
             <div v-if="loading">
                 <div class="m-auto rounded-lg shadow-lg w-1/3 p-4 bg-gray-300 mb-2 font-bold text-white">
-                    Loading...
+                    Loading... <font-awesome-icon icon="spinner" spin/>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@
             <!-- NamelessMC version section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    NamelessMC version
+                    <font-awesome-icon icon="download"/> NamelessMC version
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-3 place-items-center items-center text-center align-middle">
                     <div>
@@ -48,7 +48,7 @@
             <!-- NamelessMC settings section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    NamelessMC settings
+                    <font-awesome-icon icon="cogs"/> NamelessMC settings
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-4 gap-8 place-items-center items-center text-center align-middle">
                     <div>
@@ -90,7 +90,7 @@
             <!-- NamelessMC config section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    NamelessMC config
+                    <font-awesome-icon icon="wrench"/> NamelessMC config
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-5 place-items-center items-center text-center align-middle">
                     <div>
@@ -119,7 +119,7 @@
             <!-- NamelessMC modules section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    NamelessMC modules
+                    <font-awesome-icon icon="puzzle-piece"/> NamelessMC modules
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
@@ -171,7 +171,7 @@
             <!-- NamelessMC front end templates section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    NamelessMC templates (front end)
+                    <font-awesome-icon icon="paint-brush"/> NamelessMC templates (front end)
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.front_end)">
                     <div v-for="template in data.namelessmc.templates.front_end" :key="template.name">
@@ -211,7 +211,7 @@
             <!-- NamelessMC panel templates section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    NamelessMC templates (panel)
+                    <font-awesome-icon icon="tachometer-alt"/> NamelessMC templates (panel)
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.panel)">
                     <div v-for="template in data.namelessmc.templates.panel" :key="template.name">
@@ -251,7 +251,7 @@
             <!-- Enviroment section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    Enviroment
+                    <font-awesome-icon icon="server"/> Enviroment
                 </div>
                 <div class="pt-2 pb-8 mb-8 grid grid-cols-4 place-items-center items-center text-center align-middle">
                     <div>
