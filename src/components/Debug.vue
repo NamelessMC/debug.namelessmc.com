@@ -27,12 +27,12 @@
             <!-- NamelessMC version section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    <font-awesome-icon icon="download"/> NamelessMC version
+                    <font-awesome-icon icon="download"/> Version
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-3 place-items-center items-center text-center align-middle">
+                <div class="pt-2 pb-8 mb-8 grid grid-cols-3 text-center">
                     <div>
                         <h5 class="text-sm font-bold">Version</h5>
-                        <h2>{{ data.namelessmc.version }}</h2>
+                        <h2 v-html="asCode(data.namelessmc.version)"></h2>
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Update available</h5>
@@ -48,9 +48,9 @@
             <!-- NamelessMC settings section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    <font-awesome-icon icon="cogs"/> NamelessMC settings
+                    <font-awesome-icon icon="cogs"/> Settings
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 gap-8 place-items-center items-center text-center align-middle">
+                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 gap-8 text-center">
                     <div>
                         <h5 class="text-sm font-bold">PHPMailer enabled</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.phpmailer)"></h2>
@@ -90,12 +90,12 @@
             <!-- NamelessMC config section -->
             <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
-                    <font-awesome-icon icon="wrench"/> NamelessMC config
+                    <font-awesome-icon icon="wrench"/> Config
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-5 place-items-center items-center text-center align-middle">
+                <div class="pt-2 pb-8 mb-8 grid grid-cols-5 text-center">
                     <div>
                         <h5 class="text-sm font-bold">Path</h5>
-                        <h2 v-html="isEmpty(data.namelessmc.config.path)"></h2>
+                        <h2 v-html="isEmpty(data.namelessmc.config.path, true)"></h2>
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Friendly URLs</h5>
@@ -111,7 +111,7 @@
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Allowed Proxies</h5>
-                        <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies)"></h2>
+                        <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies, true)"></h2>
                     </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
             <!-- NamelessMC modules section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    <font-awesome-icon icon="puzzle-piece"/> NamelessMC modules
+                    <font-awesome-icon icon="puzzle-piece"/> Modules
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
@@ -139,24 +139,36 @@
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base">{{ module.namelessmc_version }}</h5>
+                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.namelessmc_version)"></h5>
                             </h5>
 
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base">{{ module.module_version }}</h5>
+                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.module_version)"></h5>
                             </h5>
 
                             <div v-if="isOfficialModule(module.name)">
                                 <div v-if="module.name == 'Core'">
-                                    <h5 class="text-sm font-bold inline-block pt-3">Extra Info:</h5>
+                                    <div class="grid grid-cols-2">
+                                        <h5 class="text-sm font-bold">
+                                            Minecraft Integration: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            UUID Linking: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.uuid_linking)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            Username Sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            Username Sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
+                                        </h5>
+                                    </div>
                                 </div>
                                 <div v-else-if="module.name == 'Forum'">
                                     <!-- No specific debug info for Forum module *yet* -->
                                 </div>
                                 <div v-else-if="module.name == 'Discord Integration'">
-                                    <h5 class="text-sm font-bold inline-block pt-3">Extra Info:</h5>
                                 </div>
                             </div>
                             <div v-else>
@@ -171,7 +183,7 @@
             <!-- NamelessMC front end templates section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    <font-awesome-icon icon="paint-brush"/> NamelessMC templates (front end)
+                    <font-awesome-icon icon="paint-brush"/> Templates
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.front_end)">
                     <div v-for="template in data.namelessmc.templates.front_end" :key="template.name">
@@ -195,13 +207,13 @@
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base">{{ template.namelessmc_version }}</h5>
+                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.namelessmc_version)"></h5>
                             </h5>
 
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base">{{ template.template_version }}</h5>
+                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.template_version)"></h5>
                             </h5>
                         </div>
                     </div>
@@ -211,7 +223,7 @@
             <!-- NamelessMC panel templates section -->
             <div v-if="loaded">
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
-                    <font-awesome-icon icon="tachometer-alt"/> NamelessMC templates (panel)
+                    <font-awesome-icon icon="tachometer-alt"/> Panel Templates
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.panel)">
                     <div v-for="template in data.namelessmc.templates.panel" :key="template.name">
@@ -235,13 +247,13 @@
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base">{{ template.namelessmc_version }}</h5>
+                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.namelessmc_version)"></h5>
                             </h5>
 
                             <br>
 
                             <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base">{{ template.template_version }}</h5>
+                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.template_version)"></h5>
                             </h5>
                         </div>
                     </div>
@@ -253,10 +265,10 @@
                 <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
                     <font-awesome-icon icon="server"/> Enviroment
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 place-items-center items-center text-center align-middle">
+                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 text-center">
                     <div>
                         <h5 class="text-sm font-bold">PHP version</h5>
-                        <h2>{{ data.enviroment.php_version }}</h2>
+                        <h2 v-html="asCode(data.enviroment.php_version)"></h2>
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Host OS</h5>
@@ -264,7 +276,7 @@
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Host Kernel version</h5>
-                        <h2>{{ data.enviroment.host_kernel_version }}</h2>
+                        <h2 v-html="asCode(data.enviroment.host_kernel_version)"></h2>
                     </div>
                     <div>
                         <h5 class="text-sm font-bold">Using official Docker image</h5>
@@ -285,6 +297,12 @@
 </template>
 
 <script>
+
+// TODO: disk/ram total, usage
+// TODO: something with php modules
+// TODO: finish module debug info
+// TODO: make font sizes match in modules and settings etc
+
 import axios from 'axios';
 
 export default {
@@ -346,13 +364,19 @@ export default {
             return `${day} ${time}`;
         },
         booleanBadge(value) {
-            //return value ? 'Yes' : 'No';
-            return value 
-                    ? '<span class="inline-block rounded-md text-white bg-green-500 px-2 py-1 text-s mt-1">Yes</span>'
-                    : '<span class="inline-block rounded-md text-white bg-yellow-500 px-2 py-1 text-s mt-1">No</span>';
+            return value
+                    ? '<span class="font-bold text-green-600">Yes</span>'
+                    : '<span class="font-bold text-yellow-500">No</span>';
         },
-        isEmpty(value) {
-            return value == undefined ? "<i>Empty</i>" : value;
+        asCode(value) {
+            return `<span class="p-1 rounded-sm text-sm text-black font-mono">${value}</span`;
+        },
+        isEmpty(value, code = false) {
+            return value == undefined 
+                    ? "<i>Empty</i>" 
+                    : code 
+                        ? this.asCode(value) 
+                        : value;
         },
         gridColsClass(obj) {
             let count = Object.keys(obj).length;
