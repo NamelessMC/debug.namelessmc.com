@@ -386,15 +386,22 @@ export default {
         }
     },
     methods: {
-        setDefaultTheme() {
+        setDefaultTheme(forcedTheme = null) {
             let theme = 'light';
 
-            if (window.matchMedia) {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    theme = 'dark';
+            if (forcedTheme != null) {
+                theme = forcedTheme;
+                localStorage.setItem('nmc-debug-theme', forcedTheme);
+            } else {
+                if (localStorage.getItem('nmc-debug-theme') != null) {
+                    theme = localStorage.getItem('nmc-debug-theme');
+                } else if (window.matchMedia) {
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        theme = 'dark';
+                    }
                 }
             }
-            
+
             this.theme = theme;
         },
         toggleTheme() {
@@ -403,6 +410,8 @@ export default {
             } else {
                 this.theme = 'light';
             }
+
+            localStorage.setItem('nmc-debug-theme', this.theme);
 
             this.renderTheme();
         },
@@ -416,7 +425,9 @@ export default {
         listenForThemeChanges() {
             if (window.matchMedia) {
                 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-                    this.setDefaultTheme();
+                    this.setDefaultTheme(
+                        window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+                    );
                     this.renderTheme();
                 });
             }
