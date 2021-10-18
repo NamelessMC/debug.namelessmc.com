@@ -125,7 +125,7 @@
                 <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
                     <font-awesome-icon icon="puzzle-piece"/> Modules
                 </div>
-                <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.modules)">
+                <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
                         <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
 
@@ -438,7 +438,7 @@ export default {
                 count = 3;
             }
 
-            return `grid-cols-${count}`;
+            return `md:grid-cols-${count}`;
         },
         isOfficialModule(moduleName) {
             return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
