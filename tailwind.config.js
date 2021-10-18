@@ -4,7 +4,7 @@ module.exports = {
             './public/**/*.html',
             './src/**/*.vue'
         ],
-        safeList: [
+        safelist: [
             'md:grid-cols-2',
             'md:grid-cols-3',
         ]
