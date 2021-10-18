@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-200 h-full" v-bind:class="{ 'h-screen': !loaded }">
+    <div class="bg-gray-200 dark:bg-gray-900 h-full" v-bind:class="{ 'h-screen': !loaded }">
 
-        <div class="py-12 bg-yellow-400 shadow-lg">
+        <div class="py-12 bg-yellow-400 dark:bg-indigo-900 shadow-lg">
             <div class="container mx-auto flex">
                 <img :src="`${publicPath}logo.png`" alt="NamelessMC logo" class="h-20 mr-4">
                 <h1 class="font-bold text-4xl text-gray-50">
@@ -44,7 +44,7 @@
                     </div>
                     <div>
                         <h5 class="section-heading">Last update check</h5>
-                        <h2>{{ formatDate(data.namelessmc.update_checked) }}</h2>
+                        <h2 class="text-normal">{{ formatDate(data.namelessmc.update_checked) }}</h2>
                     </div>
                 </div>
             </div>
@@ -74,11 +74,11 @@
 
                     <div>
                         <h5 class="section-heading">Login method</h5>
-                        <h2>{{ data.namelessmc.settings.login_method }}</h2>
+                        <h2 class="text-normal">{{ data.namelessmc.settings.login_method }}</h2>
                     </div>
                     <div>
                         <h5 class="section-heading">Captcha type</h5>
-                        <h2>{{ data.namelessmc.settings.captcha_type }}</h2>
+                        <h2 class="text-normal">{{ data.namelessmc.settings.captcha_type }}</h2>
                     </div>
                     <div>
                         <h5 class="section-heading">Captcha on login page</h5>
@@ -127,10 +127,9 @@
                 </div>
                 <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
-                        <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
-
+                        <div class="section-content-floating">
                             <div>
-                                <h3 class="text-md font-bold text-center">
+                                <h3 class="section-subheading">
                                     {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>
                                 </h3>
         
@@ -152,7 +151,7 @@
                             </div>
 
                             <div class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
-                                <span class="bg-gray-100 text-base">&nbsp;Debug Info&nbsp;</span>
+                                <span class="bg-gray-100 dark:bg-gray-800 dark:text-gray-200 text-base">&nbsp;Debug Info&nbsp;</span>
                             </div>
 
                             <div class="pt-3">
@@ -223,7 +222,7 @@
                                     </div>
                                 </div>
                                 <div v-else>
-                                    <pre>{{ module.debug_info }}</pre>
+                                    <pre class="dark:text-gray-200">{{ module.debug_info }}</pre>
                                 </div>
                             </div>
                         </div>
@@ -238,8 +237,8 @@
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.front_end)">
                     <div v-for="template in data.namelessmc.templates.front_end" :key="template.name">
-                        <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
-                            <h3 class="text-md font-bold text-center">
+                        <div class="section-content-floating">
+                            <h3 class="section-subheading">
                                 {{ template.name }} <span v-if="isOfficialTemplate(template.name)" v-html="officialBadge()"></span>
                             </h3>
     
@@ -274,8 +273,8 @@
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.panel)">
                     <div v-for="template in data.namelessmc.templates.panel" :key="template.name">
-                        <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
-                            <h3 class="text-md font-bold text-center">
+                        <div class="section-content-floating">
+                            <h3 class="section-subheading">
                                 {{ template.name }} <span v-if="isOfficialTemplate(template.name)" v-html="officialBadge()"></span>
                             </h3>
 
@@ -315,7 +314,7 @@
                     </div>
                     <div>
                         <h5 class="section-heading">Host OS</h5>
-                        <h2>{{ data.enviroment.host_os }}</h2>
+                        <h2 class="text-normal">{{ data.enviroment.host_os }}</h2>
                     </div>
                     <div>
                         <h5 class="section-heading">Host kernel version</h5>
@@ -330,7 +329,7 @@
 
         </div>
 
-        <footer v-if="loaded" class="md:h-28 bg-yellow-400 text-center">
+        <footer v-if="loaded" class="md:h-28 bg-yellow-400 dark:bg-indigo-900 text-center">
             <div class="grid md:grid-cols-4 sm:grid-cols-1 md:pt-7 py-6">
                 <div></div>
                 <div>
@@ -423,14 +422,14 @@ export default {
                     : '<span class="font-bold text-base text-yellow-500">No</span>';
         },
         asCode(value) {
-            return `<span class="text-sm text-black font-normal font-mono">${value}</span`;
+            return `<span class="text-sm text-black dark:text-gray-200 font-normal font-mono">${value}</span`;
         },
         isEmpty(value, code = false) {
             return !value
-                    ? '<i class="font-normal text-base">Empty</i>'
+                    ? '<i class="font-normal text-base dark:text-gray-200">Empty</i>'
                     : code 
                         ? this.asCode(value) 
-                        : `<span class="font-normal text-base">${value}</span>`;
+                        : `<span class="font-normal text-base dark:text-gray-200">${value}</span>`;
         },
         gridColsClass(obj) {
             let count = Object.keys(obj).length;
