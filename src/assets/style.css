@@ -3,11 +3,11 @@
 }
 
 .section-title {
-    @apply p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg font-bold text-white
+    @apply p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg font-bold text-white dark:text-gray-300
 }
 
 .section-title-floating {
-    @apply rounded-lg p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg shadow-lg font-bold text-white
+    @apply rounded-lg p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg shadow-lg font-bold text-white dark:text-gray-300
 }
 
 .section-content {
@@ -19,13 +19,13 @@
 }
 
 .section-heading {
-    @apply text-sm font-bold dark:text-gray-200
+    @apply text-sm font-bold dark:text-gray-300
 }
 
 .section-subheading {
-    @apply text-base font-bold text-center dark:text-gray-200
+    @apply text-base font-bold text-center dark:text-gray-300
 }
 
 .text-normal {
-    @apply dark:text-gray-200
+    @apply dark:text-gray-300
 }

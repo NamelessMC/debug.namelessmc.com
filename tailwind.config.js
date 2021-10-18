@@ -6,7 +6,7 @@ module.exports = {
             './src/assets/style.css',
         ],
     },
-    darkMode: 'media', // or 'media' or 'class'
+    darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {},
     },
