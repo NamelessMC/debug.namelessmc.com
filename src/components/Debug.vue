@@ -128,33 +128,40 @@
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.modules)">
                     <div v-for="module in data.namelessmc.modules" :key="module.name">
                         <div class="p-4 rounded-lg bg-gray-100 shadow-lg">
-                            <h3 class="text-md font-bold text-center">
-                                {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>
-                            </h3>
-    
-                            <h5 class="text-sm font-bold">
-                                Enabled: <span class="font-normal" v-html="booleanBadge(module.enabled)"></span>
-                            </h5>
 
-                            <h5 class="text-sm font-bold inline-block">
-                                Author: <h5 class="inline-block font-normal text-base" v-html="module.author"></h5>
-                            </h5>
+                            <div>
+                                <h3 class="text-md font-bold text-center">
+                                    {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>
+                                </h3>
+        
+                                <h5 class="text-sm font-bold">
+                                    Enabled: <span class="font-normal" v-html="booleanBadge(module.enabled)"></span>
+                                </h5>
 
-                            <br>
+                                <h5 class="text-sm font-bold inline-block">
+                                    Author: <h5 class="inline-block font-normal text-base" v-html="module.author"></h5>
+                                </h5>
 
-                            <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.namelessmc_version)"></h5>
-                            </h5>
+                                <br>
 
-                            <br>
+                                <h5 class="text-sm font-bold inline-block">
+                                    NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.namelessmc_version)"></h5>
+                                </h5>
 
-                            <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.module_version)"></h5>
-                            </h5>
+                                <br>
 
-                            <div v-if="isOfficialModule(module.name)">
+                                <h5 class="text-sm font-bold inline-block">
+                                    Version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.module_version)"></h5>
+                                </h5>
+                            </div>
+
+                            <div class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
+                                <span class="bg-gray-100 text-base">&nbsp;Debug Info&nbsp;</span>
+                            </div>
+
+                            <div class="pt-4">
                                 <div v-if="module.name == 'Core'">
-                                    <div class="grid grid-cols-2">
+                                    <div class="grid sm:grid-cols-2">
                                         <h5 class="text-sm font-bold">
                                             Minecraft Integration: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
                                         </h5>
@@ -169,15 +176,11 @@
                                         </h5>
                                     </div>
                                 </div>
-                                <div v-else-if="module.name == 'Forum'">
-                                    <!-- No specific debug info for Forum module *yet* -->
-                                </div>
                                 <div v-else-if="module.name == 'Discord Integration'">
                                 </div>
-                            </div>
-                            <div v-else>
-                                Debug Info:
-                                <pre>{{ module.debug_info }}</pre>
+                                <div v-else>
+                                    <pre>{{ module.debug_info }}</pre>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -390,7 +393,7 @@ export default {
                 count = 3;
             }
 
-            return `grid-cols-${count}`;
+            return `sm:grid-cols-${count}`;
         },
         isOfficialModule(moduleName) {
             return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
