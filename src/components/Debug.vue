@@ -29,92 +29,92 @@
             </div>
 
             <!-- NamelessMC version section -->
-            <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
+            <div v-if="loaded" class="section-background">
+                <div class="section-title">
                     <font-awesome-icon icon="download"/> Version
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-3 text-center">
+                <div class="section-content grid-cols-3">
                     <div>
-                        <h5 class="text-sm font-bold">Version</h5>
+                        <h5 class="section-heading">Version</h5>
                         <h2 v-html="asCode(data.namelessmc.version)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Update available</h5>
+                        <h5 class="section-heading">Update available</h5>
                         <h5 v-html="booleanBadge(data.namelessmc.update_available)"></h5>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Last update check</h5>
+                        <h5 class="section-heading">Last update check</h5>
                         <h2>{{ formatDate(data.namelessmc.update_checked) }}</h2>
                     </div>
                 </div>
             </div>
 
             <!-- NamelessMC settings section -->
-            <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
+            <div v-if="loaded" class="section-background">
+                <div class="section-title">
                     <font-awesome-icon icon="cogs"/> Settings
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 gap-8 text-center">
+                <div class="section-content grid-cols-4 gap-8">
                     <div>
-                        <h5 class="text-sm font-bold">PHPMailer enabled</h5>
+                        <h5 class="section-heading">PHPMailer enabled</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.phpmailer)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">API enabled</h5>
+                        <h5 class="section-heading">API enabled</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.api_enabled)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">API verification</h5>
+                        <h5 class="section-heading">API verification</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.api_verification)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Email verification enabled</h5>
+                        <h5 class="section-heading">Email verification enabled</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.email_verification)"></h2>
                     </div>
 
                     <div>
-                        <h5 class="text-sm font-bold">Login method</h5>
+                        <h5 class="section-heading">Login method</h5>
                         <h2>{{ data.namelessmc.settings.login_method }}</h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Captcha type</h5>
+                        <h5 class="section-heading">Captcha type</h5>
                         <h2>{{ data.namelessmc.settings.captcha_type }}</h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Captcha on login page</h5>
+                        <h5 class="section-heading">Captcha on login page</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.captcha_login)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Captcha on contact page</h5>
+                        <h5 class="section-heading">Captcha on contact page</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.settings.captcha_contact)"></h2>
                     </div>
                 </div>
             </div>
 
             <!-- NamelessMC config section -->
-            <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
+            <div v-if="loaded" class="section-background">
+                <div class="section-title">
                     <font-awesome-icon icon="wrench"/> Config
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-5 text-center">
+                <div class="section-content grid-cols-5">
                     <div>
-                        <h5 class="text-sm font-bold">Path</h5>
+                        <h5 class="section-heading">Path</h5>
                         <h2 v-html="isEmpty(data.namelessmc.config.path, true)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Friendly URLs</h5>
+                        <h5 class="section-heading">Friendly URLs</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.config.friendly)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Force HTTPS</h5>
+                        <h5 class="section-heading">Force HTTPS</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.config.force_https)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Force www</h5>
+                        <h5 class="section-heading">Force www</h5>
                         <h2 v-html="booleanBadge(data.namelessmc.config.force_www)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Allowed proxies</h5>
+                        <h5 class="section-heading">Allowed proxies</h5>
                         <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies, true)"></h2>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
 
             <!-- NamelessMC modules section -->
             <div v-if="loaded">
-                <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
+                <div class="section-title-floating">
                     <font-awesome-icon icon="puzzle-piece"/> Modules
                 </div>
                 <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
@@ -134,24 +134,20 @@
                                     {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>
                                 </h3>
         
-                                <h5 class="text-sm font-bold">
-                                    Enabled: <span class="font-normal" v-html="booleanBadge(module.enabled)"></span>
+                                <h5 class="section-heading">
+                                    Enabled: <span v-html="booleanBadge(module.enabled)"></span>
                                 </h5>
 
-                                <h5 class="text-sm font-bold inline-block">
-                                    Author: <h5 class="inline-block font-normal text-base" v-html="module.author"></h5>
+                                <h5 class="section-heading">
+                                    Author: <span class="font-normal text-base" v-html="module.author"></span>
                                 </h5>
 
-                                <br>
-
-                                <h5 class="text-sm font-bold inline-block">
-                                    NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.namelessmc_version)"></h5>
+                                <h5 class="section-heading">
+                                    NamelessMC version: <span v-html="asCode(module.namelessmc_version)"></span>
                                 </h5>
 
-                                <br>
-
-                                <h5 class="text-sm font-bold inline-block">
-                                    Version: <h5 class="inline-block font-normal text-base" v-html="asCode(module.module_version)"></h5>
+                                <h5 class="section-heading">
+                                    Version: <span v-html="asCode(module.module_version)"></span>
                                 </h5>
                             </div>
 
@@ -161,46 +157,46 @@
 
                             <div class="pt-3">
                                 <div v-if="module.name == 'Core'">
-                                    <h5 class="text-sm font-bold pb-1 text-center">Minecraft Integration</h5>
+                                    <h5 class="section-heading pb-1 text-center">Minecraft Integration</h5>
                                     <div class="grid grid-cols-2">
-                                        <h5 class="text-sm font-bold">
-                                            Integration enabled: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
+                                        <h5 class="section-heading">
+                                            Integration enabled: <span v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            UUID linking: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.uuid_linking)"></span>
+                                        <h5 class="section-heading">
+                                            UUID linking: <span v-html="booleanBadge(module.debug_info.minecraft.uuid_linking)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            Username sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
+                                        <h5 class="section-heading">
+                                            Username sync: <span v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            External query: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.external_query)"></span>
+                                        <h5 class="section-heading">
+                                            External query: <span v-html="booleanBadge(module.debug_info.minecraft.external_query)"></span>
                                         </h5>
                                     </div>
-                                    <h5 class="text-sm font-bold pb-1 text-center pt-1">Servers</h5>
+                                    <h5 class="section-heading pb-1 text-center pt-1">Servers</h5>
                                     <div v-for="server in module.debug_info.minecraft.servers" :key="server.id" class="divide-y-2 divide-blue-400">
                                         <div>
                                             <div class="grid grid-cols-2 pb-1">
-                                                <h5 class="text-sm font-bold">
-                                                    ID: <span class="font-normal" v-html="asCode(server.id)"></span>
+                                                <h5 class="section-heading">
+                                                    ID: <span v-html="asCode(server.id)"></span>
                                                 </h5>
-                                                <h5 class="text-sm font-bold">
-                                                    Name: <span class="font-normal">{{ server.name }}</span>
+                                                <h5 class="section-heading">
+                                                    Name: <span class="font-normal text-base">{{ server.name }}</span>
                                                 </h5>
                                             </div>
                                             <div class="grid grid-cols-2 pb-1">
-                                                <h5 class="text-sm font-bold">
-                                                    IP: <span class="font-normal" v-html="asCode(server.ip)"></span>
+                                                <h5 class="section-heading">
+                                                    IP: <span v-html="asCode(server.ip)"></span>
                                                 </h5>
-                                                <h5 class="text-sm font-bold">
-                                                    Query IP: <span class="font-normal" v-html="asCode(server.query_ip)"></span>
+                                                <h5 class="section-heading">
+                                                    Query IP: <span v-html="asCode(server.query_ip)"></span>
                                                 </h5>
                                             </div>
                                             <div class="grid grid-cols-2">
-                                                <h5 class="text-sm font-bold">
-                                                    Port: <span class="font-normal" v-html="asCode(server.port)"></span>
+                                                <h5 class="section-heading">
+                                                    Port: <span v-html="asCode(server.port)"></span>
                                                 </h5>
-                                                <h5 class="text-sm font-bold">
-                                                    Query Port: <span class="font-normal" v-html="asCode(server.query_port)"></span>
+                                                <h5 class="section-heading">
+                                                    Query Port: <span v-html="asCode(server.query_port)"></span>
                                                 </h5>
                                             </div>
                                         </div>
@@ -208,17 +204,17 @@
                                 </div>
                                 <div v-else-if="module.name == 'Discord Integration'">
                                     <div class="grid grid-cols-2">
-                                        <h5 class="text-sm font-bold">
-                                            Syncing enabled: <span class="font-normal" v-html="booleanBadge(module.enabled && module.debug_info.guild_id && module.debug_info.bot_url)"></span>
+                                        <h5 class="section-heading">
+                                            Syncing enabled: <span v-html="booleanBadge(module.enabled && module.debug_info.guild_id && module.debug_info.bot_url)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            Guild ID: <span class="font-normal" v-html="isEmpty(module.debug_info.guild_id)"></span>
+                                        <h5 class="section-heading">
+                                            Guild ID: <span v-html="isEmpty(module.debug_info.guild_id)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            Bot setup: <span class="font-normal" v-html="booleanBadge(module.debug_info.bot_setup)"></span>
+                                        <h5 class="section-heading">
+                                            Bot setup: <span v-html="booleanBadge(module.debug_info.bot_setup)"></span>
                                         </h5>
-                                        <h5 class="text-sm font-bold">
-                                            Bot URL: <span class="font-normal" v-html="isEmpty(module.debug_info.bot_url)"></span>
+                                        <h5 class="section-heading">
+                                            Bot URL: <span v-html="isEmpty(module.debug_info.bot_url)"></span>
                                         </h5>
                                         <!-- TODO: roles -->
                                     </div>
@@ -234,7 +230,7 @@
 
             <!-- NamelessMC front end templates section -->
             <div v-if="loaded">
-                <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
+                <div class="section-title-floating">
                     <font-awesome-icon icon="paint-brush"/> Templates
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.front_end)">
@@ -244,28 +240,24 @@
                                 {{ template.name }} <span v-if="isOfficialTemplate(template.name)" v-html="officialBadge()"></span>
                             </h3>
     
-                            <h5 class="text-sm font-bold">
-                                Enabled: <span class="font-normal" v-html="booleanBadge(template.enabled)"></span>
+                            <h5 class="section-heading">
+                                Enabled: <span v-html="booleanBadge(template.enabled)"></span>
                             </h5>
 
-                            <h5 class="text-sm font-bold">
-                                Is default: <span class="font-normal" v-html="booleanBadge(template.is_default)"></span>
+                            <h5 class="section-heading">
+                                Is default: <span v-html="booleanBadge(template.is_default)"></span>
                             </h5>
 
-                            <h5 class="text-sm font-bold inline-block">
-                                Author: <h5 class="inline-block font-normal text-base" v-html="template.author"></h5>
+                            <h5 class="section-heading">
+                                Author: <span class="font-normal text-base" v-html="template.author"></span>
                             </h5>
 
-                            <br>
-
-                            <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.namelessmc_version)"></h5>
+                            <h5 class="section-heading">
+                                NamelessMC version: <span v-html="asCode(template.namelessmc_version)"></span>
                             </h5>
 
-                            <br>
-
-                            <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.template_version)"></h5>
+                            <h5 class="section-heading">
+                                Version: <span v-html="asCode(template.template_version)"></span>
                             </h5>
                         </div>
                     </div>
@@ -274,7 +266,7 @@
 
             <!-- NamelessMC panel templates section -->
             <div v-if="loaded">
-                <div class="rounded-lg p-4 h-full bg-blue-400 mb-2 rounded-t-lg shadow-lg font-bold text-white">
+                <div class="section-title-floating">
                     <font-awesome-icon icon="tachometer-alt"/> Panel Templates
                 </div>
                 <div class="pt-2 mb-8 grid gap-8" :class="gridColsClass(data.namelessmc.templates.panel)">
@@ -284,28 +276,24 @@
                                 {{ template.name }} <span v-if="isOfficialTemplate(template.name)" v-html="officialBadge()"></span>
                             </h3>
 
-                            <h5 class="text-sm font-bold">
-                                Enabled: <span class="font-normal" v-html="booleanBadge(template.enabled)"></span>
+                            <h5 class="section-heading">
+                                Enabled: <span v-html="booleanBadge(template.enabled)"></span>
                             </h5>
 
-                            <h5 class="text-sm font-bold">
-                                Is default: <span class="font-normal" v-html="booleanBadge(template.is_default)"></span>
+                            <h5 class="section-heading">
+                                Is default: <span v-html="booleanBadge(template.is_default)"></span>
                             </h5>
 
-                            <h5 class="text-sm font-bold inline-block">
-                                Author: <h5 class="inline-block font-normal text-base" v-html="template.author"></h5>
+                            <h5 class="section-heading">
+                                Author: <span class="font-normal text-base" v-html="template.author"></span>
                             </h5>
 
-                            <br>
-
-                            <h5 class="text-sm font-bold inline-block">
-                                NamelessMC version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.namelessmc_version)"></h5>
+                            <h5 class="section-heading">
+                                NamelessMC version: <span v-html="asCode(template.namelessmc_version)"></span>
                             </h5>
 
-                            <br>
-
-                            <h5 class="text-sm font-bold inline-block">
-                                Version: <h5 class="inline-block font-normal text-base" v-html="asCode(template.template_version)"></h5>
+                            <h5 class="section-heading">
+                                Version: <span v-html="asCode(template.template_version)"></span>
                             </h5>
                         </div>
                     </div>
@@ -313,25 +301,25 @@
             </div>
 
             <!-- Enviroment section -->
-            <div v-if="loaded" class="rounded-lg bg-gray-100 shadow-lg">
-                <div class="p-4 h-full bg-blue-400 mb-2 rounded-t-lg font-bold text-white">
+            <div v-if="loaded" class="section-background">
+                <div class="section-title">
                     <font-awesome-icon icon="server"/> Enviroment
                 </div>
-                <div class="pt-2 pb-8 mb-8 grid grid-cols-4 text-center">
+                <div class="section-content grid-cols-4">
                     <div>
-                        <h5 class="text-sm font-bold">PHP version</h5>
+                        <h5 class="section-heading">PHP version</h5>
                         <h2 v-html="asCode(data.enviroment.php_version)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Host OS</h5>
+                        <h5 class="section-heading">Host OS</h5>
                         <h2>{{ data.enviroment.host_os }}</h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Host kernel version</h5>
+                        <h5 class="section-heading">Host kernel version</h5>
                         <h2 v-html="asCode(data.enviroment.host_kernel_version)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Using official Docker image</h5>
+                        <h5 class="section-heading">Using official Docker image</h5>
                         <h5 v-html="booleanBadge(data.enviroment.official_docker_image)"></h5>
                     </div>
                 </div>
@@ -340,9 +328,9 @@
         </div>
 
         <footer v-if="loaded" class="h-24 bg-yellow-400 text-center flex flex-col justify-center ">
-            <h5 class="text-sm font-bold">Debug log version <span class="font-normal" v-html="asCode(data.debug_version)"></span></h5>
-            <h5 class="text-sm font-bold">Generated by <img v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
-            <h5 class="text-sm font-bold">Raw JSON <a :href="`https://paste.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://paste.rkslot.nl/{{ key }}</span></a></h5>
+            <h5 class="section-heading">Debug log version <span class="font-normal" v-html="asCode(data.debug_version)"></span></h5>
+            <h5 class="section-heading">Generated by <img v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
+            <h5 class="section-heading">Raw JSON <a :href="`https://paste.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://paste.rkslot.nl/{{ key }}</span></a></h5>
         </footer>
 
     </div>
@@ -418,18 +406,18 @@ export default {
         },
         booleanBadge(value) {
             return value
-                    ? '<span class="font-bold text-green-600">Yes</span>'
-                    : '<span class="font-bold text-yellow-500">No</span>';
+                    ? '<span class="font-bold text-base text-green-600">Yes</span>'
+                    : '<span class="font-bold text-base text-yellow-500">No</span>';
         },
         asCode(value) {
-            return `<span class="text-sm text-black font-mono">${value}</span`;
+            return `<span class="text-sm text-black font-normal font-mono">${value}</span`;
         },
         isEmpty(value, code = false) {
             return !value
-                    ? "<i>Empty</i>" 
+                    ? '<i class="font-normal text-base">Empty</i>'
                     : code 
                         ? this.asCode(value) 
-                        : value;
+                        : `<span class="font-normal text-base">${value}</span>`;
         },
         gridColsClass(obj) {
             let count = Object.keys(obj).length;
