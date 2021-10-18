@@ -114,7 +114,7 @@
                         <h2 v-html="booleanBadge(data.namelessmc.config.force_www)"></h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Allowed Proxies</h5>
+                        <h5 class="text-sm font-bold">Allowed proxies</h5>
                         <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies, true)"></h2>
                     </div>
                 </div>
@@ -159,24 +159,69 @@
                                 <span class="bg-gray-100 text-base">&nbsp;Debug Info&nbsp;</span>
                             </div>
 
-                            <div class="pt-4">
+                            <div class="pt-3">
                                 <div v-if="module.name == 'Core'">
+                                    <h5 class="text-sm font-bold pb-1 text-center">Minecraft Integration</h5>
                                     <div class="grid grid-cols-2">
                                         <h5 class="text-sm font-bold">
-                                            Minecraft Integration: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
+                                            Integration enabled: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
                                         </h5>
                                         <h5 class="text-sm font-bold">
-                                            UUID Linking: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.uuid_linking)"></span>
+                                            UUID linking: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.uuid_linking)"></span>
                                         </h5>
                                         <h5 class="text-sm font-bold">
-                                            Username Sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
+                                            Username sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
                                         </h5>
                                         <h5 class="text-sm font-bold">
-                                            Username Sync: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
+                                            External query: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.external_query)"></span>
                                         </h5>
+                                    </div>
+                                    <h5 class="text-sm font-bold pb-1 text-center pt-1">Servers</h5>
+                                    <div v-for="server in module.debug_info.minecraft.servers" :key="server.id" class="divide-y-2 divide-blue-400">
+                                        <div>
+                                            <div class="grid grid-cols-2 pb-1">
+                                                <h5 class="text-sm font-bold">
+                                                    ID: <span class="font-normal" v-html="asCode(server.id)"></span>
+                                                </h5>
+                                                <h5 class="text-sm font-bold">
+                                                    Name: <span class="font-normal">{{ server.name }}</span>
+                                                </h5>
+                                            </div>
+                                            <div class="grid grid-cols-2 pb-1">
+                                                <h5 class="text-sm font-bold">
+                                                    IP: <span class="font-normal" v-html="asCode(server.ip)"></span>
+                                                </h5>
+                                                <h5 class="text-sm font-bold">
+                                                    Query IP: <span class="font-normal" v-html="asCode(server.query_ip)"></span>
+                                                </h5>
+                                            </div>
+                                            <div class="grid grid-cols-2">
+                                                <h5 class="text-sm font-bold">
+                                                    Port: <span class="font-normal" v-html="asCode(server.port)"></span>
+                                                </h5>
+                                                <h5 class="text-sm font-bold">
+                                                    Query Port: <span class="font-normal" v-html="asCode(server.query_port)"></span>
+                                                </h5>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div v-else-if="module.name == 'Discord Integration'">
+                                    <div class="grid grid-cols-2">
+                                        <h5 class="text-sm font-bold">
+                                            Syncing enabled: <span class="font-normal" v-html="booleanBadge(module.enabled && module.debug_info.guild_id && module.debug_info.bot_url)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            Guild ID: <span class="font-normal" v-html="isEmpty(module.debug_info.guild_id)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            Bot setup: <span class="font-normal" v-html="booleanBadge(module.debug_info.bot_setup)"></span>
+                                        </h5>
+                                        <h5 class="text-sm font-bold">
+                                            Bot URL: <span class="font-normal" v-html="isEmpty(module.debug_info.bot_url)"></span>
+                                        </h5>
+                                        <!-- TODO: roles -->
+                                    </div>
                                 </div>
                                 <div v-else>
                                     <pre>{{ module.debug_info }}</pre>
@@ -282,7 +327,7 @@
                         <h2>{{ data.enviroment.host_os }}</h2>
                     </div>
                     <div>
-                        <h5 class="text-sm font-bold">Host Kernel version</h5>
+                        <h5 class="text-sm font-bold">Host kernel version</h5>
                         <h2 v-html="asCode(data.enviroment.host_kernel_version)"></h2>
                     </div>
                     <div>
@@ -380,7 +425,7 @@ export default {
             return `<span class="text-sm text-black font-mono">${value}</span`;
         },
         isEmpty(value, code = false) {
-            return value == undefined 
+            return !value
                     ? "<i>Empty</i>" 
                     : code 
                         ? this.asCode(value) 
