@@ -161,7 +161,7 @@
 
                             <div class="pt-4">
                                 <div v-if="module.name == 'Core'">
-                                    <div class="grid sm:grid-cols-2">
+                                    <div class="grid grid-cols-2">
                                         <h5 class="text-sm font-bold">
                                             Minecraft Integration: <span class="font-normal" v-html="booleanBadge(module.debug_info.minecraft.mc_integration)"></span>
                                         </h5>
@@ -393,7 +393,7 @@ export default {
                 count = 3;
             }
 
-            return `sm:grid-cols-${count}`;
+            return `grid-cols-${count}`;
         },
         isOfficialModule(moduleName) {
             return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
