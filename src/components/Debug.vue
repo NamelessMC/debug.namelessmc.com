@@ -434,11 +434,15 @@ export default {
         gridColsClass(obj) {
             let count = Object.keys(obj).length;
 
-            if (count > 3) {
-                count = 3;
+            if (count == 1) {
+                return 'md:grid-cols-1';
             }
 
-            return `md:grid-cols-${count}`;
+            if (count == 2) {
+                return 'md:grid-cols-2';
+            }
+
+            return 'md:grid-cols-3';
         },
         isOfficialModule(moduleName) {
             return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
