@@ -14,8 +14,8 @@
         <div class="container mx-auto pt-8">
 
             <div v-if="!loaded && !error">
-                <div class="m-auto rounded-lg shadow-lg w-1/3 p-4 bg-gray-300 mb-2 font-bold text-white">
-                    Loading... <span class=" float-right"><font-awesome-icon icon="spinner" spin size="lg"/></span>
+                <div class="m-auto rounded-lg shadow-lg md:w-1/4 p-4 bg-gray-300 mb-2 font-bold text-white">
+                    Loading... <span class="float-right"><font-awesome-icon icon="spinner" spin size="lg"/></span>
                 </div>
             </div>
 
