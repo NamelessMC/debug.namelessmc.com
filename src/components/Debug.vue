@@ -330,8 +330,8 @@
 
         </div>
 
-        <footer v-if="loaded" class="h-24 bg-yellow-400 text-center">
-            <div class="grid grid-cols-4 pt-4">
+        <footer v-if="loaded" class="md:h-28 bg-yellow-400 text-center">
+            <div class="grid md:grid-cols-4 sm:grid-cols-1 md:pt-7">
                 <div></div>
                 <div>
                     <h5 class="section-heading">Debug log version <span class="font-normal" v-html="asCode(data.debug_version)"></span></h5>
