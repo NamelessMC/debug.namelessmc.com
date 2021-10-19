@@ -326,11 +326,19 @@
                     </div>
                     <div>
                         <h5 class="section-heading">Disk usage</h5>
-                        <h2 v-html="humanFileSize(data.enviroment.disk_total_space - data.enviroment.disk_free_space) + ' / ' + humanFileSize(data.enviroment.disk_total_space)"></h2>
+                        <h2 class="text-normal" v-html="humanFileSize(data.enviroment.disk_total_space - data.enviroment.disk_free_space) + ' / ' + humanFileSize(data.enviroment.disk_total_space)"></h2>
                     </div>
                     <div>
                         <h5 class="section-heading">RAM usage</h5>
-                        <h5 v-html="humanFileSize(data.enviroment.memory_used_space) + ' / ' + data.enviroment.memory_total_space"></h5>
+                        <h5 class="text-normal" v-html="humanFileSize(data.enviroment.memory_used_space) + ' / ' + data.enviroment.memory_total_space"></h5>
+                    </div>
+                    <div>
+                        <h5 class="section-heading">Config writable</h5>
+                        <h5 v-html="booleanBadge(data.enviroment.config_writable)"></h5>
+                    </div>
+                    <div>
+                        <h5 class="section-heading">Cache writable</h5>
+                        <h5 v-html="booleanBadge(data.enviroment.cache_writable)"></h5>
                     </div>
                 </div>
             </div>
@@ -361,9 +369,7 @@
 
 <script>
 
-// TODO: disk/ram total, usage
 // TODO: something with php modules
-// TODO: directories writable
 // TODO: finish module debug info
 // TODO: make font sizes match in modules and settings etc
 // TODO: seperate sections into own components
