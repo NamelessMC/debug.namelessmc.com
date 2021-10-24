@@ -3,11 +3,11 @@
 }
 
 .section-title {
-    @apply p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg font-bold text-white dark:text-gray-300
+    @apply p-4 bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg font-bold text-white dark:text-gray-300
 }
 
 .section-title-floating {
-    @apply rounded-lg p-4 h-full bg-blue-400 dark:bg-blue-800 mb-2 rounded-t-lg shadow-lg font-bold text-white dark:text-gray-300
+    @apply rounded-lg p-4 bg-blue-400 dark:bg-blue-800 mb-2 shadow-lg font-bold text-white dark:text-gray-300
 }
 
 .section-content {

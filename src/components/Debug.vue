@@ -1,7 +1,7 @@
 <template>
     <div class="bg-gray-200 dark:bg-gray-900 h-full" v-bind:class="{ 'h-screen': !loaded }">
 
-        <div class="py-12 bg-yellow-400 dark:bg-indigo-900 shadow-lg">
+        <div class="py-9 bg-yellow-400 dark:bg-indigo-900 shadow-lg">
             <div class="container mx-auto flex">
                 <img :src="`${publicPath}logo.png`" alt="NamelessMC logo" class="h-20 mr-4">
                 <h1 class="font-bold text-4xl text-gray-50">
@@ -370,8 +370,8 @@
 <script>
 
 // TODO: something with php modules
+// TODO: group sync rules
 // TODO: finish module debug info
-// TODO: make font sizes match in modules and settings etc
 // TODO: seperate sections into own components
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
@@ -527,6 +527,9 @@ export default {
             const i = Math.floor( Math.log(size) / Math.log(1024) );
             return ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['B', 'kB', 'MB', 'GB', 'TB'][i];
         },
+        templatesSideBySide() {
+            return Object.keys(this.data.namelessmc.templates).length == 1 && Object.keys(this.data.namelessmc.panel_templates).length == 1;
+        }
     },
 }
 
