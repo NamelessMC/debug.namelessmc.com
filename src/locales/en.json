@@ -3,11 +3,17 @@
         "header_title": "NamelessMC Debug Info",
         "generated_at": "Generated at {time}",
         "loading": "Loading...",
-        "error": "Error",
         "empty": "Empty",
         "yes": "Yes",
         "no": "No",
         "official": "OFFICIAL"
+    },
+    "errors": {
+        "error": "Error",
+        "no_id_provided": "No debug link ID provided",
+        "no_data_in_json": "No debug data available in JSON",
+        "invalid_debug_version": "Debug version <strong>{version}</strong> is not supported",
+        "invalid_link_id": "Invalid debug link ID"
     },
     "version_section": {
         "version": "Version",

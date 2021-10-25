@@ -22,7 +22,7 @@
             <div v-if="error">
                 <div class="m-auto rounded-lg bg-red-400 shadow-lg w-1/3">
                     <div class="p-4 h-full bg-red-300 mb-2 rounded-t-lg font-bold text-white">
-                        {{ $t('misc.error') }}
+                        {{ $t('errors.error') }}
                     </div>
                     <div class="pt-2 pb-4 mb-8 pl-4 text-white" v-html="error"></div>
                 </div>
@@ -455,22 +455,22 @@ export default {
         async loadData() {
 
             if (this.key.length == 0) {
-                this.error = 'No debug link ID provided'
+                this.error = this.$t('errors.no_id_provided');
             } else {
                 try {
                     const { data } = await axios.get(`https://paste.rkslot.nl/raw/${this.key}`);
                     this.data = data;
 
                     if (!this.data.generated_at) {
-                        this.error = 'No debug data available in JSON';
+                        this.error = this.$t('errors.no_data_in_json');
                     } else if (this.data.debug_version != 1) {
-                        this.error = `Debug version <strong>${this.data.debug_version}</strong> is not supported`;
+                        this.error = this.$t('errors.invalid_debug_version', { version: this.data.debug_version });
                     } else {
                         this.loaded = true;
                     }
 
                 } catch (err) {
-                    this.error = 'Invalid debug link ID';
+                    this.error = this.$t('errors.invalid_link_id');
                 }
             }
         },
@@ -533,9 +533,6 @@ export default {
             const i = Math.floor( Math.log(size) / Math.log(1024) );
             return ( size / Math.pow(1024, i) ).toFixed(2) * 1 + ' ' + ['B', 'kB', 'MB', 'GB', 'TB'][i];
         },
-        templatesSideBySide() {
-            return Object.keys(this.data.namelessmc.templates).length == 1 && Object.keys(this.data.namelessmc.panel_templates).length == 1;
-        }
     },
 }
 
