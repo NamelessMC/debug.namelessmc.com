@@ -347,7 +347,7 @@
 
         <footer v-if="loaded" class="md:h-28 bg-yellow-400 dark:bg-indigo-900 text-center">
             <div class="grid md:grid-cols-4 sm:grid-cols-1 py-6">
-                <div>
+                <div class="xl:-mr-48">
                     <h5 class="section-heading">{{ $t('footer.debug_log_version') }}: <span class="font-normal" v-html="asCode(data.debug_version)"></span></h5>
                     <h5 class="section-heading">{{ $t('footer.generated_by') }}: <img v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
                     <h5 class="section-heading">{{ $t('footer.raw_json') }}: <a :href="`https://paste.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://paste.rkslot.nl/{{ key }}</span></a></h5>
@@ -355,15 +355,15 @@
                 <div>
                     <button @click="toggleTheme()" class="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-200 font-bold text-sm">{{ $t('footer.theme', { theme: capitalize(this.theme)}) }}</button>
                 </div>
-                <div>
+                <div class="text-normal">
                     <font-awesome-icon icon="globe"/>
-                    <select v-model="$i18n.locale" class="ml-2 p-2 h-12 rounded-md bg-gray-200">
+                    <select v-model="$i18n.locale" class="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900">
                         <option v-for="lang of $i18n.availableLocales" :key="lang" :value="lang">
                             {{ lang }}
                         </option>
                     </select>
                 </div>
-                <div>
+                <div class="xl:-ml-48">
                     <h5 class="section-heading">{{ $t('footer.namelessmc_website') }}: <a href="https://namelessmc.com" target="_blank"><span class="font-normal">https://namelessmc.com</span></a></h5>
                     <h5 class="section-heading">{{ $t('footer.get_support') }}: <a href="https://discord.gg/nameless" target="_blank"><span class="font-normal">https://discord.gg/nameless</span></a></h5>
                     <h5 class="section-heading">{{ $t('footer.made_with_love') }}</h5>
@@ -379,8 +379,10 @@
 // TODO: group sync rules
 // TODO: finish module debug info
 // TODO: seperate sections into own components
+// TODO: display templates+panel templates side by side if there is only 1 of each
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
+// TODO: latest php error in dropdown <pre></pre>
 
 import axios from 'axios';
 
