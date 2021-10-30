@@ -1,1 +1,89 @@
-{}
+{
+    "misc": {
+        "header_title": "Feilsøkingsinformasjon for NamelessMC",
+        "generated_at": "Generert {time}",
+        "loading": "Laster inn...",
+        "empty": "Tomt",
+        "yes": "Ja",
+        "no": "Nei",
+        "official": "OFFISIELL"
+    },
+    "errors": {
+        "error": "Feil",
+        "no_id_provided": "Ingen feilsøkings-ID angitt",
+        "no_data_in_json": "Ingen feilsøkingsdata tilgjengelig i JSON",
+        "invalid_debug_version": "Feilsøkingsversjon <strong>{version}</strong> er ikke støttet"
+    },
+    "version_section": {
+        "version": "Versjon",
+        "update_available": "Oppdatering tilgjengelig",
+        "last_update_check": "Siste oppdateringssjekk"
+    },
+    "settings_section": {
+        "settings": "Innstillinger",
+        "phpmailer_enabled": "PHPMailer aktivert",
+        "api_enabled": "API aktivert",
+        "api_verification_enabled": "API-verifisering aktivert",
+        "email_verification_enabled": "E-postverifisering aktivert",
+        "login_method": "Påloggingsmetode",
+        "captcha_login_page": "Captcha på innloggingsside",
+        "captcha_contact_page": "Captcha på kontaktside",
+        "captcha_type": "Captcha-type"
+    },
+    "config_section": {
+        "config": "Konfigurering",
+        "path": "Sti",
+        "force_https": "Tving HTTPS",
+        "force_www": "Tving www",
+        "allowed_proxies": "Tillatte proxies"
+    },
+    "modules_section": {
+        "modules": "Moduler",
+        "author": "Utgiver",
+        "enabled": "Aktivert",
+        "version": "Versjon",
+        "debug_info": "Feilsøkingsinformasjon",
+        "core": {
+            "minecraft_integration": "Minecraft-integrering",
+            "uuid_linking": "UUID-tilknytning",
+            "servers": "Servere",
+            "id": "ID",
+            "name": "Navn",
+            "ip": "IP",
+            "integration_enabled": "Integrering aktivert",
+            "port": "Port"
+        },
+        "discord_integration": {
+            "guild_id": "Guild-ID",
+            "bot_setup": "Botoppsett",
+            "bot_url": "Bot-URL"
+        },
+        "namelessmc_version": "NamelessMC-versjon"
+    },
+    "templates_section": {
+        "templates": "Maler",
+        "enabled": "Aktivert",
+        "author": "Utgiver",
+        "namelessmc_version": "NamelessMC-versjon",
+        "version": "Versjon",
+        "is_default": "Er standard"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Panelmaler",
+        "enabled": "Aktivert",
+        "is_default": "Er standard",
+        "author": "Utgiver",
+        "version": "Versjon",
+        "namelessmc_version": "NamelessMC-versjon"
+    },
+    "enviroment_section": {
+        "php_version": "PHP-versjon"
+    },
+    "footer": {
+        "generated_by": "Generert av",
+        "theme": "Tema: {theme}",
+        "namelessmc_website": "NamelessMC-nettside",
+        "get_support": "Få hjelp",
+        "made_with_love": "Laget med ❤️"
+    }
+}
