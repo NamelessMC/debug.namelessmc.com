@@ -1,1 +1,104 @@
-{}
+{
+    "misc": {
+        "loading": "Laden...",
+        "empty": "Leeg",
+        "yes": "Ja",
+        "no": "Nee",
+        "official": "OFFICIEEL",
+        "header_title": "NamelessMC Debuginformatie",
+        "generated_at": "Gegenereerd op {time}"
+    },
+    "errors": {
+        "error": "Error",
+        "no_data_in_json": "Geen debug data beschikbaar in JSON",
+        "invalid_link_id": "Ongeldige debug link id",
+        "no_id_provided": "Geen debug link id opgegeven",
+        "invalid_debug_version": "Debugversie <strong>{version}</strong> wordt niet ondersteund"
+    },
+    "version_section": {
+        "version": "Versie",
+        "update_available": "Update beschikbaar"
+    },
+    "settings_section": {
+        "settings": "Instellingen",
+        "phpmailer_enabled": "PHPMailer ingeschakeld",
+        "email_verification_enabled": "E-mailverificatie ingeschakeld",
+        "login_method": "Inlogmethode",
+        "captcha_type": "Captcha-type",
+        "captcha_login_page": "Captcha op inlogpagina",
+        "captcha_contact_page": "Captcha op contactpagina",
+        "api_enabled": "API ingeschakeld",
+        "api_verification_enabled": "API-verificatie ingeschakeld"
+    },
+    "config_section": {
+        "path": "Pad",
+        "friendly_urls": "Mooie URLs",
+        "force_https": "Forceer HTTPS",
+        "allowed_proxies": "Toegestane proxies",
+        "config": "Configuratie",
+        "force_www": "Forceer www"
+    },
+    "modules_section": {
+        "modules": "Modules",
+        "enabled": "Ingeschakeld",
+        "namelessmc_version": "NamelessMC versie",
+        "version": "Versie",
+        "core": {
+            "minecraft_integration": "Minecraft integratie",
+            "integration_enabled": "Integratie ingeschakeld",
+            "uuid_linking": "UUID koppeling",
+            "username_sync": "Gebruikersnaamsynchronisatie",
+            "external_query": "Extern opvragen",
+            "id": "ID",
+            "name": "Naam",
+            "query_ip": "Query IP-adres",
+            "port": "Poort",
+            "servers": "Servers",
+            "ip": "IP-adres",
+            "query_port": "Querypoort"
+        },
+        "discord_integration": {
+            "syncing_enabled": "Synchronisatie ingeschakeld",
+            "guild_id": "Guild ID",
+            "bot_setup": "Bot ingesteld",
+            "bot_url": "Bot URL"
+        },
+        "author": "Auteur",
+        "debug_info": "Debuginformatie"
+    },
+    "templates_section": {
+        "templates": "Templates",
+        "enabled": "Ingeschakeld",
+        "is_default": "Is standaard",
+        "author": "Auteur",
+        "namelessmc_version": "NamelessMC versie",
+        "version": "versie"
+    },
+    "panel_templates_section": {
+        "is_default": "Is standaard",
+        "author": "Auteur",
+        "version": "Versie",
+        "enabled": "Ingeschakeld",
+        "namelessmc_version": "NamelessMC versie"
+    },
+    "enviroment_section": {
+        "enviroment": "Omgeving",
+        "host_os": "Host besturingssysteem",
+        "using_docker_image": "Gebruikt officiële Docker image",
+        "disk_usage": "Opslaggebruik",
+        "ram_usage": "Werkgeheugengebruik",
+        "config_writable": "Configuratiebestand schrijfbaar",
+        "cache_writable": "Cache schrijfbaar",
+        "php_version": "PHP versie",
+        "host_kernel_version": "Host kernelversie"
+    },
+    "footer": {
+        "generated_by": "Gegenereerd door",
+        "raw_json": "Originele JSON",
+        "theme": "Thema: {theme}",
+        "namelessmc_website": "NamelessMC website",
+        "get_support": "Krijg ondersteuning",
+        "made_with_love": "Met ❤️ gemaakt",
+        "debug_log_version": "Debuglog versie"
+    }
+}
