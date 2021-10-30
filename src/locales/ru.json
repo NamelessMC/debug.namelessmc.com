@@ -1,1 +1,85 @@
-{}
+{
+    "misc": {
+        "loading": "Загрузка...",
+        "empty": "Пусто",
+        "no": "Нет",
+        "header_title": "Отладочная информация NamelessMC",
+        "generated_at": "Сгенерирован {time}",
+        "yes": "Да",
+        "official": "ОФИЦИАЛЬНОЕ"
+    },
+    "errors": {
+        "error": "Ошибка",
+        "no_id_provided": "Не предоставлен ID отладочной ссылки",
+        "invalid_debug_version": "Отладка версии <strong>{version}</strong> не поддерживается",
+        "no_data_in_json": "Нету отладочной информации в JSON формате"
+    },
+    "version_section": {
+        "last_update_check": "Последняя проверка обновлений была",
+        "version": "Версия",
+        "update_available": "Доступно обновление"
+    },
+    "settings_section": {
+        "settings": "Настройки",
+        "phpmailer_enabled": "PHPMailer включён",
+        "api_enabled": "API включён",
+        "login_method": "Метод входа",
+        "captcha_login_page": "Капча на странице входа",
+        "captcha_contact_page": "Капча на странице контаков",
+        "api_verification_enabled": "API верификация включена",
+        "email_verification_enabled": "Верификация почты включена",
+        "captcha_type": "Тип капчи"
+    },
+    "config_section": {
+        "path": "Путь",
+        "friendly_urls": "Дружелюбные ссылки",
+        "force_https": "Прунудительное HTTPS",
+        "config": "Конфиг",
+        "force_www": "Принудительный WWW"
+    },
+    "modules_section": {
+        "modules": "Модули",
+        "enabled": "Включён",
+        "namelessmc_version": "Версия NamelessMC",
+        "version": "Версия",
+        "debug_info": "Отладочная информация",
+        "core": {
+            "integration_enabled": "Интеграция включена",
+            "servers": "Сервера",
+            "id": "ID",
+            "name": "Название",
+            "ip": "IP",
+            "minecraft_integration": "Интеграция с Minecraft",
+            "username_sync": "Сихронизация никнеймов",
+            "port": "Порт"
+        },
+        "discord_integration": {
+            "syncing_enabled": "Сихронизация включена"
+        },
+        "author": "Автор"
+    },
+    "templates_section": {
+        "author": "Автор",
+        "templates": "Стили оформления",
+        "enabled": "Включён",
+        "version": "Версия",
+        "namelessmc_version": "Версия NamelessMC"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Оформление ПУ",
+        "author": "Автор",
+        "version": "Версия",
+        "namelessmc_version": "Версия NamelessMC",
+        "enabled": "Включён"
+    },
+    "enviroment_section": {
+        "php_version": "Версия PHP",
+        "host_os": "ОС хоста",
+        "host_kernel_version": "Версия ядра хоста"
+    },
+    "footer": {
+        "get_support": "Получить помощь",
+        "made_with_love": "Сделано с ❤️",
+        "namelessmc_website": "Сайт NamelessMC"
+    }
+}
