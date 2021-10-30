@@ -17,7 +17,8 @@
     },
     "version_section": {
         "version": "Versie",
-        "update_available": "Update beschikbaar"
+        "update_available": "Update beschikbaar",
+        "last_update_check": "Laatste update check"
     },
     "settings_section": {
         "settings": "Instellingen",
@@ -79,7 +80,8 @@
         "author": "Auteur",
         "version": "Versie",
         "enabled": "Ingeschakeld",
-        "namelessmc_version": "NamelessMC versie"
+        "namelessmc_version": "NamelessMC versie",
+        "panel_templates": "Paneel Sjablonen"
     },
     "enviroment_section": {
         "enviroment": "Omgeving",
