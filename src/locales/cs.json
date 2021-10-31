@@ -1,1 +1,106 @@
-{}
+{
+    "misc": {
+        "header_title": "Ladicí informace NamelessMC",
+        "generated_at": "Vygenerováno {time}",
+        "loading": "Načítání...",
+        "empty": "Prázdné",
+        "yes": "Ano",
+        "no": "Ne",
+        "official": "OFICIÁLNÍ"
+    },
+    "errors": {
+        "no_id_provided": "Nebylo poskytnuto ID odkazu ladění",
+        "error": "Chyba",
+        "no_data_in_json": "V JSON nejsou dostupná žádná ladicí data",
+        "invalid_debug_version": "Ladění verze <strong>{version}</strong> není podporováno",
+        "invalid_link_id": "Neplatné ID odkazu ladění"
+    },
+    "settings_section": {
+        "phpmailer_enabled": "PHPMailer povolen",
+        "api_verification_enabled": "Ověřování pomocí API povoleno",
+        "captcha_login_page": "Captcha na přihlašovací stránce",
+        "settings": "Nastavení",
+        "api_enabled": "API povoleno",
+        "email_verification_enabled": "Ověřování pomocí e-mailů povoleno",
+        "login_method": "Způsob přihlášení",
+        "captcha_type": "Typ Captchy",
+        "captcha_contact_page": "Captcha na kontaktní stránce"
+    },
+    "config_section": {
+        "path": "Cesta",
+        "config": "Konfigurace",
+        "friendly_urls": "Přátelské URL",
+        "force_https": "Vynucení HTTPS",
+        "force_www": "Vynucení wwww",
+        "allowed_proxies": "Povolené proxy"
+    },
+    "modules_section": {
+        "namelessmc_version": "Verze NamelessMC",
+        "core": {
+            "integration_enabled": "Integrace povolena",
+            "username_sync": "Synchronizace uživatelských jmen",
+            "name": "Název",
+            "minecraft_integration": "Integrace Minecraftu",
+            "uuid_linking": "Propojení UUID",
+            "external_query": "Externí query",
+            "servers": "Servery",
+            "id": "ID",
+            "ip": "IP",
+            "query_ip": "IP query",
+            "port": "Port",
+            "query_port": "Port query"
+        },
+        "discord_integration": {
+            "syncing_enabled": "Synchronizace povolena",
+            "guild_id": "ID serveru",
+            "bot_setup": "Bot nastaven",
+            "bot_url": "URL bota"
+        },
+        "modules": "Doplňky",
+        "author": "Autor",
+        "enabled": "Povolen",
+        "version": "Verze",
+        "debug_info": "Ladicí informace"
+    },
+    "templates_section": {
+        "templates": "Šablony",
+        "enabled": "Povolena",
+        "is_default": "Je výchozí",
+        "author": "Autor",
+        "namelessmc_version": "Verze NamelessMC",
+        "version": "Verze"
+    },
+    "panel_templates_section": {
+        "is_default": "Je výchozí",
+        "panel_templates": "Šablony panelu",
+        "enabled": "Povolena",
+        "author": "Autor",
+        "version": "Verze",
+        "namelessmc_version": "Verze NamelessMC"
+    },
+    "version_section": {
+        "version": "Verze",
+        "update_available": "Dostupná aktualizace",
+        "last_update_check": "Poslední kontrola aktualizací"
+    },
+    "enviroment_section": {
+        "enviroment": "Prostředí",
+        "host_os": "Hostitelský OS",
+        "host_kernel_version": "Verze jádra",
+        "disk_usage": "Využití disku",
+        "ram_usage": "Využití RAM",
+        "config_writable": "Konfig. soubor zapisovatelný",
+        "cache_writable": "Mezipaměť zapisovatelná",
+        "php_version": "Verze PHP",
+        "using_docker_image": "Používán oficiální Docker image"
+    },
+    "footer": {
+        "generated_by": "Vygenerováno uživatelem",
+        "raw_json": "Prosté JSON",
+        "theme": "Téma: {theme}",
+        "namelessmc_website": "Web NamelessMC",
+        "get_support": "Podpora",
+        "made_with_love": "Vytvořeno s ❤️",
+        "debug_log_version": "Verze protokolu ladění"
+    }
+}
