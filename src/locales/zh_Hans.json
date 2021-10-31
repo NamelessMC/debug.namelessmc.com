@@ -1,1 +1,106 @@
-{}
+{
+    "misc": {
+        "generated_at": "生成时间: {time}",
+        "loading": "加载中...",
+        "empty": "空",
+        "yes": "是",
+        "no": "否",
+        "official": "官方",
+        "header_title": "NamelessMC 调试信息"
+    },
+    "errors": {
+        "no_id_provided": "没有提供调试链接 ID",
+        "invalid_debug_version": "调试版本 <strong>{version}</strong> 不受支持",
+        "invalid_link_id": "无效调试链接 ID",
+        "error": "错误",
+        "no_data_in_json": "没有 JSON 格式的可用调试数据"
+    },
+    "version_section": {
+        "version": "版本",
+        "update_available": "更新可用",
+        "last_update_check": "上次检查更新"
+    },
+    "settings_section": {
+        "settings": "设置",
+        "api_enabled": "API 是否启用",
+        "email_verification_enabled": "邮箱验证是否启用",
+        "login_method": "登录方式",
+        "captcha_type": "验证码类型",
+        "captcha_login_page": "登录页验证码",
+        "captcha_contact_page": "联系页验证码",
+        "phpmailer_enabled": "PHPMailer 是否启用",
+        "api_verification_enabled": "API 验证是否启用"
+    },
+    "config_section": {
+        "path": "路径",
+        "friendly_urls": "友好链接",
+        "force_https": "强制 HTTPS",
+        "force_www": "强制 www",
+        "allowed_proxies": "允许的代理",
+        "config": "配置"
+    },
+    "modules_section": {
+        "modules": "模块",
+        "enabled": "启用",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "debug_info": "调试信息",
+        "core": {
+            "minecraft_integration": "Minecraft 集成",
+            "integration_enabled": "集成是否启用",
+            "username_sync": "用户名同步",
+            "servers": "服务器",
+            "id": "ID",
+            "name": "名字",
+            "ip": "IP",
+            "port": "端口",
+            "query_ip": "查询 (Query) IP",
+            "uuid_linking": "UUID 链接",
+            "external_query": "外部查询 (Query)",
+            "query_port": "查询 (Query) 端口"
+        },
+        "discord_integration": {
+            "syncing_enabled": "同步是否启用",
+            "guild_id": "服务器 ID",
+            "bot_setup": "机器人配置",
+            "bot_url": "机器人链接"
+        },
+        "author": "作者"
+    },
+    "templates_section": {
+        "templates": "模板",
+        "enabled": "启用",
+        "is_default": "是否是默认模板",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "author": "作者"
+    },
+    "panel_templates_section": {
+        "panel_templates": "面板模板",
+        "enabled": "启用",
+        "is_default": "是否是默认模板",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "author": "作者"
+    },
+    "enviroment_section": {
+        "enviroment": "环境",
+        "php_version": "PHP 版本",
+        "host_os": "主机操作系统",
+        "host_kernel_version": "主机内核版本",
+        "disk_usage": "硬盘用量",
+        "ram_usage": "内存用量",
+        "config_writable": "配置是否可写",
+        "cache_writable": "缓存是否可写",
+        "using_docker_image": "使用官方 Docker image"
+    },
+    "footer": {
+        "debug_log_version": "调试日志版本",
+        "generated_by": "生成工具",
+        "raw_json": "Raw JSON",
+        "theme": "主题: {theme}",
+        "namelessmc_website": "NamelessMC 网站",
+        "get_support": "获得支持",
+        "made_with_love": "用 ❤️ 打造"
+    }
+}
