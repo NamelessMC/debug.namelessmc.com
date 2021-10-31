@@ -12,7 +12,8 @@
         "error": "Ошибка",
         "no_id_provided": "Не предоставлен ID отладочной ссылки",
         "invalid_debug_version": "Отладка версии <strong>{version}</strong> не поддерживается",
-        "no_data_in_json": "Нету отладочной информации в JSON формате"
+        "no_data_in_json": "Нету отладочной информации в JSON формате",
+        "invalid_link_id": "Некорректная ссылка отладки"
     },
     "version_section": {
         "last_update_check": "Последняя проверка обновлений была",
@@ -35,7 +36,8 @@
         "friendly_urls": "Дружелюбные ссылки",
         "force_https": "Прунудительное HTTPS",
         "config": "Конфиг",
-        "force_www": "Принудительный WWW"
+        "force_www": "Принудительный WWW",
+        "allowed_proxies": "Разрешённые прокси"
     },
     "modules_section": {
         "modules": "Модули",
@@ -51,10 +53,14 @@
             "ip": "IP",
             "minecraft_integration": "Интеграция с Minecraft",
             "username_sync": "Сихронизация никнеймов",
-            "port": "Порт"
+            "port": "Порт",
+            "uuid_linking": "UUID привязка"
         },
         "discord_integration": {
-            "syncing_enabled": "Сихронизация включена"
+            "syncing_enabled": "Сихронизация включена",
+            "guild_id": "ID канала",
+            "bot_setup": "Бот настроен",
+            "bot_url": "URL бота"
         },
         "author": "Автор"
     },
@@ -63,23 +69,35 @@
         "templates": "Стили оформления",
         "enabled": "Включён",
         "version": "Версия",
-        "namelessmc_version": "Версия NamelessMC"
+        "namelessmc_version": "Версия NamelessMC",
+        "is_default": "По умолчанию"
     },
     "panel_templates_section": {
         "panel_templates": "Оформление ПУ",
         "author": "Автор",
         "version": "Версия",
         "namelessmc_version": "Версия NamelessMC",
-        "enabled": "Включён"
+        "enabled": "Включён",
+        "is_default": "По умолчанию"
     },
     "enviroment_section": {
         "php_version": "Версия PHP",
         "host_os": "ОС хоста",
-        "host_kernel_version": "Версия ядра хоста"
+        "host_kernel_version": "Версия ядра хоста",
+        "using_docker_image": "Используется оф. образ для Docker'a",
+        "cache_writable": "Папка Cache имеет права на запись",
+        "enviroment": "Окружение системы",
+        "disk_usage": "Использование диска",
+        "ram_usage": "Использование ОЗУ",
+        "config_writable": "Право на доступ к config.php"
     },
     "footer": {
         "get_support": "Получить помощь",
         "made_with_love": "Сделано с ❤️",
-        "namelessmc_website": "Сайт NamelessMC"
+        "namelessmc_website": "Сайт NamelessMC",
+        "debug_log_version": "Версия отладочного журнала",
+        "generated_by": "Сгенерировал",
+        "raw_json": "Raw JSON",
+        "theme": "Оформление: {theme}"
     }
 }
