@@ -1,1 +1,16 @@
-{}
+{
+    "misc": {
+        "generated_at": "Generado a las {hora}",
+        "loading": "Cargando...",
+        "empty": "Vacío",
+        "yes": "Sí",
+        "no": "No",
+        "official": "OFICIAL",
+        "header_title": "Información de depuración de NamelessMC"
+    },
+    "errors": {
+        "no_id_provided": "No se ha proporcionado el ID del enlace de depuración",
+        "error": "Error",
+        "no_data_in_json": "No hay datos de depuración disponibles en JSON"
+    }
+}
