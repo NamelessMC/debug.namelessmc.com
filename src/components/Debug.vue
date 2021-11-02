@@ -28,25 +28,28 @@
                 </div>
             </div>
 
-            <!-- NamelessMC version section -->
             <VersionSection v-if="loaded" :data="data" />
 
-            <!-- NamelessMC settings section -->
             <SettingsSection v-if="loaded" :data="data" />
 
-            <!-- NamelessMC config section -->
             <ConfigSection v-if="loaded" :data="data" />
 
-            <!-- NamelessMC modules section -->
             <ModulesSection v-if="loaded" :data="data" />
 
-            <!-- NamelessMC front end templates section -->
-            <FrontEndTemplatesSection v-if="loaded" :data="data" />
+            <div v-if="loaded && displayTemplatesSideBySide()" class="md:grid grid-cols-2 gap-4">
+                <div>
+                    <FrontEndTemplatesSection v-if="loaded" :data="data" />
+                </div>
+                <div>
+                    <PanelTemplatesSection v-if="loaded" :data="data" />
+                </div>
+            </div>
+            <div v-else>
+                <FrontEndTemplatesSection v-if="loaded" :data="data" />
 
-            <!-- NamelessMC panel templates section -->
-            <PanelTemplatesSection v-if="loaded" :data="data" />
+                <PanelTemplatesSection v-if="loaded" :data="data" />
+            </div>
 
-            <!-- Enviroment section -->
             <EnviromentSection v-if="loaded" :data="data" />
 
         </div>
@@ -85,7 +88,6 @@
 // TODO: something with php modules
 // TODO: group sync rules
 // TODO: finish module debug info
-// TODO: display templates+panel templates side by side if there is only 1 of each
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
 // TODO: latest php error in dropdown <pre></pre>
@@ -152,6 +154,10 @@ export default {
                     this.error = this.$t('errors.invalid_link_id');
                 }
             }
+        },
+        displayTemplatesSideBySide() {
+            return Object.keys(this.data.namelessmc.templates.front_end).length == 1 
+                    && Object.keys(this.data.namelessmc.templates.panel).length == 1;
         },
         setDefaultTheme(forcedTheme = null) {
             let theme = 'light';
