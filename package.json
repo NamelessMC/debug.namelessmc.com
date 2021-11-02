@@ -14,11 +14,11 @@
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9",
-    "axios": "^0.23.0",
+    "axios": "^0.24.0",
     "core-js": "^3.6.5",
-    "postcss": "^7",
+    "postcss": "^8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "vue": "^3.0.0",
+    "vue": "^3.2.21",
     "vue-i18n": "^9.1.0"
   },
   "devDependencies": {
