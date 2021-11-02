@@ -63,7 +63,7 @@
                 </div>
                 <div class="text-normal">
                     <font-awesome-icon icon="globe"/>
-                    <select v-model="$i18n.locale" class="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900">
+                    <select v-model="$i18n.locale" @change="saveLocale($event)" class="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900">
                         <option v-for="lang of $i18n.availableLocales" :key="lang" :value="lang">
                             {{ lang }}
                         </option>
@@ -198,6 +198,9 @@ export default {
                     this.renderTheme();
                 });
             }
+        },
+        saveLocale(event) {
+            window.localStorage.setItem('nmc-debug-locale', event.target.value);
         },
     },
 }
