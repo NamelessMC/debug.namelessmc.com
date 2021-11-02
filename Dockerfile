@@ -4,7 +4,7 @@ RUN mkdir /build
 WORKDIR /build
 
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci
 
 # only now add the rest of the application code, so the npm install layer can be cached
 COPY . .
