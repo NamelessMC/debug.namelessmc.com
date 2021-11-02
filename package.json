@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-5",
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@vue/cli-shared-utils": "^4.5.15",
     "autoprefixer": "^9",
     "axios": "^0.24.0",
     "core-js": "^3.19.0",
