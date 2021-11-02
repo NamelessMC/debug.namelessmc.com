@@ -43,7 +43,7 @@ export default {
         return 'md:grid-cols-3';
     },
     isOfficialModule(moduleName) {
-        return ['Core', 'Forum', 'Discord Integration'].includes(moduleName);
+        return ['Core', 'Forum', 'Discord Integration', 'Cookie Consent'].includes(moduleName);
     },
     isOfficialTemplate(templateName) {
         return ['DefaultRevamp', 'Default'].includes(templateName)
