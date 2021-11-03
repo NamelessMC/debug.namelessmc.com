@@ -6,7 +6,7 @@
 import Debug from './components/Debug.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSpinner, faDownload, faCogs, faWrench, faPuzzlePiece, faPaintBrush, faTachometerAlt, faServer, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner, faDownload, faCogs, faWrench, faPuzzlePiece, faSyncAlt, faPaintBrush, faTachometerAlt, faServer, faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faSpinner,
@@ -14,6 +14,7 @@ library.add(
     faCogs,
     faWrench,
     faPuzzlePiece,
+    faSyncAlt,
     faPaintBrush,
     faTachometerAlt,
     faServer,

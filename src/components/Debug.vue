@@ -36,6 +36,8 @@
 
             <ModulesSection v-if="loaded" :data="data" />
 
+            <GroupSyncSection v-if="loaded" :data="data" />
+
             <div v-if="loaded && displayTemplatesSideBySide()" class="md:grid grid-cols-2 gap-4">
                 <div>
                     <FrontEndTemplatesSection v-if="loaded" :data="data" />
@@ -86,7 +88,6 @@
 <script>
 
 // TODO: something with php modules
-// TODO: group sync rules
 // TODO: finish module debug info
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
@@ -94,13 +95,14 @@
 
 import axios from 'axios';
 
-import VersionSection from './VersionSection.vue';
-import SettingsSection from './SettingsSection.vue';
-import ConfigSection from './ConfigSection.vue';
-import ModulesSection from './ModulesSection.vue';
-import EnviromentSection from './EnviromentSection.vue';
-import FrontEndTemplatesSection from './FrontEndTemplatesSection.vue';
-import PanelTemplatesSection from './PanelTemplatesSection.vue';
+import VersionSection from './sections/VersionSection.vue';
+import SettingsSection from './sections/SettingsSection.vue';
+import ConfigSection from './sections/ConfigSection.vue';
+import ModulesSection from './sections/ModulesSection.vue';
+import GroupSyncSection from './sections/GroupSyncSection.vue';
+import EnviromentSection from './sections/EnviromentSection.vue';
+import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
+import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
 
 export default {
     components: {
@@ -108,6 +110,7 @@ export default {
         SettingsSection,
         ConfigSection,
         ModulesSection,
+        GroupSyncSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
         EnviromentSection,

@@ -67,6 +67,15 @@
             "bot_url": "Bot URL"
         }
     },
+    "group_sync_section": {
+        "group_sync": "Group Sync",
+        "injectors": "Injectors",
+        "name": "Name",
+        "enabled": "Enabled",
+        "module": "Module",
+        "column_name": "Column Name",
+        "rules": "Rules"
+    },
     "templates_section": {
         "templates": "Templates",
         "enabled": "Enabled",

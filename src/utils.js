@@ -20,14 +20,14 @@ export default {
             : `<span class="font-bold text-base text-yellow-500">${this.$t('misc.no')}</span>`;
     },
     asCode(value) {
-        return `<span class="text-sm text-black dark:text-gray-300 font-normal font-mono">${value}</span`;
+        return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span`;
     },
     isEmpty(value, code = false) {
         return !value
-            ? `<i class="font-normal text-base dark:text-gray-300">${this.$t('misc.empty')}</i>`
+            ? `<i class="font-normal text-base text-normal">${this.$t('misc.empty')}</i>`
             : code
                 ? this.asCode(value)
-                : `<span class="font-normal text-base dark:text-gray-300">${value}</span>`;
+                : `<span class="font-normal text-base text-normal">${value}</span>`;
     },
     gridColsClass(obj) {
         let count = Object.keys(obj).length;
