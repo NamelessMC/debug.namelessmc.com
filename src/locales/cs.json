@@ -102,5 +102,14 @@
         "get_support": "Podpora",
         "made_with_love": "Vytvořeno s ❤️",
         "debug_log_version": "Verze protokolu ladění"
+    },
+    "group_sync_section": {
+        "injectors": "Vložení",
+        "name": "Název",
+        "module": "Doplněk",
+        "column_name": "Název sloupce",
+        "rules": "Pravidla",
+        "group_sync": "Synchronizace skupin",
+        "enabled": "Povolena"
     }
 }
