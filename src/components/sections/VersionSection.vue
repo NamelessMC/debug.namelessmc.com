@@ -10,7 +10,7 @@
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('version_section.update_available') }}</h5>
-                <h5 v-html="booleanBadge(data.namelessmc.update_available, true, true)"></h5>
+                <h5 v-html="booleanBadge(data.namelessmc.update_available, true)"></h5>
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('version_section.last_update_check') }}</h5>
