@@ -6,7 +6,9 @@
         "empty": "Empty",
         "yes": "Yes",
         "no": "No",
-        "official": "OFFICIAL"
+        "official": "OFFICIAL",
+        "light": "Light",
+        "dark": "Dark"
     },
     "errors": {
         "error": "Error",
