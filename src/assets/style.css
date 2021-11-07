@@ -29,3 +29,15 @@
 .text-normal {
     @apply dark:text-gray-300
 }
+
+.table-container {
+    @apply w-full text-center shadow-xl mt-4 bg-gray-200 dark:bg-gray-900 rounded-b-lg
+}
+
+.table-title {
+    @apply bg-blue-500 px-8 py-4 text-gray-200
+}
+
+.table-data {
+    @apply text-normal px-8 py-2
+}

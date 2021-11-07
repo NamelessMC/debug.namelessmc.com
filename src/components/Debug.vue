@@ -88,6 +88,7 @@
 <script>
 
 // TODO: something with php modules
+// TODO: something with namelessmc groups
 // TODO: finish module debug info
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage

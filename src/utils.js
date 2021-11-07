@@ -14,10 +14,18 @@ export default {
 
         return `${day} ${time}`;
     },
-    booleanBadge(value) {
+    booleanBadge(value, inverted = false) {
+        const yesClassName = inverted
+            ? 'text-yellow-500'
+            : 'text-green-600';
+
+        const noClassName = inverted
+            ? 'text-green-600'
+            : 'text-yellow-500';
+
         return value
-            ? `<span class="font-bold text-base text-green-600">${this.$t('misc.yes')}</span>`
-            : `<span class="font-bold text-base text-yellow-500">${this.$t('misc.no')}</span>`;
+            ? `<span class="font-bold text-base ${yesClassName}">${this.$t('misc.yes')}</span>`
+            : `<span class="font-bold text-base ${noClassName}">${this.$t('misc.no')}</span>`;
     },
     asCode(value) {
         return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span`;
@@ -36,7 +44,7 @@ export default {
             return 'md:grid-cols-1';
         }
 
-        if (count == 2) {
+        if (count == 2 || count % 2 == 0) {
             return 'md:grid-cols-2';
         }
 
@@ -53,9 +61,5 @@ export default {
     },
     capitalize(string) {
         return string[0].toUpperCase() + string.substring(1);
-    },
-    humanFileSize(size) {
-        const i = Math.floor(Math.log(size) / Math.log(1024));
-        return (size / Math.pow(1024, i)).toFixed(2) * 1 + ' ' + ['B', 'kB', 'MB', 'GB', 'TB'][i];
     },
 }
