@@ -6,7 +6,9 @@
         "no": "Nee",
         "official": "OFFICIEEL",
         "header_title": "NamelessMC Debuginformatie",
-        "generated_at": "Gegenereerd op {time}"
+        "generated_at": "Gegenereerd op {time}",
+        "light": "Licht",
+        "dark": "Donker"
     },
     "errors": {
         "error": "Error",
@@ -102,5 +104,14 @@
         "get_support": "Krijg ondersteuning",
         "made_with_love": "Met ❤️ gemaakt",
         "debug_log_version": "Debuglog versie"
+    },
+    "group_sync_section": {
+        "module": "Module",
+        "group_sync": "Groep Sync",
+        "injectors": "Injectoren",
+        "name": "Naam",
+        "enabled": "Ingeschakeld",
+        "column_name": "Kolom Naam",
+        "rules": "Regels"
     }
 }
