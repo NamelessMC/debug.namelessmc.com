@@ -6,7 +6,9 @@
         "empty": "Prázdné",
         "yes": "Ano",
         "no": "Ne",
-        "official": "OFICIÁLNÍ"
+        "official": "OFICIÁLNÍ",
+        "light": "Světlé",
+        "dark": "Tmavé"
     },
     "errors": {
         "no_id_provided": "Nebylo poskytnuto ID odkazu ladění",
