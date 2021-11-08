@@ -20,8 +20,8 @@
             </div>
 
             <div v-if="error">
-                <div class="m-auto rounded-lg bg-red-400 shadow-lg w-1/3">
-                    <div class="p-4 h-full bg-red-300 mb-2 rounded-t-lg font-bold text-white">
+                <div class="m-auto rounded-lg bg-red-400 dark:bg-red-500 shadow-lg w-1/3">
+                    <div class="p-4 h-full bg-red-300 dark:bg-red-400 mb-2 rounded-t-lg font-bold text-white">
                         {{ $t('errors.error') }}
                     </div>
                     <div class="pt-2 pb-4 mb-8 pl-4 text-white" v-html="error"></div>
