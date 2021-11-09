@@ -158,7 +158,7 @@ export default {
                     }
 
                 } catch (err) {
-                    this.error = this.$t('errors.invalid_link_id');
+                    this.error = err;
                 }
             }
         },
