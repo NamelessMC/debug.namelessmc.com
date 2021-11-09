@@ -85,8 +85,8 @@
         "namelessmc_version": "NamelessMC versie",
         "panel_templates": "Paneel Sjablonen"
     },
-    "enviroment_section": {
-        "enviroment": "Omgeving",
+    "environment_section": {
+        "environment": "Omgeving",
         "host_os": "Host besturingssysteem",
         "using_docker_image": "Gebruikt officiële Docker image",
         "disk_usage": "Opslaggebruik",

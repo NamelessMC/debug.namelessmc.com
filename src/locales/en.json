@@ -94,8 +94,8 @@
         "namelessmc_version": "NamelessMC version",
         "version": "Version"
     },
-    "enviroment_section": {
-        "enviroment": "Enviroment",
+    "environment_section": {
+        "environment": "Environment",
         "php_version": "PHP version",
         "host_os": "Host OS",
         "host_kernel_version": "Host kernel version",

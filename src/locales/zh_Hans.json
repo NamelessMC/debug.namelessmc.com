@@ -83,8 +83,8 @@
         "version": "版本",
         "author": "作者"
     },
-    "enviroment_section": {
-        "enviroment": "环境",
+    "environment_section": {
+        "environment": "环境",
         "php_version": "PHP 版本",
         "host_os": "主机操作系统",
         "host_kernel_version": "主机内核版本",

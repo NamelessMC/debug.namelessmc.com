@@ -80,13 +80,13 @@
         "enabled": "Включён",
         "is_default": "По умолчанию"
     },
-    "enviroment_section": {
+    "environment_section": {
         "php_version": "Версия PHP",
         "host_os": "ОС хоста",
         "host_kernel_version": "Версия ядра хоста",
         "using_docker_image": "Используется оф. образ для Docker'a",
         "cache_writable": "Папка Cache имеет права на запись",
-        "enviroment": "Окружение системы",
+        "environment": "Окружение системы",
         "disk_usage": "Использование диска",
         "ram_usage": "Использование ОЗУ",
         "config_writable": "Право на доступ к config.php"

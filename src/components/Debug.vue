@@ -52,7 +52,7 @@
                 <PanelTemplatesSection v-if="loaded" :data="data" />
             </div>
 
-            <EnviromentSection v-if="loaded" :data="data" />
+            <EnvironmentSection v-if="loaded" :data="data" />
 
         </div>
 
@@ -60,7 +60,7 @@
             <div class="grid md:grid-cols-4 sm:grid-cols-1 py-6">
                 <div class="xl:-mr-48">
                     <h5 class="section-heading">{{ $t('footer.debug_log_version') }}: <span class="font-normal" v-html="this.asCode(data.debug_version)"></span></h5>
-                    <h5 class="section-heading">{{ $t('footer.generated_by') }}: <img v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
+                    <h5 class="section-heading">{{ $t('footer.generated_by') }}: <img :alt="data.generated_by_name" v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
                     <h5 class="section-heading">{{ $t('footer.raw_json') }}: <a :href="`https://bytebin.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://bytebin.rkslot.nl/{{ key }}</span></a></h5>
                 </div>
                 <div>
@@ -101,7 +101,7 @@ import SettingsSection from './sections/SettingsSection.vue';
 import ConfigSection from './sections/ConfigSection.vue';
 import ModulesSection from './sections/ModulesSection.vue';
 import GroupSyncSection from './sections/GroupSyncSection.vue';
-import EnviromentSection from './sections/EnviromentSection.vue';
+import EnvironmentSection from './sections/EnvironmentSection.vue';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
 import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
 
@@ -114,7 +114,7 @@ export default {
         GroupSyncSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
-        EnviromentSection,
+        EnvironmentSection,
     },
     mounted() {
         this.setDefaultTheme();
@@ -142,7 +142,7 @@ export default {
     methods: {
         async loadData() {
 
-            if (this.key.length == 0) {
+            if (this.key.length === 0) {
                 this.error = this.$t('errors.no_id_provided');
             } else {
                 try {
@@ -151,7 +151,7 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.debug_version != 1) {
+                    } else if (this.data.debug_version !== 1) {
                         this.error = this.$t('errors.invalid_debug_version', { version: this.data.debug_version });
                     } else {
                         this.loaded = true;
@@ -163,8 +163,8 @@ export default {
             }
         },
         displayTemplatesSideBySide() {
-            return Object.keys(this.data.namelessmc.templates.front_end).length == 1 
-                    && Object.keys(this.data.namelessmc.templates.panel).length == 1;
+            return Object.keys(this.data.namelessmc.templates.front_end).length === 1
+                    && Object.keys(this.data.namelessmc.templates.panel).length === 1;
         },
         setDefaultTheme(forcedTheme = null) {
             let theme = 'light';
@@ -185,7 +185,7 @@ export default {
             this.theme = theme;
         },
         toggleTheme() {
-            if (this.theme == 'light') {
+            if (this.theme === 'light') {
                 this.theme = 'dark';
             } else {
                 this.theme = 'light';
@@ -196,7 +196,7 @@ export default {
             this.renderTheme();
         },
         renderTheme() {
-            if (this.theme == 'dark') {
+            if (this.theme === 'dark') {
                 document.documentElement.classList.add('dark');
             } else {
                 document.documentElement.classList.remove('dark');

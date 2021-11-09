@@ -76,7 +76,7 @@
         "version": "Versjon",
         "namelessmc_version": "NamelessMC-versjon"
     },
-    "enviroment_section": {
+    "environment_section": {
         "php_version": "PHP-versjon"
     },
     "footer": {

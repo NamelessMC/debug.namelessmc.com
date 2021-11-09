@@ -85,8 +85,8 @@
         "update_available": "Dostupná aktualizace",
         "last_update_check": "Poslední kontrola aktualizací"
     },
-    "enviroment_section": {
-        "enviroment": "Prostředí",
+    "environment_section": {
+        "environment": "Prostředí",
         "host_os": "Hostitelský OS",
         "host_kernel_version": "Verze jádra",
         "disk_usage": "Využití disku",
