@@ -4,7 +4,7 @@
     </div>
     <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
         <div v-for="module in data.namelessmc.modules" :key="module.name">
-            <div class="section-content-floating">
+            <div class="section-content-floating h-full">
                 <div>
                     <h3 class="section-subheading">
                         {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>
@@ -27,11 +27,11 @@
                     </h5>
                 </div>
 
-                <div class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
+                <div v-if="this.shouldShowDebugInfo(module.name)" class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
                     <span class="bg-gray-100 dark:bg-gray-800 dark:text-gray-300 text-base">&nbsp;{{ $t('modules_section.debug_info') }}&nbsp;</span>
                 </div>
 
-                <div class="pt-3">
+                <div v-if="this.shouldShowDebugInfo(module.name)" class="pt-3">
                     <div v-if="module.name == 'Core'">
                         <h5 class="section-heading pb-1 text-center">{{ $t('modules_section.core.minecraft_integration') }}</h5>
 
@@ -112,5 +112,12 @@ export default {
     props: [
         'data',
     ],
+    methods: {
+        shouldShowDebugInfo(name) {
+            return name == 'Core'
+                || name == 'Discord Integration'
+                || this.data.namelessmc.modules[name].debug_info.length > 0;
+        },
+    }
 }
 </script>
