@@ -6,7 +6,9 @@
         "header_title": "Отладочная информация NamelessMC",
         "generated_at": "Сгенерирован {time}",
         "yes": "Да",
-        "official": "ОФИЦИАЛЬНОЕ"
+        "official": "ОФИЦИАЛЬНОЕ",
+        "light": "Светлая",
+        "dark": "Тёмная"
     },
     "errors": {
         "error": "Ошибка",
@@ -99,5 +101,9 @@
         "generated_by": "Сгенерировал",
         "raw_json": "Raw JSON",
         "theme": "Оформление: {theme}"
+    },
+    "group_sync_section": {
+        "name": "Название",
+        "enabled": "Включён"
     }
 }
