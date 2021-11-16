@@ -4,7 +4,7 @@
     </div>
     <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
         <div v-for="module in data.namelessmc.modules" :key="module.name">
-            <div class="section-content-floating h-full">
+            <div class="section-content-floating h-full" :id="module.name">
                 <div>
                     <h3 class="section-subheading">
                         {{ module.name }} <span v-if="isOfficialModule(module.name)" v-html="officialBadge()"></span>

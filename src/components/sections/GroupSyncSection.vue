@@ -17,7 +17,7 @@
                         {{ injector.name }}
                     </td>
                     <td v-html="booleanBadge(injector.enabled)"/>
-                    <td class="table-data">
+                    <td class="table-data hover:underline cursor-pointer" @click="goToModule(injector.module)">
                         {{ injector.module }}
                     </td>
                     <td v-html="asCode(injector.column_name)" class="table-data"/>
@@ -63,7 +63,12 @@ export default {
         },
         getWebsiteGroupName(id) {
             return this.data.namelessmc.groups[id].name;
-        }
+        },
+        goToModule(id) {
+            document.getElementById(id).scrollIntoView({
+              behavior: 'smooth'
+            });
+        },
     }
 }
 </script>
