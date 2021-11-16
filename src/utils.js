@@ -28,7 +28,7 @@ export default {
             : `<span class="font-bold text-base ${noClassName}">${this.$t('misc.no')}</span>`;
     },
     asCode(value) {
-        return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span`;
+        return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span>`;
     },
     isEmpty(value, code = false) {
         return !value
@@ -40,11 +40,11 @@ export default {
     gridColsClass(obj) {
         let count = Object.keys(obj).length;
 
-        if (count == 1) {
+        if (count === 1) {
             return 'md:grid-cols-1';
         }
 
-        if (count == 2 || count % 2 == 0) {
+        if (count === 2 || count % 2 === 0) {
             return 'md:grid-cols-2';
         }
 
