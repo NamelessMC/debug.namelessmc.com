@@ -62,7 +62,8 @@
         "author": "Autor",
         "enabled": "Povolen",
         "version": "Verze",
-        "debug_info": "Ladicí informace"
+        "debug_info": "Ladicí informace",
+        "no_debug_info": "Nebyly poskytnuty ladící informace"
     },
     "templates_section": {
         "templates": "Šablony",
