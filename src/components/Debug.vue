@@ -56,7 +56,7 @@
 
         </div>
 
-        <footer v-if="loaded" class="md:h-28 bg-yellow-400 dark:bg-indigo-900 text-center">
+        <footer v-if="loaded" class="h-auto bg-yellow-400 dark:bg-indigo-900 text-center">
             <div class="grid md:grid-cols-4 sm:grid-cols-1 py-6">
                 <div class="xl:-mr-48">
                     <h5 class="section-heading">{{ $t('footer.debug_log_version') }}: <span class="font-normal" v-html="this.asCode(data.debug_version)"></span></h5>
