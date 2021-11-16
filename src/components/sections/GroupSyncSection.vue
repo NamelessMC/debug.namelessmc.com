@@ -2,7 +2,7 @@
     <div class="section-title-floating">
         <font-awesome-icon icon="sync-alt"/> {{ $t('group_sync_section.group_sync') }}
     </div>
-     <div class="pt-2 mb-8 grid gap-4 md:grid-cols-2 sm:grid-cols-1">
+     <div class="pt-2 mb-8 grid gap-4 lg:grid-cols-2 md:grid-cols-1">
         <div class="section-content-floating">
             <h3 class="section-subheading">{{ $t('group_sync_section.injectors') }}</h3>
             <table class="table-container">
@@ -38,8 +38,8 @@
                         {{ rule.id }}
                     </td>
                     <td v-for="injector in this.injectors()" :key="injector" class="table-data">
-                        <span v-if="injector.column_name == 'website_group_id'">
-                            {{ this.getWebsiteGroupName(rule[injector.column_name]) + ' (' + rule[injector.column_name] + ')' }}
+                        <span v-if="injector.column_name === 'website_group_id'" :title="rule[injector.column_name]">
+                            {{ this.getWebsiteGroupName(rule[injector.column_name]) }}
                         </span>
                         <span v-else v-html="isEmpty(rule[injector.column_name])"></span>
                     </td>
