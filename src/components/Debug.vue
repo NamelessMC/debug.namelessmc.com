@@ -64,7 +64,7 @@
                     <h5 class="section-heading">{{ $t('footer.raw_json') }}: <a :href="`https://bytebin.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://bytebin.rkslot.nl/{{ key }}</span></a></h5>
                 </div>
                 <div>
-                    <button @click="toggleTheme()" class="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-200 font-bold text-sm">{{ $t('footer.theme', { theme: capitalize(this.themeTranslated) }) }}</button>
+                    <button @click="toggleTheme()" class="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">{{ $t('footer.theme', { theme: capitalize(this.themeTranslated) }) }}</button>
                 </div>
                 <div class="text-normal">
                     <font-awesome-icon icon="globe"/>

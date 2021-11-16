@@ -48,6 +48,7 @@
         "namelessmc_version": "NamelessMC version",
         "version": "Version",
         "debug_info": "Debug Info",
+        "no_debug_info": "No debug info provided",
         "core": {
             "minecraft_integration": "Minecraft Integration",
             "integration_enabled": "Integration enabled",

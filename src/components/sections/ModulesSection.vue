@@ -27,12 +27,12 @@
                     </h5>
                 </div>
 
-                <div v-if="this.shouldShowDebugInfo(module.name)" class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
+                <div class="w-full text-center border-b-2 border-blue-400" style="height: 14px;">
                     <span class="bg-gray-100 dark:bg-gray-800 dark:text-gray-300 text-base">&nbsp;{{ $t('modules_section.debug_info') }}&nbsp;</span>
                 </div>
 
                 <div v-if="this.shouldShowDebugInfo(module.name)" class="pt-3">
-                    <div v-if="module.name == 'Core'">
+                    <div v-if="module.name === 'Core'">
                         <h5 class="section-heading pb-1 text-center">{{ $t('modules_section.core.minecraft_integration') }}</h5>
 
                         <div class="grid grid-cols-2">
@@ -81,7 +81,7 @@
                         </div>
 
                     </div>
-                    <div v-else-if="module.name == 'Discord Integration'">
+                    <div v-else-if="module.name === 'Discord Integration'">
                         <div class="grid grid-cols-2">
                             <h5 class="section-heading">
                                 {{ $t('modules_section.discord_integration.syncing_enabled') }}: <span v-html="booleanBadge(module.enabled && module.debug_info.guild_id && module.debug_info.bot_url)"></span>
@@ -99,8 +99,11 @@
                         </div>
                     </div>
                     <div v-else>
-                        <pre class="dark:text-gray-200">{{ module.debug_info }}</pre>
+                        <pre class="text-normal">{{ module.debug_info }}</pre>
                     </div>
+                </div>
+                <div v-else class="pt-3">
+                  <p class="text-normal italic">{{ $t('modules_section.no_debug_info') }}</p>
                 </div>
             </div>
         </div>
@@ -114,8 +117,8 @@ export default {
     ],
     methods: {
         shouldShowDebugInfo(name) {
-            return name == 'Core'
-                || name == 'Discord Integration'
+            return name === 'Core'
+                || name === 'Discord Integration'
                 || this.data.namelessmc.modules[name].debug_info.length > 0;
         },
     }
