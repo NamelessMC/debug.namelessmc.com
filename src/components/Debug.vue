@@ -28,31 +28,30 @@
                 </div>
             </div>
 
-            <VersionSection v-if="loaded" :data="data" />
+            <div v-if="loaded">
 
-            <SettingsSection v-if="loaded" :data="data" />
+              <VersionSection :data="data" />
 
-            <ConfigSection v-if="loaded" :data="data" />
+              <SettingsSection :data="data" />
 
-            <ModulesSection v-if="loaded" :data="data" />
+              <ConfigSection :data="data" />
 
-            <GroupSyncSection v-if="loaded" :data="data" />
+              <ModulesSection :data="data" />
 
-            <div v-if="loaded && displayTemplatesSideBySide()" class="md:grid grid-cols-2 gap-4">
+              <GroupSyncSection :data="data" />
+
+              <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
                 <div>
-                    <FrontEndTemplatesSection v-if="loaded" :data="data" />
+                  <FrontEndTemplatesSection :data="data" />
                 </div>
                 <div>
-                    <PanelTemplatesSection v-if="loaded" :data="data" />
+                  <PanelTemplatesSection :data="data" />
                 </div>
-            </div>
-            <div v-else>
-                <FrontEndTemplatesSection v-if="loaded" :data="data" />
+              </div>
 
-                <PanelTemplatesSection v-if="loaded" :data="data" />
-            </div>
+              <EnvironmentSection :data="data" />
 
-            <EnvironmentSection v-if="loaded" :data="data" />
+            </div>
 
         </div>
 
