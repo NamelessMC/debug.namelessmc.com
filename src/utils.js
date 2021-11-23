@@ -54,10 +54,10 @@ export default {
         return ['Core', 'Forum', 'Discord Integration', 'Cookie Consent'].includes(moduleName);
     },
     isOfficialTemplate(templateName) {
-        return ['DefaultRevamp', 'Default'].includes(templateName)
+        return ['DefaultRevamp', 'Default'].includes(templateName);
     },
     officialBadge() {
-        return `<span class="rounded-md text-white bg-blue-500 px-2 py-1 text-xs ml-1">${this.$t('misc.official')}</span>`
+        return `<span class="rounded-md text-white bg-blue-500 px-2 py-1 text-xs ml-1">${this.$t('misc.official')}</span>`;
     },
     capitalize(string) {
         return string[0].toUpperCase() + string.substring(1);

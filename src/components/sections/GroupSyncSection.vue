@@ -8,19 +8,17 @@
             <table class="table-container">
                 <tr>
                     <th class="table-title">{{ $t('group_sync_section.name') }}</th>
-                    <th class="table-title">{{ $t('group_sync_section.enabled') }}</th>
+                    <th class="table-title w-1/6">{{ $t('group_sync_section.enabled') }}</th>
                     <th class="table-title">{{ $t('group_sync_section.module') }}</th>
-                    <th class="table-title">{{ $t('group_sync_section.column_name') }}</th>
                 </tr>
                 <tr v-for="injector in this.injectors()" :key="injector">
-                    <td class="table-data">
+                    <td class="table-data" :title="injector.column_name">
                         {{ injector.name }}
                     </td>
                     <td v-html="booleanBadge(injector.enabled)"/>
                     <td class="table-data hover:underline cursor-pointer" @click="goToModule(injector.module)">
                         {{ injector.module }}
                     </td>
-                    <td v-html="asCode(injector.column_name)" class="table-data"/>
                 </tr>
             </table>
         </div>
@@ -28,7 +26,7 @@
             <h3 class="section-subheading">{{ $t('group_sync_section.rules') }}</h3>
             <table class="table-container">
                 <tr>
-                    <th class="table-title">ID</th>
+                    <th class="table-title w-1/6">ID</th>
                     <th v-for="injector in this.injectors()" :key="injector" class="table-title">
                         {{ injector.name }}
                     </th>

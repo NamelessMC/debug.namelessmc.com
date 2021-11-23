@@ -76,8 +76,18 @@
         "name": "Name",
         "enabled": "Enabled",
         "module": "Module",
-        "column_name": "Column Name",
         "rules": "Rules"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "Forum Hooks",
+        "id": "ID",
+        "name": "Name",
+        "type": "Type",
+        "events": "Events",
+        "forum_id": "Forum ID",
+        "forum_title": "Forum Title"
     },
     "templates_section": {
         "templates": "Templates",

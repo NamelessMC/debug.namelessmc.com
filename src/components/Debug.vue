@@ -40,6 +40,8 @@
 
               <GroupSyncSection :data="data" />
 
+              <WebhooksSection :data="data" />
+
               <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
                 <div>
                   <FrontEndTemplatesSection :data="data" />
@@ -86,6 +88,7 @@
 
 <script>
 
+// TODO: fix templates gap
 // TODO: something with php modules
 // TODO: something with namelessmc groups
 // TODO: finish module debug info
@@ -100,6 +103,7 @@ import SettingsSection from './sections/SettingsSection.vue';
 import ConfigSection from './sections/ConfigSection.vue';
 import ModulesSection from './sections/ModulesSection.vue';
 import GroupSyncSection from './sections/GroupSyncSection.vue';
+import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
 import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
@@ -111,6 +115,7 @@ export default {
         ConfigSection,
         ModulesSection,
         GroupSyncSection,
+        WebhooksSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
         EnvironmentSection,
