@@ -88,7 +88,6 @@
 
 <script>
 
-// TODO: fix templates gap
 // TODO: something with php modules
 // TODO: something with namelessmc groups
 // TODO: finish module debug info

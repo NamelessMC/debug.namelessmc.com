@@ -2,7 +2,7 @@
     <div class="section-title-floating">
         <font-awesome-icon icon="puzzle-piece"/> {{ $t('modules_section.modules') }}
     </div>
-    <div class="pt-2 mb-8 grid gap-8 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
+    <div class="pt-2 mb-8 grid gap-4 sm:grid-cols-1" :class="gridColsClass(data.namelessmc.modules)">
         <div v-for="module in data.namelessmc.modules" :key="module.name">
             <div class="section-content-floating h-full" :id="module.name">
                 <div>
