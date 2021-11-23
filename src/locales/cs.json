@@ -114,5 +114,16 @@
         "rules": "Pravidla",
         "group_sync": "Synchronizace skupin",
         "enabled": "Povolena"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooky",
+        "hooks": "Webhooky",
+        "forum_hooks": "Webhooky fóra",
+        "id": "ID",
+        "name": "Název",
+        "type": "Typ",
+        "events": "Události",
+        "forum_id": "ID fóra",
+        "forum_title": "Název fóra"
     }
 }
