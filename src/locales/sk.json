@@ -1,1 +1,20 @@
-{}
+{
+    "misc": {
+        "header_title": "NamelessMC Informácie k ľadeniu",
+        "yes": "Ano",
+        "no": "Nie",
+        "official": "OFICIÁLNE",
+        "generated_at": "Vygenerované {time}",
+        "loading": "Načítávam...",
+        "empty": "Prázdne",
+        "light": "Svetlý",
+        "dark": "Tmavý"
+    },
+    "errors": {
+        "error": "Chyba",
+        "no_id_provided": "Nebolo poskytnuté ID odkazu k ľadeniu"
+    },
+    "footer": {
+        "made_with_love": "Vytvorené s ❤️"
+    }
+}
