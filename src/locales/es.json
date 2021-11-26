@@ -114,5 +114,16 @@
         "version": "Versión",
         "update_available": "Actualización disponible",
         "last_update_check": "Comprobación de la última actualización"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "Hooks del foro",
+        "id": "ID",
+        "name": "Nombre",
+        "type": "Tipo",
+        "events": "Eventos",
+        "forum_id": "ID del foro",
+        "forum_title": "Título del foro"
     }
 }
