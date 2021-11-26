@@ -1,1 +1,33 @@
-{}
+{
+    "misc": {
+        "header_title": "NamelessMC Debug Info",
+        "generated_at": "{time}で生成",
+        "loading": "読み込み中...",
+        "empty": "空",
+        "yes": "はい",
+        "no": "いいえ",
+        "official": "公式",
+        "light": "ライト",
+        "dark": "ダーク"
+    },
+    "errors": {
+        "no_data_in_json": "JSONで利用できるデバッグデータがありません",
+        "error": "エラー",
+        "no_id_provided": "デバッグリンクIDが提供されていません",
+        "invalid_debug_version": "デバッグバージョン<strong>{version}</strong>はサポートされていません",
+        "invalid_link_id": "無効なデバッグリンクID"
+    },
+    "version_section": {
+        "version": "バージョン",
+        "update_available": "アップデート可能",
+        "last_update_check": "最終アップデート確認"
+    },
+    "settings_section": {
+        "email_verification_enabled": "メール認証 有効",
+        "login_method": "ログインメソッド",
+        "settings": "設定",
+        "phpmailer_enabled": "PHPMailer 有効",
+        "api_enabled": "API 有効",
+        "api_verification_enabled": "API検証 有効"
+    }
+}
