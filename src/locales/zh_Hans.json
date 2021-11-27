@@ -6,7 +6,9 @@
         "yes": "是",
         "no": "否",
         "official": "官方",
-        "header_title": "NamelessMC 调试信息"
+        "header_title": "NamelessMC 调试信息",
+        "light": "亮色模式",
+        "dark": "深色模式"
     },
     "errors": {
         "no_id_provided": "没有提供调试链接 ID",
@@ -65,7 +67,8 @@
             "bot_setup": "机器人配置",
             "bot_url": "机器人链接"
         },
-        "author": "作者"
+        "author": "作者",
+        "no_debug_info": "没有提供调试信息"
     },
     "templates_section": {
         "templates": "模板",
@@ -102,5 +105,23 @@
         "namelessmc_website": "NamelessMC 网站",
         "get_support": "获得支持",
         "made_with_love": "用 ❤️ 打造"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "论坛 Hooks",
+        "id": "ID",
+        "name": "名字",
+        "type": "类型",
+        "events": "活动",
+        "forum_id": "论坛 ID",
+        "forum_title": "论坛标题"
+    },
+    "group_sync_section": {
+        "group_sync": "权限组同步",
+        "name": "名字",
+        "enabled": "是否启用",
+        "module": "模块",
+        "rules": "规则"
     }
 }
