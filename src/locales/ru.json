@@ -56,7 +56,10 @@
             "minecraft_integration": "Интеграция с Minecraft",
             "username_sync": "Сихронизация никнеймов",
             "port": "Порт",
-            "uuid_linking": "UUID привязка"
+            "uuid_linking": "UUID привязка",
+            "external_query": "Внешний запрос",
+            "query_ip": "Запрос IP",
+            "query_port": "Запрос порта"
         },
         "discord_integration": {
             "syncing_enabled": "Сихронизация включена",
@@ -64,7 +67,8 @@
             "bot_setup": "Бот настроен",
             "bot_url": "URL бота"
         },
-        "author": "Автор"
+        "author": "Автор",
+        "no_debug_info": "Информация об отладке не предоставлена"
     },
     "templates_section": {
         "author": "Автор",
@@ -104,6 +108,21 @@
     },
     "group_sync_section": {
         "name": "Название",
-        "enabled": "Включён"
+        "enabled": "Включён",
+        "module": "Модуль",
+        "group_sync": "Групповая синхронизация",
+        "injectors": "Инжекторы",
+        "rules": "Правила"
+    },
+    "webhooks_section": {
+        "hooks": "Хуки",
+        "webhooks": "Веб-хуки",
+        "forum_hooks": "Форумные хуки",
+        "id": "ID",
+        "name": "Имя",
+        "type": "Тип",
+        "events": "События",
+        "forum_id": "Форум ID",
+        "forum_title": "Название форума"
     }
 }
