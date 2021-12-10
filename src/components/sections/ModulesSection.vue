@@ -50,36 +50,37 @@
                             </h5>
                         </div>
 
-                        <h5 class="section-heading pb-1 text-center pt-1">{{ $t('modules_section.core.servers') }}</h5>
-                        <div v-for="server in module.debug_info.minecraft.servers" :key="server.id" class="divide-y-2 divide-blue-400">
-                            <div>
-                                <div class="grid grid-cols-2 pb-1">
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.id') }}: <span v-html="asCode(server.id)"></span>
-                                    </h5>
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.name') }}: <span class="font-normal text-base">{{ server.name }}</span>
-                                    </h5>
-                                </div>
-                                <div class="grid grid-cols-2 pb-1">
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.ip') }}: <span v-html="asCode(server.ip)"></span>
-                                    </h5>
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.query_ip') }}: <span v-html="asCode(server.query_ip)"></span>
-                                    </h5>
-                                </div>
-                                <div class="grid grid-cols-2">
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.port') }}: <span v-html="asCode(server.port)"></span>
-                                    </h5>
-                                    <h5 class="section-heading">
-                                        {{ $t('modules_section.core.query_port') }}: <span v-html="asCode(server.query_port)"></span>
-                                    </h5>
+                        <div v-if="module.debug_info.minecraft.servers.length > 0">
+                            <h5 class="section-heading pb-1 text-center pt-1">{{ $t('modules_section.core.servers') }}</h5>
+                              <div v-for="server in module.debug_info.minecraft.servers" :key="server.id" class="divide-y-2 divide-blue-400">
+                                  <div>
+                                      <div class="grid grid-cols-2 pb-1">
+                                          <h5 class="section-heading">
+                                              {{ $t('modules_section.core.id') }}: <span v-html="asCode(server.id)"></span>
+                                          </h5>
+                                          <h5 class="section-heading">
+                                              {{ $t('modules_section.core.name') }}: <span class="font-normal text-base">{{ server.name }}</span>
+                                          </h5>
+                                      </div>
+                                      <div class="grid grid-cols-2 pb-1">
+                                          <h5 class="section-heading">
+                                              {{ $t('modules_section.core.ip') }}: <span v-html="asCode(server.ip)"></span>
+                                          </h5>
+                                          <h5 class="section-heading">
+                                              {{ $t('modules_section.core.query_ip') }}: <span v-html="asCode(server.query_ip)"></span>
+                                          </h5>
+                                      </div>
+                                      <div class="grid grid-cols-2">
+                                        <h5 class="section-heading">
+                                            {{ $t('modules_section.core.port') }}: <span v-html="asCode(server.port)"></span>
+                                        </h5>
+                                        <h5 class="section-heading">
+                                            {{ $t('modules_section.core.query_port') }}: <span v-html="asCode(server.query_port)"></span>
+                                        </h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div v-else-if="module.name === 'Discord Integration'">
                         <div class="grid grid-cols-2">
