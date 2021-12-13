@@ -103,7 +103,7 @@
         "namelessmc_website": "Сайт NamelessMC",
         "debug_log_version": "Версия отладочного журнала",
         "generated_by": "Сгенерировал",
-        "raw_json": "Raw JSON",
+        "raw_json": "Сырой JSON",
         "theme": "Оформление: {theme}"
     },
     "group_sync_section": {
