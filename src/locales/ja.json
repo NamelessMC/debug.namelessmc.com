@@ -29,5 +29,29 @@
         "phpmailer_enabled": "PHPMailer 有効",
         "api_enabled": "API 有効",
         "api_verification_enabled": "API検証 有効"
+    },
+    "modules_section": {
+        "core": {
+            "ip": "IP",
+            "query_ip": "クエリIP",
+            "port": "ポート",
+            "query_port": "クエリポート",
+            "id": "ID",
+            "name": "名前"
+        },
+        "modules": "モジュール",
+        "author": "作者",
+        "enabled": "有効",
+        "namelessmc_version": "NamelessMCバージョン",
+        "version": "バージョン",
+        "debug_info": "デバッグ情報"
+    },
+    "config_section": {
+        "path": "パス",
+        "config": "設定",
+        "friendly_urls": "フレンドリーURL",
+        "force_https": "強制HTTPS",
+        "force_www": "強制www",
+        "allowed_proxies": "許可されたプロキシ"
     }
 }
