@@ -1,1 +1,30 @@
-{}
+{
+    "misc": {
+        "header_title": "NamelessMC Debug-Informationen",
+        "generated_at": "Generiert um {time}",
+        "loading": "Wird geladen...",
+        "empty": "Leer",
+        "yes": "Ja",
+        "no": "Nein",
+        "official": "OFFIZIELL",
+        "light": "Hell",
+        "dark": "Dunkel"
+    },
+    "errors": {
+        "error": "Fehler",
+        "no_id_provided": "Keine Debug-Link-ID angegeben",
+        "no_data_in_json": "Keine Debug-Daten in JSON verfügbar"
+    },
+    "footer": {
+        "namelessmc_website": "NamelessMC-Website",
+        "theme": "Thema: {theme}",
+        "get_support": "Unterstützung holen",
+        "made_with_love": "Geschaffen mit ❤️"
+    },
+    "modules_section": {
+        "discord_integration": {
+            "syncing_enabled": "Synchronisierung aktiviert",
+            "guild_id": "Gilden-ID"
+        }
+    }
+}
