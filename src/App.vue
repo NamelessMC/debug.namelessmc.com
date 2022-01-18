@@ -1,9 +1,9 @@
 <template>
-  <Debug/>
+  <NamelessDebug/>
 </template>
 
 <script>
-import Debug from './components/Debug.vue'
+import NamelessDebug from './components/NamelessDebug.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSpinner, faDownload, faCogs, faWrench, faPuzzlePiece, faSyncAlt, faLink, faPaintBrush, faTachometerAlt, faServer, faGlobe } from '@fortawesome/free-solid-svg-icons'
@@ -24,7 +24,7 @@ library.add(
 
 export default {
     components: {
-        Debug
+        NamelessDebug
     }
 }
 </script>
