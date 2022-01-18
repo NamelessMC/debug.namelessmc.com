@@ -67,10 +67,11 @@
             "bot_url": "Bot URL"
         },
         "author": "Auteur",
-        "debug_info": "Debuginformatie"
+        "debug_info": "Debuginformatie",
+        "no_debug_info": "Geen debuginformatie opgegeven"
     },
     "templates_section": {
-        "templates": "Templates",
+        "templates": "Sjablonen",
         "enabled": "Ingeschakeld",
         "is_default": "Is standaard",
         "author": "Auteur",
@@ -113,5 +114,16 @@
         "enabled": "Ingeschakeld",
         "column_name": "Kolom Naam",
         "rules": "Regels"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "Forum Hooks",
+        "id": "ID",
+        "name": "Naam",
+        "type": "Type",
+        "events": "Evenementen",
+        "forum_id": "Forum ID",
+        "forum_title": "Forum Titel"
     }
 }
