@@ -13,7 +13,9 @@
     "errors": {
         "error": "Fehler",
         "no_id_provided": "Keine Debug-Link-ID angegeben",
-        "no_data_in_json": "Keine Debug-Daten in JSON verfügbar"
+        "no_data_in_json": "Keine Debug-Daten in JSON verfügbar",
+        "invalid_link_id": "Ungültige Debug-Link-ID",
+        "invalid_debug_version": "Debug-Version <strong>{Version}</strong> wird nicht unterstützt"
     },
     "footer": {
         "namelessmc_website": "NamelessMC-Website",
@@ -24,7 +26,84 @@
     "modules_section": {
         "discord_integration": {
             "syncing_enabled": "Synchronisierung aktiviert",
-            "guild_id": "Gilden-ID"
-        }
+            "guild_id": "Gilden-ID",
+            "bot_url": "Bot URL",
+            "bot_setup": "Bot-Einrichtung"
+        },
+        "no_debug_info": "Keine Debug-Informationen bereitgestellt",
+        "core": {
+            "integration_enabled": "Integration aktiviert",
+            "uuid_linking": "UUID-Verknüpfung",
+            "username_sync": "Usernamen Synchronisierung",
+            "external_query": "Externe Query",
+            "minecraft_integration": "Minecraft Integration",
+            "name": "Name",
+            "ip": "IP",
+            "query_ip": "Query IP",
+            "port": "Port",
+            "query_port": "Query port",
+            "servers": "Server",
+            "id": "ID"
+        },
+        "debug_info": "Debug-Informationen",
+        "version": "Version",
+        "modules": "Module",
+        "author": "Autor",
+        "enabled": "Aktiviert",
+        "namelessmc_version": "NamelessMC Version"
+    },
+    "settings_section": {
+        "email_verification_enabled": "E-Mail Verifikation aktiviert",
+        "api_verification_enabled": "API Verifikation aktiviert",
+        "settings": "Einstellungen",
+        "phpmailer_enabled": "PHPMailer aktiviert",
+        "api_enabled": "API aktiviert",
+        "login_method": "Login methode",
+        "captcha_type": "Captcha-Typ",
+        "captcha_login_page": "Captcha auf der Login-Seite",
+        "captcha_contact_page": "Captcha auf der Kontaktseite"
+    },
+    "config_section": {
+        "config": "Config",
+        "path": "Pfad",
+        "friendly_urls": "Benutzerfreundliche URLs",
+        "force_https": "HTTPS erzwingen",
+        "force_www": "www erzwingen",
+        "allowed_proxies": "Erlaubte Proxys"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "Forum Hooks",
+        "id": "ID",
+        "name": "Name",
+        "type": "Typ",
+        "events": "Events",
+        "forum_id": "Forum-ID",
+        "forum_title": "Forum Titel"
+    },
+    "templates_section": {
+        "templates": "Templates",
+        "enabled": "Aktiviert",
+        "is_default": "Standard",
+        "namelessmc_version": "NamelessMC Version",
+        "version": "Version",
+        "author": "Autor"
+    },
+    "group_sync_section": {
+        "name": "Name",
+        "group_sync": "Gruppen Synchronisierung",
+        "injectors": "Injectors",
+        "enabled": "Aktiviert",
+        "module": "Modul",
+        "rules": "Regeln"
+    },
+    "version_section": {
+        "version": "Version",
+        "update_available": "Update verfügbar",
+        "last_update_check": "Letzte Update-Prüfung"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Panel Templates"
     }
 }
