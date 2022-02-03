@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",
-    "@babel/eslint-parser": "^7.16.5",
+    "@babel/eslint-parser": "^7.17.0",
     "@intlify/vue-i18n-loader": "^4.1.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "5.0.0-rc.2",
