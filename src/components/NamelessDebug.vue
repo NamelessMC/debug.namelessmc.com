@@ -144,7 +144,6 @@ export default {
     },
     methods: {
         async loadData() {
-
             if (this.key.length === 0) {
                 this.error = this.$t('errors.no_id_provided');
             } else {
