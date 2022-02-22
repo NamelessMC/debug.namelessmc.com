@@ -33,10 +33,6 @@
                 <h5 class="section-heading">{{ $t('settings_section.captcha_login_page') }}</h5>
                 <h2 v-html="booleanBadge(data.namelessmc.settings.captcha_login)"></h2>
             </div>
-            <div>
-                <h5 class="section-heading">{{ $t('settings_section.captcha_contact_page') }}</h5>
-                <h2 v-html="booleanBadge(data.namelessmc.settings.captcha_contact)"></h2>
-            </div>
         </div>
     </div>
 </template>
