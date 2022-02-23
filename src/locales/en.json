@@ -56,7 +56,7 @@
             "username_sync": "Username sync",
             "external_query": "External query",
             "servers": "Servers",
-            "id": "ID",
+            "bedrock": "Bedrock",
             "name": "Name",
             "ip": "IP",
             "query_ip": "Query IP",

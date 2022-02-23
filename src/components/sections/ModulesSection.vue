@@ -46,23 +46,23 @@
                                 {{ $t('modules_section.core.username_sync') }}: <span v-html="booleanBadge(module.debug_info.minecraft.username_sync)"></span>
                             </h5>
                             <h5 class="section-heading">
-                                {{ $t('modules_section.core.external_query') }}: <span v-html="booleanBadge(module.debug_info.minecraft.external_query)"></span>
+                                {{ $t('modules_section.core.external_query') }}: <span v-html="booleanValue(module.debug_info.minecraft.external_query)"></span>
                             </h5>
                         </div>
 
-                        <div v-if="module.debug_info.minecraft.servers.length > 0">
+                        <div v-if="Object.keys(module.debug_info.minecraft.servers).length > 0">
                             <h5 class="section-heading pb-1 text-center pt-1">{{ $t('modules_section.core.servers') }}</h5>
                               <div v-for="server in module.debug_info.minecraft.servers" :key="server.id" class="divide-y-2 divide-blue-400">
-                                  <div>
-                                      <div class="grid grid-cols-2 pb-1">
+                                  <div class="pb-3">
+                                      <div class="grid grid-cols-2">
                                           <h5 class="section-heading">
-                                              {{ $t('modules_section.core.id') }}: <span v-html="asCode(server.id)"></span>
+                                            {{ $t('modules_section.core.name') }}: <span class="font-normal text-base">{{ server.name }}</span>
                                           </h5>
                                           <h5 class="section-heading">
-                                              {{ $t('modules_section.core.name') }}: <span class="font-normal text-base">{{ server.name }}</span>
+                                              {{ $t('modules_section.core.bedrock') }}: <span v-html="booleanValue(server.bedrock)"></span>
                                           </h5>
                                       </div>
-                                      <div class="grid grid-cols-2 pb-1">
+                                      <div class="grid grid-cols-2">
                                           <h5 class="section-heading">
                                               {{ $t('modules_section.core.ip') }}: <span v-html="asCode(server.ip)"></span>
                                           </h5>

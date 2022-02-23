@@ -58,9 +58,6 @@
 
 <script>
 export default {
-    created() {
-        console.log(this.data.namelessmc.settings.webhooks.hooks.length);
-    },
     props: [
         'data',
     ],

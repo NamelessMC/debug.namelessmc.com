@@ -18,7 +18,7 @@
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('config_section.force_www') }}</h5>
-                <h2 v-html="booleanBadge(data.namelessmc.config.force_www)"></h2>
+                <h2 v-html="booleanValue(data.namelessmc.config.force_www)"></h2>
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('config_section.allowed_proxies') }}</h5>

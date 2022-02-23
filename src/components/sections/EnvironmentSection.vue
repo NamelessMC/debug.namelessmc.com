@@ -18,7 +18,7 @@
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('environment_section.using_docker_image') }}</h5>
-                <h5 v-html="booleanBadge(data.environment.official_docker_image)"></h5>
+                <h5 v-html="booleanValue(data.environment.official_docker_image)"></h5>
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('environment_section.disk_usage') }}</h5>
