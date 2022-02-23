@@ -50,7 +50,8 @@
             "ip": "IP",
             "query_ip": "IP query",
             "port": "Port",
-            "query_port": "Port query"
+            "query_port": "Port query",
+            "bedrock": "Bedrock"
         },
         "discord_integration": {
             "syncing_enabled": "Synchronizace povolena",
