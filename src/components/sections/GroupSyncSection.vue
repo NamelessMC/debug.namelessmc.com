@@ -31,18 +31,25 @@
                         {{ injector.name }}
                     </th>
                 </tr>
-                <tr v-for="rule in this.rules()" :key="rule">
-                    <td class="table-data">
+                <template v-if="this.data.namelessmc.settings.group_sync.rules.length > 0">
+                    <tr v-for="rule in this.data.namelessmc.settings.group_sync.rules" :key="rule">
+                      <td class="table-data">
                         {{ rule.id }}
-                    </td>
-                    <td v-for="injector in this.injectors()" :key="injector" class="table-data">
-                        <span v-if="injector.column_name === 'website_group_id'" :title="rule[injector.column_name]">
-                            {{ this.getWebsiteGroupName(rule[injector.column_name]) }}
-                        </span>
+                      </td>
+                      <td v-for="injector in this.injectors()" :key="injector" class="table-data">
+                          <span v-if="injector.column_name === 'website_group_id'" :title="rule[injector.column_name]">
+                              {{ this.getWebsiteGroupName(rule[injector.column_name]) }}
+                          </span>
                         <span v-else v-html="isEmpty(rule[injector.column_name])"></span>
+                      </td>
+                    </tr>
+                </template>
+                <tr v-else>
+                    <td class="table-data" colspan="4">
+                      <i>{{ $t('group_sync_section.no_rules') }}</i>
                     </td>
                 </tr>
-            </table> 
+            </table>
         </div>
      </div>
 </template>
@@ -55,9 +62,6 @@ export default {
     methods: {
         injectors() {
             return this.data.namelessmc.settings.group_sync.injectors;
-        },
-        rules() {
-            return this.data.namelessmc.settings.group_sync.rules;
         },
         getWebsiteGroupName(id) {
             return this.data.namelessmc.groups[id].name;

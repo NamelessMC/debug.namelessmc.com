@@ -12,12 +12,19 @@
                       <th class="table-title">{{ $t('webhooks_section.type') }}</th>
                       <th class="table-title">{{ $t('webhooks_section.events') }}</th>
                   </tr>
-                  <tr v-for="hook in this.data.namelessmc.settings.webhooks.hooks" :key="hook">
-                      <td class="table-data">{{ hook.id }}</td>
-                      <td class="table-data">{{ hook.name }}</td>
-                      <td class="table-data">{{ this.getTypeById(hook.action) }}</td>
-                      <td class="table-data">
-                          <p v-for="event in hook.events" :key="event" v-html="asCode(event)"></p>
+                  <template v-if="this.data.namelessmc.settings.webhooks.hooks.length > 0">
+                      <tr v-for="hook in this.data.namelessmc.settings.webhooks.hooks" :key="hook">
+                        <td class="table-data">{{ hook.id }}</td>
+                        <td class="table-data">{{ hook.name }}</td>
+                        <td class="table-data">{{ this.getTypeById(hook.action) }}</td>
+                        <td class="table-data">
+                            <p v-for="event in hook.events" :key="event" v-html="asCode(event)"></p>
+                        </td>
+                      </tr>
+                  </template>
+                  <tr v-else>
+                      <td class="table-data" colspan="4">
+                          <i>{{ $t('webhooks_section.no_hooks') }}</i>
                       </td>
                   </tr>
               </table>
@@ -30,11 +37,18 @@
                       <th class="table-title">{{ $t('webhooks_section.forum_title') }}</th>
                       <th class="table-title">{{ $t('webhooks_section.hooks') }}</th>
                   </tr>
-                  <tr v-for="forum_hook in this.data.namelessmc.settings.webhooks.forum_hooks" :key="forum_hook">
-                      <td class="table-data">{{ forum_hook.forum_id }}</td>
-                      <td class="table-data">{{ forum_hook.title }}</td>
-                      <td class="table-data">
-                          <p v-for="hook in forum_hook.hooks" :key="hook" v-html="asCode(this.getHookNameById(hook))"></p>
+                  <template v-if="this.data.namelessmc.settings.webhooks.forum_hooks.length > 0">
+                      <tr v-for="forum_hook in this.data.namelessmc.settings.webhooks.forum_hooks" :key="forum_hook">
+                          <td class="table-data">{{ forum_hook.forum_id }}</td>
+                          <td class="table-data">{{ forum_hook.title }}</td>
+                          <td class="table-data">
+                              <p v-for="hook in forum_hook.hooks" :key="hook" v-html="asCode(this.getHookNameById(hook))"></p>
+                          </td>
+                      </tr>
+                  </template>
+                  <tr v-else>
+                      <td class="table-data" colspan="3">
+                          <i>{{ $t('webhooks_section.no_forum_hooks') }}</i>
                       </td>
                   </tr>
               </table>

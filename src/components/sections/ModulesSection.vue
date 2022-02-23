@@ -88,7 +88,7 @@
                                 {{ $t('modules_section.discord_integration.syncing_enabled') }}: <span v-html="booleanBadge(module.enabled && module.debug_info.guild_id && module.debug_info.bot_url)"></span>
                             </h5>
                             <h5 class="section-heading">
-                                {{ $t('modules_section.discord_integration.guild_id') }}: <span v-html="isEmpty(module.debug_info.guild_id)"></span>
+                                {{ $t('modules_section.discord_integration.guild_id') }}: <span v-html="isEmpty(module.debug_info.guild_id, true)"></span>
                             </h5>
                             <h5 class="section-heading">
                                 {{ $t('modules_section.discord_integration.bot_setup') }}: <span v-html="booleanBadge(module.debug_info.bot_setup)"></span>

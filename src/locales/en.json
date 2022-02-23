@@ -76,12 +76,15 @@
         "name": "Name",
         "enabled": "Enabled",
         "module": "Module",
-        "rules": "Rules"
+        "rules": "Rules",
+        "no_rules": "No rules"
     },
     "webhooks_section": {
         "webhooks": "Webhooks",
         "hooks": "Hooks",
-        "forum_hooks": "Forum Hooks",
+        "no_hooks": "No hooks",
+        "forum_hooks": "Forum hooks",
+        "no_forum_hooks": "No forum hooks",
         "id": "ID",
         "name": "Name",
         "type": "Type",
