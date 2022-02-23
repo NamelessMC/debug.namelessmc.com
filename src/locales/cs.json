@@ -113,7 +113,8 @@
         "column_name": "Název sloupce",
         "rules": "Pravidla",
         "group_sync": "Synchronizace skupin",
-        "enabled": "Povolena"
+        "enabled": "Povolena",
+        "no_rules": "Žádná pravidla"
     },
     "webhooks_section": {
         "webhooks": "Webhooky",
@@ -124,6 +125,8 @@
         "type": "Typ",
         "events": "Události",
         "forum_id": "ID fóra",
-        "forum_title": "Název fóra"
+        "forum_title": "Název fóra",
+        "no_hooks": "Žádné webhooky",
+        "no_forum_hooks": "Žádné webhooky fóra"
     }
 }
