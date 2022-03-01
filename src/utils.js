@@ -16,12 +16,12 @@ export default {
     },
     booleanBadge(value, inverted = false) {
         const yesClassName = inverted
-            ? 'text-yellow-500'
+            ? 'text-yellow-600'
             : 'text-green-600';
 
         const noClassName = inverted
             ? 'text-green-600'
-            : 'text-yellow-500';
+            : 'text-yellow-600';
 
         return value
             ? `<span class="font-bold text-base ${yesClassName}">${this.$t('misc.yes')}</span>`
