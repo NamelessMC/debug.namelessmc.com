@@ -1,0 +1,131 @@
+{
+    "misc": {
+        "header_title": "Informacje debug",
+        "generated_at": "Utworzony {time}",
+        "loading": "Ładowanie...",
+        "empty": "Puste",
+        "yes": "Tak",
+        "no": "Nie",
+        "official": "OFFICIAL",
+        "light": "Jasny",
+        "dark": "Ciemny"
+    },
+    "errors": {
+        "error": "Błąd",
+        "no_id_provided": "Nie podano ID",
+        "no_data_in_json": "Brak dostępnych JSON",
+        "invalid_debug_version": "Debug <strong>{version}</strong> nie jest wspierana (jeszcze)",
+        "invalid_link_id": "Nieprawidłowy id"
+    },
+    "version_section": {
+        "version": "Wersja",
+        "update_available": "Dostępna aktualizacja",
+        "last_update_check": "Ostatnie sprawdzenie"
+    },
+    "settings_section": {
+        "settings": "Ustawienia",
+        "phpmailer_enabled": "PHPMailer włączony",
+        "api_enabled": "API włączone",
+        "api_verification_enabled": "Weryfikacja API włączona",
+        "email_verification_enabled": "Weryfikacja EMAIL włączone",
+        "login_method": "Metoda logowania",
+        "captcha_type": "Captcha",
+        "captcha_login_page": "Captcha na stronie logowania",
+        "captcha_contact_page": "Captcha na stronie kontakt"
+    },
+    "config_section": {
+        "config": "Konfiguracja",
+        "path": "Sćieżka",
+        "friendly_urls": "Przyjazne URL",
+        "force_https": "Force HTTPS",
+        "force_www": "Force www",
+        "allowed_proxies": "Zezwól na proxy"
+    },
+    "modules_section": {
+        "modules": "Modóły",
+        "author": "Autor",
+        "enabled": "Włączony",
+        "namelessmc_version": "Wersja Nameless",
+        "version": "Wersja",
+        "debug_info": "Debug",
+        "no_debug_info": "Brak podanych informacji",
+        "core": {
+            "minecraft_integration": "Minecraft Integracja",
+            "integration_enabled": "Włączone",
+            "uuid_linking": "UUID",
+            "username_sync": "Synchornizacja użytkowników",
+            "external_query": "Query",
+            "servers": "Servery",
+            "bedrock": "Bedrock",
+            "name": "Nazwa",
+            "ip": "IP",
+            "query_ip": "Query IP",
+            "port": "Port",
+            "query_port": "Query port"
+        },
+        "discord_integration": {
+            "syncing_enabled": "Syncronizacja włączona",
+            "guild_id": "Guild ID",
+            "bot_setup": "Bot",
+            "bot_url": "Bot URL"
+        }
+    },
+    "group_sync_section": {
+        "group_sync": "Synchronizacja grupowa",
+        "injectors": "Wtryskiwacze",
+        "name": "Nazwa",
+        "enabled": "Włączone",
+        "module": "Modulół",
+        "rules": "Zasady",
+        "no_rules": "Brak zasad"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooki",
+        "hooks": "Hooki",
+        "no_hooks": "Brak hooków",
+        "forum_hooks": "Forum hooki",
+        "no_forum_hooks": "Brak forum hooks",
+        "id": "ID",
+        "name": "Nazwa",
+        "type": "Typ",
+        "events": "Eventy",
+        "forum_id": "Forum ID",
+        "forum_title": "Nazwa Forum"
+    },
+    "templates_section": {
+        "templates": "Szablony",
+        "enabled": "Włączony",
+        "is_default": "Jest domyślny",
+        "author": "Autor",
+        "namelessmc_version": "Wersja Nameless",
+        "version": "Wersja"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Szablony panelu",
+        "enabled": "Włączony",
+        "is_default": "Jest domyślny",
+        "author": "Autor",
+        "namelessmc_version": "Wersja Nameless",
+        "version": "Wersja"
+    },
+    "environment_section": {
+        "environment": "Środowisko",
+        "php_version": "Wersja PHP",
+        "host_os": "OS hosta",
+        "host_kernel_version": "Host kernel",
+        "using_docker_image": "Używa dockera",
+        "disk_usage": "Użycie dysku",
+        "ram_usage": "Użycie RAMU",
+        "config_writable": "Config pisalny",
+        "cache_writable": "Cache pisalny"
+    },
+    "footer": {
+        "debug_log_version": "Debug log version",
+        "generated_by": "Wygenerowano przez:",
+        "raw_json": "Surowy JSON",
+        "theme": "Styl: {theme}",
+        "namelessmc_website": "Strona NamelessMC",
+        "get_support": "Uzyskaj wsparcie",
+        "made_with_love": "Utworzone z ❤️"
+    }
+}
