@@ -4,10 +4,10 @@
         <div class="py-9 bg-yellow-400 dark:bg-indigo-900 shadow-lg">
             <div class="container mx-auto flex">
                 <img :src="`${publicPath}logo.png`" alt="NamelessMC logo" class="h-20 mr-4">
-                <h1 class="font-bold text-4xl text-gray-50">
-                      {{ $t('misc.header_title') }}
-                    <h3 v-if="loaded" class="text-2xl font-bold mb-3">{{ $t('misc.generated_at', { time: formatDate(data.generated_at) }) }}</h3>
-                </h1>
+                <div class="text-gray-50">
+                    <h1 class="font-bold text-4xl">{{ $t('misc.header_title') }}</h1>
+                    <p v-if="loaded" class="text-2xl font-bold">{{ $t('misc.generated_at', { time: formatDate(data.generated_at) }) }}</p>
+                </div>
             </div>
         </div>
 
@@ -28,46 +28,30 @@
                 </div>
             </div>
 
-            <div v-if="loaded" class="snap-y snap-mandatory">
+            <div v-if="loaded">
 
-              <div class="snap-always snap-start">
-                <VersionSection :data="data" />
-              </div>
+              <VersionSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <SettingsSection :data="data" />
-              </div>
+              <SettingsSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <ConfigSection :data="data" />
-              </div>
+              <ConfigSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <ModulesSection :data="data" />
-              </div>
+              <ModulesSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <GroupSyncSection :data="data" />
-              </div>
+              <GroupSyncSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <WebhooksSection :data="data" />
-              </div>
+              <WebhooksSection :data="data" />
 
-              <div class="snap-always snap-start">
-                <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
-                  <div>
-                    <FrontEndTemplatesSection :data="data" />
-                  </div>
-                  <div>
-                    <PanelTemplatesSection :data="data" />
-                  </div>
+              <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
+                <div>
+                  <FrontEndTemplatesSection :data="data" />
+                </div>
+                <div>
+                  <PanelTemplatesSection :data="data" />
                 </div>
               </div>
 
-              <div class="snap-always snap-start">
-                <EnvironmentSection :data="data" />
-              </div>
+              <EnvironmentSection :data="data" />
 
             </div>
 
