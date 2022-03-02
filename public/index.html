@@ -5,13 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>Debug Info &bull; NamelessMC</title>
+
+      <meta property="og:title" content="Debug Info &bull; NamelessMC" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://namelessmc.com" />
+      <meta property="og:image" content="<%= BASE_URL %>logo.png" />
+      <meta property="og:description" content="Site description" />
+      <meta name="theme-color" content="#FACC15">
+      <meta name="twitter:card" content="summary_large_image">
+
+      <title>Debug Info &bull; NamelessMC</title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
