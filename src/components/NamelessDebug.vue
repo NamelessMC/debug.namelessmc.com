@@ -28,30 +28,46 @@
                 </div>
             </div>
 
-            <div v-if="loaded">
+            <div v-if="loaded" class="snap-y snap-mandatory">
 
-              <VersionSection :data="data" />
+              <div class="snap-always snap-start">
+                <VersionSection :data="data" />
+              </div>
 
-              <SettingsSection :data="data" />
+              <div class="snap-always snap-start">
+                <SettingsSection :data="data" />
+              </div>
 
-              <ConfigSection :data="data" />
+              <div class="snap-always snap-start">
+                <ConfigSection :data="data" />
+              </div>
 
-              <ModulesSection :data="data" />
+              <div class="snap-always snap-start">
+                <ModulesSection :data="data" />
+              </div>
 
-              <GroupSyncSection :data="data" />
+              <div class="snap-always snap-start">
+                <GroupSyncSection :data="data" />
+              </div>
 
-              <WebhooksSection :data="data" />
+              <div class="snap-always snap-start">
+                <WebhooksSection :data="data" />
+              </div>
 
-              <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
-                <div>
-                  <FrontEndTemplatesSection :data="data" />
-                </div>
-                <div>
-                  <PanelTemplatesSection :data="data" />
+              <div class="snap-always snap-start">
+                <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
+                  <div>
+                    <FrontEndTemplatesSection :data="data" />
+                  </div>
+                  <div>
+                    <PanelTemplatesSection :data="data" />
+                  </div>
                 </div>
               </div>
 
-              <EnvironmentSection :data="data" />
+              <div class="snap-always snap-start">
+                <EnvironmentSection :data="data" />
+              </div>
 
             </div>
 
