@@ -118,9 +118,7 @@ export default {
     ],
     methods: {
         shouldShowDebugInfo(name) {
-            return name === 'Core'
-                || name === 'Discord Integration'
-                || this.data.namelessmc.modules[name].debug_info.length > 0;
+            return Object.keys(this.data.namelessmc.modules[name].debug_info).length > 0;
         },
     }
 }
