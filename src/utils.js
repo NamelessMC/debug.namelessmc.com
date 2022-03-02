@@ -28,7 +28,7 @@ export default {
             : `<span class="font-bold text-base ${noClassName}">${this.$t('misc.no')}</span>`;
     },
     booleanValue(value) {
-        return `<span class="font-bold text-base text-normal">${value ? this.$t('misc.yes') : this.$t('misc.no')}</span>`;
+        return `<span class="text-base text-normal font-normal">${value ? this.$t('misc.yes') : this.$t('misc.no')}</span>`;
     },
     asCode(value) {
         return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span>`;
