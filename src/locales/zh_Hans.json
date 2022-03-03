@@ -59,7 +59,8 @@
             "query_ip": "查询 (Query) IP",
             "uuid_linking": "UUID 链接",
             "external_query": "外部查询 (Query)",
-            "query_port": "查询 (Query) 端口"
+            "query_port": "查询 (Query) 端口",
+            "bedrock": "基岩"
         },
         "discord_integration": {
             "syncing_enabled": "同步是否启用",
@@ -115,7 +116,9 @@
         "type": "类型",
         "events": "活动",
         "forum_id": "论坛 ID",
-        "forum_title": "论坛标题"
+        "forum_title": "论坛标题",
+        "no_hooks": "无 Hooks",
+        "no_forum_hooks": "无论坛 Hooks"
     },
     "group_sync_section": {
         "group_sync": "权限组同步",
@@ -123,6 +126,7 @@
         "enabled": "是否启用",
         "module": "模块",
         "rules": "规则",
-        "injectors": "Injectors"
+        "injectors": "Injectors",
+        "no_rules": "无规则"
     }
 }
