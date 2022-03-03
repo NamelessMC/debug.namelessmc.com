@@ -94,6 +94,7 @@
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
 // TODO: latest php error in dropdown <pre></pre>
+// TODO: dynamic og:description meta tag summary (version + date created?)
 
 import axios from 'axios';
 
@@ -133,6 +134,11 @@ export default {
             publicPath: process.env.BASE_URL,
             theme: null,
         }
+    },
+    metaInfo() {
+      return {
+        title: 'My Options API title',
+      }
     },
     computed: {
         key() {
