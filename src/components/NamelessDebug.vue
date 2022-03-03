@@ -135,11 +135,6 @@ export default {
             theme: null,
         }
     },
-    metaInfo() {
-      return {
-        title: 'My Options API title',
-      }
-    },
     computed: {
         key() {
             return window.location.pathname.substring(1);
