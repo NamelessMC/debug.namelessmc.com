@@ -59,7 +59,8 @@
             "uuid_linking": "UUID привязка",
             "external_query": "Внешний запрос",
             "query_ip": "Запрос IP",
-            "query_port": "Запрос порта"
+            "query_port": "Запрос порта",
+            "bedrock": "Бедрок"
         },
         "discord_integration": {
             "syncing_enabled": "Сихронизация включена",
@@ -112,7 +113,8 @@
         "module": "Модуль",
         "group_sync": "Групповая синхронизация",
         "injectors": "Инжекторы",
-        "rules": "Правила"
+        "rules": "Правила",
+        "no_rules": "Нет правил"
     },
     "webhooks_section": {
         "hooks": "Хуки",
@@ -123,6 +125,8 @@
         "type": "Тип",
         "events": "События",
         "forum_id": "Форум ID",
-        "forum_title": "Название форума"
+        "forum_title": "Название форума",
+        "no_hooks": "Нет хуков",
+        "no_forum_hooks": "Нет форумных хуков"
     }
 }
