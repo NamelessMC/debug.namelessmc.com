@@ -28,7 +28,10 @@
         "settings": "設定",
         "phpmailer_enabled": "PHPMailer 有効",
         "api_enabled": "API 有効",
-        "api_verification_enabled": "API検証 有効"
+        "api_verification_enabled": "API検証 有効",
+        "captcha_login_page": "ログインページのCaptcha",
+        "captcha_contact_page": "お問い合わせページのCaptcha",
+        "captcha_type": "Captchaの種類"
     },
     "modules_section": {
         "core": {
@@ -37,14 +40,28 @@
             "port": "ポート",
             "query_port": "クエリポート",
             "id": "ID",
-            "name": "名前"
+            "name": "名前",
+            "bedrock": "統合版",
+            "minecraft_integration": "Minecraftとの連携",
+            "integration_enabled": "連携の有効化",
+            "uuid_linking": "UUIDリンク",
+            "username_sync": "ユーザー名同期",
+            "external_query": "外部クエリ",
+            "servers": "サーバー"
         },
         "modules": "モジュール",
         "author": "作者",
         "enabled": "有効",
         "namelessmc_version": "NamelessMCバージョン",
         "version": "バージョン",
-        "debug_info": "デバッグ情報"
+        "debug_info": "デバッグ情報",
+        "no_debug_info": "デバッグ情報がありません",
+        "discord_integration": {
+            "bot_setup": "Botのセットアップ",
+            "bot_url": "Bot URL",
+            "syncing_enabled": "同期の有効化",
+            "guild_id": "Guild ID"
+        }
     },
     "config_section": {
         "path": "パス",
@@ -53,5 +70,8 @@
         "force_https": "強制HTTPS",
         "force_www": "強制www",
         "allowed_proxies": "許可されたプロキシ"
+    },
+    "group_sync_section": {
+        "group_sync": "グループの同期"
     }
 }
