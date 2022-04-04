@@ -12,7 +12,7 @@
                       <th class="table-title">{{ $t('webhooks_section.type') }}</th>
                       <th class="table-title">{{ $t('webhooks_section.events') }}</th>
                   </tr>
-                  <template v-if="this.data.namelessmc.settings.webhooks.hooks.length > 0">
+                  <template v-if="Object.keys(this.data.namelessmc.settings.webhooks.hooks).length > 0">
                       <tr v-for="hook in this.data.namelessmc.settings.webhooks.hooks" :key="hook">
                         <td class="table-data">{{ hook.id }}</td>
                         <td class="table-data">{{ hook.name }}</td>
