@@ -72,6 +72,44 @@
         "allowed_proxies": "許可されたプロキシ"
     },
     "group_sync_section": {
-        "group_sync": "グループの同期"
+        "group_sync": "グループの同期",
+        "module": "モジュール",
+        "no_rules": "ルールがありません",
+        "injectors": "インジェクター",
+        "name": "名称",
+        "enabled": "有効",
+        "rules": "ルール"
+    },
+    "environment_section": {
+        "environment": "環境",
+        "php_version": "PHPバージョン",
+        "host_os": "ホストOS"
+    },
+    "templates_section": {
+        "author": "作者",
+        "namelessmc_version": "NamelessMCバージョン",
+        "templates": "テンプレート",
+        "enabled": "有効",
+        "version": "バージョン"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhook",
+        "hooks": "Hook",
+        "forum_hooks": "フォーラムHook",
+        "id": "ID",
+        "name": "名称",
+        "forum_id": "フォーラムID",
+        "forum_title": "フォーラムタイトル",
+        "type": "種類",
+        "events": "イベント",
+        "no_hooks": "Hookがありません",
+        "no_forum_hooks": "フォーラムHookがありません"
+    },
+    "panel_templates_section": {
+        "namelessmc_version": "NamelessMCバージョン",
+        "author": "作者",
+        "panel_templates": "パネルテンプレート",
+        "enabled": "有効",
+        "version": "バージョン"
     }
 }
