@@ -101,7 +101,7 @@
     "footer": {
         "debug_log_version": "调试日志版本",
         "generated_by": "生成工具",
-        "raw_json": "Raw JSON",
+        "raw_json": "原始 JSON",
         "theme": "主题: {theme}",
         "namelessmc_website": "NamelessMC 网站",
         "get_support": "获得支持",
