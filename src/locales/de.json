@@ -21,7 +21,10 @@
         "namelessmc_website": "NamelessMC-Website",
         "theme": "Thema: {theme}",
         "get_support": "Unterstützung holen",
-        "made_with_love": "Geschaffen mit ❤️"
+        "made_with_love": "Geschaffen mit ❤️",
+        "generated_by": "Generiert von",
+        "raw_json": "Rohe JSON",
+        "debug_log_version": "Debug Log Version"
     },
     "modules_section": {
         "discord_integration": {
@@ -43,7 +46,8 @@
             "port": "Port",
             "query_port": "Query port",
             "servers": "Server",
-            "id": "ID"
+            "id": "ID",
+            "bedrock": "Bedrock"
         },
         "debug_info": "Debug-Informationen",
         "version": "Version",
@@ -58,9 +62,9 @@
         "settings": "Einstellungen",
         "phpmailer_enabled": "PHPMailer aktiviert",
         "api_enabled": "API aktiviert",
-        "login_method": "Login methode",
-        "captcha_type": "Captcha-Typ",
-        "captcha_login_page": "Captcha auf der Login-Seite",
+        "login_method": "Login Methode",
+        "captcha_type": "Captcha Typ",
+        "captcha_login_page": "Captcha auf Login Seite",
         "captcha_contact_page": "Captcha auf der Kontaktseite"
     },
     "config_section": {
@@ -101,9 +105,25 @@
     "version_section": {
         "version": "Version",
         "update_available": "Update verfügbar",
-        "last_update_check": "Letzte Update-Prüfung"
+        "last_update_check": "Letzte Update Prüfung"
     },
     "panel_templates_section": {
-        "panel_templates": "Panel Templates"
+        "panel_templates": "Panel Templates",
+        "is_default": "Standard",
+        "version": "Version",
+        "enabled": "Aktiviert",
+        "author": "Author",
+        "namelessmc_version": "NamelessMC Version"
+    },
+    "environment_section": {
+        "php_version": "PHP Version",
+        "host_os": "Host Betriebssystem",
+        "config_writable": "Konfiguration beschreibbar",
+        "cache_writable": "Cache beschreibbar",
+        "environment": "Server Umgebung",
+        "host_kernel_version": "Host Kernel Version",
+        "using_docker_image": "Offizielles Docker Image",
+        "disk_usage": "Speicherverwendung",
+        "ram_usage": "Arbeitsspeicherverwendung"
     }
 }
