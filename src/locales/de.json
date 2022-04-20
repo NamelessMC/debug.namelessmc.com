@@ -68,7 +68,7 @@
         "captcha_contact_page": "Captcha auf der Kontaktseite"
     },
     "config_section": {
-        "config": "Config",
+        "config": "Konfiguration",
         "path": "Pfad",
         "friendly_urls": "Benutzerfreundliche URLs",
         "force_https": "HTTPS erzwingen",
@@ -84,7 +84,9 @@
         "type": "Typ",
         "events": "Events",
         "forum_id": "Forum-ID",
-        "forum_title": "Forum Titel"
+        "forum_title": "Forum Titel",
+        "no_hooks": "Keine Hooks",
+        "no_forum_hooks": "Keine Forum Hooks"
     },
     "templates_section": {
         "templates": "Templates",
@@ -100,7 +102,8 @@
         "injectors": "Injectors",
         "enabled": "Aktiviert",
         "module": "Modul",
-        "rules": "Regeln"
+        "rules": "Regeln",
+        "no_rules": "Keine Regeln"
     },
     "version_section": {
         "version": "Version",
