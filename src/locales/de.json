@@ -18,10 +18,10 @@
         "invalid_debug_version": "Debug-Version <strong>{Version}</strong> wird nicht unterstützt"
     },
     "footer": {
-        "namelessmc_website": "NamelessMC-Website",
+        "namelessmc_website": "NamelessMC Website",
         "theme": "Thema: {theme}",
-        "get_support": "Unterstützung holen",
-        "made_with_love": "Geschaffen mit ❤️",
+        "get_support": "Hilfe erhalten",
+        "made_with_love": "Gemacht mit ❤️",
         "generated_by": "Generiert von",
         "raw_json": "Rohe JSON",
         "debug_log_version": "Debug Log Version"
@@ -33,7 +33,7 @@
             "bot_url": "Bot URL",
             "bot_setup": "Bot-Einrichtung"
         },
-        "no_debug_info": "Keine Debug-Informationen bereitgestellt",
+        "no_debug_info": "Keine Debug Informationen verfügbar",
         "core": {
             "integration_enabled": "Integration aktiviert",
             "uuid_linking": "UUID-Verknüpfung",
@@ -49,7 +49,7 @@
             "id": "ID",
             "bedrock": "Bedrock"
         },
-        "debug_info": "Debug-Informationen",
+        "debug_info": "Debug Info",
         "version": "Version",
         "modules": "Module",
         "author": "Autor",
