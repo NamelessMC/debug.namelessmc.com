@@ -12,9 +12,17 @@
     },
     "errors": {
         "error": "Chyba",
-        "no_id_provided": "Nebolo poskytnuté ID odkazu k ľadeniu"
+        "no_id_provided": "Nebolo poskytnuté ID odkazu k ľadeniu",
+        "invalid_link_id": "Neplatné ID odkazu na ladenie",
+        "no_data_in_json": "V JSON nie sú k dispozícii žiadne údaje ladenia",
+        "invalid_debug_version": "Verzia ladenia <strong>{version}</strong> nie je podporovaná"
     },
     "footer": {
         "made_with_love": "Vytvorené s ❤️"
+    },
+    "version_section": {
+        "version": "Verzia",
+        "update_available": "Aktualizácia je dostupná",
+        "last_update_check": "Posledná kontrola aktualizácie"
     }
 }
