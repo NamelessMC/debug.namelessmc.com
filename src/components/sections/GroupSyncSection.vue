@@ -31,7 +31,7 @@
                         {{ injector.name }}
                     </th>
                 </tr>
-                <template v-if="this.data.namelessmc.settings.group_sync.rules.length > 0">
+                <template v-if="Object.keys(this.data.namelessmc.settings.group_sync.rules).length > 0">
                     <tr v-for="rule in this.data.namelessmc.settings.group_sync.rules" :key="rule">
                       <td class="table-data">
                         {{ rule.id }}
