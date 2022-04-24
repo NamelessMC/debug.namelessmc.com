@@ -3,7 +3,7 @@
         <div class="section-title">
             <font-awesome-icon icon="cogs"/> {{ $t('settings_section.settings') }}
         </div>
-        <div class="section-content grid-cols-4 gap-8">
+        <div class="section-content grid-cols-3 gap-8">
             <div>
                 <h5 class="section-heading">{{ $t('settings_section.phpmailer_enabled') }}</h5>
                 <h2 v-html="booleanBadge(data.namelessmc.settings.phpmailer)"></h2>
@@ -11,10 +11,6 @@
             <div>
                 <h5 class="section-heading">{{ $t('settings_section.api_enabled') }}</h5>
                 <h2 v-html="booleanBadge(data.namelessmc.settings.api_enabled)"></h2>
-            </div>
-            <div>
-                <h5 class="section-heading">{{ $t('settings_section.api_verification_enabled') }}</h5>
-                <h2 v-html="booleanBadge(data.namelessmc.settings.api_verification)"></h2>
             </div>
             <div>
                 <h5 class="section-heading">{{ $t('settings_section.email_verification_enabled') }}</h5>
