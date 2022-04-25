@@ -58,7 +58,8 @@
             "port": "Poort",
             "servers": "Servers",
             "ip": "IP-adres",
-            "query_port": "Querypoort"
+            "query_port": "Querypoort",
+            "bedrock": "Bedrock"
         },
         "discord_integration": {
             "syncing_enabled": "Synchronisatie ingeschakeld",
@@ -113,17 +114,20 @@
         "name": "Naam",
         "enabled": "Ingeschakeld",
         "column_name": "Kolom Naam",
-        "rules": "Regels"
+        "rules": "Regels",
+        "no_rules": "Geen regels"
     },
     "webhooks_section": {
         "webhooks": "Webhooks",
         "hooks": "Hooks",
-        "forum_hooks": "Forum Hooks",
+        "forum_hooks": "Forum hooks",
         "id": "ID",
         "name": "Naam",
         "type": "Type",
         "events": "Evenementen",
         "forum_id": "Forum ID",
-        "forum_title": "Forum Titel"
+        "forum_title": "Forum Titel",
+        "no_hooks": "Geen hooks",
+        "no_forum_hooks": "Geen forum hooks"
     }
 }
