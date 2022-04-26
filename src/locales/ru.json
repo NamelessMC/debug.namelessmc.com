@@ -131,7 +131,11 @@
     },
     "integrations_section": {
         "no_integrations": "Интеграций нет",
-        "enabled": "Включено"
+        "enabled": "Включено",
+        "integrations": "Интеграции",
+        "name": "Имя",
+        "can_unlink": "Может разъединить",
+        "required": "Требуемый"
     },
     "groups_section": {
         "groups": "Группы",
@@ -140,6 +144,9 @@
         "default": "По умолчанию",
         "order": "Порядок",
         "no_groups": "Нету групп",
-        "force_tfa": "Принудительное ДФА"
+        "force_tfa": "Принудительное ДФА",
+        "name": "Имя",
+        "can_view_staff_cp": "Может видеть Панель Админа",
+        "group_html": "HTML Группа"
     }
 }
