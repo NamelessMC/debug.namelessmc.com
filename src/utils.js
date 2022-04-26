@@ -30,7 +30,10 @@ export default {
     booleanValue(value) {
         return `<span class="text-base text-normal font-normal">${value ? this.$t('misc.yes') : this.$t('misc.no')}</span>`;
     },
-    asCode(value) {
+    asCode(value, escape = false) {
+        if (escape) {
+            value = value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
         return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span>`;
     },
     isEmpty(value, code = false) {

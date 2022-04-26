@@ -38,7 +38,11 @@
 
               <ModulesSection :data="data" />
 
+              <GroupsSection :data="data" />
+
               <GroupSyncSection :data="data" />
+
+              <IntegrationsSection :data="data" />
 
               <WebhooksSection :data="data" />
 
@@ -89,8 +93,6 @@
 <script>
 
 // TODO: something with php modules
-// TODO: something with namelessmc groups
-// TODO: finish module debug info
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
 // TODO: latest php error in dropdown <pre></pre>
@@ -102,7 +104,9 @@ import VersionSection from './sections/VersionSection.vue';
 import SettingsSection from './sections/SettingsSection.vue';
 import ConfigSection from './sections/ConfigSection.vue';
 import ModulesSection from './sections/ModulesSection.vue';
+import GroupsSection from "@/components/sections/GroupsSection";
 import GroupSyncSection from './sections/GroupSyncSection.vue';
+import IntegrationsSection from "@/components/sections/IntegrationsSection";
 import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
@@ -114,7 +118,9 @@ export default {
         SettingsSection,
         ConfigSection,
         ModulesSection,
+        GroupsSection,
         GroupSyncSection,
+        IntegrationsSection,
         WebhooksSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,

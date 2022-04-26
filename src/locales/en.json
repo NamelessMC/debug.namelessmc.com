@@ -79,6 +79,26 @@
         "rules": "Rules",
         "no_rules": "No rules"
     },
+    "integrations_section": {
+        "integrations": "Integrations",
+        "name": "Name",
+        "enabled": "Enabled",
+        "can_unlink": "Can unlink",
+        "required": "Required",
+        "no_integrations": "No integrations"
+    },
+    "groups_section": {
+        "groups": "Groups",
+        "id": "ID",
+        "name": "Name",
+        "group_html": "Group HTML",
+        "can_view_staff_cp": "Can view StaffCP",
+        "staff": "Staff",
+        "default": "Default",
+        "order": "Order",
+        "force_tfa": "Force 2FA",
+        "no_groups": "No groups"
+    },
     "webhooks_section": {
         "webhooks": "Webhooks",
         "hooks": "Hooks",
