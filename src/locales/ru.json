@@ -128,5 +128,18 @@
         "forum_title": "Название форума",
         "no_hooks": "Нет хуков",
         "no_forum_hooks": "Нет форумных хуков"
+    },
+    "integrations_section": {
+        "no_integrations": "Интеграций нет",
+        "enabled": "Включено"
+    },
+    "groups_section": {
+        "groups": "Группы",
+        "id": "ID",
+        "staff": "Администратор",
+        "default": "По умолчанию",
+        "order": "Порядок",
+        "no_groups": "Нету групп",
+        "force_tfa": "Принудительное ДФА"
     }
 }
