@@ -129,5 +129,25 @@
         "forum_title": "Název fóra",
         "no_hooks": "Žádné webhooky",
         "no_forum_hooks": "Žádné webhooky fóra"
+    },
+    "integrations_section": {
+        "name": "Název",
+        "enabled": "Povolena",
+        "can_unlink": "Lze odpojit",
+        "required": "Vyžadována",
+        "integrations": "Integrace",
+        "no_integrations": "Žádné integrace"
+    },
+    "groups_section": {
+        "groups": "Skupiny",
+        "id": "ID",
+        "name": "Název",
+        "group_html": "HTML skupiny",
+        "can_view_staff_cp": "Může vstoupit do panelu",
+        "staff": "Tým",
+        "order": "Pořadí",
+        "no_groups": "Žádné skupiny",
+        "default": "Výchozí",
+        "force_tfa": "Vynucení 2FA"
     }
 }
