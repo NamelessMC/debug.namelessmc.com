@@ -128,5 +128,25 @@
         "using_docker_image": "Offizielles Docker Image",
         "disk_usage": "Speicherverwendung",
         "ram_usage": "Arbeitsspeicherverwendung"
+    },
+    "integrations_section": {
+        "name": "Name",
+        "enabled": "Aktiviert",
+        "required": "Erforderlich",
+        "no_integrations": "Keine Integrationen",
+        "integrations": "Integrationen",
+        "can_unlink": "Kann unlinken"
+    },
+    "groups_section": {
+        "groups": "Gruppen",
+        "id": "ID",
+        "name": "Name",
+        "group_html": "Gruppen HTML",
+        "can_view_staff_cp": "Kann StaffCP ansehen",
+        "staff": "Team",
+        "default": "Standard",
+        "order": "Reihenfolge",
+        "force_tfa": "2FA erzwingen",
+        "no_groups": "Keine Gruppen"
     }
 }
