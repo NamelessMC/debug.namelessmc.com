@@ -149,5 +149,14 @@
         "no_groups": "Žádné skupiny",
         "default": "Výchozí",
         "force_tfa": "Vynucení 2FA"
+    },
+    "logs_section": {
+        "logs": "Protokoly",
+        "fatal_log": "Fatální protokol",
+        "warning_log": "Protokol varování",
+        "notice_log": "Protokol upozornění",
+        "other_log": "Protokol ostatních",
+        "custom_log": "Vlastní protokol",
+        "no_logs": "Žádné protokoly"
     }
 }
