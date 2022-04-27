@@ -6,7 +6,7 @@
 import NamelessDebug from './components/NamelessDebug.vue'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSpinner, faDownload, faCogs, faWrench, faPuzzlePiece, faAddressBook, faSyncAlt, faPlug, faLink, faPaintBrush, faTachometerAlt, faServer, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner, faDownload, faCogs, faWrench, faPuzzlePiece, faAddressBook, faSyncAlt, faPlug, faLink, faPaintBrush, faTachometerAlt, faServer, faFilePen, faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
     faSpinner,
@@ -21,6 +21,7 @@ library.add(
     faPaintBrush,
     faTachometerAlt,
     faServer,
+    faFilePen,
     faGlobe,
 )
 

@@ -41,3 +41,7 @@
 .table-data {
     @apply text-normal py-2
 }
+
+.log-content {
+    @apply font-mono text-xs whitespace-pre-wrap text-left max-h-96 overflow-scroll rounded-md mx-4 shadow-lg
+}

@@ -55,6 +55,8 @@
                 </div>
               </div>
 
+              <LogsSection :data="data" />
+
               <EnvironmentSection :data="data" />
 
             </div>
@@ -95,7 +97,6 @@
 // TODO: something with php modules
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
-// TODO: latest php error in dropdown <pre></pre>
 // TODO: dynamic og:description meta tag summary (version + date created?)
 
 import axios from 'axios';
@@ -111,6 +112,7 @@ import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
 import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
+import LogsSection from "@/components/sections/LogsSection";
 
 export default {
     components: {
@@ -124,6 +126,7 @@ export default {
         WebhooksSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
+        LogsSection,
         EnvironmentSection,
     },
     mounted() {
