@@ -148,5 +148,14 @@
         "order": "Reihenfolge",
         "force_tfa": "2FA erzwingen",
         "no_groups": "Keine Gruppen"
+    },
+    "logs_section": {
+        "fatal_log": "Fatales Log",
+        "warning_log": "Warn Log",
+        "notice_log": "Notiz Log",
+        "other_log": "Anderer Log",
+        "custom_log": "Benutzerdefinierter Log",
+        "no_logs": "Keine Logs",
+        "logs": "Logs"
     }
 }
