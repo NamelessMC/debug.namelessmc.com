@@ -3,8 +3,8 @@
     <div class="section-title">
       <font-awesome-icon icon="plug"/> {{ $t('integrations_section.integrations') }}
     </div>
-    <div class="section-content">
-      <table class="table-container mx-4">
+    <div class="section-content mx-4">
+      <table class="table-container">
         <tr>
           <th class="table-title">{{ $t('integrations_section.name') }}</th>
           <th class="table-title">{{ $t('integrations_section.enabled') }}</th>
