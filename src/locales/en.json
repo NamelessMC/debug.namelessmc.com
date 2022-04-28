@@ -135,7 +135,7 @@
         "notice_log": "Notice log",
         "other_log": "Other log",
         "custom_log": "Custom log",
-        "no_logs": "No logs"
+        "empty_log": "Empty log"
     },
     "environment_section": {
         "environment": "Environment",

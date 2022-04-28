@@ -9,7 +9,7 @@
         <highlightjs
             class="log-content"
             language="log"
-            :code="content ? content : $t('logs_section.no_logs')"
+            :code="content ? content : $t('logs_section.empty_log')"
         />
       </div>
     </div>
