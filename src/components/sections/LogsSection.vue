@@ -17,8 +17,6 @@
 </template>
 
 <script>
-// TODO: fix mobile screens have horizontal overflow of logs
-// TODO: nicer dark mode contrast
 import hljs from 'highlight.js/lib/core';
 import log from 'highlight.js/lib/languages/accesslog';
 import hljsVuePlugin from "@highlightjs/vue-plugin";
