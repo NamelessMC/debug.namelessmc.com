@@ -72,7 +72,9 @@
                 </div>
                 <div class="grid grid-cols-2 py-2">
                     <div>
-                        <button @click="toggleTheme()" class="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">{{ $t('footer.theme', { theme: capitalize(this.themeTranslated) }) }}</button>
+                        <button @click="toggleTheme()" class="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">
+                          {{ $t('footer.theme') }} <font-awesome-icon :icon="this.theme === 'light' ? 'sun' : 'moon'" size="lg"/>
+                        </button>
                     </div>
                     <div class="text-normal">
                         <font-awesome-icon icon="globe"/>
@@ -149,9 +151,6 @@ export default {
     computed: {
         key() {
             return window.location.pathname.substring(1);
-        },
-        themeTranslated() {
-            return this.$t(`misc.${this.theme}`);
         },
     },
     methods: {
