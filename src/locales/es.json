@@ -129,5 +129,34 @@
         "forum_title": "Título del foro",
         "no_hooks": "Sin conexiones",
         "no_forum_hooks": "Sin conexiones del foro"
+    },
+    "integrations_section": {
+        "integrations": "Integraciones",
+        "name": "Nombre",
+        "enabled": "Activado",
+        "can_unlink": "Se puede desvincular",
+        "required": "Obligatorio",
+        "no_integrations": "No hay integraciones"
+    },
+    "groups_section": {
+        "groups": "Grupos",
+        "id": "ID",
+        "name": "Nombre",
+        "group_html": "HTML del grupo",
+        "can_view_staff_cp": "Puede ver el StaffCP",
+        "staff": "Equipo administrativo",
+        "default": "Por defecto",
+        "order": "Orden",
+        "force_tfa": "Forzar 2FA",
+        "no_groups": "No hay grupos"
+    },
+    "logs_section": {
+        "logs": "Registros",
+        "fatal_log": "Registro de errores fatales",
+        "warning_log": "Registro de advertencias",
+        "notice_log": "Registro de avisos",
+        "other_log": "Otros registros",
+        "no_logs": "No hay registros",
+        "custom_log": "Registros personalizados"
     }
 }
