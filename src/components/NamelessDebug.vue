@@ -66,8 +66,8 @@
         <footer v-if="loaded" class="h-auto bg-yellow-400 dark:bg-indigo-900 text-center">
             <div class="container mx-auto grid md:grid-cols-3 sm:grid-cols-1 py-6">
                 <div>
-                    <h5 class="section-heading">{{ $t('footer.debug_log_version') }}: <span class="font-normal" v-html="this.asCode(data.debug_version)"></span></h5>
                     <h5 class="section-heading">{{ $t('footer.generated_by') }}: <img :alt="data.generated_by_name" v-if="data.generated_by_uuid" class="inline" :src="`https://crafthead.net/helm/${data.generated_by_uuid}/16`"> <span class="font-normal">{{ data.generated_by_name }}</span></h5>
+                    <h5 class="section-heading">{{ $t('footer.namelessmc_version') }}: <span class="font-normal" v-html="this.asCode(data.namelessmc.version)"></span></h5>
                     <h5 class="section-heading">{{ $t('footer.raw_json') }}: <a :href="`https://bytebin.rkslot.nl/${key}`" target="_blank"><span class="font-normal">https://bytebin.rkslot.nl/{{ key }}</span></a></h5>
                 </div>
                 <div class="grid grid-cols-2 py-2">
@@ -164,8 +164,11 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.debug_version !== 1) {
-                        this.error = this.$t('errors.invalid_debug_version', { version: this.data.debug_version });
+                    } else if (this.data.namelessmc.version !== '2.0.0-pr12') {
+                        this.error = this.$t('errors.invalid_namelessmc_version', {
+                          required: '2.0.0-pr12',
+                          version: this.data.namelessmc.version
+                        });
                     } else {
                         this.loaded = true;
                     }
