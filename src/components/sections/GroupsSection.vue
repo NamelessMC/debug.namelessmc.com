@@ -6,14 +6,14 @@
     <div class="section-content mx-4">
       <table class="table-container">
         <tr>
-          <th class="table-title">{{ $t('groups_section.id') }}</th>
-          <th class="table-title">{{ $t('groups_section.name') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.id') }}</th>
+          <th class="table-title w-1/6">{{ $t('groups_section.name') }}</th>
           <th class="table-title">{{ $t('groups_section.group_html') }}</th>
-          <th class="table-title">{{ $t('groups_section.can_view_staff_cp') }}</th>
-          <th class="table-title">{{ $t('groups_section.staff') }}</th>
-          <th class="table-title">{{ $t('groups_section.default') }}</th>
-          <th class="table-title">{{ $t('groups_section.order') }}</th>
-          <th class="table-title">{{ $t('groups_section.force_tfa') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.can_view_staff_cp') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.staff') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.default') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.order') }}</th>
+          <th class="table-title w-1/12">{{ $t('groups_section.force_tfa') }}</th>
         </tr>
         <template v-if="Object.keys(this.data.namelessmc.groups).length > 0">
           <tr v-for="group in this.data.namelessmc.groups" :key="group">
