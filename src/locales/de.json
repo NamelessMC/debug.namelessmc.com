@@ -15,16 +15,18 @@
         "no_id_provided": "Keine Debug-Link-ID angegeben",
         "no_data_in_json": "Keine Debug-Daten in JSON verfügbar",
         "invalid_link_id": "Ungültige Debug-Link-ID",
-        "invalid_debug_version": "Debug-Version <strong>{Version}</strong> wird nicht unterstützt"
+        "invalid_debug_version": "Debug-Version <strong>{Version}</strong> wird nicht unterstützt",
+        "invalid_namelessmc_version": "Es werden nur Debug-Links von NamelessMC-Version <strong>{required}</strong> unterstützt, Du führst Version <strong>{version}</strong> aus."
     },
     "footer": {
         "namelessmc_website": "NamelessMC Website",
-        "theme": "Thema: {theme}",
+        "theme": "Theme:",
         "get_support": "Hilfe erhalten",
         "made_with_love": "Gemacht mit ❤️",
         "generated_by": "Generiert von",
         "raw_json": "Rohe JSON",
-        "debug_log_version": "Debug Log Version"
+        "debug_log_version": "Debug Log Version",
+        "namelessmc_version": "NamelessMC Version"
     },
     "modules_section": {
         "discord_integration": {
@@ -156,6 +158,7 @@
         "other_log": "Anderer Log",
         "custom_log": "Benutzerdefinierter Log",
         "no_logs": "Keine Logs",
-        "logs": "Logs"
+        "logs": "Logs",
+        "empty_log": "Leerer Log"
     }
 }
