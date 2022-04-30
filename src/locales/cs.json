@@ -15,7 +15,8 @@
         "error": "Chyba",
         "no_data_in_json": "V JSON nejsou dostupná žádná ladicí data",
         "invalid_debug_version": "Ladění verze <strong>{version}</strong> není podporováno",
-        "invalid_link_id": "Neplatné ID odkazu ladění"
+        "invalid_link_id": "Neplatné ID odkazu ladění",
+        "invalid_namelessmc_version": "Jsou podporovány pouze ladicí odkazy NamelessMC verze <strong>{required}</strong>, vy používáte verzi <strong>{version}</strong>."
     },
     "settings_section": {
         "phpmailer_enabled": "PHPMailer povolen",
@@ -101,11 +102,12 @@
     "footer": {
         "generated_by": "Vygenerováno uživatelem",
         "raw_json": "Prosté JSON",
-        "theme": "Téma: {theme}",
+        "theme": "Téma:",
         "namelessmc_website": "Web NamelessMC",
         "get_support": "Podpora",
         "made_with_love": "Vytvořeno s ❤️",
-        "debug_log_version": "Verze protokolu ladění"
+        "debug_log_version": "Verze protokolu ladění",
+        "namelessmc_version": "Verze NamelessMC"
     },
     "group_sync_section": {
         "injectors": "Vložení",
@@ -157,6 +159,7 @@
         "notice_log": "Protokol upozornění",
         "other_log": "Protokol ostatních",
         "custom_log": "Vlastní protokol",
-        "no_logs": "Žádné protokoly"
+        "no_logs": "Žádné protokoly",
+        "empty_log": "Prázdný protokol"
     }
 }
