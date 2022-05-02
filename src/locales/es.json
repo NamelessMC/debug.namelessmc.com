@@ -15,7 +15,8 @@
         "error": "Error",
         "no_data_in_json": "No hay datos de depuración disponibles en JSON",
         "invalid_link_id": "ID de enlace de depuración inválido",
-        "invalid_debug_version": "La versión de depuración <strong>{version}</strong> no se admite"
+        "invalid_debug_version": "La versión de depuración <strong>{version}</strong> no se admite",
+        "invalid_namelessmc_version": "Sólo se soportan los enlaces de depuración de la versión <strong>{required}</strong> de NamelessMC, estás ejecutando la versión <strong>{version}</strong>."
     },
     "environment_section": {
         "environment": "Entorno",
@@ -87,11 +88,12 @@
     "footer": {
         "debug_log_version": "Versión del registro de depuración",
         "generated_by": "Generado por",
-        "theme": "Tema: {theme}",
+        "theme": "Tema:",
         "raw_json": "JSON sin procesar",
         "namelessmc_website": "Sitio web de NamelessMC",
         "get_support": "Obtener ayuda",
-        "made_with_love": "Hecho con ❤️"
+        "made_with_love": "Hecho con ❤️",
+        "namelessmc_version": "Versión de NamelessMC"
     },
     "settings_section": {
         "api_enabled": "API activada",
@@ -157,6 +159,7 @@
         "notice_log": "Registro de avisos",
         "other_log": "Otros registros",
         "no_logs": "No hay registros",
-        "custom_log": "Registros personalizados"
+        "custom_log": "Registros personalizados",
+        "empty_log": "Registro vacío"
     }
 }
