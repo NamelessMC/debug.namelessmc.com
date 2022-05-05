@@ -15,7 +15,8 @@
         "no_id_provided": "Не предоставлен ID отладочной ссылки",
         "invalid_debug_version": "Отладка версии <strong>{version}</strong> не поддерживается",
         "no_data_in_json": "Нету отладочной информации в JSON формате",
-        "invalid_link_id": "Некорректная ссылка отладки"
+        "invalid_link_id": "Некорректная ссылка отладки",
+        "invalid_namelessmc_version": "Только отладочные ссылки с NamelessMC Версии <strong>{required}</strong> поддерживаются, у вас версия <strong>{version}</strong>."
     },
     "version_section": {
         "last_update_check": "Последняя проверка обновлений была",
@@ -105,7 +106,8 @@
         "debug_log_version": "Версия отладочного журнала",
         "generated_by": "Сгенерировал",
         "raw_json": "Сырой JSON",
-        "theme": "Оформление: {theme}"
+        "theme": "Тема:",
+        "namelessmc_version": "NamelessMC Версия"
     },
     "group_sync_section": {
         "name": "Название",
@@ -156,6 +158,7 @@
         "logs": "Логи",
         "warning_log": "Логи предупреждений",
         "notice_log": "Логи уведомлений",
-        "other_log": "Другие логи"
+        "other_log": "Другие логи",
+        "empty_log": "Пустой лог"
     }
 }
