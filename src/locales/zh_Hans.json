@@ -15,7 +15,8 @@
         "invalid_debug_version": "调试版本 <strong>{version}</strong> 不受支持",
         "invalid_link_id": "无效调试链接 ID",
         "error": "错误",
-        "no_data_in_json": "没有 JSON 格式的可用调试数据"
+        "no_data_in_json": "没有 JSON 格式的可用调试数据",
+        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{required}</strong> 版本的调试链接，您正在运行 <strong>{version}</strong>。"
     },
     "version_section": {
         "version": "版本",
@@ -102,10 +103,11 @@
         "debug_log_version": "调试日志版本",
         "generated_by": "生成工具",
         "raw_json": "原始 JSON",
-        "theme": "主题: {theme}",
+        "theme": "主题",
         "namelessmc_website": "NamelessMC 网站",
         "get_support": "获得支持",
-        "made_with_love": "用 ❤️ 打造"
+        "made_with_love": "用 ❤️ 打造",
+        "namelessmc_version": "NamelessMC 版本"
     },
     "webhooks_section": {
         "webhooks": "Webhooks",
@@ -128,5 +130,34 @@
         "rules": "规则",
         "injectors": "Injectors",
         "no_rules": "无规则"
+    },
+    "integrations_section": {
+        "integrations": "集成",
+        "name": "名称",
+        "enabled": "已启用",
+        "can_unlink": "可以解绑",
+        "required": "必填",
+        "no_integrations": "无集成"
+    },
+    "groups_section": {
+        "groups": "权限组",
+        "name": "名称",
+        "group_html": "权限组 HTML",
+        "can_view_staff_cp": "可以查看 StaffCP",
+        "staff": "工作人员",
+        "default": "默认",
+        "order": "顺序",
+        "force_tfa": "强制二步验证",
+        "no_groups": "无权限组",
+        "id": "ID"
+    },
+    "logs_section": {
+        "logs": "日志",
+        "fatal_log": "致命日志",
+        "warning_log": "警告日志",
+        "notice_log": "通知日志",
+        "other_log": "其他日志",
+        "custom_log": "自定义日志",
+        "empty_log": "空日志"
     }
 }
