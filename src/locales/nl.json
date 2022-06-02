@@ -15,7 +15,8 @@
         "no_data_in_json": "Geen debug data beschikbaar in JSON",
         "invalid_link_id": "Ongeldige debug link id",
         "no_id_provided": "Geen debug link id opgegeven",
-        "invalid_debug_version": "Debugversie <strong>{version}</strong> wordt niet ondersteund"
+        "invalid_debug_version": "Debugversie <strong>{version}</strong> wordt niet ondersteund",
+        "invalid_namelessmc_version": "Alleen debug linken van NamelessMC versie <strong>{required}</strong> zijn ondersteund, je gebruikt versie <strong>{version}</strong>."
     },
     "version_section": {
         "version": "Versie",
@@ -101,11 +102,12 @@
     "footer": {
         "generated_by": "Gegenereerd door",
         "raw_json": "Originele JSON",
-        "theme": "Thema: {theme}",
+        "theme": "Thema:",
         "namelessmc_website": "NamelessMC website",
         "get_support": "Krijg ondersteuning",
         "made_with_love": "Met ❤️ gemaakt",
-        "debug_log_version": "Debuglog versie"
+        "debug_log_version": "Debuglog versie",
+        "namelessmc_version": "NamelessMC versie"
     },
     "group_sync_section": {
         "module": "Module",
@@ -129,5 +131,34 @@
         "forum_title": "Forum Titel",
         "no_hooks": "Geen hooks",
         "no_forum_hooks": "Geen forum hooks"
+    },
+    "integrations_section": {
+        "integrations": "Integraties",
+        "can_unlink": "Kan ontkoppelen",
+        "name": "Naam",
+        "enabled": "Ingeschakeld",
+        "required": "Vereist",
+        "no_integrations": "Geen integraties"
+    },
+    "groups_section": {
+        "groups": "Groepen",
+        "id": "ID",
+        "name": "Naam",
+        "group_html": "Groep HTML",
+        "can_view_staff_cp": "Kan StaffCP bekijken",
+        "staff": "Medewerker",
+        "default": "Standaard",
+        "order": "Volgorde",
+        "force_tfa": "Forceer 2FA",
+        "no_groups": "Geen groepen"
+    },
+    "logs_section": {
+        "logs": "Logs",
+        "fatal_log": "Fatale log",
+        "warning_log": "Waarschuwingen log",
+        "notice_log": "Opmerkingen log",
+        "other_log": "Andere log",
+        "custom_log": "Aangepaste log",
+        "empty_log": "Lege log"
     }
 }
