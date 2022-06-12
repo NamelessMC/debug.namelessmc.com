@@ -46,6 +46,8 @@
 
               <WebhooksSection :data="data" />
 
+              <OAuthProvidersSection :data="data" />
+
               <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
                 <div>
                   <FrontEndTemplatesSection :data="data" />
@@ -98,7 +100,6 @@
 
 <script>
 
-// TODO: OAuth provider stuff
 // TODO: something with php modules
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
@@ -115,6 +116,7 @@ import GroupSyncSection from './sections/GroupSyncSection.vue';
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
 import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
+import OAuthProvidersSection from './sections/OAuthProvidersSection';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
 import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
 import LogsSection from "@/components/sections/LogsSection";
@@ -129,6 +131,7 @@ export default {
         GroupSyncSection,
         IntegrationsSection,
         WebhooksSection,
+        OAuthProvidersSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
         LogsSection,
