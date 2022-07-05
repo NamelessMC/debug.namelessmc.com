@@ -166,7 +166,7 @@ export default {
                         this.error = this.$t('errors.no_data_in_json');
                     } else if (this.data.namelessmc.version !== '2.0.0-pr13') {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.0-pr12',
+                          required: '2.0.0-pr13',
                           version: this.data.namelessmc.version
                         });
                     } else {
