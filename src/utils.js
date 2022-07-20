@@ -68,4 +68,9 @@ export default {
     capitalize(string) {
         return string[0].toUpperCase() + string.substring(1);
     },
+    goToModule(id) {
+        document.getElementById(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    },
 }

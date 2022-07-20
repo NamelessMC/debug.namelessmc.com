@@ -46,6 +46,8 @@
 
               <WebhooksSection :data="data" />
 
+              <OAuthProvidersSection :data="data" />
+
               <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
                 <div>
                   <FrontEndTemplatesSection :data="data" />
@@ -114,6 +116,7 @@ import GroupSyncSection from './sections/GroupSyncSection.vue';
 import IntegrationsSection from "@/components/sections/IntegrationsSection";
 import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
+import OAuthProvidersSection from './sections/OAuthProvidersSection';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
 import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
 import LogsSection from "@/components/sections/LogsSection";
@@ -128,6 +131,7 @@ export default {
         GroupSyncSection,
         IntegrationsSection,
         WebhooksSection,
+        OAuthProvidersSection,
         FrontEndTemplatesSection,
         PanelTemplatesSection,
         LogsSection,
@@ -164,9 +168,9 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.namelessmc.version !== '2.0.0-pr13') {
+                    } else if (this.data.namelessmc.version !== '2.0.0') {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.0-pr13',
+                          required: '2.0.0',
                           version: this.data.namelessmc.version
                         });
                     } else {
