@@ -66,11 +66,6 @@ export default {
         getWebsiteGroupName(id) {
             return this.data.namelessmc.groups[id].name;
         },
-        goToModule(id) {
-            document.getElementById(id).scrollIntoView({
-              behavior: 'smooth'
-            });
-        },
     }
 }
 </script>

@@ -110,6 +110,17 @@
         "forum_id": "Forum ID",
         "forum_title": "Forum Title"
     },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth Providers",
+        "name": "Name",
+        "module": "Module",
+        "class": "Class",
+        "user_id_name": "User ID Name",
+        "scope_id_name": "Scope ID Name",
+        "client_id": "Client ID",
+        "enabled": "Enabled",
+        "no_providers": "No Providers"
+    },
     "templates_section": {
         "templates": "Templates",
         "enabled": "Enabled",
