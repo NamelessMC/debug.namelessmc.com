@@ -168,9 +168,9 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.namelessmc.version !== '2.0.0') {
+                    } else if (this.data.namelessmc.version >= '2.0.0') {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.0',
+                          required: '<= 2.0.0',
                           version: this.data.namelessmc.version
                         });
                     } else {
