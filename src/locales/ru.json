@@ -160,5 +160,16 @@
         "notice_log": "Логи уведомлений",
         "other_log": "Другие логи",
         "empty_log": "Пустой лог"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth источники",
+        "name": "Имя",
+        "module": "Модуль",
+        "class": "Класс",
+        "user_id_name": "ID имени пользователя",
+        "scope_id_name": "Возможные ID имен",
+        "client_id": "ID клиента",
+        "enabled": "Включено",
+        "no_providers": "Нет источников"
     }
 }
