@@ -157,5 +157,16 @@
         "notice_log": "Upozorňujúci log",
         "other_log": "Iný log",
         "custom_log": "Vlastný log"
+    },
+    "oauth_providers_section": {
+        "name": "Meno",
+        "module": "Modul",
+        "scope_id_name": "Názov ID rozsahu",
+        "client_id": "ID klienta",
+        "user_id_name": "ID mena používateľa",
+        "no_providers": "Žiadni poskytovatelia",
+        "oauth_providers": "OAuth poskytovatelia",
+        "class": "Trieda",
+        "enabled": "Povolené"
     }
 }
