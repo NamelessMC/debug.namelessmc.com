@@ -161,5 +161,16 @@
         "custom_log": "Vlastní protokol",
         "no_logs": "Žádné protokoly",
         "empty_log": "Prázdný protokol"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "Poskytovatelé OAuth",
+        "name": "Název",
+        "module": "Doplněk",
+        "user_id_name": "Název ID uživatele",
+        "scope_id_name": "Název ID oblasti",
+        "enabled": "Povoleno",
+        "no_providers": "Žádní poskytovatelé",
+        "class": "Třída",
+        "client_id": "ID klienta"
     }
 }
