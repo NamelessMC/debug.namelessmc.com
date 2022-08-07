@@ -160,5 +160,16 @@
         "no_logs": "Keine Logs",
         "logs": "Logs",
         "empty_log": "Leerer Log"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth Anbieter",
+        "name": "Name",
+        "module": "Modul",
+        "class": "Klasse",
+        "user_id_name": "Benutzer-ID Name",
+        "client_id": "Kunden-ID",
+        "scope_id_name": "Bereich ID Name",
+        "enabled": "Aktiviert",
+        "no_providers": "Keine Anbieter"
     }
 }
