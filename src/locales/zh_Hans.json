@@ -80,14 +80,6 @@
         "version": "版本",
         "author": "作者"
     },
-    "panel_templates_section": {
-        "panel_templates": "面板模板",
-        "enabled": "启用",
-        "is_default": "是否是默认模板",
-        "namelessmc_version": "NamelessMC 版本",
-        "version": "版本",
-        "author": "作者"
-    },
     "environment_section": {
         "environment": "环境",
         "php_version": "PHP 版本",

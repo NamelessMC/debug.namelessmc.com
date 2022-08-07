@@ -59,7 +59,8 @@
             "ip": "IP",
             "query_ip": "Query IP",
             "port": "Port",
-            "query_port": "Query port"
+            "query_port": "Query port",
+            "group_sync_server": "Group sync server?"
         },
         "discord_integration": {
             "syncing_enabled": "Syncing enabled",
@@ -123,14 +124,6 @@
     },
     "templates_section": {
         "templates": "Templates",
-        "enabled": "Enabled",
-        "is_default": "Is default",
-        "author": "Author",
-        "namelessmc_version": "NamelessMC version",
-        "version": "Version"
-    },
-    "panel_templates_section": {
-        "panel_templates": "Panel Templates",
         "enabled": "Enabled",
         "is_default": "Is default",
         "author": "Author",

@@ -80,14 +80,6 @@
         "namelessmc_version": "NamelessMC versie",
         "version": "versie"
     },
-    "panel_templates_section": {
-        "is_default": "Is standaard",
-        "author": "Auteur",
-        "version": "Versie",
-        "enabled": "Ingeschakeld",
-        "namelessmc_version": "NamelessMC versie",
-        "panel_templates": "Paneel Sjablonen"
-    },
     "environment_section": {
         "environment": "Omgeving",
         "host_os": "Host besturingssysteem",

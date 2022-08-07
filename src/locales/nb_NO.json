@@ -68,14 +68,6 @@
         "version": "Versjon",
         "is_default": "Er standard"
     },
-    "panel_templates_section": {
-        "panel_templates": "Panelmaler",
-        "enabled": "Aktivert",
-        "is_default": "Er standard",
-        "author": "Utgiver",
-        "version": "Versjon",
-        "namelessmc_version": "NamelessMC-versjon"
-    },
     "environment_section": {
         "php_version": "PHP-versjon"
     },

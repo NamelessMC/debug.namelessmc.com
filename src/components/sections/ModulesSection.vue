@@ -70,12 +70,15 @@
                                               {{ $t('modules_section.core.query_ip') }}: <span v-html="asCode(server.query_ip)"></span>
                                           </h5>
                                       </div>
-                                      <div class="grid grid-cols-2">
+                                      <div class="grid grid-cols-3">
                                         <h5 class="section-heading">
                                             {{ $t('modules_section.core.port') }}: <span v-html="asCode(server.port)"></span>
                                         </h5>
                                         <h5 class="section-heading">
                                             {{ $t('modules_section.core.query_port') }}: <span v-html="asCode(server.query_port)"></span>
+                                        </h5>
+                                        <h5 class="section-heading">
+                                            {{ $t('modules_section.core.group_sync_server') }}: <span v-html="booleanValue(server.group_sync_server)"></span>
                                         </h5>
                                     </div>
                                 </div>

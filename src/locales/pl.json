@@ -100,14 +100,6 @@
         "namelessmc_version": "Wersja Nameless",
         "version": "Wersja"
     },
-    "panel_templates_section": {
-        "panel_templates": "Szablony panelu",
-        "enabled": "Włączony",
-        "is_default": "Jest domyślny",
-        "author": "Autor",
-        "namelessmc_version": "Wersja Nameless",
-        "version": "Wersja"
-    },
     "environment_section": {
         "environment": "Środowisko",
         "php_version": "Wersja PHP",

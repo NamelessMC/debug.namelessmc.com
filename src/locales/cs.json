@@ -75,14 +75,6 @@
         "namelessmc_version": "Verze NamelessMC",
         "version": "Verze"
     },
-    "panel_templates_section": {
-        "is_default": "Je výchozí",
-        "panel_templates": "Šablony panelu",
-        "enabled": "Povolena",
-        "author": "Autor",
-        "version": "Verze",
-        "namelessmc_version": "Verze NamelessMC"
-    },
     "version_section": {
         "version": "Verze",
         "update_available": "Dostupná aktualizace",

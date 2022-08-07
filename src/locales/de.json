@@ -112,14 +112,6 @@
         "update_available": "Update verfügbar",
         "last_update_check": "Letzte Update Prüfung"
     },
-    "panel_templates_section": {
-        "panel_templates": "Panel Templates",
-        "is_default": "Standard",
-        "version": "Version",
-        "enabled": "Aktiviert",
-        "author": "Author",
-        "namelessmc_version": "NamelessMC Version"
-    },
     "environment_section": {
         "php_version": "PHP Version",
         "host_os": "Host Betriebssystem",

@@ -80,14 +80,6 @@
         "namelessmc_version": "Версия NamelessMC",
         "is_default": "По умолчанию"
     },
-    "panel_templates_section": {
-        "panel_templates": "Оформление ПУ",
-        "author": "Автор",
-        "version": "Версия",
-        "namelessmc_version": "Версия NamelessMC",
-        "enabled": "Включён",
-        "is_default": "По умолчанию"
-    },
     "environment_section": {
         "php_version": "Версия PHP",
         "host_os": "ОС хоста",

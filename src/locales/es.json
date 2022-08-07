@@ -77,14 +77,6 @@
         "namelessmc_version": "Versión de NamelessMC",
         "version": "Versión"
     },
-    "panel_templates_section": {
-        "version": "Versión",
-        "panel_templates": "Plantillas del panel",
-        "enabled": "Activado",
-        "is_default": "Está por defecto",
-        "author": "Autor",
-        "namelessmc_version": "Versión de NamelessMC"
-    },
     "footer": {
         "debug_log_version": "Versión del registro de depuración",
         "generated_by": "Generado por",

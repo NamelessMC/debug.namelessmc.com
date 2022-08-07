@@ -67,14 +67,6 @@
         "empty_log": "Registro vazio",
         "custom_log": "Registro personalizado"
     },
-    "panel_templates_section": {
-        "version": "Versão",
-        "namelessmc_version": "Versão do NamelessMC",
-        "author": "Autor",
-        "is_default": "É o padrão",
-        "enabled": "Habilitado",
-        "panel_templates": "Modelos do painel"
-    },
     "templates_section": {
         "version": "Versão",
         "namelessmc_version": "Versão do NamelessMC",

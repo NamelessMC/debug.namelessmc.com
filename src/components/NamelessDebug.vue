@@ -48,14 +48,7 @@
 
               <OAuthProvidersSection :data="data" />
 
-              <div class="md:grid gap-4" :class="displayTemplatesSideBySide() ? 'grid-cols-2' : 'grid-cols-1'">
-                <div>
-                  <FrontEndTemplatesSection :data="data" />
-                </div>
-                <div>
-                  <PanelTemplatesSection :data="data" />
-                </div>
-              </div>
+              <FrontEndTemplatesSection :data="data" />
 
               <LogsSection :data="data" />
 
@@ -118,7 +111,6 @@ import WebhooksSection from './sections/WebhooksSection.vue';
 import EnvironmentSection from './sections/EnvironmentSection.vue';
 import OAuthProvidersSection from './sections/OAuthProvidersSection';
 import FrontEndTemplatesSection from './sections/FrontEndTemplatesSection.vue';
-import PanelTemplatesSection from './sections/PanelTemplatesSection.vue';
 import LogsSection from "@/components/sections/LogsSection";
 
 export default {
@@ -133,7 +125,6 @@ export default {
         WebhooksSection,
         OAuthProvidersSection,
         FrontEndTemplatesSection,
-        PanelTemplatesSection,
         LogsSection,
         EnvironmentSection,
     },
@@ -168,9 +159,9 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.namelessmc.version !== '2.0.0') {
+                    } else if (this.data.namelessmc.version !== '2.0.1') {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.0',
+                          required: '2.0.1',
                           version: this.data.namelessmc.version
                         });
                     } else {
@@ -181,10 +172,6 @@ export default {
                     this.error =  this.$t('errors.invalid_link_id');
                 }
             }
-        },
-        displayTemplatesSideBySide() {
-            return Object.keys(this.data.namelessmc.templates.front_end).length === 1
-                    && Object.keys(this.data.namelessmc.templates.panel).length === 1;
         },
         setDefaultTheme(forcedTheme = null) {
             let theme = 'light';
