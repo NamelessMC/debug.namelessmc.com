@@ -97,6 +97,7 @@
 // TODO: collapsable each section
 // TODO: drag to reorder sections and store in localstorage
 // TODO: dynamic og:description meta tag summary (version + date created?)
+// TODO: support multiple minor namelessmc versions
 
 import axios from 'axios';
 
@@ -159,9 +160,9 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.namelessmc.version !== '2.0.1') {
+                    } else if (this.data.namelessmc.version !== '2.0.2') {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.1',
+                          required: '2.0.2',
                           version: this.data.namelessmc.version
                         });
                     } else {
