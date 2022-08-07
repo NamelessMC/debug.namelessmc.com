@@ -161,5 +161,15 @@
         "no_logs": "No hay registros",
         "custom_log": "Registros personalizados",
         "empty_log": "Registro vacío"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "Proveedores de OAuth",
+        "name": "Nombre",
+        "module": "Módulo",
+        "class": "Clase",
+        "user_id_name": "Nombre de identificación del usuario",
+        "client_id": "ID del cliente",
+        "enabled": "Activado",
+        "no_providers": "No hay proveedores"
     }
 }
