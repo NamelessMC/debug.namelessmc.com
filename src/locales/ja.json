@@ -159,5 +159,16 @@
         "other_log": "その他のログ",
         "empty_log": "ログが空です",
         "custom_log": "カスタムログ"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth プロバイダ",
+        "name": "名称",
+        "module": "モジュール",
+        "class": "クラス",
+        "user_id_name": "ユーザーID名",
+        "scope_id_name": "スコープID名",
+        "client_id": "クライアントID",
+        "enabled": "有効",
+        "no_providers": "プロバイダはありません"
     }
 }
