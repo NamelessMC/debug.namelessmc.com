@@ -53,7 +53,7 @@
         "version": "Versión",
         "discord_integration": {
             "syncing_enabled": "Sincronización activada",
-            "guild_id": "Identificación del servidor",
+            "guild_id": "ID del servidor",
             "bot_setup": "Configuración del bot",
             "bot_url": "URL del bot"
         },
