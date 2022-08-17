@@ -168,10 +168,21 @@ export default {
 
                     if (!this.data.generated_at) {
                         this.error = this.$t('errors.no_data_in_json');
-                    } else if (this.data.namelessmc.version !== '2.0.0') {
+                    }
+
+                    const version = this.data.namelessmc.version;
+                    const versionParts = version.split('.');
+                    const major = parseInt(versionParts[0]);
+                    const minor = parseInt(versionParts[1]);
+
+                    const requiredMajor = 2;
+                    const requiredMinor = 0;
+                    // Check that it is not a prerelease version with a hyphen
+                    // Check that the major and minor versions match (same logic as module compatibility checks)
+                    if (version.includes('-') || (major !== requiredMajor || minor !== requiredMinor)) {
                         this.error = this.$t('errors.invalid_namelessmc_version', {
-                          required: '2.0.0',
-                          version: this.data.namelessmc.version
+                          required: `${requiredMajor}.${requiredMinor}.x`,
+                          version: version,
                         });
                     } else {
                         this.loaded = true;
