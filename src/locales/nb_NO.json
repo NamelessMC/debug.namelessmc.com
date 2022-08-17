@@ -35,7 +35,7 @@
         "path": "Sti",
         "force_https": "Tving HTTPS",
         "force_www": "Tving www",
-        "allowed_proxies": "Tillatte proxies"
+        "trusted_proxies": "Tillatte proxies"
     },
     "modules_section": {
         "modules": "Moduler",

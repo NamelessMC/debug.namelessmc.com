@@ -98,7 +98,7 @@
     },
     "config_section": {
         "force_www": "Vynútenie www",
-        "allowed_proxies": "Povolené proxy servery",
+        "trusted_proxies": "Povolené proxy servery",
         "force_https": "Vynútenie HTTPS",
         "config": "Konfigurácia",
         "path": "Cesta",

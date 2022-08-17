@@ -70,7 +70,7 @@
         "friendly_urls": "フレンドリーURL",
         "force_https": "強制HTTPS",
         "force_www": "強制www",
-        "allowed_proxies": "許可されたプロキシ"
+        "trusted_proxies": "許可されたプロキシ"
     },
     "group_sync_section": {
         "group_sync": "グループの同期",

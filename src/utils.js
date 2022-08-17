@@ -37,7 +37,7 @@ export default {
         return `<span class="text-sm text-black text-normal font-normal font-mono">${value}</span>`;
     },
     isEmpty(value, code = false) {
-        return !value
+        return !value || (Array.isArray(value) && value.length === 0)
             ? `<i class="font-normal text-base text-normal">${this.$t('misc.empty')}</i>`
             : code
                 ? this.asCode(value)

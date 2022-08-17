@@ -40,7 +40,7 @@
         "friendly_urls": "Дружні URL-адреси",
         "force_https": "Примусово HTTPS",
         "force_www": "Сила www",
-        "allowed_proxies": "Дозволені проксі"
+        "trusted_proxies": "Дозволені проксі"
     },
     "modules_section": {
         "modules": "Модулі",

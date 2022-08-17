@@ -21,8 +21,8 @@
                 <h2 v-html="booleanValue(data.namelessmc.config.force_www)"></h2>
             </div>
             <div>
-                <h5 class="section-heading">{{ $t('config_section.allowed_proxies') }}</h5>
-                <h2 v-html="isEmpty(data.namelessmc.config.allowed_proxies, true)"></h2>
+                <h5 class="section-heading">{{ $t('config_section.trusted_proxies') }}</h5>
+                <h2 v-html="isEmpty(data.namelessmc.settings.trusted_proxies, true)"></h2>
             </div>
         </div>
     </div>

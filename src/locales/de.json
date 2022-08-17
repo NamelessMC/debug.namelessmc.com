@@ -75,7 +75,7 @@
         "friendly_urls": "Benutzerfreundliche URLs",
         "force_https": "HTTPS erzwingen",
         "force_www": "www erzwingen",
-        "allowed_proxies": "Erlaubte Proxys"
+        "trusted_proxies": "Erlaubte Proxys"
     },
     "webhooks_section": {
         "webhooks": "Webhooks",

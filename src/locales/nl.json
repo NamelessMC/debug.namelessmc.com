@@ -38,7 +38,7 @@
         "path": "Pad",
         "friendly_urls": "Mooie URLs",
         "force_https": "Forceer HTTPS",
-        "allowed_proxies": "Toegestane proxies",
+        "trusted_proxies": "Toegestane proxies",
         "config": "Configuratie",
         "force_www": "Forceer www"
     },

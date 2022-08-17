@@ -29,7 +29,7 @@
         "path": "Caminho",
         "friendly_urls": "URLs amigáveis",
         "force_www": "Forçar www",
-        "allowed_proxies": "Proxies permitidos",
+        "trusted_proxies": "Proxies permitidos",
         "force_https": "Forçar HTTPS"
     },
     "modules_section": {

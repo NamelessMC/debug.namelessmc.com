@@ -39,7 +39,7 @@
         "friendly_urls": "Przyjazne URL",
         "force_https": "Force HTTPS",
         "force_www": "Force www",
-        "allowed_proxies": "Zezwól na proxy"
+        "trusted_proxies": "Zezwól na proxy"
     },
     "modules_section": {
         "modules": "Modóły",

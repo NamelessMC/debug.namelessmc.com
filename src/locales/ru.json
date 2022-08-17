@@ -40,7 +40,7 @@
         "force_https": "Прунудительное HTTPS",
         "config": "Конфиг",
         "force_www": "Принудительный WWW",
-        "allowed_proxies": "Разрешённые прокси"
+        "trusted_proxies": "Разрешённые прокси"
     },
     "modules_section": {
         "modules": "Модули",

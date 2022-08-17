@@ -39,7 +39,7 @@
         "friendly_urls": "友好链接",
         "force_https": "强制 HTTPS",
         "force_www": "强制 www",
-        "allowed_proxies": "允许的代理",
+        "trusted_proxies": "允许的代理",
         "config": "配置"
     },
     "modules_section": {

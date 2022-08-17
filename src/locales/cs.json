@@ -35,7 +35,7 @@
         "friendly_urls": "Přátelské URL",
         "force_https": "Vynucení HTTPS",
         "force_www": "Vynucení wwww",
-        "allowed_proxies": "Povolené proxy"
+        "trusted_proxies": "Povolené proxy"
     },
     "modules_section": {
         "namelessmc_version": "Verze NamelessMC",
