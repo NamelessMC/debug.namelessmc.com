@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-const { t } = useTranslation();
 
 interface Props {
     loaded: boolean;
@@ -10,6 +9,9 @@ function Error({
     loaded,
     error,
 }: Props) {
+
+    const { t } = useTranslation();
+    
     return (
         <div>
             { error &&

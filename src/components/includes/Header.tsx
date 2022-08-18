@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-const { t } = useTranslation();
+import { formatDate } from '../../utils';
 
 interface Props {
     loaded: boolean;
@@ -12,6 +12,9 @@ function Header({
     publicPath,
     generatedAt,
 }: Props) {
+
+    const { t } = useTranslation();
+    
     return (
         <div className="py-9 bg-yellow-400 dark:bg-indigo-900 shadow-lg">
             <div className="container mx-auto flex">
