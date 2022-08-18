@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-const { t } = useTranslation();
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 interface Props {
     loaded: boolean;
     error: boolean;
@@ -10,6 +10,9 @@ function Loader({
     loaded,
     error
 }: Props) {
+
+    const { t } = useTranslation();
+
     return (
         <div>
             { (!loaded && !error) &&
@@ -18,7 +21,7 @@ function Loader({
                 >
                     { t('misc.loading') }
                     <span className="float-right">
-                        <font-awesome-icon icon="spinner" spin size="lg"/>
+                        <FontAwesomeIcon  icon={faCog} className="fa-spin" />
                     </span>
                 </div>
             }
