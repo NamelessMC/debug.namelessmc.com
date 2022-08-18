@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="Fix displaying of trusted proxies">
+      <change afterPath="$PROJECT_DIR$/src/components/includes/Error.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/includes/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/includes/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/includes/Loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/i18n.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx-prod.conf" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/docker/nginx-prod.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/_redirects" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/public/_redirects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/public/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/assets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/assets/tailwind.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NamelessDebug.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/NamelessDebug.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/ConfigSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/EnvironmentSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/EnvironmentSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/FrontEndTemplatesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/FrontEndTemplatesSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GroupSyncSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/GroupSyncSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GroupsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/GroupsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/IntegrationsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/IntegrationsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/LogsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/LogsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ModulesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/ModulesSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/OAuthProvidersSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/PanelTemplatesSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/PanelTemplatesSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/SettingsSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/SettingsSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/VersionSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/VersionSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/WebhooksSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/components/sections/WebhooksSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/cs.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/cs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/es.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/es.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/ja.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/ja.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/nb_NO.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/nb_NO.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/nl.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/nl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/pt_BR.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/pt_BR.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/sk.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/sk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/uk.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/locales/zh_Hans.json" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/locales/zh_Hans.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/legacy/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23Do3IcBxfP98rEuUWtZ6yVJTYi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "TF_FMT": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/src/components/sections",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/sections" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/legacy" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="" />
+      <created>1641277820791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1641277820791</updated>
+      <workItem from="1641277823667" duration="10000" />
+      <workItem from="1641319623138" duration="60000" />
+      <workItem from="1641320076657" duration="4000" />
+      <workItem from="1645563389455" duration="2205000" />
+      <workItem from="1645595770242" duration="4723000" />
+      <workItem from="1645635467947" duration="5000" />
+      <workItem from="1645635647712" duration="4000" />
+      <workItem from="1645636585080" duration="780000" />
+      <workItem from="1645639772817" duration="30000" />
+      <workItem from="1645640007125" duration="1000" />
+      <workItem from="1646152228468" duration="135000" />
+      <workItem from="1646152379352" duration="1759000" />
+      <workItem from="1646171858131" duration="5000" />
+      <workItem from="1646240032936" duration="611000" />
+      <workItem from="1646246354585" duration="2135000" />
+      <workItem from="1646252129051" duration="3553000" />
+      <workItem from="1646260806375" duration="520000" />
+      <workItem from="1646271647561" duration="14000" />
+      <workItem from="1646290384938" duration="1025000" />
+      <workItem from="1646333192246" duration="55000" />
+      <workItem from="1646336361607" duration="201000" />
+      <workItem from="1646336622296" duration="3109000" />
+      <workItem from="1646413902115" duration="5000" />
+      <workItem from="1649050882278" duration="171000" />
+      <workItem from="1649051891977" duration="4000" />
+      <workItem from="1650813876445" duration="75000" />
+      <workItem from="1650814203688" duration="53000" />
+      <workItem from="1650858554882" duration="6080000" />
+      <workItem from="1651032274539" duration="5261000" />
+      <workItem from="1651127418815" duration="9959000" />
+      <workItem from="1651188414130" duration="7000" />
+      <workItem from="1651475335334" duration="1702000" />
+      <workItem from="1651505185339" duration="12000" />
+      <workItem from="1651610406203" duration="1343000" />
+      <workItem from="1651619787086" duration="7000" />
+      <workItem from="1652047298006" duration="1432000" />
+      <workItem from="1654924515126" duration="267000" />
+      <workItem from="1655006705683" duration="84000" />
+      <workItem from="1655061543550" duration="1345000" />
+      <workItem from="1655071069949" duration="2000" />
+      <workItem from="1659845160195" duration="772000" />
+      <workItem from="1659900869261" duration="8000" />
+      <workItem from="1660708120901" duration="1846000" />
+      <workItem from="1660789419377" duration="6000" />
+      <workItem from="1660794460893" duration="2930000" />
+    </task>
+    <task id="LOCAL-00001" summary="Remove check for &gt;= 1 webhook">
+      <created>1645563553511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645563553511</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Remove blank line">
+      <created>1645564442674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645564442674</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Remove contact page captcha setting">
+      <created>1645565328634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645565328634</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add messages when no data exists in tables">
+      <created>1645596543699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645596543699</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix MC servers displaying, add Bedrock info, misc">
+      <created>1645601379634</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1645601379634</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update TailwindCSS to 3.0!">
+      <created>1646152408583</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1646152408583</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Misc tw3 fixes">
+      <created>1646153458485</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646153458485</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Misc tw3 fixes">
+      <created>1646154208580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646154208580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix shouldShowDebugInfo method">
+      <created>1646247749346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1646247749346</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Attempt at snapping sections on scroll">
+      <created>1646248090603</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1646248090603</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Revert: attempt at snapping sections on scroll">
+      <created>1646248466058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646248466058</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix booleanValue font weight">
+      <created>1646253381842</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1646253381843</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Change table heading dark mode background colour">
+      <created>1646254715641</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1646254715641</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Add og:meta tags for embeds">
+      <created>1646260972826</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1646260972826</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add og:meta tags for embeds">
+      <created>1646261093107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1646261093107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Remove meta tags">
+      <created>1646291112461</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1646291112461</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Remove meta tags">
+      <created>1646291122284</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1646291122284</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix webhook list">
+      <created>1649051044344</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1649051044344</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Fix group sync rules list">
+      <created>1650813945927</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650813945927</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fix #107">
+      <created>1650814249416</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1650814249416</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add max height &amp; scroll">
+      <created>1650859044065</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1650859044065</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fix scrollbar when not needed">
+      <created>1650947394798</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1650947394798</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add groups and integrations sections">
+      <created>1650950220689</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1650950220689</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add logs section">
+      <created>1651037430717</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1651037430717</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Fix logs on mobile">
+      <created>1651171552129</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1651171552129</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Remove todos">
+      <created>1651171781305</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1651171781305</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Reword empty log term">
+      <created>1651172035645</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1651172035645</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fix group + integration table overflow on mobile">
+      <created>1651173055124</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1651173055124</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fix footer on mobile">
+      <created>1651174516711</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1651174516711</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Better table column sizes for groups">
+      <created>1651175146475</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1651175146475</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Icon for light/dark">
+      <created>1651176754470</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1651176754470</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Check NamelessMC version and not debug link version">
+      <created>1651177762470</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1651177762470</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add new pt_BR translation">
+      <created>1651610449996</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1651610449996</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Prep for Nameless 2.0.0">
+      <created>1654924697974</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1654924697974</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add OAuth Providers section">
+      <created>1655062886907</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1655062886908</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Update to 2.0.2">
+      <created>1659845755398</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1659845755398</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Bump version check">
+      <created>1659845848673</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1659845848673</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Support multiple patch versions of nmc">
+      <created>1660708747269</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1660708747269</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Fix displaying of trusted proxies">
+      <created>1660709968573</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1660709968573</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Change table heading dark mode background colour" />
+    <MESSAGE value="Add og:meta tags for embeds" />
+    <MESSAGE value="Remove meta tags" />
+    <MESSAGE value="Fix webhook list" />
+    <MESSAGE value="Fix group sync rules list" />
+    <MESSAGE value="Fix #107" />
+    <MESSAGE value="Add max height &amp; scroll" />
+    <MESSAGE value="Fix scrollbar when not needed" />
+    <MESSAGE value="Add groups and integrations sections" />
+    <MESSAGE value="Add logs section" />
+    <MESSAGE value="Fix logs on mobile" />
+    <MESSAGE value="Remove todos" />
+    <MESSAGE value="Reword empty log term" />
+    <MESSAGE value="Fix group + integration table overflow on mobile" />
+    <MESSAGE value="Fix footer on mobile" />
+    <MESSAGE value="Better table column sizes for groups" />
+    <MESSAGE value="Icon for light/dark" />
+    <MESSAGE value="Check NamelessMC version and not debug link version" />
+    <MESSAGE value="Add new pt_BR translation" />
+    <MESSAGE value="Prep for Nameless 2.0.0" />
+    <MESSAGE value="Add OAuth Providers section" />
+    <MESSAGE value="Update to 2.0.2" />
+    <MESSAGE value="Bump version check" />
+    <MESSAGE value="Support multiple patch versions of nmc" />
+    <MESSAGE value="Fix displaying of trusted proxies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix displaying of trusted proxies" />
+  </component>
+</project>
