@@ -7,28 +7,30 @@ interface Props {
     icon: IconDefinition;
     titleKey: string;
     content: SectionContent[];
+    gridCols?: number
+    gap?: number
 }
 
 function SimpleSection({
     icon,
     titleKey,
     content,
+    gridCols,
+    gap
 }: Props) {
 
     const { t } = useTranslation();
 
-    // TODO: allow grid gap class config
-    // TODO: how to handle grid-cols?
     return (
         <div className="section-background">
             <div className="section-title">
                 <FontAwesomeIcon icon={icon} /> { t(titleKey) }
             </div>
-            <div className="section-content grid-cols-3 gap-8">
-                { content.map(item => (
-                    <div>
+            <div className={"section-content " + (gridCols ? `grid-cols-${gridCols}` : 'grid-cols-3') + " " + (gap !== undefined ? (gap > 0 ? `gap-${gap}` : '') : 'gap-8')} >
+                { content.map((item, idx) => (
+                    <div key={idx}>
                         <h5 className="section-heading">{item.header}</h5>
-                        <h2 className="section-body" dangerouslySetInnerHTML={{__html: item.body}}></h2>
+                        <h2 className="section-body text-normal" dangerouslySetInnerHTML={{__html: item.body}}></h2>
                     </div>
                 )) }
             </div>

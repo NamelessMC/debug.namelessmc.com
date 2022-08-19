@@ -1,4 +1,3 @@
-import { createElement } from "react";
 import i18n from "./i18n";
 
 const formatDate = (seconds: number) => {

@@ -26,7 +26,7 @@ function VersionSection({
         },
         {
             header: t('version_section.last_update_check'),
-            body: `<h2 class="text-normal">${formatDate(debugData.namelessmc.update_checked)}</h2>`,
+            body: formatDate(debugData.namelessmc.update_checked),
         },
     ]
 

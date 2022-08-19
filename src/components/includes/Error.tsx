@@ -1,12 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
 interface Props {
-    loaded: boolean;
     error: string;
 }
 
 function Error({
-    loaded,
     error,
 }: Props) {
 

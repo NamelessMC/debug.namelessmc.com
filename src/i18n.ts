@@ -21,12 +21,12 @@ function loadLocaleMessages(): translationData {
 }
 
 const resources = loadLocaleMessages() as any;
-
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
         resources,
         lng: "en",
+        fallbackLng: 'en',
         interpolation: {
             escapeValue: false
         }

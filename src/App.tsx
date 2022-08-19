@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/includes/Header';
 import Footer from './components/includes/Footer';
 import Loader from "./components/includes/Loader";
@@ -10,16 +10,26 @@ import ConfigSection from "./components/sections/ConfigSection";
 import VersionSection from "./components/sections/VersionSection";
 import SettingsSection from "./components/sections/SettingsSection";
 import EnvironmentSection from "./components/sections/EnvironmentSection";
+import { useTranslation } from 'react-i18next';
+
 
 function App() {
+  const { t } = useTranslation();
   const debugId = window.location.pathname.slice(1);
   const [data, loaded, error] = useRequest(`https://bytebin.rkslot.nl/${debugId}`) as [data: DebugData, loaded: boolean, error: any];
+  const [theme, setTheme] = useState<"dark" | "light">('light');
 
+  if (theme === "dark") {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark');
+  }
+  
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
           <Header
               loaded={loaded}
-              generatedAt={data ? data.generatedAt : 0}
+              generatedAt={data ? data.generated_at : 0}
           />
 
           <div className="container mx-auto pt-8">
@@ -28,22 +38,20 @@ function App() {
                   error={error}
               />
 
-              { error &&
-                  <Error loaded={loaded} error={error.message} />
-              }
+              { error && error.name === "TypeError" && debugId.length === 0 && (<Error error={ t('errors.no_id_provided') } />) }
+              { error && debugId.length > 0 && (<Error error={ t('errors.invalid_link_id') } />) }
 
-              { loaded && !error && (
+              { loaded && !error && data && (
                 <>
                   <VersionSection debugData={data} />
-                
+                  <SettingsSection debugData={data} />
+                  <ConfigSection debugData={data} />
+                  <EnvironmentSection debugData={data} />
                 </>
               )}
 
-              {/* <SettingsSection debugData={data} /> */}
 
-              {/* <ConfigSection debugData={data} /> */}
 
-              {/* <EnvironmentSection debugData={data} /> */}
           </div>
 
           {data && (
@@ -53,7 +61,7 @@ function App() {
               generatedByUuid={data.generated_by_uuid}
               generatedByName={data.generated_by_name}
               namelessMcVersion={data.namelessmc.version}
-              theme={'light'}
+              theme={theme}
           />
         )}
       </div>

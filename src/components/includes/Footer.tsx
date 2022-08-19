@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import i18n from '../../i18n';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
     loaded: boolean;
@@ -21,14 +21,14 @@ function Footer({
     theme,
 }: Props) {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const toggleTheme = () => {
         alert('Toggle theme'); // TODO: implement this
     }
 
     const changeLocale = (locale: string) => {
-        alert('Change locale to ' + locale); // TODO: implement this
+        i18n.changeLanguage(locale);
     }
 
     if (!loaded) return <></>;
@@ -64,9 +64,9 @@ function Footer({
                         </button>
                     </div>
                     <div className="text-normal">
-                        <FontAwesomeIcon icon="globe" />
-                        <select onChange={(e) => changeLocale(e.target.value)} className="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900">
-                            {i18n.languages.map((lang, idx) => (
+                        <FontAwesomeIcon icon={faGlobe} />
+                        <select onChange={(e) => changeLocale(e.target.value)} className="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900" value={i18n.language}>
+                            {Object.keys(i18n.services.resourceStore.data).map((lang, idx) => (
                                 <option key={idx} value={lang}>{lang}</option>
                             ))}
                         </select>
