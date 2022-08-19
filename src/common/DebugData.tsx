@@ -40,8 +40,11 @@ interface DebugData {
         templates: {
             frontEnd: Template[];
             panel: Template[];
-        }
+        },
+        integrations: Integration[];
+        oauthProviders: OAuthProvider[];
     },
+    logs: Log[];
     environment: {
         phpVersion: string;
         phpModules: string[];
@@ -54,7 +57,7 @@ interface DebugData {
         memoryFreeSpace: string;
         configWritable: boolean;
         cacheWritable: boolean;
-    }
+    },
 }
 
 interface GroupSyncInjector {
@@ -98,6 +101,35 @@ interface Template {
         author: string;
         templateVersion: string;
         namelessMcVersion: string;
+    }
+}
+
+interface Integration {
+    [name: string]: {
+        id: number;
+        name: string;
+        enabled: boolean;
+        canUnlink: boolean;
+        required: boolean;
+        order: number;
+    }
+}
+
+interface OAuthProvider {
+    [name: string]: {
+        providerName: string;
+        module: string;
+        class: string;
+        userIdName: string;
+        scopeIdName: string;
+        enabled: boolean;
+        clientId: string;
+    }
+}
+
+interface Log {
+    [name: string]: {
+        content: string;
     }
 }
 
