@@ -7,7 +7,7 @@ interface Props {
     generatedByUuid: string;
     generatedByName: string;
     namelessMcVersion: string;
-    key: string;
+    debugId: string;
     theme: 'light' | 'dark';
 }
 
@@ -16,7 +16,7 @@ function Footer({
     generatedByUuid,
     generatedByName,
     namelessMcVersion,
-    key,
+    debugId,
     theme,
 }: Props) {
 
@@ -29,9 +29,8 @@ function Footer({
     const changeLocale = (locale: string) => {
         alert('Change locale to ' + locale); // TODO: implement this
     }
-    
+
     if (!loaded) return;
-    
 
     return (
         <footer className="h-auto bg-yellow-400 dark:bg-indigo-900 text-center">
@@ -52,7 +51,7 @@ function Footer({
                 <h5 className="section-heading">
                     { t('footer.raw_json') }:
                     <a href="`https://bytebin.rkslot.nl/${key}`" target="_blank">
-                        <span className="font-normal">https://bytebin.rkslot.nl/{ key }</span>
+                        <span className="font-normal">https://bytebin.rkslot.nl/{debugId}</span>
                     </a>
                 </h5>
             </div>
@@ -95,3 +94,5 @@ function Footer({
         </footer>
     )
 }
+
+export default Footer;
