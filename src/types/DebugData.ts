@@ -11,7 +11,7 @@ import {Module} from "./Module";
 import {Log} from "./Log";
 
 export interface DebugData {
-    generatedAt: number;
+    generated_at: number;
     generated_by_name: string;
     generated_by_uuid: string;
     namelessmc: {
@@ -19,13 +19,13 @@ export interface DebugData {
         update_available: boolean;
         update_checked: number;
         settings: {
-            phpMailer: boolean;
-            apiEnabled: boolean;
-            emailVerification: boolean;
+            phpmailer: boolean;
+            api_enabled: boolean;
+            email_verification: boolean;
             apiVerification: boolean;
-            loginMethod: 'email' | 'username' | 'email_or_username';
-            captchaType: string;
-            captchaLogin: boolean;
+            login_method: 'email' | 'username' | 'email_or_username';
+            captcha_type: string;
+            captcha_login: boolean;
             captchaContact: boolean;
             trustedProxies: string[];
             groupSync: {
@@ -57,16 +57,16 @@ export interface DebugData {
     },
     logs: Log[];
     environment: {
-        phpVersion: string;
+        php_version: string;
         phpModules: string[];
-        hostOs: string;
-        hostKernelVersion: string;
-        officialDockerImage: boolean;
-        diskTotalSpace: number;
-        diskFreeSpace: number;
-        memoryTotalSpace: string;
-        memoryUsedSpace: number;
-        configWritable: boolean;
-        cacheWritable: boolean;
+        host_os: string;
+        host_kernel_version: string;
+        official_docker_image: boolean;
+        disk_total_space: number;
+        disk_free_space: number;
+        memory_total_space: string;
+        memory_used_space: number;
+        config_writable: boolean;
+        cache_writable: boolean;
     },
 }

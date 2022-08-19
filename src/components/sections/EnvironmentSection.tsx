@@ -28,40 +28,40 @@ function EnvironmentSection({
     const content: SectionContent[] = [
         {
             header: t('environment_section.php_version'),
-            body: asCode(debugData.environment.phpVersion),
+            body: asCode(debugData.environment.php_version),
         },
         {
             header: t('environment_section.host_os'),
-            body: debugData.environment.hostOs,
+            body: debugData.environment.host_os,
         },
         {
             header: t('environment_section.host_kernel_version'),
-            body: asCode(debugData.environment.hostKernelVersion),
+            body: asCode(debugData.environment.host_kernel_version),
         },
         {
             header: t('environment_section.using_docker_image'),
-            body: booleanValue(debugData.environment.officialDockerImage),
+            body: booleanValue(debugData.environment.official_docker_image),
         },
         {
             header: t('environment_section.disk_usage'),
-            body: humanFileSize(debugData.environment.diskTotalSpace - debugData.environment.diskFreeSpace) + ' / ' + humanFileSize(debugData.environment.diskTotalSpace),
+            body: humanFileSize(debugData.environment.disk_total_space - debugData.environment.disk_free_space) + ' / ' + humanFileSize(debugData.environment.disk_total_space),
         },
         {
             header: t('environment_section.ram_usage'),
-            body: humanFileSize(debugData.environment.memoryUsedSpace) + ' / ' + debugData.environment.memoryTotalSpace
+            body: humanFileSize(debugData.environment.memory_used_space) + ' / ' + debugData.environment.memory_total_space
         },
         {
             header: t('environment_section.config_writable'),
-            body: booleanBadge(debugData.environment.configWritable),
+            body: booleanBadge(debugData.environment.config_writable),
         },
         {
             header: t('environment_section.cache_writable'),
-            body: booleanBadge(debugData.environment.cacheWritable),
+            body: booleanBadge(debugData.environment.cache_writable),
         }
     ]
 
     return (
-        <SimpleSection icon={faServer} titleKey={'environment_section.environment'} content={content} />
+        <SimpleSection icon={faServer} titleKey={'environment_section.environment'} content={content} gridCols={4}  />
     )
 }
 
