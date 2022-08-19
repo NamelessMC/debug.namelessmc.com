@@ -11,10 +11,8 @@ function OAuthProvidersSection({
     debugData
 }: Props) {
     // wip
-    const tableRows: TableRow[] = [];
-
-    debugData.namelessMc.oauthProviders.forEach((oauthProvider: OAuthProvider) => {
-        tableRows.push({
+    const tableRows: TableRow[] = debugData.namelessMc.oauthProviders.map(oauthProvider => {
+        return {
             cells: [
                 {
                     body: oauthProvider.providerName,
@@ -28,8 +26,8 @@ function OAuthProvidersSection({
                     body: oauthProvider.class,
                 }
             ],
-        });
-    })
+        };
+    });
 
     const tableColumnHeaders: TableColumnHeader[] = [
         {
@@ -42,7 +40,6 @@ function OAuthProvidersSection({
             key: 'oauth_providers_section.class',
             classes: ['w-1/4'],
         },
-
     ];
 
     const emptyState: TableEmptyState = {
