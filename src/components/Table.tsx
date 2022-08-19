@@ -45,7 +45,7 @@ function Table({
                     {rows.map(row => row.cells.map(cell => <td onClick={cell.click} className={`table-data ${cell.classes?.join(' ')}`}>{cell.body}</td>))}
                 </tr>
                 :
-                <td className="table-data">{ t(emptyState.textKey) }</td>
+                <td className="table-data" colSpan={columnHeaders.length}>{ t(emptyState.textKey) }</td>
             }
         </table>
     </>

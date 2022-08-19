@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="lots of work. initial &quot;SimpleSection&quot; implementation. typings for debugdata">
-      <change afterPath="$PROJECT_DIR$/src/components/Table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/EnvironmentSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/SettingsSection.tsx" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="finish some more sections, start dynamic table component">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SimpleSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/VersionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/VersionSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/DebugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -429,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660885269880</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="finish some more sections, start dynamic table component">
+      <created>1660889050903</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1660889050903</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +447,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix webhook list" />
     <MESSAGE value="Fix group sync rules list" />
     <MESSAGE value="Fix #107" />
     <MESSAGE value="Add max height &amp; scroll" />
@@ -472,6 +471,7 @@
     <MESSAGE value="add debugdata type first draft" />
     <MESSAGE value="add some missing data" />
     <MESSAGE value="lots of work. initial &quot;SimpleSection&quot; implementation. typings for debugdata" />
-    <option name="LAST_COMMIT_MESSAGE" value="lots of work. initial &quot;SimpleSection&quot; implementation. typings for debugdata" />
+    <MESSAGE value="finish some more sections, start dynamic table component" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish some more sections, start dynamic table component" />
   </component>
 </project>
