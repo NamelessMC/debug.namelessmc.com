@@ -1,4 +1,16 @@
-interface DebugData {
+import {GroupSyncInjector} from "./GroupSyncInjector";
+import {GroupSyncRule} from "./GroupSyncRule";
+import {WebhookAction} from "./WebhookAction";
+import {WebhookHook} from "./WebhookHook";
+import {Group} from "./Group";
+import {Integration} from "./Integration";
+import {OAuthProvider} from "./OAuthProvider";
+import {WebhookForumHook} from "./WebhookForumHook";
+import {Template} from "./Template";
+import {Module} from "./Module";
+import {Log} from "./Log";
+
+export interface DebugData {
     generatedAt: number;
     generatedByName: string;
     generatedByUuid: string;
@@ -15,6 +27,7 @@ interface DebugData {
             captchaType: string;
             captchaLogin: boolean;
             captchaContact: boolean;
+            trustedProxies: string[];
             groupSync: {
                 injectors: GroupSyncInjector[];
                 rules: GroupSyncRule[];
@@ -32,9 +45,7 @@ interface DebugData {
                 friendly: boolean;
                 forceHttps: boolean;
                 forceWww: boolean;
-                captcha: boolean;
             },
-            allowedProxies: string[];
         },
         modules: Module[];
         templates: {
@@ -59,78 +70,3 @@ interface DebugData {
         cacheWritable: boolean;
     },
 }
-
-interface GroupSyncInjector {
-    name: string;
-    enabled: boolean;
-    module: string;
-    columnName: string;
-}
-
-interface Group {
-    [id: number] : {
-        id: number;
-        name: string;
-        groupHtml: string;
-        adminCp: boolean;
-        staff: boolean;
-        permissions: string[];
-        defaultGroup: boolean;
-        order: number;
-        forceTfa: boolean;
-        deleted: boolean;
-    }
-}
-
-interface Module {
-    [name: string]: {
-        name: string;
-        enabled: boolean;
-        author: string;
-        moduleVersion: string;
-        namelessMcVersion: string;
-        debugInfo: any; // array?
-    };
-}
-
-interface Template {
-    [name: string]: {
-        name: string;
-        enabled: boolean;
-        isDefault: boolean;
-        author: string;
-        templateVersion: string;
-        namelessMcVersion: string;
-    }
-}
-
-interface Integration {
-    [name: string]: {
-        id: number;
-        name: string;
-        enabled: boolean;
-        canUnlink: boolean;
-        required: boolean;
-        order: number;
-    }
-}
-
-interface OAuthProvider {
-    [name: string]: {
-        providerName: string;
-        module: string;
-        class: string;
-        userIdName: string;
-        scopeIdName: string;
-        enabled: boolean;
-        clientId: string;
-    }
-}
-
-interface Log {
-    [name: string]: {
-        content: string;
-    }
-}
-
-export default DebugData;

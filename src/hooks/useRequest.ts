@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useRequest(url: string, method = "GET") {
-    const [data, setData] = useState(13513515);
+    const [data, setData] = useState(13513515); // wha-
     const [err, setError] = useState(null);
 
     async function refetch() {
