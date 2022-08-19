@@ -1,5 +1,5 @@
-import {useTranslation} from "react-i18next";
-const { t } = useTranslation(); // Ok to import here?
+import { createElement } from "react";
+import i18n from "./i18n";
 
 const formatDate = (seconds: number) => {
     const date = new Date(seconds * 1000);
@@ -27,12 +27,12 @@ const booleanBadge = (value: boolean, inverted: boolean = false) => {
         : 'text-yellow-600';
 
     return value
-        ? `<span class="font-bold text-base ${yesClassName}">${ t('misc.yes') }</span>`
-        : `<span class="font-bold text-base ${noClassName}">${ t('misc.no') }</span>`;
+        ? `<span class="font-bold text-base ${yesClassName}">${ i18n.t('misc.yes') }</span>`
+        : `<span class="font-bold text-base ${noClassName}">${ i18n.t('misc.no') }</span>`;
 }
 
 const booleanValue = (value: boolean) => {
-    return `<span class="text-base text-normal font-normal">${value ? t('misc.yes') : t('misc.no')}</span>`;
+    return `<span class="text-base text-normal font-normal">${value ? i18n.t('misc.yes') : i18n.t('misc.no')}</span>`;
 }
 
 const asCode = (value: string, escape: boolean = false) => {
@@ -44,7 +44,7 @@ const asCode = (value: string, escape: boolean = false) => {
 
 const isEmpty = (value: string | Array<any>, code: boolean = false) => {
     return !value || (Array.isArray(value) && value.length === 0)
-        ? `<i class="font-normal text-base text-normal">${ t('misc.empty') }</i>`
+        ? `<i class="font-normal text-base text-normal">${ i18n.t('misc.empty') }</i>`
         : code
             ? asCode(Array.isArray(value) ? JSON.stringify(value) : value)
             : `<span class="font-normal text-base text-normal">${value}</span>`;
@@ -73,7 +73,7 @@ const isOfficialTemplate = (templateName: string) => {
 }
 
 const officialBadge = () => {
-    return `<span class="rounded-md text-white bg-blue-500 px-2 py-1 text-xs ml-1">${ t('misc.official') }</span>`;
+    return `<span class="rounded-md text-white bg-blue-500 px-2 py-1 text-xs ml-1">${ i18n.t('misc.official') }</span>`;
 }
 
 const capitalize = (string: string) => {

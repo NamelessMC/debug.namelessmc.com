@@ -12,12 +12,12 @@ import {Log} from "./Log";
 
 export interface DebugData {
     generatedAt: number;
-    generatedByName: string;
-    generatedByUuid: string;
-    namelessMc: {
+    generated_by_name: string;
+    generated_by_uuid: string;
+    namelessmc: {
         version: string;
-        updateAvailable: boolean;
-        updateChecked: number;
+        update_available: boolean;
+        update_checked: number;
         settings: {
             phpMailer: boolean;
             apiEnabled: boolean;

@@ -18,27 +18,27 @@ function SettingsSection({
     const content: SectionContent[] = [
         {
             header: t('settings_section.phpmailer_enabled'),
-            body: booleanBadge(debugData.namelessMc.settings.phpMailer),
+            body: booleanBadge(debugData.namelessmc.settings.phpMailer),
         },
         {
             header: t('settings_section.api_enabled'),
-            body: booleanBadge(debugData.namelessMc.settings.apiEnabled),
+            body: booleanBadge(debugData.namelessmc.settings.apiEnabled),
         },
         {
             header: t('settings_section.email_verification_enabled'),
-            body: booleanBadge(debugData.namelessMc.settings.emailVerification),
+            body: booleanBadge(debugData.namelessmc.settings.emailVerification),
         },
         {
             header: t('settings_section.login_method'),
-            body: capitalize(debugData.namelessMc.settings.loginMethod),
+            body: capitalize(debugData.namelessmc.settings.loginMethod),
         },
         {
             header: t('settings_section.captcha_type'),
-            body: capitalize(debugData.namelessMc.settings.captchaType),
+            body: capitalize(debugData.namelessmc.settings.captchaType),
         },
         {
             header: t('settings_section.captcha_login_page'),
-            body: booleanBadge(debugData.namelessMc.settings.captchaLogin),
+            body: booleanBadge(debugData.namelessmc.settings.captchaLogin),
         }
     ];
 

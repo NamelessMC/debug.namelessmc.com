@@ -11,22 +11,22 @@ function OAuthProvidersSection({
     debugData
 }: Props) {
     // wip
-    const tableRows: TableRow[] = debugData.namelessMc.oauthProviders.map(oauthProvider => {
+    const tableRows: TableRow[] = debugData.namelessmc.oauthProviders.map(oauthProvider => {
         return {
             cells: [
                 {
                     body: oauthProvider.providerName,
                 },
                 {
-                    body: oauthProvider.module,
+                    body: oauthProvider.module.module,
                     classes: ['hover:underline', 'cursor-pointer'],
-                    click: () => goToModule(oauthProvider.module),
+                    click: () => goToModule(oauthProvider.module.module),
                 },
                 {
                     body: oauthProvider.class,
                 }
             ],
-        };
+        } as TableRow;
     });
 
     const tableColumnHeaders: TableColumnHeader[] = [

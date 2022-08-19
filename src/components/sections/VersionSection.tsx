@@ -18,15 +18,15 @@ function VersionSection({
     const content: SectionContent[] = [
         {
             header: t('version_section.version'),
-            body: asCode(debugData.namelessMc.version),
+            body: asCode(debugData.namelessmc.version),
         },
         {
             header: t('version_section.update_available'),
-            body: booleanBadge(debugData.namelessMc.updateAvailable, true),
+            body: booleanBadge(debugData.namelessmc.update_available, true),
         },
         {
             header: t('version_section.last_update_check'),
-            body: formatDate(debugData.namelessMc.updateChecked),
+            body: `<h2 class="text-normal">${formatDate(debugData.namelessmc.update_checked)}</h2>`,
         },
     ]
 
