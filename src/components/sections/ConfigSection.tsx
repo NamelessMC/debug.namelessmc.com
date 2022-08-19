@@ -39,7 +39,7 @@ function ConfigSection({
     ]
 
     return (
-        <SimpleSection icon={faWrench} title={t('config_section.config')} content={content} />
+        <SimpleSection icon={faWrench} titleKey={'config_section.config'} content={content} />
     )
 }
 
