@@ -65,7 +65,7 @@ export interface DebugData {
         diskTotalSpace: number;
         diskFreeSpace: number;
         memoryTotalSpace: string;
-        memoryFreeSpace: string;
+        memoryUsedSpace: number;
         configWritable: boolean;
         cacheWritable: boolean;
     },

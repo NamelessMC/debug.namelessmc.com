@@ -8,6 +8,8 @@ import useRequest from './hooks/useRequest';
 import {DebugData} from "./types/DebugData";
 import ConfigSection from "./components/sections/ConfigSection";
 import VersionSection from "./components/sections/VersionSection";
+import SettingsSection from "./components/sections/SettingsSection";
+import EnvironmentSection from "./components/sections/EnvironmentSection";
 
 function App() {
   const debugId = window.location.pathname.slice(1);
@@ -33,7 +35,11 @@ function App() {
 
               <VersionSection debugData={data} />
 
+              <SettingsSection debugData={data} />
+
               <ConfigSection debugData={data} />
+
+              <EnvironmentSection debugData={data} />
           </div>
 
           <Footer

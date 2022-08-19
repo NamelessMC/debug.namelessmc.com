@@ -31,7 +31,7 @@ function VersionSection({
     ]
 
     return (
-        <SimpleSection icon={faDownload} title={t('version_section.version')} content={content} />
+        <SimpleSection icon={faDownload} titleKey={'version_section.version'} content={content} />
     )
 }
 

@@ -1,22 +1,28 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {SectionContent} from "../types/SectionContent";
 import {IconDefinition} from "@fortawesome/free-solid-svg-icons";
+import {useTranslation} from "react-i18next";
 
 interface Props {
     icon: IconDefinition;
-    title: string;
+    titleKey: string;
     content: SectionContent[];
 }
 
 function SimpleSection({
     icon,
-    title,
+    titleKey,
     content,
 }: Props) {
+
+    const { t } = useTranslation();
+
+    // TODO: allow grid gap class config
+    // TODO: how to handle grid-cols?
     return (
         <div className="section-background">
             <div className="section-title">
-                <FontAwesomeIcon icon={icon} /> { title }
+                <FontAwesomeIcon icon={icon} /> { t(titleKey) }
             </div>
             <div className="section-content">
                 { content.map(item => (
