@@ -12,6 +12,7 @@ function Loader({
     error
 }: Props) {
 
+    // Should these checks be moved to the parent component?
     if (error) return;
 
     const { t } = useTranslation();

@@ -5,7 +5,9 @@ import Loader from "./components/includes/Loader";
 import Error from "./components/includes/Error";
 
 import useRequest from './hooks/useRequest';
-import DebugData from "./common/DebugData";
+import {DebugData} from "./types/DebugData";
+import ConfigSection from "./components/sections/ConfigSection";
+import VersionSection from "./components/sections/VersionSection";
 
 function App() {
   const debugId = window.location.pathname.slice(1);
@@ -24,9 +26,14 @@ function App() {
                   loaded={loaded}
                   error={error}
               />
+
               { error &&
                   <Error loaded={loaded} error={error.message} />
               }
+
+              <VersionSection debugData={data} />
+
+              <ConfigSection debugData={data} />
           </div>
 
           <Footer
@@ -34,7 +41,7 @@ function App() {
               loaded={loaded}
               generatedByUuid={data.generatedByUuid}
               generatedByName={data.generatedByName}
-              namelessMcVersion={data.namelessMcVersion}
+              namelessMcVersion={data.namelessMc.version}
               theme={'light'}
           />
       </div>

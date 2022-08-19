@@ -4,13 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="Fix displaying of trusted proxies">
-      <change afterPath="$PROJECT_DIR$/src/common/DebugData.tsx" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="add some missing data">
+      <change afterPath="$PROJECT_DIR$/src/components/Section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Group.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/GroupSyncInjector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/GroupSyncRule.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Integration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Log.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/OAuthProvider.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/SectionContent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/Template.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/WebhookAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/WebhookForumHook.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/WebhookHook.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/includes/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/includes/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/includes/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/includes/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/DebugData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/includes/Loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/includes/Loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,7 +418,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660709968573</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add debugdata type first draft">
+      <created>1660875408975</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1660875408975</updated>
+    </task>
+    <task id="LOCAL-00041" summary="add some missing data">
+      <created>1660875591730</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1660875591730</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,8 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Change table heading dark mode background colour" />
-    <MESSAGE value="Add og:meta tags for embeds" />
     <MESSAGE value="Remove meta tags" />
     <MESSAGE value="Fix webhook list" />
     <MESSAGE value="Fix group sync rules list" />
@@ -447,6 +473,8 @@
     <MESSAGE value="Bump version check" />
     <MESSAGE value="Support multiple patch versions of nmc" />
     <MESSAGE value="Fix displaying of trusted proxies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix displaying of trusted proxies" />
+    <MESSAGE value="add debugdata type first draft" />
+    <MESSAGE value="add some missing data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some missing data" />
   </component>
 </project>
