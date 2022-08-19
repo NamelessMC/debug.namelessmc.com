@@ -13,14 +13,13 @@ import EnvironmentSection from "./components/sections/EnvironmentSection";
 
 function App() {
   const debugId = window.location.pathname.slice(1);
-
   const [data, loaded, error] = useRequest(`https://bytebin.rkslot.nl/${debugId}`) as [data: DebugData, loaded: boolean, error: any];
 
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
           <Header
               loaded={loaded}
-              generatedAt={data.generatedAt}
+              generatedAt={data ? data.generatedAt : 0}
           />
 
           <div className="container mx-auto pt-8">
@@ -33,23 +32,30 @@ function App() {
                   <Error loaded={loaded} error={error.message} />
               }
 
-              <VersionSection debugData={data} />
+              { loaded && !error && (
+                <>
+                  <VersionSection debugData={data} />
+                
+                </>
+              )}
 
-              <SettingsSection debugData={data} />
+              {/* <SettingsSection debugData={data} /> */}
 
-              <ConfigSection debugData={data} />
+              {/* <ConfigSection debugData={data} /> */}
 
-              <EnvironmentSection debugData={data} />
+              {/* <EnvironmentSection debugData={data} /> */}
           </div>
 
-          <Footer
+          {data && (
+              <Footer
               debugId={debugId}
               loaded={loaded}
-              generatedByUuid={data.generatedByUuid}
-              generatedByName={data.generatedByName}
-              namelessMcVersion={data.namelessMc.version}
+              generatedByUuid={data.generated_by_uuid}
+              generatedByName={data.generated_by_name}
+              namelessMcVersion={data.namelessmc.version}
               theme={'light'}
           />
+        )}
       </div>
   );
 }

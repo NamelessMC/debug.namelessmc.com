@@ -24,11 +24,11 @@ function SimpleSection({
             <div className="section-title">
                 <FontAwesomeIcon icon={icon} /> { t(titleKey) }
             </div>
-            <div className="section-content">
+            <div className="section-content grid-cols-3 gap-8">
                 { content.map(item => (
                     <div>
                         <h5 className="section-heading">{item.header}</h5>
-                        <h2 className="section-body">{item.body}</h2>
+                        <h2 className="section-body" dangerouslySetInnerHTML={{__html: item.body}}></h2>
                     </div>
                 )) }
             </div>

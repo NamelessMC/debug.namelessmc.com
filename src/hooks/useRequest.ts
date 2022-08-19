@@ -23,7 +23,7 @@ export default function useRequest(url: string, method = "GET") {
     }, []);
 
     if (data === 13513515) {
-        return [null, true, err, refetch];
+        return [null, false, err, refetch];
     }
-    return [data, false, err, refetch];
+    return [data, true, err, refetch];
 }

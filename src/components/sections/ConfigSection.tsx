@@ -18,23 +18,23 @@ function ConfigSection({
     const content: SectionContent[] = [
         {
             header: t('config_section.path'),
-            body: isEmpty(debugData.namelessMc.config.core.path, true),
+            body: isEmpty(debugData.namelessmc.config.core.path, true),
         },
         {
             header: t('config_section.friendly_urls'),
-            body: booleanBadge(debugData.namelessMc.config.core.friendly),
+            body: booleanBadge(debugData.namelessmc.config.core.friendly),
         },
         {
             header: t('config_section.force_https'),
-            body: booleanBadge(debugData.namelessMc.config.core.forceHttps),
+            body: booleanBadge(debugData.namelessmc.config.core.forceHttps),
         },
         {
             header: t('config_section.force_www'),
-            body: booleanBadge(debugData.namelessMc.config.core.forceWww),
+            body: booleanBadge(debugData.namelessmc.config.core.forceWww),
         },
         {
             header: t('config_section.trusted_proxies'),
-            body: isEmpty(debugData.namelessMc.settings.trustedProxies, true),
+            body: isEmpty(debugData.namelessmc.settings.trustedProxies, true),
         }
     ]
 
