@@ -1,0 +1,172 @@
+{
+    "misc": {
+        "header_title": "NamelessMC Informácie k ľadeniu",
+        "yes": "Ano",
+        "no": "Nie",
+        "official": "OFICIÁLNE",
+        "generated_at": "Vygenerované {{time}}",
+        "loading": "Načítávam...",
+        "empty": "Prázdne",
+        "light": "Svetlý",
+        "dark": "Tmavý"
+    },
+    "errors": {
+        "error": "Chyba",
+        "no_id_provided": "Nebolo poskytnuté ID odkazu k ľadeniu",
+        "invalid_link_id": "Neplatné ID odkazu na ladenie",
+        "no_data_in_json": "V JSON nie sú k dispozícii žiadne údaje ladenia",
+        "invalid_debug_version": "Verzia ladenia <strong>{{version}}</strong> nie je podporovaná",
+        "invalid_namelessmc_version": "Podporované sú iba odkazy na ladenie z NamelessMC verzie <strong>{{required}}</strong>, používate verziu <strong>{{version}}</strong>."
+    },
+    "footer": {
+        "made_with_love": "Vytvorené s ❤️",
+        "raw_json": "Surový JSON",
+        "generated_by": "Generoval",
+        "theme": "Téma:",
+        "get_support": "Získať podporu",
+        "namelessmc_version": "Verzia NamelessMC",
+        "namelessmc_website": "NamelessMC webstránka"
+    },
+    "version_section": {
+        "version": "Verzia",
+        "update_available": "Aktualizácia je dostupná",
+        "last_update_check": "Posledná kontrola aktualizácie"
+    },
+    "environment_section": {
+        "environment": "Prostredie",
+        "host_os": "OS hosťa",
+        "host_kernel_version": "Kernel verzia hosťa",
+        "ram_usage": "Využitie RAM",
+        "disk_usage": "Využitie disku",
+        "config_writable": "Konfigurácia zapisovateľná",
+        "php_version": "PHP verzia",
+        "using_docker_image": "Použitie oficiálneho Docker imagu",
+        "cache_writable": "Cache zapisovateľná"
+    },
+    "modules_section": {
+        "no_debug_info": "Neboli poskytnuté žiadne informácie o ladení",
+        "modules": "Moduly",
+        "discord_integration": {
+            "bot_url": "URL bota",
+            "syncing_enabled": "Synchronizácia povolená",
+            "guild_id": "ID servera",
+            "bot_setup": "Bot nastavený"
+        },
+        "core": {
+            "ip": "IP",
+            "minecraft_integration": "Minecraft integrácia",
+            "integration_enabled": "Integrácia povolená",
+            "uuid_linking": "Prepojenie UUID",
+            "username_sync": "Synchronizácia používateľského mena",
+            "external_query": "Externé query",
+            "servers": "Servery",
+            "name": "Meno",
+            "port": "Port",
+            "query_ip": "Query IP",
+            "bedrock": "Bedrock",
+            "query_port": "Query port"
+        },
+        "debug_info": "Informácie o ladení",
+        "author": "Autor",
+        "enabled": "Povolené",
+        "namelessmc_version": "Verzia NamelessMC",
+        "version": "Verzia"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooky",
+        "hooks": "Hooky",
+        "no_forum_hooks": "Žiadne hooky fóra",
+        "no_hooks": "Žiadne hooky",
+        "id": "ID",
+        "name": "Meno",
+        "forum_hooks": "Hooky fóra",
+        "type": "Typ",
+        "events": "Udalosti",
+        "forum_id": "ID fóra",
+        "forum_title": "Názov fóra"
+    },
+    "settings_section": {
+        "api_enabled": "API povolené",
+        "email_verification_enabled": "Overenie emailu povolené",
+        "api_verification_enabled": "API overovanie povolené",
+        "login_method": "Spôsob prihlásenia",
+        "settings": "Nastavenia",
+        "phpmailer_enabled": "PHPMailer povolený",
+        "captcha_type": "Typ captcha",
+        "captcha_contact_page": "Captcha na kontaktnej stránke",
+        "captcha_login_page": "Captcha na prihlasovacej stránke"
+    },
+    "config_section": {
+        "force_www": "Vynútenie www",
+        "trusted_proxies": "Povolené proxy servery",
+        "force_https": "Vynútenie HTTPS",
+        "config": "Konfigurácia",
+        "path": "Cesta",
+        "friendly_urls": "Priateľské URL"
+    },
+    "group_sync_section": {
+        "injectors": "Injektory",
+        "name": "Meno",
+        "group_sync": "Synchronizácia skupín",
+        "rules": "Pravidlá",
+        "no_rules": "Žiadne pravidlá",
+        "enabled": "Povolené",
+        "module": "Modul"
+    },
+    "templates_section": {
+        "templates": "Šablóny",
+        "enabled": "Povolené",
+        "is_default": "Je predvolená",
+        "author": "Autor",
+        "version": "Verzia",
+        "namelessmc_version": "Verzia NamelessMC"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Šablóny panela",
+        "enabled": "Povolené",
+        "is_default": "Je predvolená",
+        "author": "Autor",
+        "namelessmc_version": "Verzia NamelessMC",
+        "version": "Verzia"
+    },
+    "integrations_section": {
+        "integrations": "Integrácie",
+        "name": "Meno",
+        "can_unlink": "Môže odpojiť",
+        "required": "Požadované",
+        "no_integrations": "Žiadne integrácie",
+        "enabled": "Povolené"
+    },
+    "groups_section": {
+        "groups": "Skupiny",
+        "id": "ID",
+        "name": "Meno",
+        "group_html": "HTML skupiny",
+        "can_view_staff_cp": "Môže zobraziť StaffCP",
+        "staff": "Vedenie",
+        "default": "Predvolené",
+        "order": "Poradie",
+        "force_tfa": "Vynútiť 2FA",
+        "no_groups": "Žiadne skupiny"
+    },
+    "logs_section": {
+        "fatal_log": "Fatálny log",
+        "logs": "Logy",
+        "empty_log": "Prázdny log",
+        "warning_log": "Upozorňujúci log",
+        "notice_log": "Upozorňujúci log",
+        "other_log": "Iný log",
+        "custom_log": "Vlastný log"
+    },
+    "oauth_providers_section": {
+        "name": "Meno",
+        "module": "Modul",
+        "scope_id_name": "Názov ID rozsahu",
+        "client_id": "ID klienta",
+        "user_id_name": "ID mena používateľa",
+        "no_providers": "Žiadni poskytovatelia",
+        "oauth_providers": "OAuth poskytovatelia",
+        "class": "Trieda",
+        "enabled": "Povolené"
+    }
+}

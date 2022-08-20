@@ -1,0 +1,163 @@
+{
+    "misc": {
+        "generated_at": "生成时间: {{time}}",
+        "loading": "加载中...",
+        "empty": "空",
+        "yes": "是",
+        "no": "否",
+        "official": "官方",
+        "header_title": "NamelessMC 调试信息",
+        "light": "亮色模式",
+        "dark": "深色模式"
+    },
+    "errors": {
+        "no_id_provided": "没有提供调试链接 ID",
+        "invalid_debug_version": "调试版本 <strong>{{version}}</strong> 不受支持",
+        "invalid_link_id": "无效调试链接 ID",
+        "error": "错误",
+        "no_data_in_json": "没有 JSON 格式的可用调试数据",
+        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{{required}}</strong> 版本的调试链接，您正在运行 <strong>{{version}}</strong>。"
+    },
+    "version_section": {
+        "version": "版本",
+        "update_available": "更新可用",
+        "last_update_check": "上次检查更新"
+    },
+    "settings_section": {
+        "settings": "设置",
+        "api_enabled": "API 是否启用",
+        "email_verification_enabled": "邮箱验证是否启用",
+        "login_method": "登录方式",
+        "captcha_type": "验证码类型",
+        "captcha_login_page": "登录页验证码",
+        "captcha_contact_page": "联系页验证码",
+        "phpmailer_enabled": "PHPMailer 是否启用",
+        "api_verification_enabled": "API 验证是否启用"
+    },
+    "config_section": {
+        "path": "路径",
+        "friendly_urls": "友好链接",
+        "force_https": "强制 HTTPS",
+        "force_www": "强制 www",
+        "trusted_proxies": "允许的代理",
+        "config": "配置"
+    },
+    "modules_section": {
+        "modules": "模块",
+        "enabled": "启用",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "debug_info": "调试信息",
+        "core": {
+            "minecraft_integration": "Minecraft 集成",
+            "integration_enabled": "集成是否启用",
+            "username_sync": "用户名同步",
+            "servers": "服务器",
+            "id": "ID",
+            "name": "名字",
+            "ip": "IP",
+            "port": "端口",
+            "query_ip": "查询 (Query) IP",
+            "uuid_linking": "UUID 链接",
+            "external_query": "外部查询 (Query)",
+            "query_port": "查询 (Query) 端口",
+            "bedrock": "基岩"
+        },
+        "discord_integration": {
+            "syncing_enabled": "同步是否启用",
+            "guild_id": "服务器 ID",
+            "bot_setup": "机器人配置",
+            "bot_url": "机器人链接"
+        },
+        "author": "作者",
+        "no_debug_info": "没有提供调试信息"
+    },
+    "templates_section": {
+        "templates": "模板",
+        "enabled": "启用",
+        "is_default": "是否是默认模板",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "author": "作者"
+    },
+    "panel_templates_section": {
+        "panel_templates": "面板模板",
+        "enabled": "启用",
+        "is_default": "是否是默认模板",
+        "namelessmc_version": "NamelessMC 版本",
+        "version": "版本",
+        "author": "作者"
+    },
+    "environment_section": {
+        "environment": "环境",
+        "php_version": "PHP 版本",
+        "host_os": "主机操作系统",
+        "host_kernel_version": "主机内核版本",
+        "disk_usage": "硬盘用量",
+        "ram_usage": "内存用量",
+        "config_writable": "配置是否可写",
+        "cache_writable": "缓存是否可写",
+        "using_docker_image": "使用官方 Docker image"
+    },
+    "footer": {
+        "debug_log_version": "调试日志版本",
+        "generated_by": "生成工具",
+        "raw_json": "原始 JSON",
+        "theme": "主题",
+        "namelessmc_website": "NamelessMC 网站",
+        "get_support": "获得支持",
+        "made_with_love": "用 ❤️ 打造",
+        "namelessmc_version": "NamelessMC 版本"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "论坛 Hooks",
+        "id": "ID",
+        "name": "名字",
+        "type": "类型",
+        "events": "活动",
+        "forum_id": "论坛 ID",
+        "forum_title": "论坛标题",
+        "no_hooks": "无 Hooks",
+        "no_forum_hooks": "无论坛 Hooks"
+    },
+    "group_sync_section": {
+        "group_sync": "权限组同步",
+        "name": "名字",
+        "enabled": "是否启用",
+        "module": "模块",
+        "rules": "规则",
+        "injectors": "Injectors",
+        "no_rules": "无规则"
+    },
+    "integrations_section": {
+        "integrations": "集成",
+        "name": "名称",
+        "enabled": "已启用",
+        "can_unlink": "可以解绑",
+        "required": "必填",
+        "no_integrations": "无集成"
+    },
+    "groups_section": {
+        "groups": "权限组",
+        "name": "名称",
+        "group_html": "权限组 HTML",
+        "can_view_staff_cp": "可以查看 StaffCP",
+        "staff": "工作人员",
+        "default": "默认",
+        "order": "顺序",
+        "force_tfa": "强制二步验证",
+        "no_groups": "无权限组",
+        "id": "ID"
+    },
+    "logs_section": {
+        "logs": "日志",
+        "fatal_log": "致命日志",
+        "warning_log": "警告日志",
+        "notice_log": "通知日志",
+        "other_log": "其他日志",
+        "custom_log": "自定义日志",
+        "empty_log": "空日志"
+    }
+}
