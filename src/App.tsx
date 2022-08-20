@@ -11,6 +11,7 @@ import VersionSection from "./components/sections/VersionSection";
 import SettingsSection from "./components/sections/SettingsSection";
 import EnvironmentSection from "./components/sections/EnvironmentSection";
 import { useTranslation } from 'react-i18next';
+import OAuthProvidersSection from "./components/sections/OAuthProvidersSection";
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
   } else {
     document.documentElement.classList.remove('dark');
   }
-  
+
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
           <Header
@@ -46,12 +47,10 @@ function App() {
                   <VersionSection debugData={data} />
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />
+                  <OAuthProvidersSection debugData={data} />
                   <EnvironmentSection debugData={data} />
                 </>
               )}
-
-
-
           </div>
 
           {data && (

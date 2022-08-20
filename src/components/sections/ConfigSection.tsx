@@ -39,7 +39,7 @@ function ConfigSection({
     ]
 
     return (
-        <SimpleSection icon={faWrench} titleKey={'config_section.config'} content={content} gridCols={5} gap={0} />
+        <SimpleSection icon={faWrench} titleKey={'config_section.config'} content={content} gridCols={5} />
     )
 }
 

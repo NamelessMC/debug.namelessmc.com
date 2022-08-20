@@ -5,9 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="finish some more sections, start dynamic table component">
+      <change afterPath="$PROJECT_DIR$/src/components/SimpleTableSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/cs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/ja.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/nb_NO.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/nl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/pl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/pt_BR.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/ru.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/sk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/uk.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/locales/zh_Hans.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SimpleSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/DebugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/OAuthProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/OAuthProvider.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,23 +70,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
-    &quot;TF_FMT&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/src/components/sections&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "TF_FMT": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/sections" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

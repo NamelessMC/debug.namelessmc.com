@@ -53,7 +53,7 @@ export interface DebugData {
             panel: Template[];
         },
         integrations: Integration[];
-        oauthProviders: OAuthProvider[];
+        oauth_providers: OAuthProvider[];
     },
     logs: Log[];
     environment: {
