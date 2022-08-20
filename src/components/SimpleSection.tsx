@@ -21,12 +21,29 @@ function SimpleSection({
 
     const { t } = useTranslation();
 
+    const DEFAULT_GRID_COLS = 3;
+    const DEFAULT_GRID_GAP = 8;
+
+    const getGridColsClass = (cols: number) => {
+        switch (cols) {
+            case 3: return 'grid-cols-3';
+            case 4: return 'grid-cols-4';
+            case 5: return 'grid-cols-5';
+        }
+    }
+
+    const getGridGapClass = (gap: number) => {
+        switch (gap) {
+            case 8: return 'gap-8';
+        }
+    }
+
     return (
         <div className="section-background">
             <div className="section-title">
                 <FontAwesomeIcon icon={icon} /> { t(titleKey) }
             </div>
-            <div className={"section-content " + (gridCols ? `grid-cols-${gridCols}` : 'grid-cols-3') + " " + (gap !== undefined ? (gap > 0 ? `gap-${gap}` : '') : 'gap-8')} >
+            <div className={"section-content " + getGridColsClass(gridCols ?? DEFAULT_GRID_COLS) + " " + getGridGapClass(gap ?? DEFAULT_GRID_GAP)} >
                 { content.map((item, idx) => (
                     <div key={idx}>
                         <h5 className="section-heading">{item.header}</h5>

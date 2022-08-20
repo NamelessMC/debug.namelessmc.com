@@ -1,6 +1,6 @@
 import {useTranslation} from "react-i18next";
 
-interface Props {
+export interface TableProps {
     columnHeaders: TableColumnHeader[];
     rows: TableRow[];
     emptyState?: TableEmptyState;
@@ -29,7 +29,7 @@ function Table({
     columnHeaders,
     rows,
     emptyState,
-}: Props) {
+}: TableProps) {
 
     const { t } = useTranslation();
 
@@ -41,9 +41,12 @@ function Table({
 
             {rows.length > 0 || !emptyState
                 ?
-                <tr>
-                    {rows.map(row => row.cells.map(cell => <td onClick={cell.click} className={`table-data ${cell.classes?.join(' ')}`}>{cell.body}</td>))}
-                </tr>
+                    rows.map(row =>
+                        <tr> {
+                            row.cells.map(cell => <td onClick={cell.click} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
+                        }
+                        </tr>
+                    )
                 :
                 <td className="table-data" colSpan={columnHeaders.length}>{ t(emptyState.textKey) }</td>
             }
