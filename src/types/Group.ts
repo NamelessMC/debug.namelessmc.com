@@ -1,14 +1,12 @@
 export interface Group {
-    [id: number] : {
-        id: number;
-        name: string;
-        groupHtml: string;
-        adminCp: boolean;
-        staff: boolean;
-        permissions: Record<string, boolean>;
-        defaultGroup: boolean;
-        order: number;
-        forceTfa: boolean;
-        deleted: boolean;
-    }
+    id: number;
+    name: string;
+    group_html: string;
+    admin_cp: boolean;
+    staff: boolean;
+    permissions: Record<string, boolean>;
+    default_group: boolean;
+    order: number;
+    force_tfa: boolean;
+    deleted: boolean;
 }

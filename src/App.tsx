@@ -12,6 +12,7 @@ import SettingsSection from "./components/sections/SettingsSection";
 import EnvironmentSection from "./components/sections/EnvironmentSection";
 import { useTranslation } from 'react-i18next';
 import OAuthProvidersSection from "./components/sections/OAuthProvidersSection";
+import GroupsSection from "./components/sections/GroupsSection";
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
                   <VersionSection debugData={data} />
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />
+                  <GroupsSection debugData={data} />
                   <OAuthProvidersSection debugData={data} />
                   <EnvironmentSection debugData={data} />
                 </>

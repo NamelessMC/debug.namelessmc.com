@@ -45,24 +45,24 @@ function OAuthProvidersSection({
                     body: capitalize(providerName),
                 },
                 {
-                    body: String(provider.module), // wtf
+                    body: provider.module, // wtf
                     classes: ['hover:underline', 'cursor-pointer'],
-                    click: () => goToModule(String(provider.module)),
+                    click: () => goToModule(provider.module),
                 },
                 {
-                    body: asCode(String(provider.class), true),
+                    body: asCode(provider.class, true),
                 },
                 {
-                    body: asCode(String(provider.user_id_name), true)
+                    body: asCode(provider.user_id_name, true)
                 },
                 {
-                    body: asCode(String(provider.scope_id_name), true)
+                    body: asCode(provider.scope_id_name, true)
                 },
                 {
-                    body: isEmpty(String(provider.client_id), true)
+                    body: isEmpty(provider.client_id, true)
                 },
                 {
-                    body: booleanValue(Boolean(provider.enabled)),
+                    body: booleanValue(provider.enabled),
                 }
             ],
         } as TableRow);

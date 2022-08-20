@@ -4,29 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="finish some more sections, start dynamic table component">
-      <change afterPath="$PROJECT_DIR$/src/components/SimpleTableSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/cs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/de.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/es.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/ja.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/nb_NO.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/nl.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/pl.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/pt_BR.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/ru.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/sk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/uk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/locales/zh_Hans.json" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="create and implement SimpleTableSection on oauth providers!">
+      <change afterPath="$PROJECT_DIR$/src/components/sections/GroupsSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SimpleSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/DebugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Group.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Group.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/GroupSyncRule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/GroupSyncRule.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Integration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Integration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Log.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/OAuthProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/OAuthProvider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/Template.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Template.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/WebhookHook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/WebhookHook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -449,7 +441,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660889050903</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="update variable syntax to double braces">
+      <created>1660965697099</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1660965697099</updated>
+    </task>
+    <task id="LOCAL-00045" summary="create and implement SimpleTableSection on oauth providers!">
+      <created>1660965719588</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1660965719588</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,8 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix group sync rules list" />
-    <MESSAGE value="Fix #107" />
     <MESSAGE value="Add max height &amp; scroll" />
     <MESSAGE value="Fix scrollbar when not needed" />
     <MESSAGE value="Add groups and integrations sections" />
@@ -492,6 +496,8 @@
     <MESSAGE value="add some missing data" />
     <MESSAGE value="lots of work. initial &quot;SimpleSection&quot; implementation. typings for debugdata" />
     <MESSAGE value="finish some more sections, start dynamic table component" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish some more sections, start dynamic table component" />
+    <MESSAGE value="update variable syntax to double braces" />
+    <MESSAGE value="create and implement SimpleTableSection on oauth providers!" />
+    <option name="LAST_COMMIT_MESSAGE" value="create and implement SimpleTableSection on oauth providers!" />
   </component>
 </project>

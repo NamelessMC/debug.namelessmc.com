@@ -55,7 +55,7 @@ export interface DebugData {
         integrations: Integration[];
         oauth_providers: OAuthProvider[];
     },
-    logs: Log[];
+    logs: Record<string, Log>[];
     environment: {
         php_version: string;
         phpModules: string[];
