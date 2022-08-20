@@ -1,0 +1,175 @@
+{
+    "misc": {
+        "generated_at": "Generado a las {{hora}}",
+        "loading": "Cargando...",
+        "empty": "Vacío",
+        "yes": "Sí",
+        "no": "No",
+        "official": "OFICIAL",
+        "header_title": "Información de depuración de NamelessMC",
+        "light": "Claro",
+        "dark": "Oscuro"
+    },
+    "errors": {
+        "no_id_provided": "No se ha proporcionado el ID del enlace de depuración",
+        "error": "Error",
+        "no_data_in_json": "No hay datos de depuración disponibles en JSON",
+        "invalid_link_id": "ID de enlace de depuración inválido",
+        "invalid_debug_version": "La versión de depuración <strong>{{version}}</strong> no se admite",
+        "invalid_namelessmc_version": "Sólo se soportan los enlaces de depuración de la versión <strong>{{required}}</strong> de NamelessMC, estás ejecutando la versión <strong>{{version}}</strong>."
+    },
+    "environment_section": {
+        "environment": "Entorno",
+        "php_version": "Versión de PHP",
+        "host_os": "Sistema operativo del alojamiento",
+        "host_kernel_version": "Versión del kernel del alojamiento",
+        "using_docker_image": "Usando la imagen oficial de Docker",
+        "disk_usage": "Uso del disco",
+        "ram_usage": "Uso de la RAM",
+        "config_writable": "Configuración escribible",
+        "cache_writable": "Caché escribible"
+    },
+    "modules_section": {
+        "no_debug_info": "No se ha proporcionado información de depuración",
+        "core": {
+            "query_port": "Puerto de consulta",
+            "username_sync": "Sincronización del nombre de usuario",
+            "uuid_linking": "Vinculación con UUID",
+            "external_query": "Consulta externa",
+            "servers": "Servidores",
+            "id": "ID",
+            "name": "Nombre",
+            "ip": "IP",
+            "port": "Puerto",
+            "minecraft_integration": "Integración con Minecraft",
+            "integration_enabled": "Integración activada",
+            "query_ip": "Consulta de la IP",
+            "bedrock": "Bedrock"
+        },
+        "modules": "Módulos",
+        "author": "Autor",
+        "enabled": "Activado",
+        "namelessmc_version": "Versión de NamelessMC",
+        "version": "Versión",
+        "discord_integration": {
+            "syncing_enabled": "Sincronización activada",
+            "guild_id": "Identificación del servidor",
+            "bot_setup": "Configuración del bot",
+            "bot_url": "URL del bot"
+        },
+        "debug_info": "Información de depuración"
+    },
+    "group_sync_section": {
+        "enabled": "Activado",
+        "module": "Módulo",
+        "column_name": "Nombre de la columna",
+        "group_sync": "Sincronización de grupos",
+        "injectors": "Inyectores",
+        "name": "Nombre",
+        "rules": "Reglas",
+        "no_rules": "No hay reglas"
+    },
+    "templates_section": {
+        "enabled": "Activado",
+        "templates": "Plantillas",
+        "is_default": "Está por defecto",
+        "author": "Autor",
+        "namelessmc_version": "Versión de NamelessMC",
+        "version": "Versión"
+    },
+    "panel_templates_section": {
+        "version": "Versión",
+        "panel_templates": "Plantillas del panel",
+        "enabled": "Activado",
+        "is_default": "Está por defecto",
+        "author": "Autor",
+        "namelessmc_version": "Versión de NamelessMC"
+    },
+    "footer": {
+        "debug_log_version": "Versión del registro de depuración",
+        "generated_by": "Generado por",
+        "theme": "Tema:",
+        "raw_json": "JSON sin procesar",
+        "namelessmc_website": "Sitio web de NamelessMC",
+        "get_support": "Obtener ayuda",
+        "made_with_love": "Hecho con ❤️",
+        "namelessmc_version": "Versión de NamelessMC"
+    },
+    "settings_section": {
+        "api_enabled": "API activada",
+        "api_verification_enabled": "Verificación de la API activada",
+        "email_verification_enabled": "Verificación de correo electrónico activado",
+        "captcha_type": "Tipo de captcha",
+        "settings": "Ajustes",
+        "phpmailer_enabled": "PHPMailer activado",
+        "login_method": "Método de inicio de sesión",
+        "captcha_login_page": "Captcha en la página de acceso",
+        "captcha_contact_page": "Captcha en la página de contacto"
+    },
+    "config_section": {
+        "force_www": "Forzar www",
+        "trusted_proxies": "Proxies permitidos",
+        "config": "Configuración",
+        "path": "Ruta",
+        "friendly_urls": "URLs amigables",
+        "force_https": "Forzar HTTPS"
+    },
+    "version_section": {
+        "version": "Versión",
+        "update_available": "Actualización disponible",
+        "last_update_check": "Comprobación de la última actualización"
+    },
+    "webhooks_section": {
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "forum_hooks": "Conexiones del foro",
+        "id": "ID",
+        "name": "Nombre",
+        "type": "Tipo",
+        "events": "Eventos",
+        "forum_id": "ID del foro",
+        "forum_title": "Título del foro",
+        "no_hooks": "Sin conexiones",
+        "no_forum_hooks": "Sin conexiones del foro"
+    },
+    "integrations_section": {
+        "integrations": "Integraciones",
+        "name": "Nombre",
+        "enabled": "Activado",
+        "can_unlink": "Se puede desvincular",
+        "required": "Obligatorio",
+        "no_integrations": "No hay integraciones"
+    },
+    "groups_section": {
+        "groups": "Grupos",
+        "id": "ID",
+        "name": "Nombre",
+        "group_html": "HTML del grupo",
+        "can_view_staff_cp": "Puede ver el StaffCP",
+        "staff": "Equipo administrativo",
+        "default": "Por defecto",
+        "order": "Orden",
+        "force_tfa": "Forzar 2FA",
+        "no_groups": "No hay grupos"
+    },
+    "logs_section": {
+        "logs": "Registros",
+        "fatal_log": "Registro de errores fatales",
+        "warning_log": "Registro de advertencias",
+        "notice_log": "Registro de avisos",
+        "other_log": "Otros registros",
+        "no_logs": "No hay registros",
+        "custom_log": "Registros personalizados",
+        "empty_log": "Registro vacío"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "Proveedores de OAuth",
+        "name": "Nombre",
+        "module": "Módulo",
+        "class": "Clase",
+        "user_id_name": "Nombre de identificación del usuario",
+        "client_id": "ID del cliente",
+        "enabled": "Activado",
+        "no_providers": "No hay proveedores"
+    }
+}
