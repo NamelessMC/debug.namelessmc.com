@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 export interface TableProps {
     columnHeaders: TableColumnHeader[];
     rows: TableRow[];
-    emptyState?: TableEmptyState;
+    emptyState: TableEmptyState;
 }
 
 export interface TableColumnHeader {
@@ -39,7 +39,7 @@ function Table({
                 {columnHeaders.map(columnHeader => <th className={`table-title ${columnHeader.classes?.join(' ')}`}>{ t(columnHeader.key) }</th>)}
             </tr>
 
-            {rows.length > 0 || !emptyState
+            {rows.length > 0
                 ?
                     rows.map(row =>
                         <tr> {

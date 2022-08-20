@@ -1,5 +1,3 @@
 export interface Log {
-    [name: string]: {
-        content: string;
-    }
+    content: string;
 }
