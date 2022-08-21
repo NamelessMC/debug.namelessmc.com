@@ -22,12 +22,12 @@ export interface DebugData {
             phpmailer: boolean;
             api_enabled: boolean;
             email_verification: boolean;
-            apiVerification: boolean;
+            api_verification: boolean;
             login_method: 'email' | 'username' | 'email_or_username';
             captcha_type: string;
             captcha_login: boolean;
-            captchaContact: boolean;
-            trustedProxies: string[];
+            captcha_contact: boolean;
+            trusted_proxies: string[];
             groupSync: {
                 injectors: GroupSyncInjector[];
                 rules: GroupSyncRule[];
@@ -35,7 +35,7 @@ export interface DebugData {
             webhooks: {
                 actions: WebhookAction[];
                 hooks: WebhookHook[];
-                forumHooks: WebhookForumHook[];
+                forum_hooks: WebhookForumHook[];
             }
         },
         groups: Group[];
@@ -43,13 +43,13 @@ export interface DebugData {
             core: {
                 path: string;
                 friendly: boolean;
-                forceHttps: boolean;
-                forceWww: boolean;
+                force_https: boolean;
+                force_www: boolean;
             },
         },
         modules: Module[];
         templates: {
-            frontEnd: Template[];
+            front_end: Template[];
             panel: Template[];
         },
         integrations: Integration[];
