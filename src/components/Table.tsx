@@ -3,7 +3,7 @@ import {useTranslation} from "react-i18next";
 export interface TableProps {
     columnHeaders: TableColumnHeader[];
     rows: TableRow[];
-    emptyState: TableEmptyState;
+    emptyState?: TableEmptyState;
 }
 
 export interface TableColumnHeader {
@@ -16,8 +16,9 @@ export interface TableRow {
 }
 
 export interface TableCell {
-    classes?: string[];
     body: string;
+    title?: string;
+    classes?: string[];
     click?: () => void;
 }
 
@@ -39,15 +40,16 @@ function Table({
                 {columnHeaders.map(columnHeader => <th className={`table-title ${columnHeader.classes?.join(' ')}`}>{ t(columnHeader.key) }</th>)}
             </tr>
 
-            {rows.length > 0
-                ?
-                    rows.map(row =>
-                        <tr> {
-                            row.cells.map(cell => <td onClick={cell.click} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
-                        }
-                        </tr>
-                    )
-                :
+            {rows.length > 0 &&
+                rows.map(row =>
+                    <tr> {
+                        row.cells.map(cell => <td onClick={cell.click} title={cell.title} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
+                    }
+                    </tr>
+                )
+            }
+
+            {rows.length === 0 && emptyState &&
                 <td className="table-data" colSpan={columnHeaders.length}>{ t(emptyState.textKey) }</td>
             }
         </table>

@@ -13,7 +13,7 @@ import EnvironmentSection from "./components/sections/EnvironmentSection";
 import { useTranslation } from 'react-i18next';
 import OAuthProvidersSection from "./components/sections/OAuthProvidersSection";
 import GroupsSection from "./components/sections/GroupsSection";
-
+import GroupSyncSection from "./components/sections/GroupSyncSection";
 
 function App() {
   const { t } = useTranslation();
@@ -49,6 +49,7 @@ function App() {
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />
                   <GroupsSection debugData={data} />
+                  <GroupSyncSection debugData={data} />
                   <OAuthProvidersSection debugData={data} />
                   <EnvironmentSection debugData={data} />
                 </>
