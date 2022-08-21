@@ -1,6 +1,6 @@
 export interface GroupSyncRule {
     id: number;
-    inGameRankName: string;
-    discordRoleId: string;
-    websiteGroupId: string;
+    ingame_rank_name: string;
+    discord_role_id: string;
+    website_group_id: string;
 }

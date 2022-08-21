@@ -28,7 +28,7 @@ export interface DebugData {
             captcha_login: boolean;
             captcha_contact: boolean;
             trusted_proxies: string[];
-            groupSync: {
+            group_sync: {
                 injectors: GroupSyncInjector[];
                 rules: GroupSyncRule[];
             },
