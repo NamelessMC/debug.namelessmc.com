@@ -26,15 +26,15 @@ function ConfigSection({
         },
         {
             header: t('config_section.force_https'),
-            body: booleanBadge(debugData.namelessmc.config.core.forceHttps),
+            body: booleanBadge(debugData.namelessmc.config.core.force_https),
         },
         {
             header: t('config_section.force_www'),
-            body: booleanBadge(debugData.namelessmc.config.core.forceWww),
+            body: booleanBadge(debugData.namelessmc.config.core.force_www),
         },
         {
             header: t('config_section.trusted_proxies'),
-            body: isEmpty(debugData.namelessmc.settings.trustedProxies, true),
+            body: isEmpty(debugData.namelessmc.settings.trusted_proxies, true),
         }
     ]
 

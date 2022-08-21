@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="create and implement SimpleTableSection on oauth providers!">
-      <change afterPath="$PROJECT_DIR$/src/components/sections/GroupsSection.tsx" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="add Group section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SimpleSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/DebugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Group.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Group.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/GroupSyncRule.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/GroupSyncRule.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Integration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Integration.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Log.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/OAuthProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/OAuthProvider.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Template.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Template.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/WebhookHook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/WebhookHook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +59,7 @@
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "TF_FMT": "false",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/src",
+    "last_opened_file_path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/components/sections" />
     </key>
@@ -455,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660965719588</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add Group section">
+      <created>1660967022244</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1660967022244</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add max height &amp; scroll" />
     <MESSAGE value="Fix scrollbar when not needed" />
     <MESSAGE value="Add groups and integrations sections" />
     <MESSAGE value="Add logs section" />
@@ -498,6 +497,7 @@
     <MESSAGE value="finish some more sections, start dynamic table component" />
     <MESSAGE value="update variable syntax to double braces" />
     <MESSAGE value="create and implement SimpleTableSection on oauth providers!" />
-    <option name="LAST_COMMIT_MESSAGE" value="create and implement SimpleTableSection on oauth providers!" />
+    <MESSAGE value="add Group section" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Group section" />
   </component>
 </project>
