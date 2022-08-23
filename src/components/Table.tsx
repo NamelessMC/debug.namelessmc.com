@@ -50,7 +50,7 @@ function Table({
             }
 
             {rows.length === 0 && emptyState &&
-                <td className="table-data" colSpan={columnHeaders.length}>{ t(emptyState.textKey) }</td>
+                <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
             }
         </table>
     </>

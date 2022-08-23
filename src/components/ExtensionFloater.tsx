@@ -40,8 +40,6 @@ function ExtensionFloater({
         isOfficial = true;
     }
 
-    console.log(debugInfo);
-
     return (
         <div className="section-content-floating h-full">
             <h3 className="section-subheading">

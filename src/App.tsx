@@ -17,6 +17,8 @@ import GroupSyncSection from "./components/sections/GroupSyncSection";
 import IntegrationsSection from "./components/sections/IntegrationsSection";
 import WebhooksSection from "./components/sections/WebhooksSection";
 import ModulesSection from "./components/sections/ModulesSection";
+import TemplatesSection from './components/sections/TemplatesSection';
+import PanelTemplatesSection from './components/sections/PanelTemplatesSection';
 
 function App() {
   const { t } = useTranslation();
@@ -44,7 +46,7 @@ function App() {
               />
 
               { error && error.name === "TypeError" && debugId.length === 0 && (<Error error={ t('errors.no_id_provided') } />) }
-              { error && debugId.length > 0 && (<Error error={ t('errors.invalid_link_id') } />) }
+              { error && debugId.length && (<Error error={ t('errors.invalid_link_id') } />) }
 
               { loaded && !error && data && (
                 <>
@@ -57,6 +59,10 @@ function App() {
                   <IntegrationsSection debugData={data} />
                   <WebhooksSection debugData={data} />
                   <OAuthProvidersSection debugData={data} />
+                  <div className='md:grid grid-cols-2 gap-4'>
+                    <TemplatesSection debugData={data} />
+                    <PanelTemplatesSection debugData={data} />
+                  </div>
                   <EnvironmentSection debugData={data} />
                 </>
               )}
