@@ -1,5 +1,5 @@
 export interface WebhookForumHook {
-    forumId: number;
+    forum_id: number;
     title: string;
     hooks: number[];
 }

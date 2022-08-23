@@ -15,6 +15,7 @@ import OAuthProvidersSection from "./components/sections/OAuthProvidersSection";
 import GroupsSection from "./components/sections/GroupsSection";
 import GroupSyncSection from "./components/sections/GroupSyncSection";
 import IntegrationsSection from "./components/sections/IntegrationsSection";
+import WebhooksSection from "./components/sections/WebhooksSection";
 
 function App() {
   const { t } = useTranslation();
@@ -52,6 +53,7 @@ function App() {
                   <GroupsSection debugData={data} />
                   <GroupSyncSection debugData={data} />
                   <IntegrationsSection debugData={data} />
+                  <WebhooksSection debugData={data} />
                   <OAuthProvidersSection debugData={data} />
                   <EnvironmentSection debugData={data} />
                 </>

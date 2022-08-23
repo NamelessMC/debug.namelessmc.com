@@ -33,7 +33,7 @@ export interface DebugData {
                 rules: GroupSyncRule[];
             },
             webhooks: {
-                actions: WebhookAction[];
+                actions: Map<number, string>;
                 hooks: WebhookHook[];
                 forum_hooks: WebhookForumHook[];
             }

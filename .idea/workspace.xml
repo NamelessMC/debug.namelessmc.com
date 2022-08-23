@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="convert group sync section">
-      <change afterPath="$PROJECT_DIR$/src/components/sections/IntegrationsSection.tsx" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="add integrationssection">
+      <change afterPath="$PROJECT_DIR$/src/components/sections/WebhooksSection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Integration.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Integration.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/DebugData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/DebugData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/WebhookForumHook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/WebhookForumHook.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -466,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661056942201</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="add integrationssection">
+      <created>1661134687067</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1661134687067</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add logs section" />
     <MESSAGE value="Fix logs on mobile" />
     <MESSAGE value="Remove todos" />
     <MESSAGE value="Reword empty log term" />
@@ -509,6 +517,7 @@
     <MESSAGE value="add Group section" />
     <MESSAGE value="wip" />
     <MESSAGE value="convert group sync section" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert group sync section" />
+    <MESSAGE value="add integrationssection" />
+    <option name="LAST_COMMIT_MESSAGE" value="add integrationssection" />
   </component>
 </project>
