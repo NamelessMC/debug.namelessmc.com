@@ -1,8 +1,8 @@
 export interface Template {
     name: string;
     enabled: boolean;
-    isDefault: boolean;
+    is_default: boolean;
     author: string;
-    templateVersion: string;
-    namelessMcVersion: string;
+    template_version: string;
+    namelessmc_version: string;
 }

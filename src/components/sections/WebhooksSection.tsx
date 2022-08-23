@@ -103,6 +103,9 @@ function WebhooksSection({
                     ]
                 }
             }),
+            emptyState: {
+                textKey: "webhooks_section.no_forum_hooks"
+            }
         }
     }
 

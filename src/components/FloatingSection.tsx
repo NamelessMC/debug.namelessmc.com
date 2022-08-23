@@ -8,6 +8,7 @@ interface Props {
     icon: IconDefinition;
     titleKey: string;
     floatingContent: FloatingContent[];
+    floatingContentFullSpace?: boolean;
 }
 
 export interface FloatingContent {
@@ -20,15 +21,16 @@ function FloatingSection({
     icon,
     titleKey,
     floatingContent,
+    floatingContentFullSpace
 }: Props) {
 
     const { t } = useTranslation();
 
-    return <>
+    return <div>
         <div className="section-title-floating">
             <FontAwesomeIcon icon={icon}/> { t(titleKey) }
         </div>
-        <div className="pt-2 mb-8 grid gap-4 lg:grid-cols-2 md:grid-cols-1">
+        <div className={`pt-2 mb-8 grid gap-4 ${!floatingContentFullSpace && 'lg:grid-cols-2'} md:grid-cols-1`}>
             { floatingContent.map(content => <>
                 { content.extensionFloaters ?
                     content.extensionFloaters.map(floater => {
@@ -46,7 +48,7 @@ function FloatingSection({
                 }
             </>) }
         </div>
-    </>
+    </div>
 }
 
 export default FloatingSection;
