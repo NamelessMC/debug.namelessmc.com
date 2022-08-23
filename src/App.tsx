@@ -16,6 +16,7 @@ import GroupsSection from "./components/sections/GroupsSection";
 import GroupSyncSection from "./components/sections/GroupSyncSection";
 import IntegrationsSection from "./components/sections/IntegrationsSection";
 import WebhooksSection from "./components/sections/WebhooksSection";
+import ModulesSection from "./components/sections/ModulesSection";
 
 function App() {
   const { t } = useTranslation();
@@ -50,6 +51,7 @@ function App() {
                   <VersionSection debugData={data} />
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />
+                  <ModulesSection debugData={data} />
                   <GroupsSection debugData={data} />
                   <GroupSyncSection debugData={data} />
                   <IntegrationsSection debugData={data} />

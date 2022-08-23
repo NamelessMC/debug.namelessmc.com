@@ -2,7 +2,7 @@ export interface Module {
     name: string;
     enabled: boolean;
     author: string;
-    moduleVersion: string;
-    namelessMcVersion: string;
-    debugInfo: any;
+    module_version: string;
+    namelessmc_version: string;
+    debug_info: any;
 }
