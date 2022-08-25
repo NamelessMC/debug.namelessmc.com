@@ -170,6 +170,7 @@
         "user_id_name": "Nombre de identificación del usuario",
         "client_id": "ID del cliente",
         "enabled": "Activado",
-        "no_providers": "No hay proveedores"
+        "no_providers": "No hay proveedores",
+        "scope_id_name": "Nombre del Scope ID"
     }
 }
