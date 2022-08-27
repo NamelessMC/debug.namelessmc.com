@@ -34,7 +34,7 @@
         "config": "Konfigurace",
         "friendly_urls": "Přátelské URL",
         "force_https": "Vynucení HTTPS",
-        "force_www": "Vynucení wwww",
+        "force_www": "Vynucení www",
         "trusted_proxies": "Povolené proxy"
     },
     "modules_section": {
