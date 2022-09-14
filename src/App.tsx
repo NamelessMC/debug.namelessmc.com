@@ -19,6 +19,7 @@ import WebhooksSection from "./components/sections/WebhooksSection";
 import ModulesSection from "./components/sections/ModulesSection";
 import TemplatesSection from './components/sections/TemplatesSection';
 import PanelTemplatesSection from './components/sections/PanelTemplatesSection';
+import LogsSection from './components/sections/LogsSection';
 
 function App() {
   const { t } = useTranslation();
@@ -63,6 +64,7 @@ function App() {
                     <TemplatesSection debugData={data} />
                     <PanelTemplatesSection debugData={data} />
                   </div>
+                  <LogsSection debugData={data} />
                   <EnvironmentSection debugData={data} />
                 </>
               )}
