@@ -8,7 +8,6 @@ import {OAuthProvider} from "./OAuthProvider";
 import {WebhookForumHook} from "./WebhookForumHook";
 import {Template} from "./Template";
 import {Module} from "./Module";
-import {Log} from "./Log";
 
 export interface DebugData {
     generated_at: number;
@@ -55,7 +54,7 @@ export interface DebugData {
         integrations: Integration[];
         oauth_providers: OAuthProvider[];
     },
-    logs: Record<string, Log>[];
+    logs: {[key: string]: string};
     environment: {
         php_version: string;
         phpModules: string[];
