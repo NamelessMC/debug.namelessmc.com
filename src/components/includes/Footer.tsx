@@ -10,6 +10,7 @@ interface Props {
     namelessMcVersion: string;
     debugId: string;
     theme: 'light' | 'dark';
+    setTheme: Function
 }
 
 function Footer({
@@ -19,12 +20,13 @@ function Footer({
     namelessMcVersion,
     debugId,
     theme,
+    setTheme
 }: Props) {
 
     const { t, i18n } = useTranslation();
 
     const toggleTheme = () => {
-        alert('Toggle theme'); // TODO: implement this
+        setTheme(theme === "dark" ? "light" : "dark")
     }
 
     const changeLocale = (locale: string) => {
