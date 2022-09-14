@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './components/includes/Header';
 import Footer from './components/includes/Footer';
 import Loader from "./components/includes/Loader";
@@ -27,11 +27,13 @@ function App() {
   const [data, loaded, error] = useRequest(`https://bytebin.rkslot.nl/${debugId}`) as [data: DebugData, loaded: boolean, error: any];
   const [theme, setTheme] = useState<"dark" | "light">('light');
 
-  if (theme === "dark") {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
+  useEffect(() => {
+      if (theme === "dark") {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+  }, [theme]);
 
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
@@ -78,6 +80,7 @@ function App() {
               generatedByName={data.generated_by_name}
               namelessMcVersion={data.namelessmc.version}
               theme={theme}
+              setTheme={setTheme}
           />
         )}
       </div>
