@@ -104,8 +104,8 @@ function ExtensionFloater({
 
                                     { Object.values(debugInfo.minecraft.servers).length > 0 && <>
                                         <h5 className="section-heading pb-1 text-center pt-1">{ t('modules_section.core.servers') }</h5>
-                                        { Object.values(debugInfo.minecraft.servers).map((server: any)=> {
-                                            return <div className="pb-3">
+                                        { Object.values(debugInfo.minecraft.servers).map((server: any, idx)=> {
+                                            return <div key={idx} className="pb-3">
                                                 <div className="grid grid-cols-2">
                                                     <h5 className="section-heading">
                                                         { t('modules_section.core.name') }: <span className="font-normal text-base">{ server.name }</span>

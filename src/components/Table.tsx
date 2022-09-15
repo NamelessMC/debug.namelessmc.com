@@ -36,22 +36,24 @@ function Table({
 
     return <>
         <table className="table-container">
-            <tr>
-                {columnHeaders.map(columnHeader => <th className={`table-title ${columnHeader.classes?.join(' ')}`}>{ t(columnHeader.key) }</th>)}
-            </tr>
+            <tbody>
+                <tr>
+                    {columnHeaders.map((columnHeader, idx) => <th key={idx} className={`table-title ${columnHeader.classes?.join(' ')}`}>{ t(columnHeader.key) }</th>)}
+                </tr>
 
-            {rows.length > 0 &&
-                rows.map((row, idx) =>
-                    <tr key={idx}> {
-                        row.cells.map(cell => <td onClick={cell.click} title={cell.title} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
-                    }
-                    </tr>
-                )
-            }
+                {rows.length > 0 &&
+                    rows.map((row, idx) =>
+                        <tr key={idx}> {
+                            row.cells.map((cell, idx2) => <td key={idx2} onClick={cell.click} title={cell.title} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
+                        }
+                        </tr>
+                    )
+                }
 
-            {rows.length === 0 && emptyState &&
-                <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
-            }
+                {rows.length === 0 && emptyState &&
+                    <tr><td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td></tr>
+                }
+            </tbody>
         </table>
     </>
 }
