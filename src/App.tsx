@@ -36,9 +36,8 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light' as "dark" | "light";
-    console.log(theme);
-    setTheme(theme as any);
+    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light';
+    setTheme(theme as any); // React not accepting my type intensifies
 
     const preferredLanguage = localStorage.getItem('nmc-debug-locale') ?? "en";
     i18n.changeLanguage(preferredLanguage);
