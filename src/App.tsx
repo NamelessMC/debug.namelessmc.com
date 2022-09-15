@@ -22,18 +22,28 @@ import PanelTemplatesSection from './components/sections/PanelTemplatesSection';
 import LogsSection from './components/sections/LogsSection';
 
 function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const debugId = window.location.pathname.slice(1);
   const [data, loaded, error] = useRequest(`https://bytebin.rkslot.nl/${debugId}`) as [data: DebugData, loaded: boolean, error: any];
   const [theme, setTheme] = useState<"dark" | "light">('light');
 
   useEffect(() => {
-      if (theme === "dark") {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
+    if (theme === "dark") {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, [theme]);
+
+  useEffect(() => {
+    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light' as "dark" | "light";
+    console.log(theme);
+    setTheme(theme as any);
+
+    const preferredLanguage = localStorage.getItem('nmc-debug-locale') ?? "en";
+    i18n.changeLanguage(preferredLanguage);
+
+  }, [])
 
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>

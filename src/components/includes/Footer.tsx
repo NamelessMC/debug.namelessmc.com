@@ -26,11 +26,13 @@ function Footer({
     const { t, i18n } = useTranslation();
 
     const toggleTheme = () => {
+        localStorage.setItem('nmc-debug-theme', theme === "dark" ? "light" : "dark");
         setTheme(theme === "dark" ? "light" : "dark")
     }
 
     const changeLocale = (locale: string) => {
         i18n.changeLanguage(locale);
+        localStorage.setItem('nmc-debug-locale', locale)
     }
 
     if (!loaded) return <></>;

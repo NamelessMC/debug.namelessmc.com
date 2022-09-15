@@ -27,10 +27,10 @@ function SimpleLogSection({
             </div>
             <div className="section-content mx-4 gap-y-4">
                 {logs.map((log, idx) => (
-                    <>
+                    <div key={idx}>
                         <p className="text-normal text-left pl-4 font-medium">{ t(log.titleKey) }</p>
                         <Highlight className='log-content log'>{log.content.length > 0 ? log.content : t('logs_section.empty_log')}</Highlight>
-                    </>
+                    </div>
                 ))}
             </div>
         </div>
