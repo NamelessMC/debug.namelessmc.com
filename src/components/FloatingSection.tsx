@@ -31,24 +31,33 @@ function FloatingSection({
             <FontAwesomeIcon icon={icon}/> { t(titleKey) }
         </div>
         <div className={`pt-2 mb-8 grid gap-4 ${!floatingContentFullSpace && 'lg:grid-cols-2'} md:grid-cols-1`}>
-            { floatingContent.map(content => <>
-                { content.extensionFloaters ?
-                    content.extensionFloaters.map(floater => {
-                        return <ExtensionFloater {...floater}/>
-                    })
-                    :
-                    <div className="section-content-floating">
-                        { content.subheadingKey &&
-                            <div className="section-subheading">{ t(content.subheadingKey) }</div>
-                        }
-                        { content.table &&
-                            <Table {...content.table} />
-                        }
-                    </div>
-                }
-            </>) }
+            { floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />) }
         </div>
     </div>
 }
 
 export default FloatingSection;
+
+function FloatingSubSection({ content }: { content: FloatingContent }) {
+
+    const { t } = useTranslation();
+    
+    return (
+        <>
+            { content.extensionFloaters ?
+                content.extensionFloaters.map((floater, idx2) => {
+                    return <ExtensionFloater key={idx2} {...floater}/>
+                })
+                :
+                <div className="section-content-floating">
+                    { content.subheadingKey &&
+                        <div className="section-subheading">{ t(content.subheadingKey) }</div>
+                    }
+                    { content.table &&
+                        <Table {...content.table} />
+                    }
+                </div>
+            }
+        </>
+    )
+}
