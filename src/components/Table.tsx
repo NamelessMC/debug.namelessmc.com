@@ -41,8 +41,8 @@ function Table({
             </tr>
 
             {rows.length > 0 &&
-                rows.map(row =>
-                    <tr> {
+                rows.map((row, idx) =>
+                    <tr key={idx}> {
                         row.cells.map(cell => <td onClick={cell.click} title={cell.title} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
                     }
                     </tr>
