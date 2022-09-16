@@ -1,4 +1,4 @@
-import { faPaintBrush } from "@fortawesome/free-solid-svg-icons";
+import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
 import { DebugData } from "../../types/DebugData";
 import { ExtensionFloaterProps } from "../ExtensionFloater";
 import FloatingSection, { FloatingContent } from "../FloatingSection";
@@ -28,7 +28,7 @@ function PanelTemplatesSection({
     }
 
     return (
-        <FloatingSection floatingContentFullSpace={true} icon={faPaintBrush} titleKey={"templates_section.templates"} floatingContent={[templatesFloatingContent]} />
+        <FloatingSection floatingContentFullSpace={true} icon={faTachometerAlt} titleKey={"panel_templates_section.panel_templates"} floatingContent={[templatesFloatingContent]} />
     )
 
 }
