@@ -47,7 +47,10 @@ function SimpleSection({
                 { content.map((item, idx) => (
                     <div key={idx}>
                         <h5 className="section-heading">{item.header}</h5>
-                        <h2 className="section-body text-normal" dangerouslySetInnerHTML={{ __html: item.body }}></h2>
+                        { typeof item.body !== 'string' ?
+                            item.body
+                            : <h2 className="section-body text-normal" dangerouslySetInnerHTML={{ __html: item.body }}></h2>
+                        }
                     </div>
                 )) }
             </div>

@@ -25,7 +25,7 @@ function App() {
   const { t, i18n } = useTranslation();
   const debugId = window.location.pathname.slice(1);
   const [data, loaded, error] = useRequest(`https://bytebin.rkslot.nl/${debugId}`) as [data: DebugData, loaded: boolean, error: any];
-  const [theme, setTheme] = useState<"dark" | "light">('light');
+  const [theme, setTheme] = useState<"dark" | "light">("light");
 
   useEffect(() => {
     if (theme === "dark") {
@@ -41,7 +41,6 @@ function App() {
 
     const preferredLanguage = localStorage.getItem('nmc-debug-locale') ?? "en";
     i18n.changeLanguage(preferredLanguage);
-
   }, [])
 
   return (

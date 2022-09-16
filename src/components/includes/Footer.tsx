@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import i18n from '../../i18n';
 import { faSun, faMoon, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
@@ -31,8 +30,9 @@ function Footer({
     }
 
     const changeLocale = (locale: string) => {
-        i18n.changeLanguage(locale);
-        localStorage.setItem('nmc-debug-locale', locale)
+        i18n.changeLanguage(locale).then(() => {
+            localStorage.setItem('nmc-debug-locale', locale)
+        });
     }
 
     if (!loaded) return <></>;
