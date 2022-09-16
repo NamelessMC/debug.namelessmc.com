@@ -20,7 +20,7 @@ export default function useRequest(url: string, method = "GET") {
 
     useEffect(() => {
         refetch();
-    }, []);
+    }, [refetch]);
 
     if (data === 13513515) {
         return [null, false, err, refetch];

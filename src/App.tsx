@@ -41,7 +41,7 @@ function App() {
 
     const preferredLanguage = localStorage.getItem('nmc-debug-locale') ?? "en";
     i18n.changeLanguage(preferredLanguage);
-  }, [])
+  }, [i18n]);
 
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
