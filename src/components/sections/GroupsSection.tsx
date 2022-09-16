@@ -74,7 +74,7 @@ function GroupsSection({
                     body: String(group.order),
                 },
                 {
-                    body: <BooleanBadge value={group.force_tfa} inverted={true} />,
+                    body: <BooleanBadge value={group.force_tfa} />,
                 }
             ]
         });
