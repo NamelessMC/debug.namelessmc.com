@@ -56,7 +56,7 @@ function Footer({
                     </h5>
                     <h5 className="section-heading">
                         { t('footer.raw_json') }: {' '}
-                        <a href={`https://bytebin.rkslot.nl/${debugId}`} target="_blank">
+                        <a href={`https://bytebin.rkslot.nl/${debugId}`} target="_blank" rel="noreferrer">
                             <span className="font-normal">https://bytebin.rkslot.nl/{debugId}</span>
                         </a>
                     </h5>
