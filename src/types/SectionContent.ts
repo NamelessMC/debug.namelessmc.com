@@ -1,4 +1,6 @@
+import {ReactElement} from "react";
+
 export interface SectionContent {
     header: string;
-    body: string;
+    body: ReactElement | string;
 }

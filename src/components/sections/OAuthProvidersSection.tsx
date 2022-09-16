@@ -1,8 +1,11 @@
 import {DebugData} from "../../types/DebugData";
 import {TableColumnHeader, TableEmptyState, TableProps, TableRow} from "../Table";
-import {asCode, booleanValue, capitalize, goToModule, isEmpty} from "../../utils";
+import {capitalize, goToModule} from "../../utils";
 import SimpleTableSection from "../SimpleTableSection";
 import {faUserShield} from "@fortawesome/free-solid-svg-icons";
+import BooleanValue from "../utils/BooleanValue";
+import Empty from "../utils/Empty";
+import Code from "../utils/Code";
 
 interface Props {
     debugData: DebugData;
@@ -50,19 +53,19 @@ function OAuthProvidersSection({
                     click: () => goToModule(provider.module),
                 },
                 {
-                    body: asCode(provider.class, true),
+                    body: <Code value={provider.class} escape={true} />,
                 },
                 {
-                    body: asCode(provider.user_id_name, true)
+                    body: <Code value={provider.user_id_name} escape={true} />,
                 },
                 {
-                    body: asCode(provider.scope_id_name, true)
+                    body: <Code value={provider.scope_id_name} escape={true} />,
                 },
                 {
-                    body: isEmpty(provider.client_id, true)
+                    body: <Empty value={provider.client_id} asCode={true} />,
                 },
                 {
-                    body: booleanValue(provider.enabled),
+                    body: <BooleanValue value={provider.enabled} />,
                 }
             ],
         } as TableRow);

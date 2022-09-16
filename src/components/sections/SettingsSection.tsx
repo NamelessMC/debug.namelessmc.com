@@ -3,7 +3,8 @@ import {faCogs} from "@fortawesome/free-solid-svg-icons";
 import {SectionContent} from "../../types/SectionContent";
 import {useTranslation} from "react-i18next";
 import {DebugData} from "../../types/DebugData";
-import {booleanBadge, capitalize} from "../../utils";
+import {capitalize} from "../../utils";
+import BooleanBadge from "../utils/BooleanBadge";
 
 interface Props {
     debugData: DebugData;
@@ -18,15 +19,15 @@ function SettingsSection({
     const content: SectionContent[] = [
         {
             header: t('settings_section.phpmailer_enabled'),
-            body: booleanBadge(debugData.namelessmc.settings.phpmailer),
+            body: <BooleanBadge value={debugData.namelessmc.settings.phpmailer} />,
         },
         {
             header: t('settings_section.api_enabled'),
-            body: booleanBadge(debugData.namelessmc.settings.api_enabled),
+            body: <BooleanBadge value={debugData.namelessmc.settings.api_enabled} />,
         },
         {
             header: t('settings_section.email_verification_enabled'),
-            body: booleanBadge(debugData.namelessmc.settings.email_verification),
+            body: <BooleanBadge value={debugData.namelessmc.settings.email_verification} />,
         },
         {
             header: t('settings_section.login_method'),
@@ -38,7 +39,7 @@ function SettingsSection({
         },
         {
             header: t('settings_section.captcha_login_page'),
-            body: booleanBadge(debugData.namelessmc.settings.captcha_login),
+            body: <BooleanBadge value={debugData.namelessmc.settings.captcha_login} />,
         }
     ];
 

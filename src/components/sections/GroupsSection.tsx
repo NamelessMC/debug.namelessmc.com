@@ -2,7 +2,9 @@ import {DebugData} from "../../types/DebugData";
 import {TableColumnHeader, TableEmptyState, TableProps, TableRow} from "../Table";
 import SimpleTableSection from "../SimpleTableSection";
 import {faAddressBook} from "@fortawesome/free-solid-svg-icons";
-import {asCode, booleanBadge, booleanValue} from "../../utils";
+import BooleanBadge from "../utils/BooleanBadge";
+import BooleanValue from "../utils/BooleanValue";
+import Code from "../utils/Code";
 
 interface Props {
     debugData: DebugData;
@@ -57,22 +59,22 @@ function GroupsSection({
                     body: group.name,
                 },
                 {
-                    body: asCode(group.group_html, true),
+                    body: <Code value={group.group_html} escape={true} />,
                 },
                 {
-                    body: booleanValue(group.admin_cp),
+                    body: <BooleanValue value={group.admin_cp} />,
                 },
                 {
-                    body: booleanValue(group.staff),
+                    body: <BooleanValue value={group.staff} />,
                 },
                 {
-                    body: booleanValue(group.default_group),
+                    body: <BooleanValue value={group.default_group} />,
                 },
                 {
                     body: String(group.order),
                 },
                 {
-                    body: booleanBadge(group.force_tfa),
+                    body: <BooleanBadge value={group.force_tfa} />,
                 }
             ]
         });

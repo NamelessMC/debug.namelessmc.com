@@ -1,4 +1,5 @@
 import {useTranslation} from "react-i18next";
+import {ReactElement} from "react";
 
 export interface TableProps {
     columnHeaders: TableColumnHeader[];
@@ -16,7 +17,7 @@ export interface TableRow {
 }
 
 export interface TableCell {
-    body: string;
+    body: ReactElement | string;
     title?: string;
     classes?: string[];
     click?: () => void;
@@ -44,7 +45,25 @@ function Table({
                 {rows.length > 0 &&
                     rows.map((row, idx) =>
                         <tr key={idx}> {
-                            row.cells.map((cell, idx2) => <td key={idx2} onClick={cell.click} title={cell.title} className={`table-data ${cell.classes?.join(' ')}`} dangerouslySetInnerHTML={{__html: cell.body}}></td>)
+                            row.cells.map((cell, idx2) => {
+                                if (typeof cell.body !== 'string') {
+                                    return <td
+                                        key={idx2}
+                                        onClick={cell.click}
+                                        title={cell.title}
+                                        className={`table-data ${cell.classes?.join(' ')}`}
+                                    >
+                                        {cell.body}
+                                    </td>
+                                }
+                                return <td
+                                    key={idx2}
+                                    onClick={cell.click}
+                                    title={cell.title}
+                                    className={`table-data ${cell.classes?.join(' ')}`}
+                                    dangerouslySetInnerHTML={{__html: cell.body}}
+                                ></td>
+                            })
                         }
                         </tr>
                     )
