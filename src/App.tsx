@@ -56,8 +56,13 @@ function App() {
                   error={error}
               />
 
-              { error && error.name === "TypeError" && debugId.length === 0 && (<Error error={ t('errors.no_id_provided') } />) }
-              { error && debugId.length && (<Error error={ t('errors.invalid_link_id') } />) }
+              {
+                  error && <Error error={
+                      debugId.length === 0
+                          ? t('errors.no_id_provided')
+                          : t('errors.invalid_link_id')
+                  } />
+              }
 
               { loaded && !error && data && (
                 <>
