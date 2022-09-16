@@ -59,7 +59,7 @@ function GroupsSection({
                     body: group.name,
                 },
                 {
-                    body: <Code value={group.group_html} escape={true} />,
+                    body: <Code value={group.group_html} />,
                 },
                 {
                     body: <BooleanValue value={group.admin_cp} />,
@@ -74,7 +74,7 @@ function GroupsSection({
                     body: String(group.order),
                 },
                 {
-                    body: <BooleanBadge value={group.force_tfa} />,
+                    body: <BooleanBadge value={group.force_tfa} inverted={true} />,
                 }
             ]
         });

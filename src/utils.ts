@@ -13,20 +13,6 @@ const formatDate = (seconds: number) => {
     return `${day} ${time}`;
 }
 
-const gridColsClass = (obj: object) => {
-    let count = Object.keys(obj).length;
-
-    if (count === 1) {
-        return 'md:grid-cols-1';
-    }
-
-    if (count === 2 || count % 2 === 0) {
-        return 'md:grid-cols-2';
-    }
-
-    return 'md:grid-cols-3';
-}
-
 const isOfficialModule = (moduleName: string) => {
     return ['Core', 'Forum', 'Discord Integration', 'Cookie Consent'].includes(moduleName);
 }
@@ -47,7 +33,6 @@ const goToModule = (id: string) => {
 
 export {
     formatDate,
-    gridColsClass,
     isOfficialModule,
     isOfficialTemplate,
     capitalize,
