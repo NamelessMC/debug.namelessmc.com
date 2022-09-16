@@ -18,11 +18,11 @@ export default function useRequest(url: string, method = "GET") {
             });
     }
 
-    // eslint-disable react-hooks/exhaustive-deps
+    /* eslint-disable react-hooks/exhaustive-deps */
     useEffect(() => {
         refetch();
     }, []);
-    // eslint-enable react-hooks/exhaustive-deps
+    /* eslint-enable react-hooks/exhaustive-deps */
 
     if (data === 13513515) {
         return [null, false, err, refetch];
