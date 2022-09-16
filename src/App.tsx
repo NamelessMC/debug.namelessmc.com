@@ -51,21 +51,15 @@ function App() {
           />
 
           <div className="container mx-auto pt-8">
-              <Loader
-                  loaded={loaded}
-                  error={error}
-              />
+              { !loaded && !error && <Loader /> }
 
-              {
-                  error && <Error error={
-                      debugId.length === 0
-                          ? t('errors.no_id_provided')
-                          : t('errors.invalid_link_id')
-                  } />
-              }
+              { error && <Error error={
+                  debugId.length === 0
+                      ? t('errors.no_id_provided')
+                      : t('errors.invalid_link_id')
+              } /> }
 
-              { loaded && !error && data && (
-                <>
+              { loaded && !error && data && <>
                   <VersionSection debugData={data} />
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />
@@ -81,8 +75,7 @@ function App() {
                   </div>
                   <LogsSection debugData={data} />
                   <EnvironmentSection debugData={data} />
-                </>
-              )}
+              </>}
           </div>
 
           {data && (
