@@ -5,6 +5,7 @@ import {useTranslation} from "react-i18next";
 import {faWrench} from "@fortawesome/free-solid-svg-icons";
 import Empty from "../utils/Empty";
 import BooleanBadge from "../utils/BooleanBadge";
+import BooleanValue from "../utils/BooleanValue";
 
 interface Props {
     debugData: DebugData;
@@ -31,7 +32,7 @@ function ConfigSection({
         },
         {
             header: t('config_section.force_www'),
-            body: <BooleanBadge value={debugData.namelessmc.config.core.force_www} />,
+            body: <BooleanValue value={debugData.namelessmc.config.core.force_www} />,
         },
         {
             header: t('config_section.trusted_proxies'),
