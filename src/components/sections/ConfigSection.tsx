@@ -2,8 +2,9 @@ import SimpleSection from "../SimpleSection";
 import {SectionContent} from "../../types/SectionContent";
 import {DebugData} from "../../types/DebugData";
 import {useTranslation} from "react-i18next";
-import {booleanBadge, isEmpty} from "../../utils";
 import {faWrench} from "@fortawesome/free-solid-svg-icons";
+import Empty from "../utils/Empty";
+import BooleanBadge from "../utils/BooleanBadge";
 
 interface Props {
     debugData: DebugData;
@@ -18,23 +19,23 @@ function ConfigSection({
     const content: SectionContent[] = [
         {
             header: t('config_section.path'),
-            body: isEmpty(debugData.namelessmc.config.core.path, true),
+            body: <Empty value={debugData.namelessmc.config.core.path} asCode={true} />,
         },
         {
             header: t('config_section.friendly_urls'),
-            body: booleanBadge(debugData.namelessmc.config.core.friendly),
+            body: <BooleanBadge value={debugData.namelessmc.config.core.friendly} />,
         },
         {
             header: t('config_section.force_https'),
-            body: booleanBadge(debugData.namelessmc.config.core.force_https),
+            body: <BooleanBadge value={debugData.namelessmc.config.core.force_https} />,
         },
         {
             header: t('config_section.force_www'),
-            body: booleanBadge(debugData.namelessmc.config.core.force_www),
+            body: <BooleanBadge value={debugData.namelessmc.config.core.force_www} />,
         },
         {
             header: t('config_section.trusted_proxies'),
-            body: isEmpty(debugData.namelessmc.settings.trusted_proxies, true),
+            body: <Empty value={debugData.namelessmc.settings.trusted_proxies} asCode={true} />,
         }
     ]
 

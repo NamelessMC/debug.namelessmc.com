@@ -1,8 +1,9 @@
 import SimpleTableSection from "../SimpleTableSection";
 import {faPlug} from "@fortawesome/free-solid-svg-icons";
 import {DebugData} from "../../types/DebugData";
-import {booleanBadge, booleanValue} from "../../utils";
 import {TableProps} from "../Table";
+import BooleanBadge from "../utils/BooleanBadge";
+import BooleanValue from "../utils/BooleanValue";
 
 interface Props {
     debugData: DebugData;
@@ -34,13 +35,13 @@ function IntegrationsSection({
                         body: integration.name,
                     },
                     {
-                        body: booleanBadge(integration.enabled),
+                        body: <BooleanBadge value={integration.enabled} />,
                     },
                     {
-                        body: booleanValue(integration.can_unlink),
+                        body: <BooleanValue value={integration.can_unlink} />,
                     },
                     {
-                        body: booleanValue(integration.required),
+                        body: <BooleanValue value={integration.required} />,
                     },
                 ],
             }

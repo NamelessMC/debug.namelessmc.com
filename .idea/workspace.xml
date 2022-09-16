@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="convert webhooks section">
-      <change afterPath="$PROJECT_DIR$/src/components/ExtensionFloater.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sections/ModulesSection.tsx" afterDir="false" />
+    <list default="true" id="4bd6aa83-42a5-4d40-9682-fd6478506210" name="Changes" comment="convert modules section (yuck)">
+      <change afterPath="$PROJECT_DIR$/src/components/utils/BooleanBadge.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/BooleanValue.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/Code.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/Empty.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utils/OfficialBadge.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FloatingSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FloatingSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/Module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/Module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ExtensionFloater.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExtensionFloater.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ConfigSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/EnvironmentSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/EnvironmentSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GroupSyncSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/GroupSyncSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GroupsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/GroupsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/IntegrationsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/IntegrationsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OAuthProvidersSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/SettingsSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/SettingsSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/VersionSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/VersionSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/WebhooksSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/WebhooksSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +65,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.laravel-idea.search-composer-json": "true",
-    "TF_FMT": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.laravel-idea.search-composer-json&quot;: &quot;true&quot;,
+    &quot;TF_FMT&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/aberdeener/Desktop/Programming/debug.namelessmc.com/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -132,13 +143,8 @@
       <workItem from="1660708120901" duration="1846000" />
       <workItem from="1660789419377" duration="6000" />
       <workItem from="1660794460893" duration="2930000" />
-    </task>
-    <task id="LOCAL-00002" summary="Remove blank line">
-      <created>1645564442674</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1645564442674</updated>
+      <workItem from="1661818916193" duration="8000" />
+      <workItem from="1663285181269" duration="2128000" />
     </task>
     <task id="LOCAL-00003" summary="Remove contact page captcha setting">
       <created>1645565328634</created>
@@ -476,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661219006661</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="convert modules section (yuck)">
+      <created>1661223206170</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1661223206170</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,7 +507,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove todos" />
     <MESSAGE value="Reword empty log term" />
     <MESSAGE value="Fix group + integration table overflow on mobile" />
     <MESSAGE value="Fix footer on mobile" />
@@ -519,6 +531,7 @@
     <MESSAGE value="convert group sync section" />
     <MESSAGE value="add integrationssection" />
     <MESSAGE value="convert webhooks section" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert webhooks section" />
+    <MESSAGE value="convert modules section (yuck)" />
+    <option name="LAST_COMMIT_MESSAGE" value="convert modules section (yuck)" />
   </component>
 </project>

@@ -2,8 +2,10 @@ import SimpleSection from "../SimpleSection";
 import {SectionContent} from "../../types/SectionContent";
 import {DebugData} from "../../types/DebugData";
 import {useTranslation} from "react-i18next";
-import {asCode, booleanBadge, booleanValue} from "../../utils";
 import {faServer} from "@fortawesome/free-solid-svg-icons";
+import BooleanBadge from "../utils/BooleanBadge";
+import BooleanValue from "../utils/BooleanValue";
+import Code from "../utils/Code";
 
 interface Props {
     debugData: DebugData;
@@ -28,7 +30,7 @@ function EnvironmentSection({
     const content: SectionContent[] = [
         {
             header: t('environment_section.php_version'),
-            body: asCode(debugData.environment.php_version),
+            body: <Code value={debugData.environment.php_version} />,
         },
         {
             header: t('environment_section.host_os'),
@@ -36,11 +38,11 @@ function EnvironmentSection({
         },
         {
             header: t('environment_section.host_kernel_version'),
-            body: asCode(debugData.environment.host_kernel_version),
+            body: <Code value={debugData.environment.host_kernel_version} />,
         },
         {
             header: t('environment_section.using_docker_image'),
-            body: booleanValue(debugData.environment.official_docker_image),
+            body: <BooleanValue value={debugData.environment.official_docker_image} />,
         },
         {
             header: t('environment_section.disk_usage'),
@@ -52,11 +54,11 @@ function EnvironmentSection({
         },
         {
             header: t('environment_section.config_writable'),
-            body: booleanBadge(debugData.environment.config_writable),
+            body: <BooleanBadge value={debugData.environment.config_writable} />,
         },
         {
             header: t('environment_section.cache_writable'),
-            body: booleanBadge(debugData.environment.cache_writable),
+            body: <BooleanBadge value={debugData.environment.cache_writable} />,
         }
     ]
 

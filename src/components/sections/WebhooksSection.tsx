@@ -1,7 +1,7 @@
 import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faLink} from "@fortawesome/free-solid-svg-icons";
-import {asCode} from "../../utils";
+import Code from "../utils/Code";
 
 interface Props {
     debugData: DebugData;
@@ -52,7 +52,7 @@ function WebhooksSection({
                             body: actionFromId(hook.action),
                         },
                         {
-                            body: asCode(hook.events.join('\n')),
+                            body: <Code value={hook.events.join('\n')} />,
                         }
                     ],
                 }
@@ -98,7 +98,7 @@ function WebhooksSection({
                             body: hook.title,
                         },
                         {
-                            body: asCode(hook.hooks.map(h => hookById(h)).join('\n')),
+                            body: <Code value={hook.hooks.map(h => hookById(h)).join('\n')} />,
                         }
                     ]
                 }

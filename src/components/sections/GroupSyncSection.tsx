@@ -1,8 +1,10 @@
 import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faSyncAlt} from "@fortawesome/free-solid-svg-icons";
-import {booleanBadge, goToModule, isEmpty} from "../../utils";
+import {goToModule} from "../../utils";
 import {GroupSyncRule} from "../../types/GroupSyncRule";
+import BooleanBadge from "../utils/BooleanBadge";
+import Empty from "../utils/Empty";
 
 interface Props {
     debugData: DebugData;
@@ -35,7 +37,7 @@ function GroupSyncSection({
                             title: injector.column_name,
                         },
                         {
-                            body: booleanBadge(injector.enabled),
+                            body: <BooleanBadge value={injector.enabled} />,
                         },
                         {
                             body: injector.module,
@@ -90,7 +92,7 @@ function GroupSyncSection({
                                 };
                             } else {
                                 return {
-                                    body: isEmpty(group_id),
+                                    body: <Empty value={group_id} />,
                                 };
                             }
                         })
