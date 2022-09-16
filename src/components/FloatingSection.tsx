@@ -8,7 +8,6 @@ interface Props {
     icon: IconDefinition;
     titleKey: string;
     floatingContent: FloatingContent[];
-    floatingContentFullSpace?: boolean;
 }
 
 export interface FloatingContent {
@@ -21,19 +20,36 @@ function FloatingSection({
     icon,
     titleKey,
     floatingContent,
-    floatingContentFullSpace
 }: Props) {
 
     const { t } = useTranslation();
 
-    return <div>
-        <div className="section-title-floating">
-            <FontAwesomeIcon icon={icon}/> { t(titleKey) }
+    const gridColsClass = (floatingContent: FloatingContent[]) => {
+        let count = floatingContent.map(fc => fc?.extensionFloaters).map(ef => ef?.length).reduce(
+            (a, b) => Number(a) + Number(b),
+        ) || 0;
+
+        if (count === 1) {
+            return 'md:grid-cols-1';
+        }
+
+        if (count === 2 || count % 2 === 0) {
+            return 'md:grid-cols-2';
+        }
+
+        return 'md:grid-cols-3';
+    }
+
+    return (
+        <div>
+            <div className="section-title-floating">
+                <FontAwesomeIcon icon={icon}/> { t(titleKey) }
+            </div>
+            <div className={"pt-2 mb-8 grid gap-4 " + gridColsClass(floatingContent)}>
+                { floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />) }
+            </div>
         </div>
-        <div className={`pt-2 mb-8 grid gap-4 ${!floatingContentFullSpace && 'lg:grid-cols-2'} md:grid-cols-1`}>
-            { floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />) }
-        </div>
-    </div>
+    )
 }
 
 export default FloatingSection;
@@ -41,23 +57,21 @@ export default FloatingSection;
 function FloatingSubSection({ content }: { content: FloatingContent }) {
 
     const { t } = useTranslation();
-    
-    return (
-        <>
-            { content.extensionFloaters ?
-                content.extensionFloaters.map((floater, idx2) => {
-                    return <ExtensionFloater key={idx2} {...floater}/>
-                })
-                :
-                <div className="section-content-floating">
-                    { content.subheadingKey &&
-                        <div className="section-subheading">{ t(content.subheadingKey) }</div>
-                    }
-                    { content.table &&
-                        <Table {...content.table} />
-                    }
-                </div>
-            }
-        </>
-    )
+
+    return <>
+        { content.extensionFloaters ?
+            content.extensionFloaters.map((floater, idx2) => {
+                return <ExtensionFloater key={idx2} {...floater}/>
+            })
+            :
+            <div className="section-content-floating">
+                { content.subheadingKey &&
+                    <div className="section-subheading">{ t(content.subheadingKey) }</div>
+                }
+                { content.table &&
+                    <Table {...content.table} />
+                }
+            </div>
+        }
+    </>
 }

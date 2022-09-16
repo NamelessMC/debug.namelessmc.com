@@ -43,6 +43,11 @@ function App() {
     i18n.changeLanguage(preferredLanguage);
   }, [i18n]);
 
+  const shouldDisplayTemplateSectionsSideBySide = () => {
+      return Object.entries(data.namelessmc.templates.front_end).length === 1
+          && Object.entries(data.namelessmc.templates.panel).length === 1;
+  }
+
   return (
       <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
           <Header
@@ -69,9 +74,9 @@ function App() {
                   <IntegrationsSection debugData={data} />
                   <WebhooksSection debugData={data} />
                   <OAuthProvidersSection debugData={data} />
-                  <div className='md:grid grid-cols-2 gap-4'>
-                    <TemplatesSection debugData={data} />
-                    <PanelTemplatesSection debugData={data} />
+                  <div className={shouldDisplayTemplateSectionsSideBySide() ? "grid gap-4 grid-cols-2" : ""}>
+                      <TemplatesSection debugData={data} />
+                      <PanelTemplatesSection debugData={data} />
                   </div>
                   <LogsSection debugData={data} />
                   <EnvironmentSection debugData={data} />

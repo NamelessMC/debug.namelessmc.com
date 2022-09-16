@@ -50,9 +50,9 @@ function ExtensionFloater({
                 { t('panel_templates_section.enabled') }: <BooleanBadge value={enabled} />
             </h5>
 
-            { type === 'template' && isDefault &&
+            { type === 'template' &&
                 <h5 className="section-heading">
-                    {t('panel_templates_section.is_default')}: <BooleanBadge value={isDefault} />
+                    {t('panel_templates_section.is_default')}: <BooleanBadge value={ Boolean(isDefault) } />
                 </h5>
             }
 
