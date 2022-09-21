@@ -43,7 +43,7 @@ function WebhooksSection({
                 return {
                     cells: [
                         {
-                            body: String(hook.id),
+                            body: hook.id,
                         },
                         {
                             body: hook.name,
@@ -92,7 +92,7 @@ function WebhooksSection({
                 return {
                     cells: [
                         {
-                            body: String(hook.forum_id),
+                            body: hook.forum_id,
                         },
                         {
                             body: hook.title,

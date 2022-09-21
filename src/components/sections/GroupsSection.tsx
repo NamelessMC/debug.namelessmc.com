@@ -71,7 +71,7 @@ function GroupsSection({
                     body: <BooleanValue value={group.default_group} />,
                 },
                 {
-                    body: String(group.order),
+                    body: group.order,
                 },
                 {
                     body: <BooleanBadge value={group.force_tfa} />,

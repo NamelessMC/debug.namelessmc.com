@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useRequest(url: string, method = "GET") {
-    const [data, setData] = useState(13513515); // wha-
+    const [data, setData] = useState(null);
     const [err, setError] = useState(null);
 
     async function refetch() {
@@ -24,7 +24,7 @@ export default function useRequest(url: string, method = "GET") {
     }, []);
     /* eslint-enable react-hooks/exhaustive-deps */
 
-    if (data === 13513515) {
+    if (data === null) {
         return [null, false, err, refetch];
     }
     return [data, true, err, refetch];

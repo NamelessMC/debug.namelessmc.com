@@ -82,7 +82,7 @@ function GroupSyncSection({
                 return {
                     cells: [
                         {
-                            body: String(rule.id),
+                            body: rule.id,
                         },
                         ...debugData.namelessmc.settings.group_sync.injectors.map(injector => {
                             const group_id = getGroupIdFromColumnName(rule, injector.column_name);

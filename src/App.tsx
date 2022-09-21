@@ -64,7 +64,7 @@ function App() {
                       : t('errors.invalid_link_id')
               } /> }
 
-              { loaded && !error && data && <>
+              { loaded && !error && <>
                   <VersionSection debugData={data} />
                   <SettingsSection debugData={data} />
                   <ConfigSection debugData={data} />

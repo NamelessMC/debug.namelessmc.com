@@ -17,7 +17,7 @@ export interface TableRow {
 }
 
 export interface TableCell {
-    body: ReactElement | string;
+    body: ReactElement | string | number;
     title?: string;
     classes?: string[];
     click?: () => void;
