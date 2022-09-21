@@ -20,6 +20,7 @@ import ModulesSection from "./components/sections/ModulesSection";
 import TemplatesSection from './components/sections/TemplatesSection';
 import PanelTemplatesSection from './components/sections/PanelTemplatesSection';
 import LogsSection from './components/sections/LogsSection';
+import Thumbnail from "./components/Thumbnail";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -46,6 +47,13 @@ function App() {
   const shouldDisplayTemplateSectionsSideBySide = () => {
       return Object.entries(data.namelessmc.templates.front_end).length === 1
           && Object.entries(data.namelessmc.templates.panel).length === 1;
+  }
+
+  // check if the query string contains  thumbnail=true
+  if (new URLSearchParams(window.location.search).get('thumbnail') === 'true' && loaded) {
+      return (
+          <Thumbnail debugId={debugId} debugData={data} />
+      )
   }
 
   return (

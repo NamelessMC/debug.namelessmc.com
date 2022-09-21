@@ -1,4 +1,4 @@
-const formatDate = (seconds: number) => {
+const formatDate = (seconds: number, minutes: boolean = true) => {
     const date = new Date(seconds * 1000);
     const day = date.toLocaleDateString('en-US', {
         day: 'numeric',
@@ -10,7 +10,7 @@ const formatDate = (seconds: number) => {
         timeStyle: 'short'
     });
 
-    return `${day} ${time}`;
+    return `${day} ${minutes ? time : ''}`;
 }
 
 const isOfficialModule = (moduleName: string) => {
