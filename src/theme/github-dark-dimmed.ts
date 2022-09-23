@@ -1,10 +1,5 @@
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports["default"] = void 0;
-var _default = {
+const theme = {
     "hljs": {
         "display": "block",
         "background": "#22272e",
@@ -17,9 +12,6 @@ var _default = {
         "color": "#f47067"
     },
     "hljs-keyword": {
-        "color": "#f47067"
-    },
-    "hljs-meta": {
         "color": "#f47067"
     },
     "hljs-template-tag": {
@@ -57,9 +49,6 @@ var _default = {
     "hljs-literal": {
         "color": "#6cb6ff"
     },
-    "hljs-meta": {
-        "color": "#6cb6ff"
-    },
     "hljs-number": {
         "color": "#6cb6ff"
     },
@@ -78,7 +67,6 @@ var _default = {
     "hljs-variable": {
         "color": "#6cb6ff"
     },
-
     "hljs-meta": {
         "color": "#96d0ff"
     },
@@ -142,4 +130,5 @@ var _default = {
         "backgroundColor": "#78191b"
     }
 };
-exports["default"] = _default;
+
+export default theme;
