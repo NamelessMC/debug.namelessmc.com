@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {IconDefinition} from "@fortawesome/free-solid-svg-icons";
 import {useTranslation} from "react-i18next";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import {atomOneDark, atomOneLight} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import {atomOneLight} from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import githubDarkDimmed from "../theme/github-dark-dimmed"; 
 
 interface Props {
     icon: IconDefinition;
@@ -34,7 +35,7 @@ function SimpleLogSection({
                 {logs.map((log, idx) => (
                     <div key={idx}>
                         <p className="text-normal text-left pl-4 font-medium">{ t(log.titleKey) }</p>
-                        <SyntaxHighlighter className="log-content" language="accesslog" wrapLongLines={true} style={theme === 'light' ? atomOneLight : atomOneDark}>
+                        <SyntaxHighlighter className="log-content" language="accesslog" wrapLongLines={true} style={theme === 'light' ? atomOneLight : githubDarkDimmed as any}>
                             {log.content.length > 0 ? log.content : t('logs_section.empty_log')}
                         </SyntaxHighlighter>
                     </div>
