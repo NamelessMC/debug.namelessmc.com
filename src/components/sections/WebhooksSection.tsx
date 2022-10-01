@@ -64,13 +64,9 @@ function WebhooksSection({
     }
 
     const hookById = (hookId: number) => {
-        for (const [id, hook] of Object.entries(debugData.namelessmc.settings.webhooks.hooks)) {
-            if (String(hookId) === id) {
-                return hook.name;
-            }
-        }
-
-        return 'unknown';
+        return Object.values(debugData.namelessmc.settings.webhooks.hooks).find(hook => {
+            return hookId === hook.id;
+        })?.name ?? 'unknown';
     }
 
     const forumHooksFloatingContent: FloatingContent = {

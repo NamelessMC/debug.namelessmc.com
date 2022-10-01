@@ -1,20 +1,27 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {useTranslation} from "react-i18next";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import {githubGist} from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import {DebugData} from "../../types/DebugData";
+import githubDarkDimmed from "../../theme/github-dark-dimmed";
 import {faFilePen} from "@fortawesome/free-solid-svg-icons";
-import SimpleLogSection from "../SimpleLogSection";
-
 
 interface Props {
     debugData: DebugData;
 }
 
 function LogsSection({
-    debugData, // Hook for this?
+    debugData,
 }: Props) {
+
+    const { t } = useTranslation();
+
+    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light'
 
     const logs = [
         {
             titleKey: 'logs_section.fatal_log',
-            content: debugData.logs.fatal       
+            content: debugData.logs.fatal
         },
         {
             titleKey: 'logs_section.warning_log',
@@ -35,8 +42,22 @@ function LogsSection({
     ]
 
     return (
-        <SimpleLogSection icon={faFilePen} titleKey={'logs_section.logs'} logs={logs} />
-    )
+        <div className="section-background">
+            <div className="section-title">
+                <FontAwesomeIcon icon={faFilePen} /> { t('logs_section.logs') }
+            </div>
+            <div className="section-content mx-4 gap-y-4">
+                {logs.map((log, idx) => (
+                    <div key={idx}>
+                        <p className="text-normal text-left pl-4 font-medium">{ t(log.titleKey) }</p>
+                        <SyntaxHighlighter className="log-content" language="accesslog" wrapLongLines={true} style={theme === 'light' ? githubGist : githubDarkDimmed as any}>
+                            {log.content.length > 0 ? log.content : t('logs_section.empty_log')}
+                        </SyntaxHighlighter>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
 
 export default LogsSection;

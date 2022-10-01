@@ -39,38 +39,44 @@ function Table({
         <table className="table-container">
             <tbody>
                 <tr>
-                    {columnHeaders.map((columnHeader, idx) => <th key={idx} className={`table-title ${columnHeader.classes?.join(' ')}`}>{ t(columnHeader.key) }</th>)}
+                    {columnHeaders.map((columnHeader, idx) => {
+                        let classes = 'table-title';
+                        if (columnHeader.classes) {
+                            classes += ` ${columnHeader.classes.join(' ')}`;
+                        }
+                        return (
+                            <th key={idx} className={classes}>{ t(columnHeader.key) }</th>
+                        )
+                    })}
                 </tr>
 
                 {rows.length > 0 &&
                     rows.map((row, idx) =>
-                        <tr key={idx}> {
+                        <tr key={idx}>{
                             row.cells.map((cell, idx2) => {
-                                if (typeof cell.body !== 'string') {
-                                    return <td
+                                let classes = 'table-data';
+                                if (cell.classes) {
+                                    classes += ` ${cell.classes.join(' ')}`;
+                                }
+                                return (
+                                    <td
                                         key={idx2}
                                         onClick={cell.click}
                                         title={cell.title}
-                                        className={`table-data ${cell.classes?.join(' ')}`}
+                                        className={classes}
                                     >
                                         {cell.body}
                                     </td>
-                                }
-                                return <td
-                                    key={idx2}
-                                    onClick={cell.click}
-                                    title={cell.title}
-                                    className={`table-data ${cell.classes?.join(' ')}`}
-                                    dangerouslySetInnerHTML={{__html: cell.body}}
-                                ></td>
+                                )
                             })
-                        }
-                        </tr>
+                        }</tr>
                     )
                 }
 
                 {rows.length === 0 && emptyState &&
-                    <tr><td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td></tr>
+                    <tr>
+                        <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
+                    </tr>
                 }
             </tbody>
         </table>

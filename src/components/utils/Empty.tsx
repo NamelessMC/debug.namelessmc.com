@@ -18,7 +18,7 @@ function Empty({
     }
 
     if (asCode) {
-        return <Code value={Array.isArray(value) ? JSON.stringify(value) : value} />
+        return <Code value={Array.isArray(value) ? value.join(', ') : value} />
     }
 
     return <span className="font-normal text-base text-normal">{ value }</span>
