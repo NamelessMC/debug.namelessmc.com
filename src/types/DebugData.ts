@@ -57,7 +57,7 @@ export interface DebugData {
     logs: {[key: string]: string};
     environment: {
         php_version: string;
-        phpModules: string[];
+        php_modules: string[];
         host_os: string;
         host_kernel_version: string;
         official_docker_image: boolean;
