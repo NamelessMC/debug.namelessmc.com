@@ -47,5 +47,5 @@
 }
 
 .log-content {
-    @apply font-mono text-xs whitespace-pre-wrap text-left max-h-96 overflow-scroll rounded-md mx-4 shadow-lg
+    @apply font-mono text-xs whitespace-pre-wrap text-left max-h-96 rounded-md shadow-lg
 }

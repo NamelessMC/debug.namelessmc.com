@@ -13,6 +13,7 @@ function ModulesSection({
     const moduleFloatingContent = {
         extensionFloaters: Object.values(debugData.namelessmc.modules).map(module => {
             return {
+                id: module.name,
                 name: module.name,
                 type: 'module',
                 enabled: module.enabled,

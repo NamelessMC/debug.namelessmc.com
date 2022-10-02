@@ -10,6 +10,7 @@ import OfficialBadge from "./utils/OfficialBadge";
 import Empty from "./utils/Empty";
 
 export interface ExtensionFloaterProps {
+    id?: string;
     name: string;
     type: 'module' | 'template';
     enabled: boolean;
@@ -21,6 +22,7 @@ export interface ExtensionFloaterProps {
 }
 
 function ExtensionFloater({
+    id,
     name,
     type,
     enabled,
@@ -41,7 +43,7 @@ function ExtensionFloater({
     }
 
     return (
-        <div className="section-content-floating h-full">
+        <div className="section-content-floating h-full" {...(id ? {id: id} : {})}>
             <h3 className="section-subheading">
                 { name } { isOfficial && <OfficialBadge /> }
             </h3>

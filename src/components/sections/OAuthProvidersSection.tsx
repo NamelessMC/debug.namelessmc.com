@@ -53,13 +53,13 @@ function OAuthProvidersSection({
                     click: () => goToModule(provider.module),
                 },
                 {
-                    body: <Code value={provider.class} escape={true} />,
+                    body: <Code value={provider.class} />,
                 },
                 {
-                    body: <Code value={provider.user_id_name} escape={true} />,
+                    body: <Code value={provider.user_id_name} />,
                 },
                 {
-                    body: <Code value={provider.scope_id_name} escape={true} />,
+                    body: <Code value={provider.scope_id_name} />,
                 },
                 {
                     body: <Empty value={provider.client_id} asCode={true} />,

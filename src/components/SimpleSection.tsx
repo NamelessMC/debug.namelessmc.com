@@ -46,10 +46,10 @@ function SimpleSection({
             <div className={"section-content " + getGridColsClass(gridCols ?? DEFAULT_GRID_COLS) + " " + getGridGapClass(gap ?? DEFAULT_GRID_GAP)} >
                 { content.map((item, idx) => (
                     <div key={idx}>
-                        <h5 className="section-heading">{item.header}</h5>
+                        <h5 className="section-heading">{ item.header }</h5>
                         { typeof item.body !== 'string' ?
                             item.body
-                            : <h2 className="section-body text-normal" dangerouslySetInnerHTML={{ __html: item.body }}></h2>
+                            : <h2 className="section-body text-normal">{ item.body }</h2>
                         }
                     </div>
                 )) }

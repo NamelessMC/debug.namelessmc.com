@@ -7,9 +7,7 @@ function Loader() {
     const { t } = useTranslation();
 
     return (
-        <div
-            className="m-auto rounded-lg shadow-lg md:w-1/4 p-4 bg-gray-300 dark:bg-gray-500 mb-2 font-bold text-white"
-        >
+        <div className="m-auto rounded-lg shadow-lg md:w-1/4 p-4 bg-gray-300 dark:bg-gray-500 mb-2 font-bold text-white">
             { t('misc.loading') }
             <span className="float-right">
                 <FontAwesomeIcon icon={faSpinner} className="fa-spin" />

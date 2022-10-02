@@ -48,8 +48,8 @@ function LogsSection({
             </div>
             <div className="section-content mx-4 gap-y-4">
                 {logs.map((log, idx) => (
-                    <div key={idx}>
-                        <p className="text-normal text-left pl-4 font-medium">{ t(log.titleKey) }</p>
+                    <div className="overflow-clip" key={idx}>
+                        <p className="text-normal text-left font-medium">{ t(log.titleKey) }</p>
                         <SyntaxHighlighter className="log-content" language="accesslog" wrapLongLines={true} style={theme === 'light' ? githubGist : githubDarkDimmed as any}>
                             {log.content.length > 0 ? log.content : t('logs_section.empty_log')}
                         </SyntaxHighlighter>
