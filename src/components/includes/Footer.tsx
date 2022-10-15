@@ -22,8 +22,10 @@ function Footer({
     const { t, i18n } = useTranslation();
 
     const toggleTheme = (): void => {
-        localStorage.setItem('nmc-debug-theme', theme === 'dark' ? 'light' : 'dark');
-        setTheme(theme === 'dark' ? 'light' : 'dark');
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+
+        localStorage.setItem('nmc-debug-theme', newTheme);
+            setTheme(newTheme);
     };
 
     const changeLocale = (locale: string): void => {
