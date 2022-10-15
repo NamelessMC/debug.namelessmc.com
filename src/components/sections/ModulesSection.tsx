@@ -1,14 +1,11 @@
-import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faPuzzlePiece} from "@fortawesome/free-solid-svg-icons";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function ModulesSection() {
 
-function ModulesSection({
-    debugData
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const moduleFloatingContent = {
         extensionFloaters: Object.values(debugData.namelessmc.modules).map(module => {

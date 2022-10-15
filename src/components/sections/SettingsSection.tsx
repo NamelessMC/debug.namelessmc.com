@@ -2,17 +2,14 @@ import SimpleSection from "../SimpleSection";
 import {faCogs} from "@fortawesome/free-solid-svg-icons";
 import {SectionContent} from "../../types/SectionContent";
 import {useTranslation} from "react-i18next";
-import {DebugData} from "../../types/DebugData";
 import {capitalize} from "../../utils";
 import BooleanBadge from "../utils/BooleanBadge";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function SettingsSection() {
 
-function SettingsSection({
-    debugData,
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const { t } = useTranslation();
 

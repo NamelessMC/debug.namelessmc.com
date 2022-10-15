@@ -1,18 +1,15 @@
-import {DebugData} from "../../types/DebugData";
 import {TableColumnHeader, TableEmptyState, TableProps, TableRow} from "../Table";
 import SimpleTableSection from "../SimpleTableSection";
 import {faAddressBook} from "@fortawesome/free-solid-svg-icons";
 import BooleanBadge from "../utils/BooleanBadge";
 import BooleanValue from "../utils/BooleanValue";
 import Code from "../utils/Code";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function GroupsSection() {
 
-function GroupsSection({
-    debugData,
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const tableColumnHeaders: TableColumnHeader[] = [
         {

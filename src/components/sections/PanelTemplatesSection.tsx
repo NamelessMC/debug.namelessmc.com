@@ -1,16 +1,13 @@
 import { faTachometerAlt } from "@fortawesome/free-solid-svg-icons";
-import { DebugData } from "../../types/DebugData";
 import { ExtensionFloaterProps } from "../ExtensionFloater";
 import FloatingSection, { FloatingContent } from "../FloatingSection";
 import {Template} from "../../types/Template";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function PanelTemplatesSection() {
 
-function PanelTemplatesSection({
-    debugData
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const templatesFloatingExtensionContent: ExtensionFloaterProps[] = Object.values(debugData.namelessmc.templates.panel).map((template: Template) => (
         {

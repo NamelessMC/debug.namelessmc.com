@@ -1,17 +1,14 @@
-import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faSyncAlt} from "@fortawesome/free-solid-svg-icons";
 import {goToModule} from "../../utils";
 import BooleanBadge from "../utils/BooleanBadge";
 import Empty from "../utils/Empty";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function GroupSyncSection() {
 
-function GroupSyncSection({
-    debugData
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const injectorsFloatingContent: FloatingContent = {
         subheadingKey: 'group_sync_section.injectors',

@@ -1,17 +1,14 @@
 import SimpleTableSection from "../SimpleTableSection";
 import {faPlug} from "@fortawesome/free-solid-svg-icons";
-import {DebugData} from "../../types/DebugData";
 import {TableProps} from "../Table";
 import BooleanBadge from "../utils/BooleanBadge";
 import BooleanValue from "../utils/BooleanValue";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function IntegrationsSection() {
 
-function IntegrationsSection({
-    debugData,
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const table: TableProps = {
         columnHeaders: [

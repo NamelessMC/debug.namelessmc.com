@@ -21,6 +21,8 @@ import TemplatesSection from './components/sections/TemplatesSection';
 import PanelTemplatesSection from './components/sections/PanelTemplatesSection';
 import LogsSection from './components/sections/LogsSection';
 
+import { DebugDataProvider} from "./contexts/DebugDataContext";
+
 function App() {
   const { t, i18n } = useTranslation();
   const debugId = window.location.pathname.slice(1);
@@ -49,52 +51,54 @@ function App() {
   }
 
   return (
-      <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
-          <Header
-              loaded={loaded}
-              generatedAt={data ? data.generated_at : 0}
-          />
+      <DebugDataProvider value={data}>
+          <div className={`bg-gray-200 dark:bg-gray-900 h-full ${loaded && !error ? '' : 'h-screen'}`}>
+              <Header
+                  loaded={loaded}
+                  generatedAt={data ? data.generated_at : 0}
+              />
 
-          <div className="container mx-auto pt-8">
-              { !loaded && !error && <Loader /> }
+              <div className="container mx-auto pt-8">
+                  { !loaded && !error && <Loader /> }
 
-              { error && <Error error={
-                  debugId.length === 0
-                      ? t('errors.no_id_provided')
-                      : t('errors.invalid_link_id')
-              } /> }
+                  { error && <Error error={
+                      debugId.length === 0
+                          ? t('errors.no_id_provided')
+                          : t('errors.invalid_link_id')
+                  } /> }
 
-              { loaded && !error && <>
-                  <VersionSection debugData={data} />
-                  <SettingsSection debugData={data} />
-                  <ConfigSection debugData={data} />
-                  <ModulesSection debugData={data} />
-                  <GroupsSection debugData={data} />
-                  <GroupSyncSection debugData={data} />
-                  <IntegrationsSection debugData={data} />
-                  <WebhooksSection debugData={data} />
-                  <OAuthProvidersSection debugData={data} />
-                  <div className={shouldDisplayTemplateSectionsSideBySide() ? "grid gap-4 grid-cols-2" : ""}>
-                      <TemplatesSection debugData={data} />
-                      <PanelTemplatesSection debugData={data} />
-                  </div>
-                  <LogsSection debugData={data} />
-                  <EnvironmentSection debugData={data} />
-              </>}
+                  { loaded && !error && <>
+                      <VersionSection />
+                      <SettingsSection  />
+                      <ConfigSection />
+                      <ModulesSection />
+                      <GroupsSection />
+                      <GroupSyncSection />
+                      <IntegrationsSection />
+                      <WebhooksSection />
+                      <OAuthProvidersSection />
+                      <div className={shouldDisplayTemplateSectionsSideBySide() ? "grid gap-4 grid-cols-2" : ""}>
+                          <TemplatesSection />
+                          <PanelTemplatesSection />
+                      </div>
+                      <LogsSection />
+                      <EnvironmentSection />
+                  </>}
+              </div>
+
+              {data && (
+                  <Footer
+                      debugId={debugId}
+                      loaded={loaded}
+                      generatedByUuid={data.generated_by_uuid}
+                      generatedByName={data.generated_by_name}
+                      namelessMcVersion={data.namelessmc.version}
+                      theme={theme}
+                      setTheme={setTheme}
+                  />
+              )}
           </div>
-
-          {data && (
-              <Footer
-              debugId={debugId}
-              loaded={loaded}
-              generatedByUuid={data.generated_by_uuid}
-              generatedByName={data.generated_by_name}
-              namelessMcVersion={data.namelessmc.version}
-              theme={theme}
-              setTheme={setTheme}
-          />
-        )}
-      </div>
+      </DebugDataProvider>
   );
 }
 
