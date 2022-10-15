@@ -1,4 +1,3 @@
-import {DebugData} from "../../types/DebugData";
 import {TableColumnHeader, TableEmptyState, TableProps, TableRow} from "../Table";
 import {capitalize, goToModule} from "../../utils";
 import SimpleTableSection from "../SimpleTableSection";
@@ -6,14 +5,12 @@ import {faUserShield} from "@fortawesome/free-solid-svg-icons";
 import BooleanValue from "../utils/BooleanValue";
 import Empty from "../utils/Empty";
 import Code from "../utils/Code";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function OAuthProvidersSection() {
 
-function OAuthProvidersSection({
-    debugData
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const tableColumnHeaders: TableColumnHeader[] = [
         {

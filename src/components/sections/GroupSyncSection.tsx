@@ -1,18 +1,14 @@
-import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faSyncAlt} from "@fortawesome/free-solid-svg-icons";
 import {goToModule} from "../../utils";
-import {GroupSyncRule} from "../../types/GroupSyncRule";
 import BooleanBadge from "../utils/BooleanBadge";
 import Empty from "../utils/Empty";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function GroupSyncSection() {
 
-function GroupSyncSection({
-    debugData
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const injectorsFloatingContent: FloatingContent = {
         subheadingKey: 'group_sync_section.injectors',
@@ -50,20 +46,6 @@ function GroupSyncSection({
         },
     };
 
-    // TODO: yuck. can't find a way to access `rule[injector.column_name]` without TS error, so have to do this
-    const getGroupIdFromColumnName = (rule: GroupSyncRule, columnName: string): string => {
-        switch (columnName) {
-            case 'website_group_id':
-                return rule.website_group_id;
-            case 'ingame_rank_name':
-                return rule.ingame_rank_name;
-            case 'discord_role_id':
-                return rule.discord_role_id;
-            default:
-                return ''; // should never happen
-        }
-    }
-
     const rulesFloatingContent: FloatingContent = {
         subheadingKey: 'group_sync_section.rules',
         table: {
@@ -85,7 +67,7 @@ function GroupSyncSection({
                             body: rule.id,
                         },
                         ...debugData.namelessmc.settings.group_sync.injectors.map(injector => {
-                            const group_id = getGroupIdFromColumnName(rule, injector.column_name);
+                            const group_id = rule[injector.column_name];
                             if (injector.column_name === 'website_group_id') {
                                 return {
                                     body: Object.values(debugData.namelessmc.groups).find(g => String(g.id) === group_id)?.name ?? '',

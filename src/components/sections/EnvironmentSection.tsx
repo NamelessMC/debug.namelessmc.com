@@ -1,22 +1,18 @@
 import SimpleSection from "../SimpleSection";
 import {SectionContent} from "../../types/SectionContent";
-import {DebugData} from "../../types/DebugData";
 import {useTranslation} from "react-i18next";
 import {faServer} from "@fortawesome/free-solid-svg-icons";
 import BooleanBadge from "../utils/BooleanBadge";
 import BooleanValue from "../utils/BooleanValue";
 import Code from "../utils/Code";
 import {humanFileSize} from "../../utils";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
-
-function EnvironmentSection({
-    debugData, // Hook for this?
-}: Props) {
+function EnvironmentSection() {
 
     const { t } = useTranslation();
+    const debugData = useContext(DebugDataContext);
 
     const content: SectionContent[] = [
         {
