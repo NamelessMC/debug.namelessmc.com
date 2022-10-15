@@ -1,7 +1,7 @@
 {
     "misc": {
         "header_title": "Feilsøkingsinformasjon for NamelessMC",
-        "generated_at": "Generert {time}",
+        "generated_at": "Generert {{time}}",
         "loading": "Laster inn...",
         "empty": "Tomt",
         "yes": "Ja",
@@ -12,7 +12,7 @@
         "error": "Feil",
         "no_id_provided": "Ingen feilsøkings-ID angitt",
         "no_data_in_json": "Ingen feilsøkingsdata tilgjengelig i JSON",
-        "invalid_debug_version": "Feilsøkingsversjon <strong>{version}</strong> er ikke støttet"
+        "invalid_debug_version": "Feilsøkingsversjon <strong>{{version}}</strong> er ikke støttet"
     },
     "version_section": {
         "version": "Versjon",
@@ -81,7 +81,7 @@
     },
     "footer": {
         "generated_by": "Generert av",
-        "theme": "Tema: {theme}",
+        "theme": "Tema: {{theme}}",
         "namelessmc_website": "NamelessMC-nettside",
         "get_support": "Få hjelp",
         "made_with_love": "Laget med ❤️"

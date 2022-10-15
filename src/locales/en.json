@@ -1,7 +1,7 @@
 {
     "misc": {
         "header_title": "NamelessMC Debug Info",
-        "generated_at": "Generated at {time}",
+        "generated_at": "Generated at {{time}}",
         "loading": "Loading...",
         "empty": "Empty",
         "yes": "Yes",
@@ -12,7 +12,7 @@
         "error": "Error",
         "no_id_provided": "No debug link ID provided",
         "no_data_in_json": "No debug data available in JSON",
-        "invalid_namelessmc_version": "Only debug links from NamelessMC version <strong>{required}</strong> are supported, you are running version <strong>{version}</strong>.",
+        "invalid_namelessmc_version": "Only debug links from NamelessMC version <strong>{{required}}</strong> are supported, you are running version <strong>{{version}}</strong>.",
         "invalid_link_id": "Invalid debug link ID"
     },
     "version_section": {

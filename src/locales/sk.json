@@ -4,7 +4,7 @@
         "yes": "Ano",
         "no": "Nie",
         "official": "OFICIÁLNE",
-        "generated_at": "Vygenerované {time}",
+        "generated_at": "Vygenerované {{time}}",
         "loading": "Načítávam...",
         "empty": "Prázdne",
         "light": "Svetlý",
@@ -15,8 +15,8 @@
         "no_id_provided": "Nebolo poskytnuté ID odkazu k ľadeniu",
         "invalid_link_id": "Neplatné ID odkazu na ladenie",
         "no_data_in_json": "V JSON nie sú k dispozícii žiadne údaje ladenia",
-        "invalid_debug_version": "Verzia ladenia <strong>{version}</strong> nie je podporovaná",
-        "invalid_namelessmc_version": "Podporované sú iba odkazy na ladenie z NamelessMC verzie <strong>{required}</strong>, používate verziu <strong>{version}</strong>."
+        "invalid_debug_version": "Verzia ladenia <strong>{{version}}</strong> nie je podporovaná",
+        "invalid_namelessmc_version": "Podporované sú iba odkazy na ladenie z NamelessMC verzie <strong>{{required}}</strong>, používate verziu <strong>{{version}}</strong>."
     },
     "footer": {
         "made_with_love": "Vytvorené s ❤️",

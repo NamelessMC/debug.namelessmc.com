@@ -6,7 +6,7 @@
         "no": "Não",
         "official": "OFICIAL",
         "header_title": "Informações de depuração do NamelessMC",
-        "generated_at": "Gerado em {time}"
+        "generated_at": "Gerado em {{time}}"
     },
     "version_section": {
         "version": "Versão",

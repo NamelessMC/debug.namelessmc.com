@@ -1,7 +1,7 @@
 {
     "misc": {
         "header_title": "NamelessMC Debug Info",
-        "generated_at": "{time}に生成",
+        "generated_at": "{{time}}に生成",
         "loading": "読み込み中...",
         "empty": "空",
         "yes": "はい",
@@ -14,9 +14,9 @@
         "no_data_in_json": "JSONで利用できるデバッグデータがありません",
         "error": "エラー",
         "no_id_provided": "デバッグリンクIDが提供されていません",
-        "invalid_debug_version": "デバッグバージョン<strong>{version}</strong>はサポートされていません",
+        "invalid_debug_version": "デバッグバージョン<strong>{{version}}</strong>はサポートされていません",
         "invalid_link_id": "無効なデバッグリンクID",
-        "invalid_namelessmc_version": "NamelessMCバージョン<strong>{required}</strong>からのデバッグリンクのみがサポートされています。あなたは現在バージョン<strong>{version}</strong>を実行しています。"
+        "invalid_namelessmc_version": "NamelessMCバージョン<strong>{{required}}</strong>からのデバッグリンクのみがサポートされています。あなたは現在バージョン<strong>{{version}}</strong>を実行しています。"
     },
     "version_section": {
         "version": "バージョン",

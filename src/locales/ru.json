@@ -4,7 +4,7 @@
         "empty": "Пусто",
         "no": "Нет",
         "header_title": "Отладочная информация NamelessMC",
-        "generated_at": "Сгенерирован {time}",
+        "generated_at": "Сгенерирован {{time}}",
         "yes": "Да",
         "official": "ОФИЦИАЛЬНОЕ",
         "light": "Светлая",
@@ -13,10 +13,10 @@
     "errors": {
         "error": "Ошибка",
         "no_id_provided": "Не предоставлен ID отладочной ссылки",
-        "invalid_debug_version": "Отладка версии <strong>{version}</strong> не поддерживается",
+        "invalid_debug_version": "Отладка версии <strong>{{version}}</strong> не поддерживается",
         "no_data_in_json": "Нету отладочной информации в JSON формате",
         "invalid_link_id": "Некорректная ссылка отладки",
-        "invalid_namelessmc_version": "Только отладочные ссылки с NamelessMC Версии <strong>{required}</strong> поддерживаются, у вас версия <strong>{version}</strong>."
+        "invalid_namelessmc_version": "Только отладочные ссылки с NamelessMC Версии <strong>{{required}}</strong> поддерживаются, у вас версия <strong>{{version}}</strong>."
     },
     "version_section": {
         "last_update_check": "Последняя проверка обновлений была",

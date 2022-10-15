@@ -1,7 +1,7 @@
 {
     "misc": {
         "header_title": "Informacje debug",
-        "generated_at": "Utworzony {time}",
+        "generated_at": "Utworzony {{time}}",
         "loading": "Ładowanie...",
         "empty": "Puste",
         "yes": "Tak",
@@ -14,7 +14,7 @@
         "error": "Błąd",
         "no_id_provided": "Nie podano ID",
         "no_data_in_json": "Brak dostępnych JSON",
-        "invalid_debug_version": "Debug <strong>{version}</strong> nie jest wspierana (jeszcze)",
+        "invalid_debug_version": "Debug <strong>{{version}}</strong> nie jest wspierana (jeszcze)",
         "invalid_link_id": "Nieprawidłowy id"
     },
     "version_section": {
@@ -123,7 +123,7 @@
         "debug_log_version": "Debug log version",
         "generated_by": "Wygenerowano przez:",
         "raw_json": "Surowy JSON",
-        "theme": "Styl: {theme}",
+        "theme": "Styl: {{theme}}",
         "namelessmc_website": "Strona NamelessMC",
         "get_support": "Uzyskaj wsparcie",
         "made_with_love": "Utworzone z ❤️"

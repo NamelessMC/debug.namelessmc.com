@@ -1,6 +1,6 @@
 {
     "misc": {
-        "generated_at": "Generado a las {hora}",
+        "generated_at": "Generado a las {{hora}}",
         "loading": "Cargando...",
         "empty": "Vacío",
         "yes": "Sí",
@@ -15,8 +15,8 @@
         "error": "Error",
         "no_data_in_json": "No hay datos de depuración disponibles en JSON",
         "invalid_link_id": "ID de enlace de depuración inválido",
-        "invalid_debug_version": "La versión de depuración <strong>{version}</strong> no se admite",
-        "invalid_namelessmc_version": "Sólo se soportan los enlaces de depuración de la versión <strong>{required}</strong> de NamelessMC, estás ejecutando la versión <strong>{version}</strong>."
+        "invalid_debug_version": "La versión de depuración <strong>{{version}}</strong> no se admite",
+        "invalid_namelessmc_version": "Sólo se soportan los enlaces de depuración de la versión <strong>{{required}}</strong> de NamelessMC, estás ejecutando la versión <strong>{{version}}</strong>."
     },
     "environment_section": {
         "environment": "Entorno",

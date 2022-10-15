@@ -1,7 +1,7 @@
 {
     "misc": {
         "header_title": "Ladicí informace NamelessMC",
-        "generated_at": "Vygenerováno {time}",
+        "generated_at": "Vygenerováno {{time}}",
         "loading": "Načítání...",
         "empty": "Prázdné",
         "yes": "Ano",
@@ -14,9 +14,9 @@
         "no_id_provided": "Nebylo poskytnuto ID odkazu ladění",
         "error": "Chyba",
         "no_data_in_json": "V JSON nejsou dostupná žádná ladicí data",
-        "invalid_debug_version": "Ladění verze <strong>{version}</strong> není podporováno",
+        "invalid_debug_version": "Ladění verze <strong>{{version}}</strong> není podporováno",
         "invalid_link_id": "Neplatné ID odkazu ladění",
-        "invalid_namelessmc_version": "Jsou podporovány pouze ladicí odkazy NamelessMC verze <strong>{required}</strong>, vy používáte verzi <strong>{version}</strong>."
+        "invalid_namelessmc_version": "Jsou podporovány pouze ladicí odkazy NamelessMC verze <strong>{{required}}</strong>, vy používáte verzi <strong>{{version}}</strong>."
     },
     "settings_section": {
         "phpmailer_enabled": "PHPMailer povolen",

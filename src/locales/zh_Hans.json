@@ -1,6 +1,6 @@
 {
     "misc": {
-        "generated_at": "生成时间: {time}",
+        "generated_at": "生成时间: {{time}}",
         "loading": "加载中...",
         "empty": "空",
         "yes": "是",
@@ -12,11 +12,11 @@
     },
     "errors": {
         "no_id_provided": "没有提供调试链接 ID",
-        "invalid_debug_version": "调试版本 <strong>{version}</strong> 不受支持",
+        "invalid_debug_version": "调试版本 <strong>{{version}}</strong> 不受支持",
         "invalid_link_id": "无效调试链接 ID",
         "error": "错误",
         "no_data_in_json": "没有 JSON 格式的可用调试数据",
-        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{required}</strong> 版本的调试链接，您正在运行 <strong>{version}</strong>。"
+        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{{required}}</strong> 版本的调试链接，您正在运行 <strong>{{version}}</strong>。"
     },
     "version_section": {
         "version": "版本",

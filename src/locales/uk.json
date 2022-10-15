@@ -15,8 +15,8 @@
         "no_id_provided": "Не вказано ідентифікатор посилання для налагодження",
         "no_data_in_json": "Немає даних про налагодження в JSON",
         "invalid_link_id": "Недійсний ідентифікатор посилання для налагодження",
-        "invalid_debug_version": "Версія налагодження <strong>{version}</strong> не підтримується",
-        "invalid_namelessmc_version": "Тільки вихідні посилання з NamelessMC Версії <strong>{required}</strong> підтримуються у вашій версії <strong>{version}</strong>."
+        "invalid_debug_version": "Версія налагодження <strong>{{version}}</strong> не підтримується",
+        "invalid_namelessmc_version": "Тільки вихідні посилання з NamelessMC Версії <strong>{{required}}</strong> підтримуються у вашій версії <strong>{{version}}</strong>."
     },
     "version_section": {
         "version": "Версія",

@@ -6,7 +6,7 @@
         "no": "Nee",
         "official": "OFFICIEEL",
         "header_title": "NamelessMC Debuginformatie",
-        "generated_at": "Gegenereerd op {time}",
+        "generated_at": "Gegenereerd op {{{time}}}",
         "light": "Licht",
         "dark": "Donker"
     },
@@ -15,8 +15,8 @@
         "no_data_in_json": "Geen debug data beschikbaar in JSON",
         "invalid_link_id": "Ongeldige debug link id",
         "no_id_provided": "Geen debug link id opgegeven",
-        "invalid_debug_version": "Debugversie <strong>{version}</strong> wordt niet ondersteund",
-        "invalid_namelessmc_version": "Alleen debug linken van NamelessMC versie <strong>{required}</strong> zijn ondersteund, je gebruikt versie <strong>{version}</strong>."
+        "invalid_debug_version": "Debugversie <strong>{{version}}</strong> wordt niet ondersteund",
+        "invalid_namelessmc_version": "Alleen debug linken van NamelessMC versie <strong>{{required}}</strong> zijn ondersteund, je gebruikt versie <strong>{{version}}</strong>."
     },
     "version_section": {
         "version": "Versie",
