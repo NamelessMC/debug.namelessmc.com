@@ -53,7 +53,7 @@
         "version": "Versión",
         "discord_integration": {
             "syncing_enabled": "Sincronización activada",
-            "guild_id": "Identificación del servidor",
+            "guild_id": "ID del servidor",
             "bot_setup": "Configuración del bot",
             "bot_url": "URL del bot"
         },
@@ -170,6 +170,7 @@
         "user_id_name": "Nombre de identificación del usuario",
         "client_id": "ID del cliente",
         "enabled": "Activado",
-        "no_providers": "No hay proveedores"
+        "no_providers": "No hay proveedores",
+        "scope_id_name": "Nombre del Scope ID"
     }
 }
