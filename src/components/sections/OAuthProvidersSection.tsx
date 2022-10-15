@@ -1,15 +1,14 @@
-import {TableColumnHeader, TableEmptyState, TableProps, TableRow} from "../Table";
-import {capitalize, goToModule} from "../../utils";
-import SimpleTableSection from "../SimpleTableSection";
-import {faUserShield} from "@fortawesome/free-solid-svg-icons";
-import BooleanValue from "../utils/BooleanValue";
-import Empty from "../utils/Empty";
-import Code from "../utils/Code";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import { TableColumnHeader, TableEmptyState, TableProps, TableRow } from '../Table';
+import { capitalize, goToModule } from '../../utils';
+import SimpleTableSection from '../SimpleTableSection';
+import { faUserShield } from '@fortawesome/free-solid-svg-icons';
+import BooleanValue from '../utils/BooleanValue';
+import Empty from '../utils/Empty';
+import Code from '../utils/Code';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function OAuthProvidersSection() {
-
+function OAuthProvidersSection(): JSX.Element {
     const debugData = useContext(DebugDataContext);
 
     const tableColumnHeaders: TableColumnHeader[] = [
@@ -34,7 +33,7 @@ function OAuthProvidersSection() {
         },
         {
             key: 'oauth_providers_section.enabled',
-        }
+        },
     ];
 
     const tableRows: TableRow[] = [];
@@ -63,24 +62,24 @@ function OAuthProvidersSection() {
                 },
                 {
                     body: <BooleanValue value={provider.enabled} />,
-                }
+                },
             ],
-        } as TableRow);
+        });
     }
 
     const emptyState: TableEmptyState = {
         textKey: 'oauth_providers_section.no_providers',
-    }
+    };
 
     const table: TableProps = {
         columnHeaders: tableColumnHeaders,
         rows: tableRows,
-        emptyState: emptyState,
-    }
+        emptyState,
+    };
 
     return (
         <SimpleTableSection icon={faUserShield} titleKey={'oauth_providers_section.oauth_providers'} table={table} />
-    )
+    );
 }
 
 export default OAuthProvidersSection;

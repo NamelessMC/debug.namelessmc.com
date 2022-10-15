@@ -1,20 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {IconDefinition} from "@fortawesome/free-solid-svg-icons";
-import {useTranslation} from "react-i18next";
-import Table, {TableProps} from "./Table";
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { useTranslation } from 'react-i18next';
+import Table, { TableProps } from './Table';
 
 interface Props {
-    icon: IconDefinition;
-    titleKey: string;
-    table: TableProps;
+    icon: IconDefinition
+    titleKey: string
+    table: TableProps
 }
 
 function SimpleTableSection({
-   icon,
-   titleKey,
-   table,
-}: Props) {
-
+    icon,
+    titleKey,
+    table,
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
     return (

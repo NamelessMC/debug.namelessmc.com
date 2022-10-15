@@ -1,33 +1,32 @@
-import {IconDefinition} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {useTranslation} from "react-i18next";
-import Table, {TableProps} from "./Table";
-import ExtensionFloater, {ExtensionFloaterProps} from "./ExtensionFloater";
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useTranslation } from 'react-i18next';
+import Table, { TableProps } from './Table';
+import ExtensionFloater, { ExtensionFloaterProps } from './ExtensionFloater';
 
 interface Props {
-    icon: IconDefinition;
-    titleKey: string;
-    floatingContent: FloatingContent[];
+    icon: IconDefinition
+    titleKey: string
+    floatingContent: FloatingContent[]
 }
 
 export interface FloatingContent {
-    subheadingKey?: string;
-    table?: TableProps;
-    extensionFloaters?: ExtensionFloaterProps[];
+    subheadingKey?: string
+    table?: TableProps
+    extensionFloaters?: ExtensionFloaterProps[]
 }
 
 function FloatingSection({
     icon,
     titleKey,
     floatingContent,
-}: Props) {
-
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
-    const gridColsClass = (floatingContent: FloatingContent[]) => {
-        let count = floatingContent.map(fc => fc?.extensionFloaters).map(ef => ef?.length).reduce(
+    const gridColsClass = (floatingContent: FloatingContent[]): string => {
+        const count = floatingContent.map(fc => fc?.extensionFloaters).map(ef => ef?.length).reduce(
             (a, b) => Number(a) + Number(b),
-        ) || 0;
+        ) ?? 0;
 
         if (count === 1) {
             return 'md:grid-cols-1';
@@ -38,40 +37,46 @@ function FloatingSection({
         }
 
         return 'md:grid-cols-3';
-    }
+    };
 
     return (
         <div>
             <div className="section-title-floating">
                 <FontAwesomeIcon icon={icon}/> { t(titleKey) }
             </div>
-            <div className={"pt-2 mb-8 grid gap-4 " + gridColsClass(floatingContent)}>
+            <div className={'pt-2 mb-8 grid gap-4 ' + gridColsClass(floatingContent)}>
                 { floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />) }
             </div>
         </div>
-    )
+    );
 }
 
 export default FloatingSection;
 
-function FloatingSubSection({ content }: { content: FloatingContent }) {
-
+interface FloatingSubSectionProps {
+    content: FloatingContent
+}
+function FloatingSubSection({
+    content,
+}: FloatingSubSectionProps): JSX.Element {
     const { t } = useTranslation();
 
-    return <>
-        { content.extensionFloaters ?
-            content.extensionFloaters.map((floater, idx2) => {
-                return <ExtensionFloater key={idx2} {...floater}/>
-            })
-            :
+    if (content.extensionFloaters == null) {
+        return (
             <div className="section-content-floating">
                 { content.subheadingKey &&
-                    <div className="section-subheading">{ t(content.subheadingKey) }</div>
+                <div className="section-subheading">{ t(content.subheadingKey) }</div>
                 }
-                { content.table &&
-                    <Table {...content.table} />
+                { (content.table != null) &&
+                <Table {...content.table} />
                 }
             </div>
-        }
-    </>
+        );
+    }
+
+    return <>
+        {content.extensionFloaters.map((floater, idx2) => {
+            return <ExtensionFloater key={idx2} {...floater}/>;
+        })}
+    </>;
 }

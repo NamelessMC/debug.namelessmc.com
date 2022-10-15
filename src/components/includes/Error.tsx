@@ -1,13 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 interface Props {
-    error: string;
+    error: string
 }
 
 function Error({
     error,
-}: Props) {
-
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
     return (
@@ -17,7 +16,7 @@ function Error({
             </div>
             <div className="pt-2 pb-4 mb-8 pl-4 text-white">{ error }</div>
         </div>
-    )
+    );
 }
 
 export default Error;

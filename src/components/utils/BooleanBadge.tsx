@@ -1,15 +1,14 @@
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 interface Props {
-    value: boolean,
-    inverted?: boolean,
+    value: boolean
+    inverted?: boolean
 }
 
 function BooleanBadge({
     value,
     inverted = false,
-}: Props) {
-
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
     const yesClassName = inverted
@@ -20,7 +19,7 @@ function BooleanBadge({
         ? 'text-green-600'
         : 'text-yellow-600';
 
-    return <span className={"font-bold text-base " + (value ? yesClassName : noClassName)}>{ value ? t('misc.yes') : t('misc.no') }</span>
+    return <span className={'font-bold text-base ' + (value ? yesClassName : noClassName)}>{ value ? t('misc.yes') : t('misc.no') }</span>;
 }
 
 export default BooleanBadge;

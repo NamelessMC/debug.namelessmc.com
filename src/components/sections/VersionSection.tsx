@@ -1,15 +1,14 @@
-import SimpleSection from "../SimpleSection";
-import {SectionContent} from "../../types/SectionContent";
-import {useTranslation} from "react-i18next";
-import {formatDate} from "../../utils";
-import {faDownload} from "@fortawesome/free-solid-svg-icons";
-import BooleanBadge from "../utils/BooleanBadge";
-import Code from "../utils/Code";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import SimpleSection from '../SimpleSection';
+import { SectionContent } from '../../types/SectionContent';
+import { useTranslation } from 'react-i18next';
+import { formatDate } from '../../utils';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import BooleanBadge from '../utils/BooleanBadge';
+import Code from '../utils/Code';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function VersionSection() {
-
+function VersionSection(): JSX.Element {
     const { t } = useTranslation();
     const debugData = useContext(DebugDataContext);
 
@@ -26,11 +25,11 @@ function VersionSection() {
             header: t('version_section.last_update_check'),
             body: formatDate(debugData.namelessmc.update_checked),
         },
-    ]
+    ];
 
     return (
         <SimpleSection icon={faDownload} titleKey={'version_section.version'} content={content} />
-    )
+    );
 }
 
 export default VersionSection;

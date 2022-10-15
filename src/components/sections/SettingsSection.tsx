@@ -1,14 +1,13 @@
-import SimpleSection from "../SimpleSection";
-import {faCogs} from "@fortawesome/free-solid-svg-icons";
-import {SectionContent} from "../../types/SectionContent";
-import {useTranslation} from "react-i18next";
-import {capitalize} from "../../utils";
-import BooleanBadge from "../utils/BooleanBadge";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import SimpleSection from '../SimpleSection';
+import { faCogs } from '@fortawesome/free-solid-svg-icons';
+import { SectionContent } from '../../types/SectionContent';
+import { useTranslation } from 'react-i18next';
+import { capitalize } from '../../utils';
+import BooleanBadge from '../utils/BooleanBadge';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function SettingsSection() {
-
+function SettingsSection(): JSX.Element {
     const debugData = useContext(DebugDataContext);
 
     const { t } = useTranslation();
@@ -37,12 +36,12 @@ function SettingsSection() {
         {
             header: t('settings_section.captcha_login_page'),
             body: <BooleanBadge value={debugData.namelessmc.settings.captcha_login} />,
-        }
+        },
     ];
 
     return (
         <SimpleSection icon={faCogs} titleKey={'settings_section.settings'} content={content}/>
-    )
+    );
 }
 
 export default SettingsSection;

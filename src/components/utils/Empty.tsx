@@ -1,27 +1,26 @@
-import {useTranslation} from "react-i18next";
-import Code from "./Code";
+import { useTranslation } from 'react-i18next';
+import Code from './Code';
 
 interface Props {
-    value: string | Array<any>,
-    asCode?: boolean,
+    value: string | any[]
+    asCode?: boolean
 }
 
 function Empty({
     value,
-    asCode = false
-}: Props) {
-
+    asCode = false,
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
     if (!value || (Array.isArray(value) && value.length === 0)) {
-        return <i className="font-normal text-base text-normal">{ t('misc.empty') }</i>
+        return <i className="font-normal text-base text-normal">{ t('misc.empty') }</i>;
     }
 
     if (asCode) {
-        return <Code value={Array.isArray(value) ? value.join(', ') : value} />
+        return <Code value={Array.isArray(value) ? value.join(', ') : value} />;
     }
 
-    return <span className="font-normal text-base text-normal">{ value }</span>
+    return <span className="font-normal text-base text-normal">{ value }</span>;
 }
 
 export default Empty;

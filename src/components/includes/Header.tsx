@@ -2,15 +2,14 @@ import { useTranslation } from 'react-i18next';
 import { formatDate } from '../../utils';
 
 interface Props {
-    loaded: boolean;
-    generatedAt: number;
+    loaded: boolean
+    generatedAt: number
 }
 
 function Header({
     loaded,
     generatedAt,
-}: Props) {
-
+}: Props): JSX.Element {
     const { t } = useTranslation();
 
     return (
@@ -20,9 +19,9 @@ function Header({
                 <div className="text-gray-50">
                     <h1 className="font-bold text-4xl">{ t('misc.header_title') }</h1>
                     {loaded &&
-                        <p className="text-2xl font-bold">
-                            { t('misc.generated_at', { time: formatDate(generatedAt) }) }
-                        </p>
+                    <p className="text-2xl font-bold">
+                        { t('misc.generated_at', { time: formatDate(generatedAt) }) }
+                    </p>
                     }
                 </div>
             </div>

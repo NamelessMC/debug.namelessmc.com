@@ -2,8 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
-function Loader() {
-
+function Loader(): JSX.Element {
     const { t } = useTranslation();
 
     return (
@@ -13,7 +12,7 @@ function Loader() {
                 <FontAwesomeIcon icon={faSpinner} className="fa-spin" />
             </span>
         </div>
-    )
+    );
 }
 
 export default Loader;
