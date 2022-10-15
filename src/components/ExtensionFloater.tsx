@@ -43,7 +43,7 @@ function ExtensionFloater({
     }
 
     return (
-        <div className="section-content-floating h-full" {...(id ? {id: id} : {})}>
+        <div className="section-content-floating h-full" id={id || undefined}>
             <h3 className="section-subheading">
                 { name } { isOfficial && <OfficialBadge /> }
             </h3>
