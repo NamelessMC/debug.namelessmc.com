@@ -44,9 +44,10 @@ function App(): JSX.Element {
         i18n.changeLanguage(preferredLanguage);
     }, [i18n]);
 
-    const shouldDisplayTemplateSectionsSideBySide =
-        Object.entries(data.namelessmc.templates.front_end).length === 1 &&
+    const shouldDisplayTemplateSectionsSideBySide = (): boolean => {
+        return Object.entries(data.namelessmc.templates.front_end).length === 1 &&
         Object.entries(data.namelessmc.templates.panel).length === 1;
+    };
 
     return (
         <DebugDataProvider value={data}>
@@ -76,7 +77,7 @@ function App(): JSX.Element {
                         <WebhooksSection />
                         <OAuthProvidersSection />
                         <div className={
-                            shouldDisplayTemplateSectionsSideBySide
+                            shouldDisplayTemplateSectionsSideBySide()
                                 ? 'grid gap-4 grid-cols-2'
                                 : ''
                         }>

@@ -26,7 +26,7 @@ function FloatingSection({
     const gridColsClass = (floatingContent: FloatingContent[]): string => {
         const count = floatingContent.map(fc => fc?.extensionFloaters).map(ef => ef?.length).reduce(
             (a, b) => Number(a) + Number(b),
-        ) ?? 0;
+        ) || 0;
 
         if (count === 1) {
             return 'md:grid-cols-1';
@@ -35,7 +35,7 @@ function FloatingSection({
         if (count === 2 || count % 2 === 0) {
             return 'md:grid-cols-2';
         }
-
+        console.log(count);
         return 'md:grid-cols-3';
     };
 

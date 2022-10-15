@@ -33,6 +33,7 @@ module.exports = {
         '@typescript-eslint/strict-boolean-expressions': 'off',
         'react-hooks/exhaustive-deps': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off',
+        '@typescript-eslint/prefer-nullish-coalescing': 'off',
     },
     settings: {
         react: {
