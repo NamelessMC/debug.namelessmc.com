@@ -2,19 +2,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {useTranslation} from "react-i18next";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import {githubGist} from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import {DebugData} from "../../types/DebugData";
 import githubDarkDimmed from "../../theme/github-dark-dimmed";
 import {faFilePen} from "@fortawesome/free-solid-svg-icons";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
-
-function LogsSection({
-    debugData,
-}: Props) {
+function LogsSection() {
 
     const { t } = useTranslation();
+    const debugData = useContext(DebugDataContext);
 
     const theme = localStorage.getItem('nmc-debug-theme') ?? 'light'
 

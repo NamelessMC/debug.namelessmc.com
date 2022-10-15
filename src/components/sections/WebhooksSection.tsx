@@ -1,15 +1,12 @@
-import {DebugData} from "../../types/DebugData";
 import FloatingSection, {FloatingContent} from "../FloatingSection";
 import {faLink} from "@fortawesome/free-solid-svg-icons";
 import Code from "../utils/Code";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
+function WebhooksSection() {
 
-function WebhooksSection({
-    debugData,
-}: Props) {
+    const debugData = useContext(DebugDataContext);
 
     const actionFromId = (actionId: number): string => {
         for (const [id, name] of Object.entries(debugData.namelessmc.settings.webhooks.actions)) {

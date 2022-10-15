@@ -1,21 +1,17 @@
 import SimpleSection from "../SimpleSection";
 import {SectionContent} from "../../types/SectionContent";
-import {DebugData} from "../../types/DebugData";
 import {useTranslation} from "react-i18next";
 import {faWrench} from "@fortawesome/free-solid-svg-icons";
 import Empty from "../utils/Empty";
 import BooleanBadge from "../utils/BooleanBadge";
 import BooleanValue from "../utils/BooleanValue";
+import {useContext} from "react";
+import DebugDataContext from "../../contexts/DebugDataContext";
 
-interface Props {
-    debugData: DebugData;
-}
-
-function ConfigSection({
-    debugData,
-}: Props) {
+function ConfigSection() {
 
     const { t } = useTranslation();
+    const debugData = useContext(DebugDataContext);
 
     const content: SectionContent[] = [
         {
