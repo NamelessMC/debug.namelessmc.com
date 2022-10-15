@@ -1,6 +1,5 @@
 import SimpleSection from "../SimpleSection";
 import {SectionContent} from "../../types/SectionContent";
-import {DebugData} from "../../types/DebugData";
 import {useTranslation} from "react-i18next";
 import {faServer} from "@fortawesome/free-solid-svg-icons";
 import BooleanBadge from "../utils/BooleanBadge";
