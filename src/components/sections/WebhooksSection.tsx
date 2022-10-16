@@ -1,11 +1,10 @@
-import FloatingSection, {FloatingContent} from "../FloatingSection";
-import {faLink} from "@fortawesome/free-solid-svg-icons";
-import Code from "../utils/Code";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import FloatingSection, { FloatingContent } from '../FloatingSection';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
+import Code from '../utils/Code';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function WebhooksSection() {
-
+function WebhooksSection(): JSX.Element {
     const debugData = useContext(DebugDataContext);
 
     const actionFromId = (actionId: number): string => {
@@ -16,7 +15,7 @@ function WebhooksSection() {
         }
 
         return 'unknown';
-    }
+    };
 
     const hooksFloatingContent: FloatingContent = {
         subheadingKey: 'webhooks_section.hooks',
@@ -34,7 +33,7 @@ function WebhooksSection() {
                 },
                 {
                     key: 'webhooks_section.events',
-                }
+                },
             ],
             rows: Object.values(debugData.namelessmc.settings.webhooks.hooks).map(hook => {
                 return {
@@ -50,21 +49,21 @@ function WebhooksSection() {
                         },
                         {
                             body: <Code value={hook.events.join('\n')} />,
-                        }
+                        },
                     ],
-                }
+                };
             }),
             emptyState: {
                 textKey: 'webhooks_section.no_hooks',
-            }
-        }
-    }
+            },
+        },
+    };
 
-    const hookById = (hookId: number) => {
+    const hookById = (hookId: number): string => {
         return Object.values(debugData.namelessmc.settings.webhooks.hooks).find(hook => {
             return hookId === hook.id;
         })?.name ?? 'unknown';
-    }
+    };
 
     const forumHooksFloatingContent: FloatingContent = {
         subheadingKey: 'webhooks_section.forum_hooks',
@@ -79,7 +78,7 @@ function WebhooksSection() {
                 },
                 {
                     key: 'webhooks_section.hooks',
-                }
+                },
             ],
             rows: Object.values(debugData.namelessmc.settings.webhooks.forum_hooks).map(hook => {
                 return {
@@ -92,19 +91,19 @@ function WebhooksSection() {
                         },
                         {
                             body: <Code value={hook.hooks.map(h => hookById(h)).join('\n')} />,
-                        }
-                    ]
-                }
+                        },
+                    ],
+                };
             }),
             emptyState: {
-                textKey: "webhooks_section.no_forum_hooks"
-            }
-        }
-    }
+                textKey: 'webhooks_section.no_forum_hooks',
+            },
+        },
+    };
 
     return (
         <FloatingSection icon={faLink} titleKey={'webhooks_section.webhooks'} floatingContent={[hooksFloatingContent, forumHooksFloatingContent]} />
-    )
+    );
 }
 
 export default WebhooksSection;

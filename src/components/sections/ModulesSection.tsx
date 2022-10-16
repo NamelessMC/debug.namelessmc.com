@@ -1,10 +1,9 @@
-import FloatingSection, {FloatingContent} from "../FloatingSection";
-import {faPuzzlePiece} from "@fortawesome/free-solid-svg-icons";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import FloatingSection, { FloatingContent } from '../FloatingSection';
+import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function ModulesSection() {
-
+function ModulesSection(): JSX.Element {
     const debugData = useContext(DebugDataContext);
 
     const moduleFloatingContent = {
@@ -18,13 +17,13 @@ function ModulesSection() {
                 namelessMcVersion: module.namelessmc_version,
                 version: module.module_version,
                 debugInfo: module.debug_info,
-            }
+            };
         }),
     } as FloatingContent;
 
     return (
         <FloatingSection icon={faPuzzlePiece} titleKey={'modules_section.modules'} floatingContent={[moduleFloatingContent]}/>
-    )
+    );
 }
 
 export default ModulesSection;

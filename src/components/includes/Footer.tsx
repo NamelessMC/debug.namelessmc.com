@@ -3,48 +3,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
-    loaded: boolean;
-    generatedByUuid: string;
-    generatedByName: string;
-    namelessMcVersion: string;
-    debugId: string;
-    theme: 'light' | 'dark';
+    generatedByUuid: string
+    generatedByName: string
+    namelessMcVersion: string
+    debugId: string
+    theme: 'light' | 'dark'
     setTheme: Function
 }
 
 function Footer({
-    loaded,
     generatedByUuid,
     generatedByName,
     namelessMcVersion,
     debugId,
     theme,
-    setTheme
-}: Props) {
-
+    setTheme,
+}: Props): JSX.Element {
     const { t, i18n } = useTranslation();
 
-    const toggleTheme = () => {
-        localStorage.setItem('nmc-debug-theme', theme === "dark" ? "light" : "dark");
-        setTheme(theme === "dark" ? "light" : "dark")
-    }
+    const toggleTheme = (): void => {
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
 
-    const changeLocale = (locale: string) => {
+        localStorage.setItem('nmc-debug-theme', newTheme);
+        setTheme(newTheme);
+    };
+
+    const changeLocale = (locale: string): void => {
         i18n.changeLanguage(locale).then(() => {
-            localStorage.setItem('nmc-debug-locale', locale)
+            localStorage.setItem('nmc-debug-locale', locale);
         });
-    }
-
-    if (!loaded) return <></>;
+    };
 
     return (
         <footer className="h-auto bg-yellow-400 dark:bg-indigo-900 text-center">
             <div className="container mx-auto grid md:grid-cols-3 sm:grid-cols-1 py-6">
                 <div>
                     <h5 className="section-heading">
-                        { t('footer.generated_by' ) } {' '}
+                        { t('footer.generated_by') } {' '}
                         { generatedByUuid &&
-                            <img alt={generatedByName} className="inline" src={`https://crafthead.net/helm/${generatedByUuid}/16`}></img>
+                        <img alt={generatedByName} className="inline" src={`https://crafthead.net/helm/${generatedByUuid}/16`}></img>
                         } {' '}
                         <span className="font-normal">
                             { generatedByName }
@@ -64,7 +61,7 @@ function Footer({
                 <div className="grid grid-cols-2 py-2">
                     <div>
                         <button onClick={() => toggleTheme()} className="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">
-                            { t('footer.theme') } {theme === "light" ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
+                            { t('footer.theme') } {theme === 'light' ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
                         </button>
                     </div>
                     <div className="text-normal">
@@ -99,7 +96,7 @@ function Footer({
                 </div>
             </div>
         </footer>
-    )
+    );
 }
 
 export default Footer;

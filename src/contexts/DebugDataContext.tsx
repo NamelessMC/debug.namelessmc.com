@@ -1,5 +1,5 @@
 import React from 'react';
-import {DebugData} from "../types/DebugData";
+import { DebugData } from '../types/DebugData';
 
 const DebugDataContext = React.createContext({} as DebugData);
 

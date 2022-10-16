@@ -1,16 +1,15 @@
-import SimpleSection from "../SimpleSection";
-import {SectionContent} from "../../types/SectionContent";
-import {useTranslation} from "react-i18next";
-import {faServer} from "@fortawesome/free-solid-svg-icons";
-import BooleanBadge from "../utils/BooleanBadge";
-import BooleanValue from "../utils/BooleanValue";
-import Code from "../utils/Code";
-import {humanFileSize} from "../../utils";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import SimpleSection from '../SimpleSection';
+import { SectionContent } from '../../types/SectionContent';
+import { useTranslation } from 'react-i18next';
+import { faServer } from '@fortawesome/free-solid-svg-icons';
+import BooleanBadge from '../utils/BooleanBadge';
+import BooleanValue from '../utils/BooleanValue';
+import Code from '../utils/Code';
+import { humanFileSize } from '../../utils';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function EnvironmentSection() {
-
+function EnvironmentSection(): JSX.Element {
     const { t } = useTranslation();
     const debugData = useContext(DebugDataContext);
 
@@ -37,7 +36,7 @@ function EnvironmentSection() {
         },
         {
             header: t('environment_section.ram_usage'),
-            body: humanFileSize(debugData.environment.memory_used_space) + ' / ' + debugData.environment.memory_total_space
+            body: humanFileSize(debugData.environment.memory_used_space) + ' / ' + debugData.environment.memory_total_space,
         },
         {
             header: t('environment_section.config_writable'),
@@ -46,12 +45,12 @@ function EnvironmentSection() {
         {
             header: t('environment_section.cache_writable'),
             body: <BooleanBadge value={debugData.environment.cache_writable} />,
-        }
-    ]
+        },
+    ];
 
     return (
-        <SimpleSection icon={faServer} titleKey={'environment_section.environment'} content={content} gridCols={4}  />
-    )
+        <SimpleSection icon={faServer} titleKey={'environment_section.environment'} content={content} gridCols={4} />
+    );
 }
 
 export default EnvironmentSection;

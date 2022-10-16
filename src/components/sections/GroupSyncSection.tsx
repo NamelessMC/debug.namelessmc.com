@@ -1,13 +1,12 @@
-import FloatingSection, {FloatingContent} from "../FloatingSection";
-import {faSyncAlt} from "@fortawesome/free-solid-svg-icons";
-import {goToModule} from "../../utils";
-import BooleanBadge from "../utils/BooleanBadge";
-import Empty from "../utils/Empty";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import FloatingSection, { FloatingContent } from '../FloatingSection';
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { goToModule } from '../../utils';
+import BooleanBadge from '../utils/BooleanBadge';
+import Empty from '../utils/Empty';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function GroupSyncSection() {
-
+function GroupSyncSection(): JSX.Element {
     const debugData = useContext(DebugDataContext);
 
     const injectorsFloatingContent: FloatingContent = {
@@ -23,7 +22,7 @@ function GroupSyncSection() {
                 },
                 {
                     key: 'group_sync_section.module',
-                }
+                },
             ],
             rows: debugData.namelessmc.settings.group_sync.injectors.map(injector => {
                 return {
@@ -39,9 +38,9 @@ function GroupSyncSection() {
                             body: injector.module,
                             classes: ['hover:underline', 'cursor-pointer'],
                             click: () => goToModule(injector.module),
-                        }
-                    ]
-                }
+                        },
+                    ],
+                };
             }),
         },
     };
@@ -58,7 +57,7 @@ function GroupSyncSection() {
                     return {
                         key: injector.name,
                     };
-                })
+                }),
             ],
             rows: Object.values(debugData.namelessmc.settings.group_sync.rules).map(rule => {
                 return {
@@ -67,29 +66,29 @@ function GroupSyncSection() {
                             body: rule.id,
                         },
                         ...debugData.namelessmc.settings.group_sync.injectors.map(injector => {
-                            const group_id = rule[injector.column_name];
+                            const groupId = rule[injector.column_name];
                             if (injector.column_name === 'website_group_id') {
                                 return {
-                                    body: Object.values(debugData.namelessmc.groups).find(g => String(g.id) === group_id)?.name ?? '',
+                                    body: Object.values(debugData.namelessmc.groups).find(group => String(group.id) === groupId)?.name ?? '',
                                 };
                             } else {
                                 return {
-                                    body: <Empty value={group_id} />,
+                                    body: <Empty value={groupId} />,
                                 };
                             }
-                        })
-                    ]
-                }
+                        }),
+                    ],
+                };
             }),
             emptyState: {
                 textKey: 'group_sync_section.no_rules',
-            }
-        }
-    }
+            },
+        },
+    };
 
     return (
         <FloatingSection icon={faSyncAlt} titleKey={'group_sync_section.group_sync'} floatingContent={[injectorsFloatingContent, rulesFloatingContent]} />
-    )
+    );
 }
 
 export default GroupSyncSection;

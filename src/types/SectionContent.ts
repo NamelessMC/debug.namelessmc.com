@@ -1,6 +1,6 @@
-import {ReactElement} from "react";
+import { ReactElement } from 'react';
 
 export interface SectionContent {
-    header: string;
-    body: ReactElement | string;
+    header: string
+    body: ReactElement | string
 }

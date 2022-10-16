@@ -1,14 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-export default function useRequest(url: string, method = "GET") {
+export default function useRequest(url: string, method = 'GET'): [any, boolean, any, () => void] {
     const [data, setData] = useState(null);
     const [err, setError] = useState(null);
 
-    async function refetch() {
+    async function refetch(): Promise<void> {
         await fetch(url, {
             method,
         })
-            .then((r) => r.json())
+            .then(async(r) => await r.json())
             .then((r) => {
                 setError(null);
                 setData(r);
@@ -18,11 +18,9 @@ export default function useRequest(url: string, method = "GET") {
             });
     }
 
-    /* eslint-disable react-hooks/exhaustive-deps */
     useEffect(() => {
         refetch();
     }, []);
-    /* eslint-enable react-hooks/exhaustive-deps */
 
     if (data === null) {
         return [null, false, err, refetch];

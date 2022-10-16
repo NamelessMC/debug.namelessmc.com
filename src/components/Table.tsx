@@ -1,38 +1,37 @@
-import {useTranslation} from "react-i18next";
-import {ReactElement} from "react";
+import { useTranslation } from 'react-i18next';
+import { ReactElement } from 'react';
 
 export interface TableProps {
-    columnHeaders: TableColumnHeader[];
-    rows: TableRow[];
-    emptyState?: TableEmptyState;
+    columnHeaders: TableColumnHeader[]
+    rows: TableRow[]
+    emptyState?: TableEmptyState
 }
 
 export interface TableColumnHeader {
-    key: string;
-    classes?: string[];
+    key: string
+    classes?: string[]
 }
 
 export interface TableRow {
-    cells: TableCell[];
+    cells: TableCell[]
 }
 
 export interface TableCell {
-    body: ReactElement | string | number;
-    title?: string;
-    classes?: string[];
-    click?: () => void;
+    body: ReactElement | string | number
+    title?: string
+    classes?: string[]
+    click?: () => void
 }
 
 export interface TableEmptyState {
-    textKey: string;
+    textKey: string
 }
 
 function Table({
     columnHeaders,
     rows,
     emptyState,
-}: TableProps) {
-
+}: TableProps): JSX.Element {
     const { t } = useTranslation();
 
     return <>
@@ -41,12 +40,12 @@ function Table({
                 <tr>
                     {columnHeaders.map((columnHeader, idx) => {
                         let classes = 'table-title';
-                        if (columnHeader.classes) {
+                        if (columnHeader.classes != null) {
                             classes += ` ${columnHeader.classes.join(' ')}`;
                         }
                         return (
                             <th key={idx} className={classes}>{ t(columnHeader.key) }</th>
-                        )
+                        );
                     })}
                 </tr>
 
@@ -55,7 +54,7 @@ function Table({
                         <tr key={idx}>{
                             row.cells.map((cell, idx2) => {
                                 let classes = 'table-data';
-                                if (cell.classes) {
+                                if (cell.classes != null) {
                                     classes += ` ${cell.classes.join(' ')}`;
                                 }
                                 return (
@@ -67,20 +66,20 @@ function Table({
                                     >
                                         {cell.body}
                                     </td>
-                                )
+                                );
                             })
-                        }</tr>
+                        }</tr>,
                     )
                 }
 
-                {rows.length === 0 && emptyState &&
-                    <tr>
-                        <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
-                    </tr>
+                {rows.length === 0 && (emptyState != null) &&
+                <tr>
+                    <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
+                </tr>
                 }
             </tbody>
         </table>
-    </>
+    </>;
 }
 
 export default Table;

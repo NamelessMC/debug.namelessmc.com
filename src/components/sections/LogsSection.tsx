@@ -1,41 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {useTranslation} from "react-i18next";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import {githubGist} from "react-syntax-highlighter/dist/cjs/styles/hljs";
-import githubDarkDimmed from "../../theme/github-dark-dimmed";
-import {faFilePen} from "@fortawesome/free-solid-svg-icons";
-import {useContext} from "react";
-import DebugDataContext from "../../contexts/DebugDataContext";
+import { useTranslation } from 'react-i18next';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { githubGist } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import githubDarkDimmed from '../../theme/github-dark-dimmed';
+import { faFilePen } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import DebugDataContext from '../../contexts/DebugDataContext';
 
-function LogsSection() {
-
+function LogsSection(): JSX.Element {
     const { t } = useTranslation();
     const debugData = useContext(DebugDataContext);
 
-    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light'
+    const theme = localStorage.getItem('nmc-debug-theme') ?? 'light';
 
     const logs = [
         {
             titleKey: 'logs_section.fatal_log',
-            content: debugData.logs.fatal
+            content: debugData.logs.fatal,
         },
         {
             titleKey: 'logs_section.warning_log',
-            content: debugData.logs.warning
+            content: debugData.logs.warning,
         },
         {
             titleKey: 'logs_section.notice_log',
-            content: debugData.logs.notice
+            content: debugData.logs.notice,
         },
         {
             titleKey: 'logs_section.other_log',
-            content: debugData.logs.other
+            content: debugData.logs.other,
         },
         {
             titleKey: 'logs_section.custom_log',
-            content: debugData.logs.custom
-        }
-    ]
+            content: debugData.logs.custom,
+        },
+    ];
 
     return (
         <div className="section-background">
