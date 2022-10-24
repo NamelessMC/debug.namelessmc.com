@@ -1,1 +1,92 @@
-{}
+{
+    "misc": {
+        "loading": "Caricamento…",
+        "empty": "Vuoto",
+        "yes": "Si",
+        "no": "No",
+        "official": "UFFICIALE",
+        "header_title": "Informazioni Debug NamelessMC",
+        "generated_at": "Generato alle {{time}}"
+    },
+    "errors": {
+        "error": "Errore",
+        "no_data_in_json": "Nessun dato di debug disponibile in JSON",
+        "no_id_provided": "Nessun debug link ID fornito",
+        "invalid_namelessmc_version": "Solo i link di debug di NamelessMC versione <strong>{{required}}</strong> sono supportati. Stai usando la versione <strong>{{version}}</strong>.",
+        "invalid_link_id": "Link di debug non valido"
+    },
+    "version_section": {
+        "version": "Versione",
+        "update_available": "Aggiornamento disponibile",
+        "last_update_check": "Ultimo controllo di aggiornamento"
+    },
+    "settings_section": {
+        "settings": "Impostazioni",
+        "phpmailer_enabled": "PHPMailer abilitato",
+        "api_verification_enabled": "Verifica API abilitata",
+        "login_method": "Metodo di Login",
+        "captcha_type": "Tipologia Captcha",
+        "captcha_login_page": "Captcha sulla pagina di login",
+        "captcha_contact_page": "Captcha sulla pagina di contatto",
+        "api_enabled": "API abilitate",
+        "email_verification_enabled": "Verifica Email abilitata"
+    },
+    "config_section": {
+        "config": "Configurazione",
+        "path": "Percorso",
+        "friendly_urls": "URLs Amichevoli",
+        "force_https": "HTTPS Forzato",
+        "force_www": "WWW forzato",
+        "trusted_proxies": "Proxy consentiti"
+    },
+    "modules_section": {
+        "modules": "Moduli",
+        "author": "Autore",
+        "enabled": "Abilitato",
+        "namelessmc_version": "Versione NamelessMC",
+        "version": "Versione",
+        "debug_info": "Informazioni di Debug",
+        "core": {
+            "minecraft_integration": "Integrazione Minecraft",
+            "integration_enabled": "Integrazione abilitata",
+            "uuid_linking": "Collegamento UUID",
+            "username_sync": "Sincronizzazione Username",
+            "external_query": "Query esterna",
+            "servers": "Servers",
+            "bedrock": "Bedrock",
+            "ip": "IP",
+            "query_ip": "IP Query",
+            "port": "Porta",
+            "query_port": "Porta Query",
+            "name": "Nome"
+        },
+        "discord_integration": {
+            "guild_id": "Server ID",
+            "bot_setup": "Configurazione Bot",
+            "bot_url": "URL Bot",
+            "syncing_enabled": "Sincronizzazione abilitata"
+        },
+        "no_debug_info": "Nessuna informazione di debug fornita"
+    },
+    "group_sync_section": {
+        "enabled": "Abilitato",
+        "rules": "Regole",
+        "group_sync": "Sincronizzazione Gruppi",
+        "name": "Nome",
+        "module": "Modulo",
+        "no_rules": "Nessuna regola"
+    },
+    "integrations_section": {
+        "required": "Obbligatorio",
+        "integrations": "Integrazioni",
+        "name": "Nome",
+        "enabled": "Abilitato",
+        "can_unlink": "Può scollegare",
+        "no_integrations": "Nessuna integrazione"
+    },
+    "groups_section": {
+        "id": "ID",
+        "groups": "Gruppi",
+        "name": "Nome"
+    }
+}
