@@ -1,1 +1,169 @@
-{}
+{
+    "misc": {
+        "header_title": "NamelessMC Hibakereső Infó",
+        "generated_at": "Generálva ekkor {{time}}",
+        "loading": "Betöltés...",
+        "empty": "Üres",
+        "yes": "Igen",
+        "no": "Nem",
+        "official": "OFFICIÁLIS"
+    },
+    "errors": {
+        "error": "Hiba",
+        "no_id_provided": "Nincs hibakereső link ID megadva",
+        "no_data_in_json": "Nem állnak rendelkezésre hibakeresési adatok a JSON-ban",
+        "invalid_namelessmc_version": "Csak a NamelessMC <strong>{{required}}</strong> verziójának hibakereső hivatkozásai támogatottak, Ön a <strong>{{version}}</strong> verziót futtatja.",
+        "invalid_link_id": "Érvénytelen hibakeresési ID"
+    },
+    "version_section": {
+        "version": "Verzió",
+        "update_available": "Frissítés elérhető",
+        "last_update_check": "Legutóbbi frissítés keresés"
+    },
+    "settings_section": {
+        "settings": "Beállítások",
+        "phpmailer_enabled": "PHPMailer bekapcsolva",
+        "api_enabled": "API engedélyezve",
+        "api_verification_enabled": "API igazolás engedélyezve",
+        "login_method": "Bejelentkezési metódus",
+        "captcha_type": "Captcha típus",
+        "captcha_login_page": "Captcha a bejelentkező oldalon",
+        "captcha_contact_page": "Captcha a kapcsolat oldalon",
+        "email_verification_enabled": "Email igazolás engedélyezve"
+    },
+    "config_section": {
+        "config": "Konfig",
+        "path": "Útvonal",
+        "force_https": "HTTPS Erőltetése",
+        "force_www": "www Erőltetése",
+        "trusted_proxies": "Begbízható proxyk",
+        "friendly_urls": "Barátságos URL-ek"
+    },
+    "modules_section": {
+        "modules": "Modulok",
+        "author": "Szerző",
+        "enabled": "Engedélyezve",
+        "namelessmc_version": "NamelessMC verzió",
+        "version": "Verzió",
+        "debug_info": "Hibakeresési Infó",
+        "no_debug_info": "Nincs hibakeresési infó megadva",
+        "core": {
+            "integration_enabled": "Integráció engedélyezve",
+            "uuid_linking": "UUID linkelés",
+            "username_sync": "Felhasználónév szinkronizáció",
+            "external_query": "Külső lekérdezés",
+            "servers": "Szerverek",
+            "bedrock": "Bedrock",
+            "name": "Név",
+            "ip": "IP",
+            "query_ip": "Query IP",
+            "query_port": "Query port",
+            "minecraft_integration": "Minecraft Integráció",
+            "port": "Port"
+        },
+        "discord_integration": {
+            "syncing_enabled": "Szinkronizáció engedélyezve",
+            "guild_id": "Guild ID",
+            "bot_setup": "Bot beállítása",
+            "bot_url": "Bot URL"
+        }
+    },
+    "group_sync_section": {
+        "group_sync": "Csoport Szinkronizáció",
+        "injectors": "Injektorok",
+        "name": "Név",
+        "enabled": "Engedélyezve",
+        "module": "Modul",
+        "rules": "Szabályok",
+        "no_rules": "Nincsenek szabályok"
+    },
+    "integrations_section": {
+        "integrations": "Integrációk",
+        "name": "Név",
+        "can_unlink": "Leválasztható",
+        "required": "Szükséges",
+        "no_integrations": "Nincsenek integrációk",
+        "enabled": "Engedélyezve"
+    },
+    "groups_section": {
+        "groups": "Csoportok",
+        "name": "Név",
+        "group_html": "Csoportos HTML",
+        "can_view_staff_cp": "Megtekinthető StaffCP-vel",
+        "staff": "Staff",
+        "force_tfa": "2FA Erőltetése",
+        "no_groups": "Nincsenek csoportok",
+        "id": "ID",
+        "default": "Alapértelmezett",
+        "order": "Sorrend"
+    },
+    "webhooks_section": {
+        "no_hooks": "Nincsenek hookok",
+        "id": "ID",
+        "name": "Név",
+        "type": "Típus",
+        "events": "Eventek",
+        "forum_id": "Fórum ID",
+        "webhooks": "Webhookok",
+        "hooks": "Hookok",
+        "forum_hooks": "Fórum hookok",
+        "no_forum_hooks": "Nincsenek fórum hookok",
+        "forum_title": "Fórum Cím"
+    },
+    "oauth_providers_section": {
+        "name": "Név",
+        "module": "Modul",
+        "class": "Osztály",
+        "user_id_name": "Felhasználó ID Neve",
+        "scope_id_name": "Látókör ID Neve",
+        "client_id": "Kliens ID",
+        "enabled": "Engedélyezve",
+        "oauth_providers": "OAuth szolgáltatók",
+        "no_providers": "Nincsenek szolgáltatók"
+    },
+    "templates_section": {
+        "templates": "Sablonok",
+        "is_default": "Alapértelmezett",
+        "enabled": "Engedélyezve",
+        "author": "Szerző",
+        "namelessmc_version": "NamelessMC verzió",
+        "version": "Verzió"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Panel Sablon",
+        "is_default": "Alapértelmezett",
+        "namelessmc_version": "NamelessMC verzió",
+        "version": "Verzió",
+        "enabled": "Engedélyezve",
+        "author": "Szerző"
+    },
+    "logs_section": {
+        "logs": "Logok",
+        "fatal_log": "Fatális log",
+        "other_log": "Egyéb log",
+        "warning_log": "Figyelmeztetés log",
+        "notice_log": "Értesítés log",
+        "custom_log": "Egyéni log",
+        "empty_log": "Üres log"
+    },
+    "environment_section": {
+        "php_version": "PHP verzió",
+        "using_docker_image": "Hivatalos Docker kép használata",
+        "disk_usage": "Tárhely használat",
+        "ram_usage": "RAM használat",
+        "config_writable": "Konfig írható",
+        "environment": "Környezet",
+        "host_os": "Házigazda OS",
+        "host_kernel_version": "Házigazda kernel verziója",
+        "cache_writable": "Gyorsítótár írható"
+    },
+    "footer": {
+        "generated_by": "Generálva álltal",
+        "theme": "Téma:",
+        "namelessmc_website": "NamelessMC weboldal",
+        "get_support": "Kérj segítséget",
+        "made_with_love": "Készítve ❤️",
+        "namelessmc_version": "NamelessMC verzió",
+        "raw_json": "Nyers JSON"
+    }
+}
