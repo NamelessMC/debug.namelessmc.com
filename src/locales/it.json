@@ -87,6 +87,73 @@
     "groups_section": {
         "id": "ID",
         "groups": "Gruppi",
-        "name": "Nome"
+        "name": "Nome",
+        "staff": "Staff",
+        "default": "Default",
+        "order": "Ordine",
+        "group_html": "Gruppo HTML",
+        "can_view_staff_cp": "Può vedere Pannello Staff",
+        "force_tfa": "Forza 2FA",
+        "no_groups": "Nessun Gruppo"
+    },
+    "webhooks_section": {
+        "no_hooks": "Nessun hook",
+        "name": "Nome",
+        "events": "Eventi",
+        "webhooks": "Webhooks",
+        "hooks": "Hooks",
+        "id": "ID",
+        "type": "Tipo",
+        "forum_id": "ID Forum",
+        "forum_title": "Titolo Forum"
+    },
+    "oauth_providers_section": {
+        "name": "Nome",
+        "class": "Classe",
+        "client_id": "Client ID",
+        "enabled": "Attivato",
+        "oauth_providers": "Providers OAuth",
+        "module": "Modulo",
+        "no_providers": "Nessun Provider"
+    },
+    "templates_section": {
+        "templates": "Templates",
+        "enabled": "Attivato",
+        "author": "Autore",
+        "namelessmc_version": "Versione NamelessMC",
+        "version": "Versione"
+    },
+    "panel_templates_section": {
+        "panel_templates": "Template Pannello",
+        "enabled": "Attivato",
+        "author": "Autore",
+        "namelessmc_version": "Versione NamelessMC",
+        "version": "Versione"
+    },
+    "logs_section": {
+        "logs": "Logs",
+        "fatal_log": "Log Fatale",
+        "warning_log": "Log Avvertimento",
+        "other_log": "Altri Log",
+        "empty_log": "Log Vuoto",
+        "custom_log": "Log Personalizzati"
+    },
+    "environment_section": {
+        "environment": "Ambiente",
+        "php_version": "Versione PHP",
+        "host_os": "OS",
+        "host_kernel_version": "Versione Kernel Host",
+        "ram_usage": "Utilizzo RAM",
+        "disk_usage": "Utilizzo Disco",
+        "config_writable": "Config scrivibile",
+        "cache_writable": "Cache scrivibili"
+    },
+    "footer": {
+        "generated_by": "Generato da",
+        "theme": "Tema:",
+        "namelessmc_website": "Sito NamelessMC",
+        "made_with_love": "Realizzato con il ❤️",
+        "namelessmc_version": "Versione NamelessMC",
+        "get_support": "Richiedi Supporto"
     }
 }
