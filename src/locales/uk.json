@@ -4,7 +4,7 @@
         "official": "OFFICIAL",
         "light": "Світло",
         "dark": "Темний",
-        "generated_at": "Створено в",
+        "generated_at": "Згенеровано в {{time}}",
         "yes": "Так",
         "header_title": "NamelessMC Debug Info",
         "loading": "Завантаження...",
