@@ -121,14 +121,16 @@
         "enabled": "Attivato",
         "author": "Autore",
         "namelessmc_version": "Versione NamelessMC",
-        "version": "Versione"
+        "version": "Versione",
+        "is_default": "Default"
     },
     "panel_templates_section": {
         "panel_templates": "Template Pannello",
         "enabled": "Attivato",
         "author": "Autore",
         "namelessmc_version": "Versione NamelessMC",
-        "version": "Versione"
+        "version": "Versione",
+        "is_default": "Default"
     },
     "logs_section": {
         "logs": "Logs",
