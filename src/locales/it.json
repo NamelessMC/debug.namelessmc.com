@@ -74,7 +74,8 @@
         "group_sync": "Sincronizzazione Gruppi",
         "name": "Nome",
         "module": "Modulo",
-        "no_rules": "Nessuna regola"
+        "no_rules": "Nessuna regola",
+        "injectors": "Elenco"
     },
     "integrations_section": {
         "required": "Obbligatorio",
@@ -105,7 +106,9 @@
         "id": "ID",
         "type": "Tipo",
         "forum_id": "ID Forum",
-        "forum_title": "Titolo Forum"
+        "forum_title": "Titolo Forum",
+        "no_forum_hooks": "Nessun collegamento al forum",
+        "forum_hooks": "Collegamenti Forum"
     },
     "oauth_providers_section": {
         "name": "Nome",
@@ -114,7 +117,9 @@
         "enabled": "Attivato",
         "oauth_providers": "Providers OAuth",
         "module": "Modulo",
-        "no_providers": "Nessun Provider"
+        "no_providers": "Nessun Provider",
+        "user_id_name": "Nome User ID",
+        "scope_id_name": "Scopo"
     },
     "templates_section": {
         "templates": "Templates",
@@ -134,11 +139,12 @@
     },
     "logs_section": {
         "logs": "Logs",
-        "fatal_log": "Log Fatale",
+        "fatal_log": "Log Fatali",
         "warning_log": "Log Avvertimento",
         "other_log": "Altri Log",
         "empty_log": "Log Vuoto",
-        "custom_log": "Log Personalizzati"
+        "custom_log": "Log Personalizzati",
+        "notice_log": "Registro Avvisi"
     },
     "environment_section": {
         "environment": "Ambiente",
@@ -148,7 +154,8 @@
         "ram_usage": "Utilizzo RAM",
         "disk_usage": "Utilizzo Disco",
         "config_writable": "Config scrivibile",
-        "cache_writable": "Cache scrivibili"
+        "cache_writable": "Cache scrivibili",
+        "using_docker_image": "Immagine Docker ufficiale in utilizzo"
     },
     "footer": {
         "generated_by": "Generato da",
@@ -156,6 +163,7 @@
         "namelessmc_website": "Sito NamelessMC",
         "made_with_love": "Realizzato con il ❤️",
         "namelessmc_version": "Versione NamelessMC",
-        "get_support": "Richiedi Supporto"
+        "get_support": "Richiedi Supporto",
+        "raw_json": "JSON Semplificato"
     }
 }
