@@ -1,12 +1,12 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-interface translationData { [key: string]: { translation: string } }
+type TranslationData = Record<string, { translation: string }>;
 
-function loadLocaleMessages(): translationData {
+function loadLocaleMessages(): TranslationData {
     const locales = require.context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i);
 
-    const messages: translationData = {};
+    const messages: TranslationData = {};
 
     locales.keys().forEach((key: string) => {
         const matched = key.match(/([A-Za-z0-9-_]+)\./i);

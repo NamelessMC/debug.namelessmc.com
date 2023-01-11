@@ -46,7 +46,7 @@ function OAuthProvidersSection(): JSX.Element {
                 {
                     body: provider.module, // wtf
                     classes: ['hover:underline', 'cursor-pointer'],
-                    click: () => goToModule(provider.module),
+                    click: () => { goToModule(provider.module); },
                 },
                 {
                     body: <Code value={provider.class} />,

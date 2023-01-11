@@ -37,7 +37,7 @@ function GroupSyncSection(): JSX.Element {
                         {
                             body: injector.module,
                             classes: ['hover:underline', 'cursor-pointer'],
-                            click: () => goToModule(injector.module),
+                            click: () => { goToModule(injector.module); },
                         },
                     ],
                 };

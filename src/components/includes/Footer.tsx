@@ -60,13 +60,13 @@ function Footer({
                 </div>
                 <div className="grid grid-cols-2 py-2">
                     <div>
-                        <button onClick={() => toggleTheme()} className="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">
+                        <button onClick={() => { toggleTheme(); }} className="px-2 h-12 rounded-lg bg-gray-200 dark:bg-gray-900 text-black dark:text-gray-300 font-bold text-sm">
                             { t('footer.theme') } {theme === 'light' ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
                         </button>
                     </div>
                     <div className="text-normal">
                         <FontAwesomeIcon icon={faGlobe} />
-                        <select onChange={(e) => changeLocale(e.target.value)} className="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900" value={i18n.language}>
+                        <select onChange={(e) => { changeLocale(e.target.value); }} className="ml-2 p-2 h-12 rounded-md bg-gray-200 dark:bg-gray-900" value={i18n.language}>
                             {Object.keys(i18n.services.resourceStore.data).map((lang, idx) => (
                                 <option key={idx} value={lang}>{lang}</option>
                             ))}
