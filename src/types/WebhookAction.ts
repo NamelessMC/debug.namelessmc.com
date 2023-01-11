@@ -1,3 +1,1 @@
-export interface WebhookAction {
-    [id: number]: string
-}
+export type WebhookAction = Record<number, string>;
