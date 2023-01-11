@@ -32,7 +32,7 @@ export interface DebugData {
                 rules: GroupSyncRule[]
             }
             webhooks: {
-                actions: { [key: number]: string }
+                actions: Record<number, string>;
                 hooks: WebhookHook[]
                 forum_hooks: WebhookForumHook[]
             }
@@ -54,7 +54,7 @@ export interface DebugData {
         integrations: Integration[]
         oauth_providers: OAuthProvider[]
     }
-    logs: { [key: string]: string }
+    logs: Record<string, string>;
     environment: {
         php_version: string
         php_modules: string[]
