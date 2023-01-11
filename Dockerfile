@@ -1,4 +1,4 @@
-FROM node:16 AS builder
+FROM node:18 AS builder
 
 RUN mkdir /build
 WORKDIR /build
@@ -10,8 +10,8 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginx:alpine
+FROM nginxinc/nginx-unprivileged
 
 RUN rm /etc/nginx/conf.d/*
 COPY docker/nginx-prod.conf /etc/nginx/conf.d/nameless.conf
-COPY --from=builder /build/dist /var/www/html
+COPY --from=builder /build/build /var/www/html
