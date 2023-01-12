@@ -42,10 +42,10 @@ function FloatingSection({
     return (
         <div>
             <div className="section-title-floating">
-                <FontAwesomeIcon icon={icon}/> { t(titleKey) }
+                <FontAwesomeIcon icon={icon} /> {t(titleKey as any)}
             </div>
             <div className={'pt-2 mb-8 grid gap-4 ' + gridColsClass(floatingContent)}>
-                { floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />) }
+                {floatingContent.map((content, idx) => <FloatingSubSection key={idx} content={content} />)}
             </div>
         </div>
     );
@@ -64,11 +64,11 @@ function FloatingSubSection({
     if (content.extensionFloaters == null) {
         return (
             <div className="section-content-floating">
-                { content.subheadingKey &&
-                <div className="section-subheading">{ t(content.subheadingKey) }</div>
+                {content.subheadingKey &&
+                    <div className="section-subheading">{t(content.subheadingKey as any)}</div>
                 }
-                { (content.table != null) &&
-                <Table {...content.table} />
+                {(content.table != null) &&
+                    <Table {...content.table} />
                 }
             </div>
         );
@@ -76,7 +76,7 @@ function FloatingSubSection({
 
     return <>
         {content.extensionFloaters.map((floater, idx2) => {
-            return <ExtensionFloater key={idx2} {...floater}/>;
+            return <ExtensionFloater key={idx2} {...floater} />;
         })}
     </>;
 }

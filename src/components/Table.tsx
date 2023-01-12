@@ -44,7 +44,7 @@ function Table({
                             classes += ` ${columnHeader.classes.join(' ')}`;
                         }
                         return (
-                            <th key={idx} className={classes}>{ t(columnHeader.key) }</th>
+                            <th key={idx} className={classes}>{t(columnHeader.key as any)}</th>
                         );
                     })}
                 </tr>
@@ -73,9 +73,9 @@ function Table({
                 }
 
                 {rows.length === 0 && (emptyState != null) &&
-                <tr>
-                    <td className="table-data" colSpan={columnHeaders.length}><i>{ t(emptyState.textKey) }</i></td>
-                </tr>
+                    <tr>
+                        <td className="table-data" colSpan={columnHeaders.length}><i>{t(emptyState.textKey as any)}</i></td>
+                    </tr>
                 }
             </tbody>
         </table>
