@@ -24,6 +24,7 @@ const resources = loadLocaleMessages() as any;
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .init({
+        returnNull: false,
         resources,
         lng: 'en',
         fallbackLng: 'en',
