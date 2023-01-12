@@ -1,11 +1,11 @@
-import "i18next";
-import en from "./locales/en.json";
+import 'i18next';
+import en from './locales/en.json';
 
-declare module "i18next" {
+declare module 'i18next' {
     interface CustomTypeOptions {
-        defaultNS: 'en';
-        returnNull: false;
-        resources: typeof en;
+        defaultNS: 'en'
+        returnNull: false
+        resources: typeof en
         nsSeparator: '.'
     }
 }
