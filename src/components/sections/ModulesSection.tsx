@@ -1,4 +1,4 @@
-import FloatingSection, { FloatingContent } from '../FloatingSection';
+import FloatingSection, { type FloatingContent } from '../FloatingSection';
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import DebugDataContext from '../../contexts/DebugDataContext';

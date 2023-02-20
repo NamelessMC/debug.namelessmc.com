@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SectionContent } from '../types/SectionContent';
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import type { SectionContent } from '../types/SectionContent';
+import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 
 interface Props {

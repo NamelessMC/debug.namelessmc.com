@@ -1,4 +1,4 @@
-import { TableColumnHeader, TableEmptyState, TableProps, TableRow } from '../Table';
+import type { TableColumnHeader, TableEmptyState, TableProps, TableRow } from '../Table';
 import { capitalize, goToModule } from '../../utils';
 import SimpleTableSection from '../SimpleTableSection';
 import { faUserShield } from '@fortawesome/free-solid-svg-icons';

@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 export interface TableProps {
     columnHeaders: TableColumnHeader[]

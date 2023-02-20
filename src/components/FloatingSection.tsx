@@ -1,8 +1,8 @@
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import type { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useTranslation } from 'react-i18next';
-import Table, { TableProps } from './Table';
-import ExtensionFloater, { ExtensionFloaterProps } from './ExtensionFloater';
+import Table, { type TableProps } from './Table';
+import ExtensionFloater, { type ExtensionFloaterProps } from './ExtensionFloater';
 
 interface Props {
     icon: IconDefinition

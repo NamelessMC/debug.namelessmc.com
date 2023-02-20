@@ -1,4 +1,4 @@
-import FloatingSection, { FloatingContent } from '../FloatingSection';
+import FloatingSection, { type FloatingContent } from '../FloatingSection';
 import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
 import { goToModule } from '../../utils';
 import BooleanBadge from '../utils/BooleanBadge';
