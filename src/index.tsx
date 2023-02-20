@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-// @ts-expect-error
+// @ts-expect-error Errors in the next line should be ignored
 import hljs from '../node_modules/highlight.js/lib/core';
-// @ts-expect-error
+// @ts-expect-error Errors in the next line should be ignored
 import log from '../node_modules/highlight.js/lib/languages/accesslog';
 
 import App from './App';
