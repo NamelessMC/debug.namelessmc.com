@@ -1,4 +1,4 @@
-import FloatingSection, { FloatingContent } from '../FloatingSection';
+import FloatingSection, { type FloatingContent } from '../FloatingSection';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import Code from '../utils/Code';
 import { useContext } from 'react';

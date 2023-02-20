@@ -1,7 +1,7 @@
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
-import { ExtensionFloaterProps } from '../ExtensionFloater';
-import FloatingSection, { FloatingContent } from '../FloatingSection';
-import { Template } from '../../types/Template';
+import type { ExtensionFloaterProps } from '../ExtensionFloater';
+import FloatingSection, { type FloatingContent } from '../FloatingSection';
+import type { Template } from '../../types/Template';
 import { useContext } from 'react';
 import DebugDataContext from '../../contexts/DebugDataContext';
 

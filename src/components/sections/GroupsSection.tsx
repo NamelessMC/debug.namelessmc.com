@@ -1,4 +1,4 @@
-import { TableColumnHeader, TableEmptyState, TableProps, TableRow } from '../Table';
+import type { TableColumnHeader, TableEmptyState, TableProps, TableRow } from '../Table';
 import SimpleTableSection from '../SimpleTableSection';
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import BooleanBadge from '../utils/BooleanBadge';

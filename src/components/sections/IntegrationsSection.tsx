@@ -1,6 +1,6 @@
 import SimpleTableSection from '../SimpleTableSection';
 import { faPlug } from '@fortawesome/free-solid-svg-icons';
-import { TableProps } from '../Table';
+import type { TableProps } from '../Table';
 import BooleanBadge from '../utils/BooleanBadge';
 import BooleanValue from '../utils/BooleanValue';
 import { useContext } from 'react';

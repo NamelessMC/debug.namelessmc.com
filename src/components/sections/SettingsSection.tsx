@@ -1,6 +1,6 @@
 import SimpleSection from '../SimpleSection';
 import { faCogs } from '@fortawesome/free-solid-svg-icons';
-import { SectionContent } from '../../types/SectionContent';
+import type { SectionContent } from '../../types/SectionContent';
 import { useTranslation } from 'react-i18next';
 import { capitalize } from '../../utils';
 import BooleanBadge from '../utils/BooleanBadge';

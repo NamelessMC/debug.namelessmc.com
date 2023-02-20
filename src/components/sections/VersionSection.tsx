@@ -1,5 +1,5 @@
 import SimpleSection from '../SimpleSection';
-import { SectionContent } from '../../types/SectionContent';
+import type { SectionContent } from '../../types/SectionContent';
 import { useTranslation } from 'react-i18next';
 import { formatDate } from '../../utils';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';

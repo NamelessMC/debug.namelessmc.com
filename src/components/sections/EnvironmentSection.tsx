@@ -1,5 +1,5 @@
 import SimpleSection from '../SimpleSection';
-import { SectionContent } from '../../types/SectionContent';
+import type { SectionContent } from '../../types/SectionContent';
 import { useTranslation } from 'react-i18next';
 import { faServer } from '@fortawesome/free-solid-svg-icons';
 import BooleanBadge from '../utils/BooleanBadge';
