@@ -1,13 +1,13 @@
-import { GroupSyncInjector } from './GroupSyncInjector';
-import { GroupSyncRule } from './GroupSyncRule';
+import type { GroupSyncInjector } from './GroupSyncInjector';
+import type { GroupSyncRule } from './GroupSyncRule';
 // import { WebhookAction } from './WebhookAction';
-import { WebhookHook } from './WebhookHook';
-import { Group } from './Group';
-import { Integration } from './Integration';
-import { OAuthProvider } from './OAuthProvider';
-import { WebhookForumHook } from './WebhookForumHook';
-import { Template } from './Template';
-import { Module } from './Module';
+import type { WebhookHook } from './WebhookHook';
+import type { Group } from './Group';
+import type { Integration } from './Integration';
+import type { OAuthProvider } from './OAuthProvider';
+import type { WebhookForumHook } from './WebhookForumHook';
+import type { Template } from './Template';
+import type { Module } from './Module';
 
 export interface DebugData {
     generated_at: number
