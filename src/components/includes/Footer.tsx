@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import type { Dispatch, SetStateAction } from 'react';
 
 interface Props {
     generatedByUuid: string
@@ -8,7 +9,7 @@ interface Props {
     namelessMcVersion: string
     debugId: string
     theme: 'light' | 'dark'
-    setTheme: Function
+    setTheme: Dispatch<SetStateAction<'light' | 'dark'>>
 }
 
 function Footer({
