@@ -87,7 +87,6 @@ function ExtensionFloater({
                                     <SyntaxHighlighter className="max-h-52" language="json" wrapLongLines={true} style={theme === 'light' ? githubGist : githubDarkDimmed as any}>
                                         {JSON.stringify(debugInfo, null, 2)}
                                     </SyntaxHighlighter>
-                                    {/* <pre className="text-normal max-h-64 overflow-scroll">{JSON.stringify(debugInfo, null, 2)}</pre> */}
                                 </>}
                                 {name === 'Core'
                                     ? <>
