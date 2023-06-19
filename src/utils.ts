@@ -14,7 +14,7 @@ const formatDate = (seconds: number): string => {
 };
 
 const isOfficialModule = (moduleName: string): boolean => {
-    return ['Core', 'Forum', 'Discord Integration', 'Cookie Consent'].includes(moduleName);
+    return ['Core', 'Forum', 'Discord Integration', 'Cookie Consent', 'Members'].includes(moduleName);
 };
 
 const isOfficialTemplate = (templateName: string): boolean => {
