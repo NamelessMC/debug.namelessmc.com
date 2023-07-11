@@ -6,7 +6,7 @@
         "no": "Nee",
         "official": "OFFICIEEL",
         "header_title": "NamelessMC Debuginformatie",
-        "generated_at": "Gegenereerd op {{{time}}}",
+        "generated_at": "Gegenereerd op {{time}}",
         "light": "Licht",
         "dark": "Donker"
     },
@@ -160,5 +160,16 @@
         "other_log": "Andere log",
         "custom_log": "Aangepaste log",
         "empty_log": "Lege log"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth Aanbieders",
+        "name": "Naam",
+        "class": "Klasse",
+        "scope_id_name": "Scope ID Naam",
+        "client_id": "Cliënt ID",
+        "enabled": "Ingeschakeld",
+        "no_providers": "Geen Aanbieders",
+        "module": "Module",
+        "user_id_name": "Gebruiker ID Naam"
     }
 }
