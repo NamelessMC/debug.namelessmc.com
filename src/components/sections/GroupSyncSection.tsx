@@ -69,7 +69,7 @@ function GroupSyncSection(): JSX.Element {
                             const groupId = rule[injector.column_name];
                             if (injector.column_name === 'website_group_id') {
                                 return {
-                                    body: Object.values(debugData.namelessmc.groups).find(group => String(group.id) === groupId)?.name ?? '',
+                                    body: Object.values(debugData.namelessmc.groups).find(group => group.id === groupId)?.name ?? '',
                                 };
                             } else {
                                 return {
