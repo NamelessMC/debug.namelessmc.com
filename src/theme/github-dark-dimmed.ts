@@ -1,4 +1,3 @@
-
 const theme = {
     hljs: {
         display: 'block',
