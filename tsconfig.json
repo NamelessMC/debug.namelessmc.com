@@ -21,6 +21,9 @@
     "jsx": "react-jsx"
   },
   "include": [
+    ".eslintrc.js",
+    "postcss.config.js",
+    "tailwind.config.js",
     "src",
     "src/i18next.d.ts"
   ]
