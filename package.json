@@ -13,7 +13,7 @@
     "@types/node": "^20.4.4",
     "@types/react-dom": "^18.2.7",
     "@types/react-syntax-highlighter": "^15.5.7",
-    "i18next": "^23.2.11",
+    "i18next": "^23.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.2",
