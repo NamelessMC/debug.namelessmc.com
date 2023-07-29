@@ -123,7 +123,7 @@
     },
     "templates_section": {
         "templates": "Sablonok",
-        "is_default": "Alapértelmezett",
+        "is_default": "Az alapértelmezett",
         "enabled": "Engedélyezve",
         "author": "Szerző",
         "namelessmc_version": "NamelessMC verzió",
@@ -131,7 +131,7 @@
     },
     "panel_templates_section": {
         "panel_templates": "Panel Sablon",
-        "is_default": "Alapértelmezett",
+        "is_default": "Az alapértelmezett",
         "namelessmc_version": "NamelessMC verzió",
         "version": "Verzió",
         "enabled": "Engedélyezve",
