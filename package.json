@@ -46,7 +46,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^18.2.31",
+    "@types/react": "^18.2.36",
     "@types/react-highlight": "^0.12.7",
     "@types/webpack-env": "^1.18.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
