@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
-    "@types/react-highlight": "^0.12.7",
+    "@types/react-highlight": "^0.12.8",
     "@types/webpack-env": "^1.18.4",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "autoprefixer": "^10.4.8",
