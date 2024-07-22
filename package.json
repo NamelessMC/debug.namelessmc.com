@@ -58,7 +58,7 @@
     "eslint-plugin-promise": "^6.4.0",
     "eslint-plugin-react": "^7.34.3",
     "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.6",
     "typescript": "^5.4.5"
   },
   "overrides": {
