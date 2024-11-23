@@ -1,14 +1,14 @@
 {
     "misc": {
         "no": "Ні",
-        "official": "OFFICIAL",
+        "official": "Офіційно",
         "light": "Світло",
         "dark": "Темний",
-        "generated_at": "Згенеровано в {{time}}",
+        "generated_at": "Згенеровано за {{time}}",
         "yes": "Так",
-        "header_title": "NamelessMC Debug Info",
+        "header_title": "Інформація для налагодження NamelessMC",
         "loading": "Завантаження...",
-        "empty": "Порожній"
+        "empty": "Порожньо"
     },
     "errors": {
         "error": "Помилка",
@@ -16,7 +16,7 @@
         "no_data_in_json": "Немає даних про налагодження в JSON",
         "invalid_link_id": "Недійсний ідентифікатор посилання для налагодження",
         "invalid_debug_version": "Версія налагодження <strong>{{version}}</strong> не підтримується",
-        "invalid_namelessmc_version": "Тільки вихідні посилання з NamelessMC Версії <strong>{{required}}</strong> підтримуються у вашій версії <strong>{{version}}</strong>."
+        "invalid_namelessmc_version": "Тільки вихідні посилання з NamelessMC Версії <strong>{{required}}</strong> підтримуються у твоїй версії <strong>{{version}}</strong>."
     },
     "version_section": {
         "version": "Версія",
