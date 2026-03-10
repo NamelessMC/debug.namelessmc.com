@@ -1,4 +1,4 @@
-FROM node:18 AS builder
+FROM docker.io/node AS builder
 
 RUN mkdir /build
 WORKDIR /build
@@ -10,7 +10,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged
+FROM docker.io/nginxinc/nginx-unprivileged
 
 RUN rm /etc/nginx/conf.d/*
 COPY docker/nginx-prod.conf /etc/nginx/conf.d/nameless.conf
