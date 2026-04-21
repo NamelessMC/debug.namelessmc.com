@@ -1,7 +1,7 @@
 {
     "misc": {
-        "generated_at": "生成时间: {{time}}",
-        "loading": "加载中...",
+        "generated_at": "生成于 {{time}}",
+        "loading": "加载中…",
         "empty": "空",
         "yes": "是",
         "no": "否",
@@ -13,15 +13,15 @@
     "errors": {
         "no_id_provided": "没有提供调试链接 ID",
         "invalid_debug_version": "调试版本 <strong>{{version}}</strong> 不受支持",
-        "invalid_link_id": "无效调试链接 ID",
+        "invalid_link_id": "调试链接 ID 无效",
         "error": "错误",
         "no_data_in_json": "没有 JSON 格式的可用调试数据",
-        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{{required}}</strong> 版本的调试链接，您正在运行 <strong>{{version}}</strong>。"
+        "invalid_namelessmc_version": "只能使用 NamelessMC <strong>{{required}}</strong> 版本的调试链接，您正在运行 <strong>{{version}}</strong> 版本。"
     },
     "version_section": {
         "version": "版本",
-        "update_available": "更新可用",
-        "last_update_check": "上次检查更新"
+        "update_available": "有更新可用",
+        "last_update_check": "最后检查更新时间"
     },
     "settings_section": {
         "settings": "设置",
@@ -110,8 +110,8 @@
         "namelessmc_version": "NamelessMC 版本"
     },
     "webhooks_section": {
-        "webhooks": "Webhooks",
-        "hooks": "Hooks",
+        "webhooks": "Webhook",
+        "hooks": "钩子",
         "forum_hooks": "论坛 Hooks",
         "id": "ID",
         "name": "名字",
@@ -128,7 +128,7 @@
         "enabled": "是否启用",
         "module": "模块",
         "rules": "规则",
-        "injectors": "Injectors",
+        "injectors": "注入器",
         "no_rules": "无规则"
     },
     "integrations_section": {
@@ -159,5 +159,16 @@
         "other_log": "其他日志",
         "custom_log": "自定义日志",
         "empty_log": "空日志"
+    },
+    "oauth_providers_section": {
+        "oauth_providers": "OAuth 提供者",
+        "name": "名称",
+        "module": "模块",
+        "class": "类别",
+        "user_id_name": "用户 ID 名称",
+        "scope_id_name": "范围 ID 名称",
+        "client_id": "客户端 ID",
+        "enabled": "已启用",
+        "no_providers": "尚无提供者"
     }
 }
