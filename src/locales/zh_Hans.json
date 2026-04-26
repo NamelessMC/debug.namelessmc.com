@@ -147,7 +147,7 @@
         "staff": "工作人员",
         "default": "默认",
         "order": "顺序",
-        "force_tfa": "强制二步验证",
+        "force_tfa": "强制双因素身份验证（2FA）",
         "no_groups": "无权限组",
         "id": "ID"
     },
